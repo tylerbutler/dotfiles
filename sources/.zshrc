@@ -18,6 +18,9 @@ export PATH="/snap/bin:$PATH"
 source $HOME/antigen.zsh
 antigen init $HOME/.antigenrc
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241,bold'
+bindkey '^ ' autosuggest-accept
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -78,6 +81,7 @@ fi
 # alias refreshenv="src"
 alias cls="clear"
 alias lsa="k --almost-all --human"
+alias cdu="cd-gitroot"
 
 # alias fuck to oops
 eval "$(thefuck --alias oops)"

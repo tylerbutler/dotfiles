@@ -2,60 +2,72 @@
 antigen use oh-my-zsh
 
 antigen bundles <<EOBUNDLES
-    # Bundles from the default repo (robbyrussell's oh-my-zsh)
-    alias-finder
-    bgnotify
-    colorize
-    command-not-found 
-    common-aliases 
-    cp
-    direnv
-    dirhistory
-    docker
-    git
-    gitfast
-    github
-    git-auto-fetch
-    git-escape-magic
-    git-extras
-    git-prompt
-    last-working-dir
-    magic-enter
-    npm
-    nvm
-    perms
-    profiles
-    rand-quote
-    rsync
-    thefuck
-    timer
-    tmux
-    zsh_reload
-    zsh-interactive-cd
-    zsh-navigation-tools
-    
-    # Other plugins
-    arzzen/calc.plugin.zsh
+  # Bundles from oh-my-zsh
+  ########################
+  alias-finder
+  bgnotify
+  colorize
+  command-not-found
+  common-aliases
+  cp
+  direnv
+  dirhistory
+  docker
+  git
+  gitfast
+  github
+  git-auto-fetch
+  git-escape-magic
+  git-extras
+  git-prompt
+  last-working-dir
+  magic-enter
+  npm
+  nvm
+  perms
+  profiles
+  rand-quote
+  rsync
+  thefuck
+  timer
+  tmux
+  zsh_reload
+  zsh-interactive-cd
+  zsh-navigation-tools
 
-    # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
-    ddollar/git-utils
-    # desyncr/zsh-ctrlp
-    
-    # horizontal rules ftw
-    LuRsT/hr
+  # Other plugins
+  ###############
+  Aloxaf/fzf-tab
+  arzzen/calc.plugin.zsh
 
-    # psprint/zsh-select  # required by zsh-ctrlp
-    psprint/zsh-navigation-tools
-    rupa/z@master
+  # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
+  ddollar/git-utils
 
-    # nicer dir listings
-    supercrabtree/k
-    
-    zdharma/fast-syntax-highlighting
-    zlsun/solarized-man
-    zsh-users/zsh-autosuggestions@master
-    zsh-users/zsh-completions
-    zsh-users/zsh-history-substring-search
+  # run ls on every cd
+  # desyncr/auto-ls
+
+  joel-porquet/zsh-dircolors-solarized
+
+  # horizontal rules ftw
+  LuRsT/hr
+
+  mollifier/cd-gitroot
+  kiurchv/asdf.plugin.zsh
+  psprint/zsh-navigation-tools
+  rupa/z@master
+  smallhadroncollider/antigen-git-rebase
+
+  # nicer dir listings
+  supercrabtree/k
+
+  unixorn/autoupdate-antigen.zshplugin
+  # Vifon/deer
+  zdharma/fast-syntax-highlighting
+  zlsun/solarized-man
+  zpm-zsh/colors
+  zsh-users/zsh-autosuggestions@master
+  zsh-users/zsh-completions
+  zsh-users/zsh-history-substring-search
 
 EOBUNDLES
 
@@ -65,3 +77,7 @@ antigen theme romkatv/powerlevel10k
 
 # Tell antigen that we're done
 antigen apply
+
+# autoload -U deer
+# zle -N deer
+# bindkey '\ek' deer

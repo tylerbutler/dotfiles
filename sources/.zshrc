@@ -78,5 +78,7 @@ fi
 alias refreshenv="source ~/.zshrc"
 alias j="jump"
 
+eval "$(thefuck --alias oops)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

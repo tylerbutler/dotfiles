@@ -75,8 +75,9 @@ fi
 # Aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias refreshenv="src"
+# alias refreshenv="src"
 alias cls="clear"
+alias lsa="k --almost-all --human"
 
 # alias fuck to oops
 eval "$(thefuck --alias oops)"

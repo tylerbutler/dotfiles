@@ -30,16 +30,32 @@ antigen bundles <<EOBUNDLES
     thefuck
     timer
     tmux
-    z
     zsh_reload
     zsh-interactive-cd
     zsh-navigation-tools
     
     # Other plugins
-    ddollar/git-utils # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
-    LuRsT/hr  # horizontal rules ftw
+    arzzen/calc.plugin.zsh
+
+    # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
+    ddollar/git-utils
+    # desyncr/zsh-ctrlp
+    
+    # horizontal rules ftw
+    LuRsT/hr
+
+    # psprint/zsh-select  # required by zsh-ctrlp
+    psprint/zsh-navigation-tools
+    rupa/z@master
+
+    # nicer dir listings
+    supercrabtree/k
+    
     zdharma/fast-syntax-highlighting
     zlsun/solarized-man
+    zsh-users/zsh-autosuggestions@master
+    zsh-users/zsh-completions
+    zsh-users/zsh-history-substring-search
 
 EOBUNDLES
 

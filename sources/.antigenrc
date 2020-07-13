@@ -1,0 +1,48 @@
+# Load oh-my-zsh's library
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNDLES
+    # Bundles from the default repo (robbyrussell's oh-my-zsh)
+    alias-finder
+    bgnotify
+    colorize
+    command-not-found 
+    common-aliases 
+    cp
+    direnv
+    dirhistory
+    docker
+    git
+    gitfast
+    github
+    git-auto-fetch
+    git-escape-magic
+    git-extras
+    git-prompt
+    last-working-dir
+    magic-enter
+    npm
+    nvm
+    perms
+    profiles
+    rand-quote
+    rsync
+    thefuck
+    timer
+    tmux
+    z
+    zsh_reload
+    zsh-interactive-cd
+    zsh-navigation-tools
+    
+    # Other plugins
+    zdharma/fast-syntax-highlighting
+    zlsun/solarized-man
+EOBUNDLES
+
+# Load the theme
+# antigen theme robbyrussell/oh-my-zsh themes/mh
+antigen theme romkatv/powerlevel10k
+
+# Tell antigen that we're done
+antigen apply

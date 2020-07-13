@@ -75,9 +75,10 @@ fi
 # Aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias refreshenv="source ~/.zshrc"
-alias j="jump"
+alias refreshenv="src"
+alias cls="clear"
 
+# alias fuck to oops
 eval "$(thefuck --alias oops)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

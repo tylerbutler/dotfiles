@@ -36,8 +36,11 @@ antigen bundles <<EOBUNDLES
     zsh-navigation-tools
     
     # Other plugins
+    ddollar/git-utils # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
+    LuRsT/hr  # horizontal rules ftw
     zdharma/fast-syntax-highlighting
     zlsun/solarized-man
+
 EOBUNDLES
 
 # Load the theme

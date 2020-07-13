@@ -1,0 +1,58 @@
+[alias]
+	delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
+	delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
+	dm = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
+	dm-f = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
+	truncate = !bash -c 'git checkout --orphan temp $1 && git commit -m \"Truncated history\" && git checkout master && git rebase --onto temp $1 master && git branch -D temp'
+[core]
+	autocrlf = false
+	editor = code --wait
+	longpaths = true
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
+[commit]
+	gpgSign = false
+[gpg]
+	program = gpg
+[tag]
+	forceSignAnnotated = false
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[user]
+	email = tyler@tylerbutler.com
+	name = Tyler Butler
+[diff]
+	tool = bc3
+[merge]
+	tool = bc3
+
+{{ if eq .chezmoi.os "linux" -}}
+[difftool "bc3"]
+	trustExitCode = true
+[mergetool "bc3"]
+	trustExitCode = true
+
+{{ else if eq .chezmoi.os "windows" -}}
+[difftool "bc3"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+[mergetool "bc3"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+[hub]
+	protocol = https
+
+{{ end -}}
+

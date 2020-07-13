@@ -1,23 +1,26 @@
+[user]
+	email = tyler@tylerbutler.com
+	name = Tyler Butler
 [alias]
 	delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
 	delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
 	dm = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
 	dm-f = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
 	truncate = !bash -c 'git checkout --orphan temp $1 && git commit -m \"Truncated history\" && git checkout master && git rebase --onto temp $1 master && git branch -D temp'
-[core]
-	autocrlf = false
-	editor = code --wait
-	longpaths = true
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[merge "npm-merge-driver"]
-	name = automatically merge npm lockfiles
-	driver = npx npm-merge-driver merge %A %O %B %P
-[commit]
-	gpgSign = false
-[gpg]
-	program = gpg
-[tag]
-	forceSignAnnotated = false
+
+	# Stash all files, including untracked files and directories
+	stash-all = stash save --include-untracked
+
+	# Show the branches, ordered by most recently updated closest to prompt
+	# Also shows the last commit and committer for each branch listed.
+	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+
+	# Graph/Log aliases
+	lp = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	graph = log --graph --all --decorate --stat --date=iso
+	graph1 = log --date-order --decorate --graph --oneline --no-show-signature
+
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -32,27 +35,65 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-[user]
-	email = tyler@tylerbutler.com
-	name = Tyler Butler
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[commit]
+	gpgSign = false
+[core]
+	autocrlf = false
+	editor = code --wait
+	longpaths = true
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+	# Global gitignore rules
+	excludesfile = ~/.gitignore_global
+
+	# Pay attention to case, even on OSX and Windows
+	ignorecase = false
 [diff]
+	# Show submodules changes in diffs as a list of commits like `git log` shows
+	submodule = log
 	tool = bc3
+[fetch]
+	# Push push submodule changes to the remote before pushing the main project.
+	# If a submodule fails to push the main project will not be pushed.
+	recurseSubmodules = on-demand
 [merge]
 	tool = bc3
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
+[pager]
+	# Don't use pager when listing branches
+	# Taken from https://stackoverflow.com/a/48370253/1245380
+	branch = false
+[status]
+	# Show status of git submodules in git status output
+	submoduleSummary = true
+[tag]
+	forceSignAnnotated = false
 
 {{ if eq .chezmoi.os "linux" -}}
 [difftool "bc3"]
 	trustExitCode = true
+[gpg]
+	program = gpg
 [mergetool "bc3"]
 	trustExitCode = true
 
 {{ else if eq .chezmoi.os "windows" -}}
 [difftool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
-[mergetool "bc3"]
-	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
 [hub]
 	protocol = https
+[mergetool "bc3"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
 
 {{ end -}}
 

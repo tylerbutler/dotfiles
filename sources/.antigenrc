@@ -83,7 +83,7 @@ antigen bundles <<EOBUNDLES
 
   # Other plugins
   ###############
-  # Aloxaf/fzf-tab
+  Aloxaf/fzf-tab
   # akoenig/npm-run.plugin.zsh # broken?
   arzzen/calc.plugin.zsh
 

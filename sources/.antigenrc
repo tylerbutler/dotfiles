@@ -127,7 +127,9 @@ antigen bundles <<EOBUNDLES
 
   zdharma/fast-syntax-highlighting
   zlsun/solarized-man
-  zsh-users/zsh-autosuggestions@master
+
+  # fish-style autosuggestions; disabled
+  # zsh-users/zsh-autosuggestions@master
 
   # extra completions
   zsh-users/zsh-completions

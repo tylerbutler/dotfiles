@@ -120,7 +120,7 @@ antigen bundles <<EOBUNDLES
 
   # nicer dir listings
   # supercrabtree/k
-  tylerbutler/k  # fork with enhancements
+  tylerbutler/k@env-vars  # fork with enhancements
 
   # auto-update antigen
   unixorn/autoupdate-antigen.zshplugin

@@ -1,6 +1,9 @@
 # Load oh-my-zsh's library
 antigen use oh-my-zsh
 
+# sane defaults
+antigen bundle willghatch/zsh-saneopt
+
 antigen bundles <<EOBUNDLES
   # Bundles from oh-my-zsh
   ########################
@@ -39,6 +42,7 @@ antigen bundles <<EOBUNDLES
   ###############
   Aloxaf/fzf-tab
   arzzen/calc.plugin.zsh
+  brymck/print-alias
 
   # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
   ddollar/git-utils
@@ -49,18 +53,21 @@ antigen bundles <<EOBUNDLES
   # better dir colors; no effect?
   # joel-porquet/zsh-dircolors-solarized
 
+  kiurchv/asdf.plugin.zsh
+  knu/zsh-manydots-magic
+
   # horizontal rules ftw
   LuRsT/hr
 
+  mattmc3/zsh-safe-rm
   mollifier/cd-gitroot
-  kiurchv/asdf.plugin.zsh
+  oldratlee/hacker-quotes
   psprint/zsh-navigation-tools
   rupa/z@master
-  smallhadroncollider/antigen-git-rebase
 
   # nicer dir listings
   # supercrabtree/k
-  tylerbutler/k
+  tylerbutler/k  # fork with enhancements
 
   unixorn/autoupdate-antigen.zshplugin
   zdharma/fast-syntax-highlighting

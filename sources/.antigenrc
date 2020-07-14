@@ -9,73 +9,132 @@ antigen bundles <<EOBUNDLES
   ########################
   alias-finder
   bgnotify
-  colorize
+
+  # syntax highlighting
+  # colorize  # replaced by fast-syntax-highlighting
+
+  # suggest packages to install when commands aren't found
   command-not-found
-  common-aliases
+
+  # common aliases; unneeded
+  # common-aliases
+
+  # enable compleat-powered completions
+  compleat
+
+  # cpv command uses rsync
   cp
+
+  # hook direnv into the shell
   direnv
+
+  # alt-left, alt-right to go back and forth in dirs
   dirhistory
+
+  # docker completions and aliases
   docker
+
+  # need to install using brew install fzf
+  fzf
+
   git
   gitfast
   github
   git-auto-fetch
   git-escape-magic
   git-extras
-  git-prompt
+  # git-prompt  # replaced by powerlevel10k
+
+  # golang completions and aliases
+  golang
+
+  # load the last working dir on shell init
   last-working-dir
+
+  # just press enter
   magic-enter
-  npm
+
+  # npm completions
+  # npm  # replaced by zsh-better-npm-completion
+
+  # nvm completions
   nvm
-  perms
-  profiles
-  rand-quote
+
+  # rand-quote
+
+  # rsync completions
   rsync
+
+  # corrections with esc-esc
   thefuck
+
+  # output time after every command
   timer
+
+  # tmux completions
   tmux
+
+  # add 'src' command to reload shell
   zsh_reload
+
   zsh-interactive-cd
-  zsh-navigation-tools
+
+  # zsh-navigation-tools  # unneeded?
 
   # Other plugins
   ###############
-  Aloxaf/fzf-tab
+  # Aloxaf/fzf-tab
+  # akoenig/npm-run.plugin.zsh # broken?
   arzzen/calc.plugin.zsh
+
+  # expand aliases when they're used
   brymck/print-alias
 
   # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
   ddollar/git-utils
 
-  # run ls on every cd
+  # run ls on every cd; disabled
   # desyncr/auto-ls
 
-  # better dir colors; no effect?
-  # joel-porquet/zsh-dircolors-solarized
-
+  # asdf venv manager hook
   kiurchv/asdf.plugin.zsh
+
+  # Support ... and .... etc.
   knu/zsh-manydots-magic
+
+  # npm completions
+  lukechilds/zsh-better-npm-completion
 
   # horizontal rules ftw
   LuRsT/hr
 
+  # need to install using npm i -g safe-rm
   mattmc3/zsh-safe-rm
+
+  # add shortcut to root of git repo
   mollifier/cd-gitroot
-  oldratlee/hacker-quotes
-  psprint/zsh-navigation-tools
-  rupa/z@master
+
+  # oldratlee/hacker-quotes # broken?
+
+  # rupa/z@master  # replaced by
 
   # nicer dir listings
   # supercrabtree/k
   tylerbutler/k  # fork with enhancements
 
+  # auto-update antigen
   unixorn/autoupdate-antigen.zshplugin
+
   zdharma/fast-syntax-highlighting
   zlsun/solarized-man
-  zpm-zsh/colors
   zsh-users/zsh-autosuggestions@master
+
+  # extra completions
   zsh-users/zsh-completions
-  zsh-users/zsh-history-substring-search
+
+  # type a command then up or down to find history
+  # entries that match
+  # zsh-users/zsh-history-substring-search  # unneeded?
 
 EOBUNDLES
 
@@ -115,11 +174,11 @@ GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
 export K_CUSTOM_COLOR_ENABLE=true
 # export K_CUSTOM_COLOR_BR="32;40"
 export K_CUSTOM_COLOR_BR="92;40"
-. "$HOME/.local/share/lscolors.sh"
+# . "$HOME/.local/share/lscolors.sh"
 
 # magic-enter
 #############
-MAGIC_ENTER_GIT_COMMAND="gst; l"
+MAGIC_ENTER_GIT_COMMAND="git status -sb"
 MAGIC_ENTER_OTHER_COMMAND="l"
 
 # thefuck

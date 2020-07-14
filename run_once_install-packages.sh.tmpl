@@ -4,11 +4,16 @@
 # install beyond compare
 wget http://www.scootersoftware.com/bcompare-4.3.4.24657_amd64.deb
 sudo apt-get update
-sudo apt-get install gdebi-core
+sudo apt-get install gdebi-core -y
 sudo gdebi bcompare-4.3.4.24657_amd64.deb
+
+# clone asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
+
+brew install fzf
 
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
-brew install ripgrep
+brew install asdf fzf
 
 {{ end -}}

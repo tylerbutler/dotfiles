@@ -46,7 +46,8 @@ antigen bundles <<EOBUNDLES
   # run ls on every cd
   # desyncr/auto-ls
 
-  joel-porquet/zsh-dircolors-solarized
+  # better dir colors; no effect?
+  # joel-porquet/zsh-dircolors-solarized
 
   # horizontal rules ftw
   LuRsT/hr
@@ -58,10 +59,10 @@ antigen bundles <<EOBUNDLES
   smallhadroncollider/antigen-git-rebase
 
   # nicer dir listings
-  supercrabtree/k
+  # supercrabtree/k
+  tylerbutler/k
 
   unixorn/autoupdate-antigen.zshplugin
-  # Vifon/deer
   zdharma/fast-syntax-highlighting
   zlsun/solarized-man
   zpm-zsh/colors
@@ -78,6 +79,50 @@ antigen theme romkatv/powerlevel10k
 # Tell antigen that we're done
 antigen apply
 
-# autoload -U deer
-# zle -N deer
-# bindkey '\ek' deer
+# Plugin settings
+
+# alias-finder
+##############
+# show shorter aliases before every command
+ZSH_ALIAS_FINDER_AUTOMATIC=true
+
+# git
+#####
+GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
+
+# k
+###
+# K_COLOR_DI=${K_CUSTOM_COLOR_DI:-"0;34"}  # di:directory
+# K_COLOR_LN=${K_CUSTOM_COLOR_LN:-"0;35"}  # ln:symlink
+# K_COLOR_SO=${K_CUSTOM_COLOR_SO:-"0;32"}  # so:socket
+# K_COLOR_PI=${K_CUSTOM_COLOR_PI:-"0;33"}  # pi:pipe
+# K_COLOR_EX=${K_CUSTOM_COLOR_EX:-"0;31"}  # ex:executable
+# K_COLOR_BD=${K_CUSTOM_COLOR_BD:-"34;46"} # bd:block special
+# K_COLOR_CD=${K_CUSTOM_COLOR_CD:-"34;43"} # cd:character special
+# K_COLOR_SU=${K_CUSTOM_COLOR_SU:-"30;41"} # su:executable with setuid bit set
+# K_COLOR_SG=${K_CUSTOM_COLOR_SG:-"30;46"} # sg:executable with setgid bit set
+# K_COLOR_TW=${K_CUSTOM_COLOR_TW:-"30;42"} # tw:directory writable to others, with sticky bit
+# K_COLOR_OW=${K_CUSTOM_COLOR_OW:-"30;43"} # ow:directory writable to others, without sticky bit
+# K_COLOR_BR=${K_CUSTOM_COLOR_BR:-"0;30"}  # branch
+
+export K_CUSTOM_COLOR_ENABLE=true
+# export K_CUSTOM_COLOR_BR="32;40"
+export K_CUSTOM_COLOR_BR="92;40"
+. "$HOME/.local/share/lscolors.sh"
+
+# magic-enter
+#############
+MAGIC_ENTER_GIT_COMMAND="gst; l"
+MAGIC_ENTER_OTHER_COMMAND="l"
+
+# thefuck
+#########
+# alias fuck to oops
+eval "$(thefuck --alias oops)"
+
+# zsh-users/zsh-autosuggestions
+###############################
+# Style for Solarized Dark
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=241,bold"
+# Bind ctrl-space to autosuggest accept
+bindkey "^ " autosuggest-accept

@@ -13,11 +13,10 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied t
 alias cdr="cd-gitroot"
 alias k="k --human"
 alias kl="k --human --almost-all"
-alias l="ls --color -Ao "
+alias l="ls "
 alias ll="k --human --almost-all"
-alias ls="ls --color -Ao "
-alias lsa="\ls --color -A "
-alias lso="\ls --color -o "
+alias ls="ls --color -o "
+alias lsa="\ls --color -oA "
 alias mkdir="mkdir -p "
 
 # grc overides for ls; brew install coreutils

@@ -116,7 +116,7 @@ antigen bundles <<EOBUNDLES
 
   # oldratlee/hacker-quotes # broken?
 
-  # rupa/z@master  # replaced by
+  # rupa/z@master  # replaced by zoxide
 
   # nicer dir listings
   # supercrabtree/k
@@ -147,8 +147,11 @@ antigen theme romkatv/powerlevel10k
 # Tell antigen that we're done
 antigen apply
 
-# Plugin settings
+# zoxide
+########
+eval "$(zoxide init zsh)"
 
+# Plugin settings
 # alias-finder
 ##############
 # show shorter aliases before every command

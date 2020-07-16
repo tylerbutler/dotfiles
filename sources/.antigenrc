@@ -119,8 +119,10 @@ antigen bundles <<EOBUNDLES
   # rupa/z@master  # replaced by zoxide
 
   # nicer dir listings
-  # supercrabtree/k
-  tylerbutler/k@env-vars  # fork with enhancements
+  # supercrabtree/k  # original
+  # tylerbutler/k@master
+  # tylerbutler/k@env-vars  # personal fork with env var overrides - but it's (too) slow
+  tylerbutler/k@branch-color  # overrides only the branch color
 
   # auto-update antigen
   unixorn/autoupdate-antigen.zshplugin
@@ -184,7 +186,7 @@ export K_CUSTOM_COLOR_BR="92;40"
 # magic-enter
 #############
 MAGIC_ENTER_GIT_COMMAND="git status -sb"
-MAGIC_ENTER_OTHER_COMMAND="l"
+MAGIC_ENTER_OTHER_COMMAND="ls -ah"
 
 # thefuck
 #########

@@ -42,4 +42,5 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export LS_COLORS="$(vivid generate solarized-dark)"
-eval "$(zoxide init zsh)"
+# export LS_COLORS="$(vivid generate jellybeans)"
+source ~/.env.zsh

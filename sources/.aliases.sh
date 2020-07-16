@@ -4,11 +4,20 @@ alias cls="clear"
 alias reboot="sudo shutdown -r now"
 alias zshconfig="$EDITOR ~/.zshrc"
 
+# Pipe my public key to my clipboard
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
 # listings and navigation
 alias cdr="cd-gitroot"
-alias l="k --human"
+alias k="k --human"
+alias kl="k --human --almost-all"
+alias l="ls --color -Ao "
 alias ll="k --human --almost-all"
-alias lsa="k --human --almost-all"
+alias ls="ls --color -Ao "
+alias lsa="\ls --color -A "
+alias lso="\ls --color -o "
 alias mkdir="mkdir -p "
 
 # grc overides for ls; brew install coreutils

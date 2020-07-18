@@ -31,12 +31,19 @@ ENABLE_CORRECTION="true"
 # Display red dots whilst waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='code'
-else
-  export EDITOR='nano'
-fi
+# Save all history
+# Incrementally write history to file
+setopt INC_APPEND_HISTORY
+# Save timestamp to history file too
+setopt EXTENDED_HISTORY
+# Import newly written commands from the history file
+setopt SHARE_HISTORY
+
+precmd() {
+    if [ "$(id -u)" -ne 0 ]; then
+        echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history | tail -n 1)" >>! $HOME/history/zsh-history-$(date "+%Y-%m-%d").log;
+    fi
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

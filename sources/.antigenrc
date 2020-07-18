@@ -108,6 +108,9 @@ antigen bundles <<EOBUNDLES
   # horizontal rules ftw
   LuRsT/hr
 
+  # auto-complete integration
+  marlonrichert/zsh-autocomplete
+
   # need to install using npm i -g safe-rm
   mattmc3/zsh-safe-rm
 
@@ -159,6 +162,13 @@ eval "$(zoxide init zsh)"
 # show shorter aliases before every command
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 
+# fzf
+#####
+# Setting rg as the default source for fzf
+export FZF_DEFAULT_OPTS="--height 96% --reverse --preview 'cat {}'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # git
 #####
 GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
@@ -192,6 +202,10 @@ MAGIC_ENTER_OTHER_COMMAND="ls -ah"
 #########
 # alias fuck to oops
 eval "$(thefuck --alias oops)"
+
+# zsf-autocomplete
+##################
+zstyle ':autocomplete:space:*' magic correct-word expand-history
 
 # zsh-users/zsh-autosuggestions
 ###############################

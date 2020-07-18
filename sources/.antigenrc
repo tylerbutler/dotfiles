@@ -147,7 +147,8 @@ EOBUNDLES
 
 # Load the theme
 # antigen theme robbyrussell/oh-my-zsh themes/mh
-antigen theme romkatv/powerlevel10k
+# antigen theme romkatv/powerlevel10k
+source $HOME/.zsh/themes/blinks-modified.zsh-theme
 
 # Tell antigen that we're done
 antigen apply

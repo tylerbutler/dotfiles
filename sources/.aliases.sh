@@ -4,7 +4,10 @@ alias cls="clear"
 alias reboot="sudo shutdown -r now"
 alias zshconfig="$EDITOR ~/.zshrc"
 
-# Pipe my public key to my clipboard
+# I find typing 'chezmoi' awkward
+alias dotfiles=chezmoi
+
+# Pipe my public key to the clipboard
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
 alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'"

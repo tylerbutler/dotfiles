@@ -205,6 +205,7 @@ eval "$(thefuck --alias oops)"
 
 # zsf-autocomplete
 ##################
+zstyle ':autocomplete:list-choices:*' min-input 3
 zstyle ':autocomplete:space:*' magic correct-word expand-history
 
 # zsh-users/zsh-autosuggestions

@@ -49,13 +49,18 @@
 	autocrlf = false
 	editor = code --wait
 	longpaths = true
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	# pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
 
 	# Global gitignore rules
 	excludesfile = ~/.gitignore_global
 
 	# Pay attention to case, even on OSX and Windows
 	ignorecase = false
+[delta]
+	syntax-theme = Solarized (dark
+	plus-color = "#012800"
+	minus-color = "#340001"
 [diff]
 	# Show submodules changes in diffs as a list of commits like `git log` shows
 	submodule = log
@@ -64,6 +69,8 @@
 	# Push push submodule changes to the remote before pushing the main project.
 	# If a submodule fails to push the main project will not be pushed.
 	recurseSubmodules = on-demand
+[interactive]
+	diffFilter = delta --color-only
 [merge]
 	tool = bc3
 [merge "npm-merge-driver"]

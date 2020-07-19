@@ -1,1 +1,7 @@
+direnv 2.21.3
+deno 1.2.0
+dotnet-core 3.1.302
+gohugo 0.74.2
+golang 1.14.6
 nodejs 12.18.2
+rust 1.45.0

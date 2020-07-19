@@ -9,8 +9,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# linuxbrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # PATH updates
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -53,3 +55,19 @@ source $HOME/.zsh/completions/chezmoi.zsh
 export LS_COLORS="$(vivid generate solarized-dark)"
 # export LS_COLORS="$(vivid generate jellybeans)"
 source ~/.env.zsh
+
+# asdf setup
+. $HOME/.asdf/asdf.sh
+
+# In order to bypass asdf shims. We *only* add the `ASDF_DIR/bin`
+# directory to PATH, since we still want to use `asdf` but not its shims.
+export PATH="$HOME/.asdf/bin:$PATH"
+
+# Hook direnv into the shell
+eval "$(asdf exec direnv hook zsh)"
+
+# append asdf completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialize completions with ZSH's compinit
+autoload -Uz compinit
+compinit

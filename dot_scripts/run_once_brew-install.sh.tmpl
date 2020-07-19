@@ -1,0 +1,31 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+
+if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+(
+    brew update
+)
+else
+    sudo apt update
+
+    # linux-brew deps
+    sudo apt install -y --no-install-recommends \
+        build-essential \
+        curl \
+        file \
+        git
+
+    # install brew
+    /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+brew install \
+    bat \
+    bat-extras \
+    fzf \
+    git-delta \
+    hub \
+    ripgrep \
+    zoxide \
+
+{{ end -}}

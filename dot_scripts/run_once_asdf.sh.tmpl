@@ -1,0 +1,53 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+
+if [ -d "$HOME/.asdf" ]; then
+(
+    # asdf update
+    # asdf plugin update --all
+    echo "asdf installed already"
+)
+else
+    # clone asdf
+    git clone git@github.com:asdf-vm/asdf.git "$HOME/.asdf" --branch v0.7.8
+
+    sudo apt update
+
+    # asdf-nodejs deps
+    bash -c "${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring"
+    sudo apt install -y --no-install-recommends \
+        curl \
+        dirmngr \
+        gpg \
+        jq \
+        tar
+
+    # asdf-python build deps
+    sudo apt install -y --no-install-recommends \
+        libbz2-dev \
+        libffi-dev \
+        liblzma-dev \
+        libncurses5-dev \
+        libreadline-dev \
+        libsqlite3-dev \
+        libssl-dev \
+        libxml2-dev \
+        libxmlsec1-dev \
+        llvm \
+        make \
+        tk-dev \
+        wget \
+        xz-utils \
+        zlib1g-dev
+
+    asdf plugin add deno
+    asdf plugin add direnv
+    asdf plugin add dotnet-core
+    asdf plugin add gohugo
+    asdf plugin add golang
+    asdf plugin add nodejs
+    asdf plugin add rust
+
+fi
+
+{{ end -}}

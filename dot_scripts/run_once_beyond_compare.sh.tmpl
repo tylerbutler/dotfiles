@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+
+# install beyond compare
+wget http://www.scootersoftware.com/bcompare-4.3.4.24657_amd64.deb
+sudo apt-get update
+sudo apt-get install gdebi-core -y
+sudo gdebi bcompare-4.3.4.24657_amd64.deb
+rm bcompare-4.3.4.24657_amd64.deb
+
+{{ end -}}

@@ -165,7 +165,7 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 # fzf
 #####
 # Setting rg as the default source for fzf
-export FZF_DEFAULT_OPTS="--height 96% --reverse --preview 'cat {}'"
+export FZF_DEFAULT_OPTS="--height 96% --preview 'cat {}'"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
@@ -195,8 +195,8 @@ export K_CUSTOM_COLOR_BR="92;40"
 
 # magic-enter
 #############
-MAGIC_ENTER_GIT_COMMAND="git status -sb"
-MAGIC_ENTER_OTHER_COMMAND="ls -ah"
+MAGIC_ENTER_GIT_COMMAND="git status -sb;kl;echo '\n'"
+MAGIC_ENTER_OTHER_COMMAND="kl;echo '\n'"
 
 # thefuck
 #########
@@ -207,6 +207,7 @@ eval "$(thefuck --alias oops)"
 ##################
 zstyle ':autocomplete:list-choices:*' min-input 3
 zstyle ':autocomplete:space:*' magic correct-word expand-history
+zstyle ':autocomplete:*' frecent-dirs off
 
 # zsh-users/zsh-autosuggestions
 ###############################

@@ -5,8 +5,8 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 # Prompt
-Import-Module posh-git
-Import-Module oh-my-posh
+# Import-Module posh-git
+# Import-Module oh-my-posh
 Set-Theme tylerbu
 Set-Variable -name DefaultUser 'tylerbu'
 
@@ -17,3 +17,5 @@ New-Alias e windows_explorer
 New-Alias ex explorer
 New-Alias st subl
 Set-Alias git hub
+
+Invoke-Expression (&starship init powershell)

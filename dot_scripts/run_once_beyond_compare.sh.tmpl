@@ -8,4 +8,8 @@ sudo apt-get install gdebi-core -y
 sudo gdebi bcompare-4.3.4.24657_amd64.deb
 rm bcompare-4.3.4.24657_amd64.deb
 
+{{ else if eq .chezmoi.os "windows" -}}
+#!/bin/pwsh
+
+choco install beyondcompare
 {{ end -}}

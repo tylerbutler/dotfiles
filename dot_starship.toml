@@ -14,5 +14,15 @@ format = "🕙 [ %r ]"
 # time_range = "10:00:00-14:00:00"
 
 [env_var]
+disabled = false
 variable = "EDITOR"
 default = "unknown editor"
+
+[memory_usage]
+disabled = false
+show_percentage = true
+show_swap = true
+threshold = -1
+symbol = " "
+separator = "/"
+style = "bold dimmed green"

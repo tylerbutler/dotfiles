@@ -73,3 +73,4 @@ autoload -Uz compinit
 compinit
 
 eval "$(starship init zsh)"
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

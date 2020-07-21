@@ -1,3 +1,18 @@
 # Replace the "❯" symbol in the prompt with "➜"
 [character]      # The name of the module we are configuring is "character"
 symbol = "➜"     # The "symbol" segment is being set to "➜"
+
+[username]
+disabled = true
+
+[time]
+disabled = false
+# use_12hr = true
+style = "bold blue"
+format = "🕙 [ %r ]"
+# utc_time_offset = "-5"
+# time_range = "10:00:00-14:00:00"
+
+[env_var]
+variable = "EDITOR"
+default = "unknown editor"

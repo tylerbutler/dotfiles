@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+
+# install hyper terminal
+wget -O ~/Downloads/hyper.deb "https://releases.hyper.is/download/deb"
+sudo apt install ~/Downloads/hyper.deb -y
+rm ~/Downloads/hyper.deb
+
+{{ end -}}

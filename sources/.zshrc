@@ -5,9 +5,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # linuxbrew
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -47,8 +47,6 @@ precmd() {
     fi
 }
 
-source $HOME/.zsh/completions/chezmoi.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
@@ -68,9 +66,14 @@ eval "$(asdf exec direnv hook zsh)"
 
 # append asdf completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
+fpath=($HOME/.zsh/completions $fpath)
+
 # initialize completions with ZSH's compinit
 autoload -Uz compinit
 compinit
 
-eval "$(starship init zsh)"
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+# eval "$(starship init zsh)"
+# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

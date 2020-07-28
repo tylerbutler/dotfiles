@@ -10,7 +10,10 @@ sudo apt install \
     thefuck \
     -y \
 
-# compaudit | xargs chown -R "tylerbu"
-# compaudit | xargs chmod go-w
+if [! compaudit]; then
+    echo "compaudit"
+    compaudit | xargs chown -R "tylerbu"
+    compaudit | xargs chmod go-w
+fi
 
 {{ end -}}

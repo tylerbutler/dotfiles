@@ -1,5 +1,5 @@
-{{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
+{{ if and (eq .chezmoi.os "linux") (not (contains "Microsoft" .chezmoi.kernel.osrelease)) -}}
+#!/bin/bash
 
 # install hyper terminal
 wget -O ~/Downloads/hyper.deb "https://releases.hyper.is/download/deb"

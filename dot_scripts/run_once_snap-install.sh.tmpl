@@ -1,6 +1,13 @@
-{{ if eq .chezmoi.os "linux" -}}
+{{ if and (eq .chezmoi.os "linux") (not (contains "Microsoft" .chezmoi.kernel.osrelease)) -}}
 #!/bin/sh
 
 snap install code --classic
+
+{{ end -}}
+
+{{ if (contains "Microsoft" .chezmoi.kernel.osrelease) -}}
+#!/bin/bash
+
+echo "Skipping because this is WSL."
 
 {{ end -}}

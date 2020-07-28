@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
+#!/bin/bash
 
 if [ -d "/home/linuxbrew/.linuxbrew" ]; then
 (
@@ -16,16 +16,18 @@ else
         git
 
     # install brew
-    /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 brew install \
     bat \
-    eth-p/software/bat-extras \
     fzf \
     git-delta \
     hub \
     ripgrep \
     zoxide \
+    # eth-p/software/bat-extras \
 
 {{ end -}}

@@ -1,6 +1,16 @@
 {{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
+#!/bin/bash
 
-# Nothing yet
+sudo apt update
+sudo apt install zsh -y
+chsh -s $(which zsh)
+
+sudo apt install \
+    direnv \
+    thefuck \
+    -y \
+
+# compaudit | xargs chown -R "tylerbu"
+# compaudit | xargs chmod go-w
 
 {{ end -}}

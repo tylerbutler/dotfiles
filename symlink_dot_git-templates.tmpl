@@ -1,1 +1,3 @@
-{{ .chezmoi.sourceDir }}/_sources/git-templates/
+{{ if eq .chezmoi.os "linux" -}}
+    {{ .chezmoi.sourceDir }}/_sources/git-templates
+{{ end -}}

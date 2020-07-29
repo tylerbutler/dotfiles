@@ -1,4 +1,5 @@
-{{ if and (eq .chezmoi.os "linux") (not (contains "Microsoft" .chezmoi.kernel.osrelease)) -}}
+{{ if eq .chezmoi.os "linux"  -}}
+{{ if not (contains "Microsoft" .chezmoi.kernel.osrelease) }}
 #!/bin/bash
 
 # install hyper terminal
@@ -6,4 +7,5 @@ wget -O ~/Downloads/hyper.deb "https://releases.hyper.is/download/deb"
 sudo apt install ~/Downloads/hyper.deb -y
 rm ~/Downloads/hyper.deb
 
+{{ end -}}
 {{ end -}}

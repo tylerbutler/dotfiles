@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "windows" -}}
+Powershell.exe -executionpolicy remotesigned -File  _ps1/install_chocolatey.ps1
+
+choco install git -y
+
+{{ end -}}

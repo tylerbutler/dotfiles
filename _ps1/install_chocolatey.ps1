@@ -1,10 +1,4 @@
-{{ if eq .chezmoi.os "windows" -}}
-
-if((Test-Path "C:\ProgramData\Chocolatey") -eq $false) {
+if ((Test-Path "C:\ProgramData\Chocolatey") -eq $false) {
   # install Chocolatey
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
-
-choco install git -y
-
-{{ end -}}

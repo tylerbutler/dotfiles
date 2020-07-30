@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "linux"  -}}
+#!/bin/bash
+
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh
+
+{{ end -}}

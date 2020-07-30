@@ -1,12 +1,13 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
+# install zsh and change the default shell to it
 sudo apt update
 sudo apt install --yes --no-install-recommends zsh
 chsh -s $(which zsh)
 
+# Some apt-installable packages
 sudo apt install --yes --no-install-recommends \
     direnv \
-    thefuck
 
 {{ end -}}

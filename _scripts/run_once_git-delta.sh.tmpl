@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+# install git-delta
+wget -O ~/Downloads/delta.deb "https://github.com/dandavison/delta/releases/download/0.3.0/git-delta_0.3.0_amd64.deb"
+sudo apt install ~/Downloads/delta.deb -y
+rm ~/Downloads/delta.deb
+
+{{ end -}}

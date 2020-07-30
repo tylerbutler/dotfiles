@@ -1,4 +1,5 @@
 {{ if eq .chezmoi.os "linux" -}}
+{{ if not (contains "Microsoft" .chezmoi.kernel.osrelease) }}
 #!/bin/sh
 
 # install beyond compare
@@ -8,4 +9,5 @@ sudo apt-get install gdebi-core --yes
 sudo gdebi bcompare-4.3.4.24657_amd64.deb
 rm bcompare-4.3.4.24657_amd64.deb
 
+{{ end -}}
 {{ end -}}

@@ -3,7 +3,7 @@
 install
 install/*
 README.md
-_sources
-_sources/*
 _ps1
 _ps1/*
+_sources
+_sources/*

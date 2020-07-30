@@ -2,12 +2,11 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install zsh -y
+sudo apt install --yes --no-install-recommends zsh
 chsh -s $(which zsh)
 
-sudo apt install \
+sudo apt install --yes --no-install-recommends \
     direnv \
-    thefuck \
-    -y \
+    thefuck
 
 {{ end -}}

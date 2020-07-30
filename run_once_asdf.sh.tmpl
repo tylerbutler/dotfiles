@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
+#!/bin/bash
 
 if [ -d "$HOME/.asdf" ]; then
 (
@@ -16,7 +16,7 @@ sudo apt update
 
 # asdf-nodejs deps
 bash -c "${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring"
-sudo apt install -y --no-install-recommends \
+sudo apt install --yes --no-install-recommends \
     curl \
     dirmngr \
     gpg \
@@ -24,7 +24,7 @@ sudo apt install -y --no-install-recommends \
     tar
 
 # asdf-python build deps
-sudo apt install -y --no-install-recommends \
+sudo apt install --yes --no-install-recommends \
     libbz2-dev \
     libffi-dev \
     liblzma-dev \

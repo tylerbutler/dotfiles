@@ -1,3 +1,23 @@
+# sane defaults
+antigen bundle willghatch/zsh-saneopt
+
+# linuxbrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# asdf setup
+# . $HOME/.asdf/asdf.sh
+
+# In order to bypass asdf shims. We *only* add the `ASDF_DIR/bin`
+# directory to PATH, since we still want to use `asdf` but not its shims.
+export PATH="$ASDF_DIR/bin:$PATH"
+# echo "$PATH"
+
+# Hook direnv into the shell
+eval "$(asdf exec direnv hook zsh)"
+
+# append asdf completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
 # fzf prerequisites
 export FZF_BASE="$(asdf where fzf)"
 
@@ -8,9 +28,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Load oh-my-zsh's library
 antigen use oh-my-zsh
-
-# sane defaults
-antigen bundle willghatch/zsh-saneopt
 
 antigen bundles <<EOBUNDLES
   # Bundles from oh-my-zsh

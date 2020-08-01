@@ -11,9 +11,6 @@ fi
 
 GITSTATUS_LOG_LEVEL=DEBUG
 
-# linuxbrew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
 # PATH updates
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -49,25 +46,12 @@ precmd() {
     fi
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
-
 export LS_COLORS="$(vivid generate solarized-dark)"
 # export LS_COLORS="$(vivid generate jellybeans)"
+
+# load env variables
 source ~/.env.zsh
 
-# asdf setup
-. $HOME/.asdf/asdf.sh
-
-# In order to bypass asdf shims. We *only* add the `ASDF_DIR/bin`
-# directory to PATH, since we still want to use `asdf` but not its shims.
-export PATH="$HOME/.asdf/bin:$PATH"
-
-# Hook direnv into the shell
-eval "$(asdf exec direnv hook zsh)"
-
-# append asdf completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
 fpath=($HOME/.zsh/completions $fpath)
 
 # initialize completions with ZSH's compinit

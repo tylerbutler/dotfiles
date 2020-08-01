@@ -12,7 +12,7 @@ else
     git clone git@github.com:asdf-vm/asdf.git "$HOME/.asdf" --branch v0.7.8
 fi
 
-sudo apt update
+# sudo apt update
 
 # asdf-nodejs deps
 bash -c "${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring"
@@ -21,7 +21,9 @@ sudo apt install --yes --no-install-recommends \
     dirmngr \
     gpg \
     jq \
-    tar
+    tar \
+    unzip \
+    zip \
 
 # asdf-python build deps
 sudo apt install --yes --no-install-recommends \
@@ -43,7 +45,7 @@ sudo apt install --yes --no-install-recommends \
 
 asdf plugin add bat
 asdf plugin add deno
-asdf plugin add direnv
+# asdf plugin add direnv # use the apt-installed version instead
 asdf plugin add dotnet-core
 asdf plugin add fzf
 asdf plugin add gohugo
@@ -52,6 +54,7 @@ asdf plugin add hub
 asdf plugin add nodejs
 asdf plugin add python
 asdf plugin add ripgrep
+asdf plugin add ruby
 asdf plugin add rust
 
 echo "asdf setup complete"

@@ -1,6 +1,6 @@
 # fzf prerequisites
-# export FZF_BASE="$(asdf where fzf)"
-# echo "FZF_BASE=$FZF_BASE"
+export FZF_BASE="$(asdf where fzf)"
+
 # Setting rg as the default source for fzf
 export FZF_DEFAULT_OPTS="--height 96% --preview 'bat --color=always {}'"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
@@ -31,8 +31,8 @@ antigen bundles <<EOBUNDLES
   # cpv command uses rsync
   cp
 
-  # hook direnv into the shell
-  # direnv
+  # hook direnv into the shell; it's installed by asdf
+  direnv
 
   # alt-left, alt-right to go back and forth in dirs
   dirhistory
@@ -40,7 +40,7 @@ antigen bundles <<EOBUNDLES
   # docker completions and aliases
   docker
 
-  # need to install using brew install fzf
+  # installed using asdf
   fzf
 
   git

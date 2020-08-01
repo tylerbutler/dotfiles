@@ -5,5 +5,7 @@ install/*
 README.md
 _ps1
 _ps1/*
+_scripts/ignored
+_scripts/ignored/*
 _sources
 _sources/*

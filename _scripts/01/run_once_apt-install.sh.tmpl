@@ -1,13 +1,17 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
-# install zsh and change the default shell to it
+# add the git upstream ppa so we can get the latest stable git
+sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
+
+# install zsh and change the default shell to it
 sudo apt install --yes --no-install-recommends zsh
 chsh -s $(which zsh)
 
 # Some apt-installable packages
 sudo apt install --yes --no-install-recommends \
     direnv \
+    git \
 
 {{ end -}}

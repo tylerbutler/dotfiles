@@ -95,12 +95,14 @@
 	program = gpg
 [mergetool "bc3"]
 	trustExitCode = true
+{{ end -}}
 
-{{ else if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+{{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
 [hub]
 	protocol = https
+{{ end -}}
 
-{{ else if eq .chezmoi.os "windows" -}}
+{{ if eq .chezmoi.os "windows" -}}
 [difftool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
 [mergetool "bc3"]

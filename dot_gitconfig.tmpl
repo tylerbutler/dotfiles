@@ -96,13 +96,17 @@
 [mergetool "bc3"]
 	trustExitCode = true
 
+{{ else if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+[hub]
+	protocol = https
+
 {{ else if eq .chezmoi.os "windows" -}}
 [difftool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
-# [hub]
-# 	protocol = https
 [mergetool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+[hub]
+	protocol = https
 
 {{ end -}}
 

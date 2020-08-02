@@ -3,7 +3,7 @@ deno 1.2.0
 direnv 2.21.3
 dotnet-core 3.1.302
 fzf 0.21.1
-gohugo 0.74.2
+gohugo extended_0.74.3
 golang 1.14.6
 hub v2.14.2
 nodejs 12.18.2

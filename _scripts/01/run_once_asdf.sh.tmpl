@@ -65,6 +65,8 @@ asdf plugin add rust
 # enable asdf-nodejs pgp verification to work
 bash -c "${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring"
 
-echo "asdf setup complete"
+asdf install
+
+echo "!!! asdf setup complete !!!"
 
 {{ end -}}

@@ -2,10 +2,10 @@
 antigen bundle willghatch/zsh-saneopt
 
 # linuxbrew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # asdf setup
-# . $HOME/.asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
 
 # In order to bypass asdf shims. We *only* add the `ASDF_DIR/bin`
 # directory to PATH, since we still want to use `asdf` but not its shims.

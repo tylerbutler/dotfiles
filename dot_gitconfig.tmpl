@@ -57,6 +57,8 @@
 
 	# Pay attention to case, even on OSX and Windows
 	ignorecase = false
+[credential]
+	helper = manager
 [delta]
 	syntax-theme = Solarized (dark
 	plus-color = "#012800"
@@ -97,8 +99,8 @@
 {{ else if eq .chezmoi.os "windows" -}}
 [difftool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
-[hub]
-	protocol = https
+# [hub]
+# 	protocol = https
 [mergetool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
 

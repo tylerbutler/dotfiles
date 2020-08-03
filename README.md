@@ -1,5 +1,7 @@
 # tylerbutler's dotfiles
 
+These are my dotfiles. There are many like them, but these are mine.
+
 ## Installation
 
 To setup a new box with these dotfiles you'll need [chezmoi][]. Once installed, use it to clone the dotfiles repo.
@@ -9,7 +11,7 @@ To setup a new box with these dotfiles you'll need [chezmoi][]. Once installed, 
 
 ```bash
 snap install chezmoi --classic
-chezmoi init --apply --verbose git@github.com:tylerbutler/chezmoi.git
+chezmoi init --apply --verbose git@github.com:tylerbutler/dotfiles.git
 ```
 
 
@@ -17,7 +19,7 @@ chezmoi init --apply --verbose git@github.com:tylerbutler/chezmoi.git
 
 ```powershell
 choco install chezmoi
-chezmoi init --apply --verbose https://github.com/tylerbutler/chezmoi.git
+chezmoi init --apply --verbose https://github.com/tylerbutler/dotfiles.git
 ```
 
 

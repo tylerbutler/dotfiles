@@ -7,13 +7,12 @@ These are my dotfiles. There are many like them, but these are mine.
 To setup a new box with these dotfiles you'll need [chezmoi][]. Once installed, use it to clone the dotfiles repo.
 
 
-### Ubuntu
+### Ubuntu / WSL
 
 ```bash
-snap install chezmoi --classic
-chezmoi init --apply --verbose git@github.com:tylerbutler/dotfiles.git
+curl -sfL https://git.io/chezmoi | sh
+chezmoi init --apply --verbose https://github.com/tylerbutler/dotfiles.git
 ```
-
 
 ### Windows
 

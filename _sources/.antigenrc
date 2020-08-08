@@ -84,7 +84,7 @@ antigen bundles <<EOBUNDLES
   nvm
 
   # ctrl-G to switch between local and global history
-  per-directory-history
+  # per-directory-history
 
   # rand-quote
 

@@ -2,6 +2,7 @@
 alias :q="exit"
 alias cls="clear"
 alias reboot="sudo shutdown -r now"
+alias reset-time="sudo ntpdate -sb time.nist.gov"
 alias zshconfig="$EDITOR ~/.zshrc"
 
 # I find typing 'chezmoi' awkward

@@ -1,6 +1,5 @@
 {{ if eq .chezmoi.os "linux" -}}
-{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
-
+{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
 #!/bin/sh
 
 snap install code --classic

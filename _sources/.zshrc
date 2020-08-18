@@ -48,6 +48,8 @@ precmd() {
 
 export LS_COLORS="$(vivid generate solarized-dark)"
 # export LS_COLORS="$(vivid generate jellybeans)"
+# test -r "~/.dir_colors"
+# eval $(dircolors ~/.dir_colors/nord.txt)
 
 # load env variables
 source ~/.env.zsh

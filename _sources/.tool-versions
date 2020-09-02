@@ -6,6 +6,5 @@ fzf 0.21.1
 gohugo extended_0.74.3
 golang 1.14.6
 hub v2.14.2
-nodejs 12.18.2
 ripgrep 12.1.1
 rust 1.45.0

@@ -13,9 +13,13 @@ Set-Variable -name DefaultUser 'tylerbu'
 # Aliases and their functions
 function windows_explorer { explorer . }
 
+New-Alias dotfiles chezmoi
 New-Alias e windows_explorer
 New-Alias ex explorer
-New-Alias st subl
 Set-Alias git hub
+
+# git aliases
+Set-Alias g git
+Set-Alias gst "git status"
 
 Invoke-Expression (&starship init powershell)

@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.os "windows" -}}
+REM Powershell.exe -executionpolicy remotesigned -File "{{.chezmoi.homedir}}/_scripts/_ps1/install_chocolatey_packages.ps1"
+
+choco install {{.chezmoi.homedir}}/.default-chocolatey-packages.config --yes
+{{ end -}}

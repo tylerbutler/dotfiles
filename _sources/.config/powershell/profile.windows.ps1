@@ -4,22 +4,14 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
+echo "Sourcing aliases..."
+. ~\.aliases.ps1
+
 # Prompt
-# Import-Module posh-git
-# Import-Module oh-my-posh
+Import-Module posh-git
+Import-Module oh-my-posh
 Set-Theme tylerbu
 Set-Variable -name DefaultUser 'tylerbu'
 
-# Aliases and their functions
-function windows_explorer { explorer . }
-
-New-Alias dotfiles chezmoi
-New-Alias e windows_explorer
-New-Alias ex explorer
-Set-Alias git hub
-
-# git aliases
-Set-Alias g git
-Set-Alias gst "git status"
-
-Invoke-Expression (&starship init powershell)
+# Starship
+# Invoke-Expression (&starship init powershell)

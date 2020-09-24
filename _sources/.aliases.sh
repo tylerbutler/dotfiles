@@ -38,3 +38,4 @@ alias du='du -hd1 | sort -h'
 
 # git
 alias gst="git status -u ."
+alias gs="git sync"

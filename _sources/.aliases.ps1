@@ -9,6 +9,10 @@ function New-BashStyleAlias([string]$name, [string]$command)
 }
 Set-Alias nba New-BashStyleAlias
 
+# Remove some default aliases
+Remove-Item Alias:gl -Force
+Remove-Item Alias:gp -Force
+
 function windows_explorer { explorer . }
 
 # I find typing 'chezmoi' awkward
@@ -27,12 +31,8 @@ nba glgga "hub log --graph --decorate --all"
 nba glgm "hub log --graph --max-count=10"
 nba glgp "hub log --stat -p"
 nba glo "hub log --oneline --decorate"
-nba glod "hub log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'"
 nba glog "hub log --oneline --decorate --graph"
 nba gloga "hub log --oneline --decorate --graph --all"
-nba glol "hub log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'"
-nba glola "hub log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'"
-nba glols "hub log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'"
 nba gp "hub push @args"
 nba gpf "hub push --force-with-lease @args"
 nba gr "hub remote @args"

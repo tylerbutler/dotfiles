@@ -1,0 +1,3 @@
+{{ if eq .chezmoi.os "windows" -}}
+Powershell.exe -executionpolicy remotesigned -File "{{.chezmoi.homedir}}/_scripts/_ps1/install-psget.ps1"
+{{ end -}}

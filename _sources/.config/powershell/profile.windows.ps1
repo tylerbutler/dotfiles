@@ -4,6 +4,8 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
+Import-Module PowerShellGet
+
 echo "Sourcing aliases..."
 . ~\.aliases.ps1
 
@@ -15,3 +17,4 @@ Set-Variable -name DefaultUser 'tylerbu'
 
 # Starship
 # Invoke-Expression (&starship init powershell)
+

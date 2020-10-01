@@ -1,0 +1,2 @@
+$fonts = (New-Object -ComObject Shell.Application).Namespace(0x14)
+dir {{ .chezmoi.sourceDir }}/_fonts/*.ttf -Recurse | %{ $fonts.CopyHere($_.fullname) }

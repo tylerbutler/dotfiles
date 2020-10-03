@@ -6,7 +6,7 @@ if (Test-Path($ChocolateyProfile)) {
 
 Import-Module PowerShellGet
 
-echo "Sourcing aliases..."
+Write-Output "Sourcing aliases..."
 . ~\.aliases.ps1
 
 # Prompt

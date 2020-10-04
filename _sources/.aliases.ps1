@@ -19,6 +19,7 @@ function windows_explorer { explorer . }
 Set-Alias dotfiles chezmoi
 
 # git
+Set-Alias git hub
 nba g "hub @args"
 nba gba "hub branch --all"
 nba gba "hub branch @args"

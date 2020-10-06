@@ -86,7 +86,7 @@
 [tag]
 	forceSignAnnotated = false
 
-{{- if eq .chezmoi.os "linux" }}
+{{- if eq .chezmoi.os "linux" -}}
 [difftool "bc3"]
 	trustExitCode = true
 [gpg]
@@ -95,8 +95,8 @@
 	trustExitCode = true
 {{- end -}}
 
-{{- if eq .chezmoi.os "linux" }}
-{{- if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+{{- if eq .chezmoi.os "linux" -}}
+{{- if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
 [credential]
 	helper = manager
 [hub]

@@ -7,16 +7,12 @@ antigen bundle willghatch/zsh-saneopt
 # asdf setup
 . $HOME/.asdf/asdf.sh
 
-# In order to bypass asdf shims. We *only* add the `ASDF_DIR/bin`
-# directory to PATH, since we still want to use `asdf` but not its shims.
-export PATH="$ASDF_DIR/bin:$PATH"
-# echo "$PATH"
-
 # Hook direnv into the shell
+# echo "Hooking direnv"
 eval "$(asdf exec direnv hook zsh)"
 
 # A shortcut for asdf managed direnv.
-# direnv() { asdf exec direnv "$@"; }
+direnv() { asdf exec direnv "$@"; }
 
 # append asdf completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

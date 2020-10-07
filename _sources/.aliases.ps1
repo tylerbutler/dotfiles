@@ -1,11 +1,13 @@
 # Aliases and their functions
 
 # Thanks to https://stackoverflow.com/a/2486303
-function New-BashStyleAlias([string]$name, [string]$command)
-{
-    $prefix = "echo `"$command @args`"`n"
-    $sb = [scriptblock]::Create($prefix + $command)
-    Set-Item "Function:\global:$name" -Value $sb | Out-Null
+function New-BashStyleAlias([string]$name, [string]$command) {
+  $echo_script = @"
+`$str_args = `$args -join " "
+echo "$command `$str_args"`n
+"@
+  $sb = [scriptblock]::Create($echo_script + $command + " @args")
+  Set-Item "Function:\global:$name" -Value $sb | Out-Null
 }
 Set-Alias nba New-BashStyleAlias
 

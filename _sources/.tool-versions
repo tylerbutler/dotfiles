@@ -1,10 +1,9 @@
-bat 0.15.4
-deno 1.2.0
-direnv 2.21.3
-dotnet-core 3.1.302
-fzf 0.21.1
-gohugo extended_0.74.3
-golang 1.14.6
+bat 0.16.0
+deno 1.4.4
+direnv 2.22.1
+fzf 0.22.0
+gohugo extended_0.76.0
+golang 1.15.2
 hub v2.14.2
 ripgrep 12.1.1
 rust 1.45.0

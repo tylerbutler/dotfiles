@@ -38,6 +38,8 @@ nba glgp "hub log --stat -p"
 nba glo "hub log --oneline --decorate"
 nba glog "hub log --oneline --decorate --graph"
 nba gloga "hub log --oneline --decorate --graph --all"
+Remove-Item Alias:\gm -Force # Remove default gm alias
+nba gm "hub merge"
 nba gp "hub push"
 nba gpf "hub push --force-with-lease"
 nba gpo "hub push -u origin HEAD"

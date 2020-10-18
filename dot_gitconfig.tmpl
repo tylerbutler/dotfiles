@@ -86,25 +86,25 @@
 [tag]
 	forceSignAnnotated = false
 
-{{- if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.os "linux" }}
 [difftool "bc3"]
 	trustExitCode = true
 [gpg]
 	program = gpg
 [mergetool "bc3"]
 	trustExitCode = true
-{{- end -}}
+{{ end }}
 
-{{- if eq .chezmoi.os "linux" -}}
-{{- if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+{{ if eq .chezmoi.os "linux" }}
+{{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
 [credential]
 	helper = manager
 [hub]
 	protocol = https
-{{- end -}}
-{{- end -}}
+{{ end }}
+{{ end }}
 
-{{- if eq .chezmoi.os "windows" -}}
+{{ if eq .chezmoi.os "windows" }}
 [credential]
 	helper = manager
 [difftool "bc3"]
@@ -113,5 +113,5 @@
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
 [hub]
 	protocol = https
-{{- end -}}
+{{ end }}
 

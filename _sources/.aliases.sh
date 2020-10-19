@@ -39,3 +39,5 @@ alias du='du -hd1 | sort -h'
 # git
 alias gst="git status -u ."
 alias gs="git sync"
+
+alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"

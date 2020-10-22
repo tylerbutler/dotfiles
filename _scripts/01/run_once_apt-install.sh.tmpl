@@ -1,8 +1,6 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
-# add the git upstream ppa so we can get the latest stable git
-sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 
 # install zsh and change the default shell to it

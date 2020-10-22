@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+#!/bin/bash
+
+# add the git upstream ppa so we can get the latest stable git
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+
+sudo apt install --yes --no-install-recommends \
+    git \
+
+{{ end -}}
+{{ end -}}

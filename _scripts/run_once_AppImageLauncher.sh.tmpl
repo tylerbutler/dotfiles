@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+#!/bin/bash
+
+# add the appimagelauncher ppa
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update
+
+sudo apt install --yes --no-install-recommends \
+    appimagelauncher \
+
+{{ end -}}
+{{ end -}}

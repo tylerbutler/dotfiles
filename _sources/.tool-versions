@@ -5,4 +5,5 @@ gitui 0.10.1
 gohugo extended_0.76.0
 golang 1.15.2
 hub v2.14.2
+pnpm 5.10.0
 ripgrep 12.1.1

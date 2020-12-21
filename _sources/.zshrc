@@ -40,6 +40,7 @@ setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 # Import newly written commands from the history file
 setopt SHARE_HISTORY
+setopt extended_glob
 
 precmd() {
     if [ "$(id -u)" -ne 0 ]; then

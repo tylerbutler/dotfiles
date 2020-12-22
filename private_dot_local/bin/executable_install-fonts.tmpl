@@ -1,0 +1,12 @@
+{{ if eq .chezmoi.os "windows" -}}
+Powershell.exe -executionpolicy remotesigned -File "{{.chezmoi.sourceDir}}/_scripts/_ps1/register-fonts.ps1"
+{{ end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+#!/bin/sh
+
+mkdir -p .fonts
+cp {{ .chezmoi.sourceDir }}/_fonts/**/*.ttf ~/.fonts
+{{ end -}}
+{{ end -}}

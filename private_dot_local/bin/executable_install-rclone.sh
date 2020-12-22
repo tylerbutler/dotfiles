@@ -1,9 +1,0 @@
-{{ if eq .chezmoi.os "linux" -}}
-{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
-#!/bin/bash
-
-# install rclone
-# curl https://rclone.org/install.sh | sudo bash
-
-{{ end -}}
-{{ end -}}

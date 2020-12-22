@@ -6,4 +6,5 @@ gohugo extended_0.76.0
 golang 1.15.2
 hub v2.14.2
 pnpm 5.10.0
+python 3.9.1
 ripgrep 12.1.1

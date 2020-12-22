@@ -45,5 +45,6 @@ alias default-npm-packages="npm i -g pnpm; xargs pnpm i -g <~/.default-npm-packa
 alias zfs-space="zfs list -o space -r deadpool wolverine x23"
 alias zfs-snaps="zfs list -t snapshot -S creation "
 alias zfs-sync="syncoid --no-stream --no-sync-snap --create-bookmark --exclude='^.*?_hourly' "
+alias zfs-snap-delete="sudo zfs destroy -v "
 
 alias rmlint="\rmlint -g -C "

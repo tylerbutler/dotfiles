@@ -40,4 +40,10 @@ alias du='du -hd1 | sort -h'
 alias gst="git status -u ."
 alias gs="git sync"
 
-alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"
+alias default-npm-packages="npm i -g pnpm; xargs pnpm i -g <~/.default-npm-packages"
+
+alias zfs-space="zfs list -o space -r deadpool wolverine x23"
+alias zfs-snaps="zfs list -t snapshot -S creation "
+alias zfs-sync="syncoid --no-stream --no-sync-snap --create-bookmark --exclude='^.*?_hourly' "
+
+alias rmlint="\rmlint -g -C "

@@ -3,7 +3,7 @@
 #!/bin/bash
 
 # install rclone
-curl https://rclone.org/install.sh | sudo bash
+# curl https://rclone.org/install.sh | sudo bash
 
 {{ end -}}
 {{ end -}}

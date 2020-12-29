@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "linux" -}}
+{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+#!/bin/bash
+
+sudo add-apt-repository ppa:samuel-w1/vorta
+sudo apt-get update
+sudo apt-get install vorta -y
+
+{{ end -}}
+
+{{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+#!/bin/bash
+
+echo "Skipping because this is WSL."
+{{ end -}}
+{{ end -}}

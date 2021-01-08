@@ -39,6 +39,7 @@ alias du='du -hd1 | sort -h'
 # git
 alias gst="git status -u ."
 alias gs="git sync"
+alias gsc="git clone --filter=tree:0"
 
 alias default-npm-packages="npm i -g pnpm; xargs pnpm i -g <~/.default-npm-packages"
 

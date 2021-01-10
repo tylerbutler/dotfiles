@@ -85,6 +85,8 @@
 	submoduleSummary = true
 [tag]
 	forceSignAnnotated = false
+[hub]
+	protocol = https
 
 {{ if eq .chezmoi.os "linux" }}
 [difftool "bc3"]
@@ -93,14 +95,12 @@
 	program = gpg
 [mergetool "bc3"]
 	trustExitCode = true
-{{ end }}
-
-{{ if eq .chezmoi.os "linux" }}
-{{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
+[credential]
+	helper = cache --timeout=3600
+{{ else }}
 [credential]
 	helper = manager
-[hub]
-	protocol = https
 {{ end }}
 {{ end }}
 
@@ -111,7 +111,4 @@
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
 [mergetool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
-[hub]
-	protocol = https
 {{ end }}
-

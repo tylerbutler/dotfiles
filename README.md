@@ -17,7 +17,7 @@ chezmoi init --apply --verbose https://github.com/tylerbutler/dotfiles.git
 ### Windows
 
 ```powershell
-choco install chezmoi
+choco install chezmoi git
 chezmoi init --apply --verbose https://github.com/tylerbutler/dotfiles.git
 ```
 

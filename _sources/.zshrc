@@ -12,6 +12,7 @@ fi
 GITSTATUS_LOG_LEVEL=DEBUG
 
 # PATH updates
+export PATH="/usr/sbin:/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"

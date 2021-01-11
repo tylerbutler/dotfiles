@@ -2,6 +2,7 @@ act 0.2.17
 bat 0.17.1
 direnv 2.27.0
 fzf 0.25.0
+github-cli 1.4.0
 gitui 0.11.0
 gohugo extended_0.80.0
 golang 1.15.2

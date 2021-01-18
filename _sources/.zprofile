@@ -4,6 +4,6 @@
 #     compaudit | xargs chmod go-w
 # fi
 
-if [[ -z "$STY" ]]; then
-   screen -xRR default
-fi
+#if [[ -z "$STY" ]]; then
+#   screen -xRR default
+#fi

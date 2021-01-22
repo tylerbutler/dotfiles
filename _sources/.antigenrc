@@ -102,7 +102,7 @@ antigen bundles <<EOBUNDLES
   # add 'src' command to reload shell
   zsh_reload
 
-  zsh-interactive-cd
+  # zsh-interactive-cd
 
   # zsh-navigation-tools  # unneeded?
 
@@ -111,6 +111,8 @@ antigen bundles <<EOBUNDLES
   Aloxaf/fzf-tab
   # akoenig/npm-run.plugin.zsh # broken?
   arzzen/calc.plugin.zsh
+
+  b4b4r07/enhancd
 
   # expand aliases when they're used
   brymck/print-alias
@@ -155,6 +157,7 @@ antigen bundles <<EOBUNDLES
   # auto-update antigen
   unixorn/autoupdate-antigen.zshplugin
 
+  unixorn/git-extra-commands
   zdharma/fast-syntax-highlighting
   zlsun/solarized-man
 
@@ -169,6 +172,19 @@ antigen bundles <<EOBUNDLES
   # zsh-users/zsh-history-substring-search  # unneeded?
 
 EOBUNDLES
+
+export ENHANCD_FILTER='fzf'
+# When entering a git repo do a git status, othewise do an ls
+export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1) && git st || ls -lhrt'
+# export ENHANCD_COMMAND='c'
+export ENHANCD_DISABLE_HOME=1
+export ENHANCD_DISABLE_HYPHEN=1
+export ENHANCD_DISABLE_DOT=1
+export ENHANCD_HYPHEN_ARG=_
+
+if (( $+commands[exa] )); then
+  antigen bundle DarrinTisdale/zsh-aliases-exa
+fi
 
 # Load the theme
 # antigen theme robbyrussell/oh-my-zsh themes/mh

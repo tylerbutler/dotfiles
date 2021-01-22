@@ -158,6 +158,8 @@ antigen bundles <<EOBUNDLES
   unixorn/autoupdate-antigen.zshplugin
 
   unixorn/git-extra-commands
+  wfxr/forgit
+  wfxr/emoji-cli
   zdharma/fast-syntax-highlighting
   zlsun/solarized-man
 

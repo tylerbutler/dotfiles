@@ -12,3 +12,6 @@ python 3.9.1
 ripgrep 12.1.1
 ruby 3.0.0
 tmux 3.1c
+dust 0.5.4
+container-diff 0.16.0
+fd 8.2.1

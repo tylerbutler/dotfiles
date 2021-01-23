@@ -179,12 +179,12 @@ EOBUNDLES
 
 export ENHANCD_FILTER='fzf'
 # When entering a git repo do a git status, othewise do an ls
-export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1) && git st || ls -lhrt'
+export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1) && git status || ll'
 # export ENHANCD_COMMAND='c'
-export ENHANCD_DISABLE_HOME=1
-export ENHANCD_DISABLE_HYPHEN=1
-export ENHANCD_DISABLE_DOT=1
-export ENHANCD_HYPHEN_ARG=_
+# export ENHANCD_DISABLE_HOME=1
+# export ENHANCD_DISABLE_HYPHEN=1
+# export ENHANCD_DISABLE_DOT=1
+# export ENHANCD_HYPHEN_ARG=_
 
 export forgit_diff=gdi
 
@@ -192,7 +192,7 @@ export forgit_diff=gdi
 export NVM_COMPLETION=true
 antigen bundle lukechilds/zsh-nvm
 
-if (( $+commands[exa] )); then
+if (($ + commands[exa])); then
   antigen bundle DarrinTisdale/zsh-aliases-exa
 fi
 
@@ -239,8 +239,8 @@ export K_CUSTOM_COLOR_BR="92;40"
 
 # magic-enter
 #############
-MAGIC_ENTER_GIT_COMMAND="git status -sb;kl;echo '\n'"
-MAGIC_ENTER_OTHER_COMMAND="kl;echo '\n'"
+MAGIC_ENTER_GIT_COMMAND="git status -sb;ll;echo '\n'"
+MAGIC_ENTER_OTHER_COMMAND="ll;echo '\n'"
 
 # thefuck
 #########
@@ -267,24 +267,24 @@ bindkey "^ " autosuggest-accept
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # place this after nvm initialization!
-#autoload -U add-zsh-hook
-#load-nvmrc() {
-  # echo "Loading node from .nvmrc..."
- # local node_version="$(nvm version)"
-  #local nvmrc_path="$(nvm_find_nvmrc)"
+# autoload -U add-zsh-hook
+# load-nvmrc() {
+#   echo "Loading node from .nvmrc..."
+#   local node_version="$(nvm version)"
+#   local nvmrc_path="$(nvm_find_nvmrc)"
 
-  #if [ -n "$nvmrc_path" ]; then
-   # local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+#   if [ -n "$nvmrc_path" ]; then
+#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-    #if [ "$nvmrc_node_version" = "N/A" ]; then
-     # nvm install
-    #elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#      nvm use
-#    fi
-#  elif [ "$node_version" != "$(nvm version default)" ]; then
-    # echo "Reverting to nvm default version"
-#    nvm use default
-#  fi
-#}
-#add-zsh-hook chpwd load-nvmrc
-#load-nvmrc
+#     if [ "$nvmrc_node_version" = "N/A" ]; then
+#       nvm install
+#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
+#       nvm use
+#     fi
+#   elif [ "$node_version" != "$(nvm version default)" ]; then
+#     echo "Reverting to nvm default version"
+#     nvm use default
+#   fi
+# }
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc

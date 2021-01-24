@@ -192,7 +192,7 @@ export forgit_diff=gdi
 export NVM_COMPLETION=true
 antigen bundle lukechilds/zsh-nvm
 
-if (($ + commands[exa])); then
+if (($+commands[exa])); then
   antigen bundle DarrinTisdale/zsh-aliases-exa
 fi
 

@@ -55,6 +55,7 @@ alias df="df -h "
 alias du='du -hd1 | sort -h'
 
 # git
+alias gpo="git push -u origin HEAD"
 alias gst="git status -u ."
 alias gs="git sync"
 alias gsc="git clone --filter=tree:0"

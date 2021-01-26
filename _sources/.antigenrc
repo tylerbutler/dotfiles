@@ -189,6 +189,7 @@ export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/nul
 export forgit_diff=gdi
 
 # Export nvm completion settings for zsh-nvm plugin
+export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 antigen bundle lukechilds/zsh-nvm
 

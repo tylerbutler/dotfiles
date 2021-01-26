@@ -114,7 +114,8 @@ antigen bundles <<EOBUNDLES
   # akoenig/npm-run.plugin.zsh # broken?
   arzzen/calc.plugin.zsh
 
-  b4b4r07/enhancd
+  # disabled
+  # b4b4r07/enhancd
 
   # expand aliases when they're used
   brymck/print-alias
@@ -177,9 +178,9 @@ antigen bundles <<EOBUNDLES
 
 EOBUNDLES
 
-export ENHANCD_FILTER='fzf'
+# export ENHANCD_FILTER='fzf'
 # When entering a git repo do a git status, othewise do an ls
-export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1) && git status || ll'
+# export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1) && git status || ll'
 # export ENHANCD_COMMAND='c'
 # export ENHANCD_DISABLE_HOME=1
 # export ENHANCD_DISABLE_HYPHEN=1
@@ -194,7 +195,7 @@ export NVM_COMPLETION=true
 antigen bundle lukechilds/zsh-nvm
 
 if (($+commands[exa])); then
-  antigen bundle DarrinTisdale/zsh-aliases-exa
+  antigen bundle hermitmaster/zsh-exa-plugin
 fi
 
 # Load the theme

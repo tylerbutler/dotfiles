@@ -147,6 +147,9 @@ antigen bundles <<EOBUNDLES
   # add shortcut to root of git repo
   mollifier/cd-gitroot
 
+  # auto-switch pipenvs
+  owenstranathan/pipenv.zsh
+
   # oldratlee/hacker-quotes # broken?
 
   # rupa/z@master  # replaced by zoxide
@@ -187,9 +190,10 @@ EOBUNDLES
 # export ENHANCD_DISABLE_DOT=1
 # export ENHANCD_HYPHEN_ARG=_
 
+# Set gdi as an alias for interactive git diff
 export forgit_diff=gdi
 
-# Export nvm completion settings for zsh-nvm plugin
+# Export nvm settings for zsh-nvm plugin
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 antigen bundle lukechilds/zsh-nvm

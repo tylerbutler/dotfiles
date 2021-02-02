@@ -120,6 +120,9 @@ antigen bundles <<EOBUNDLES
   # expand aliases when they're used
   brymck/print-alias
 
+  # adds sess command for tmux session management
+  ChrisPenner/session-sauce
+
   # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
   ddollar/git-utils
 
@@ -180,6 +183,8 @@ antigen bundles <<EOBUNDLES
   # zsh-users/zsh-history-substring-search  # unneeded?
 
 EOBUNDLES
+
+export SESS_PROJECT_ROOT=~/code
 
 # export ENHANCD_FILTER='fzf'
 # When entering a git repo do a git status, othewise do an ls

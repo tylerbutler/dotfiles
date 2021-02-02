@@ -48,6 +48,7 @@
 [core]
 	autocrlf = input
 	editor = code --wait
+	editor = "if [[ $EDITOR -eq 'code' ]]; then ED='code --wait'; else ED=$EDITOR; fi; $ED"
 	longpaths = true
 	# pager = diff-so-fancy | less --tabs=4 -RFX
 	pager = delta

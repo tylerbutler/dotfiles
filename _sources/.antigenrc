@@ -21,7 +21,7 @@ fpath=(${ASDF_DIR}/completions $fpath)
 export FZF_BASE="$(asdf where fzf)"
 
 # Setting rg as the default source for fzf
-export FZF_DEFAULT_OPTS="--height 96% --preview 'bat --color=always {}'"
+export FZF_DEFAULT_OPTS="--height 96%"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
@@ -206,6 +206,8 @@ antigen bundle lukechilds/zsh-nvm
 if (($+commands[exa])); then
   antigen bundle hermitmaster/zsh-exa-plugin
 fi
+
+antigen bundle 3v1n0/zsh-bash-completions-fallback
 
 # Load the theme
 # antigen theme robbyrussell/oh-my-zsh themes/mh

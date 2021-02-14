@@ -1,6 +1,8 @@
 # We need this so that tmux uses zsh when started in a zsh shell
 export SHELL='/bin/zsh'
 
+export LANG='en_US.UTF-8'
+
 export BAT_CONFIG_PATH="$HOME/.bat.conf"
 
 # Preferred editor for local and remote sessions

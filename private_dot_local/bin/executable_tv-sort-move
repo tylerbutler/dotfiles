@@ -1,0 +1,35 @@
+rsync -avz --progress -h --remove-source-files A* /wolverine/tv/A-C/
+rsync -avz --progress -h --remove-source-files B* /wolverine/tv/A-C/
+rsync -avz --progress -h --remove-source-files b* /wolverine/tv/A-C/
+rsync -avz --progress -h --remove-source-files C* /wolverine/tv/A-C/
+rsync -avz --progress -h --remove-source-files D* /x23/tv/D-F/
+rsync -avz --progress -h --remove-source-files E* /x23/tv/D-F/
+rsync -avz --progress -h --remove-source-files F* /x23/tv/D-F/
+rsync -avz --progress -h --remove-source-files G* /wolverine/tv/G-H/
+rsync -avz --progress -h --remove-source-files H* /wolverine/tv/G-H/
+rsync -avz --progress -h --remove-source-files I* /deadpool/tv/I-L/
+rsync -avz --progress -h --remove-source-files J* /deadpool/tv/I-L/
+rsync -avz --progress -h --remove-source-files K* /deadpool/tv/I-L/
+rsync -avz --progress -h --remove-source-files L* /deadpool/tv/I-L/
+rsync -avz --progress -h --remove-source-files M* /deadpool/tv/M-P/
+rsync -avz --progress -h --remove-source-files N* /deadpool/tv/M-P/
+rsync -avz --progress -h --remove-source-files O* /deadpool/tv/M-P/
+rsync -avz --progress -h --remove-source-files P* /deadpool/tv/M-P/
+rsync -avz --progress -h --remove-source-files Q* /x23/tv/Q-S/
+rsync -avz --progress -h --remove-source-files R* /x23/tv/Q-S/
+rsync -avz --progress -h --remove-source-files S* /x23/tv/Q-S/
+rsync -avz --progress -h --remove-source-files The* /x23/tv/The/
+rsync -avz --progress -h --remove-source-files T* /x23/tv/T/
+rsync -avz --progress -h --remove-source-files U* /x23/tv/U-Z/
+rsync -avz --progress -h --remove-source-files V* /x23/tv/U-Z/
+rsync -avz --progress -h --remove-source-files W* /x23/tv/U-Z/
+rsync -avz --progress -h --remove-source-files X* /x23/tv/U-Z/
+rsync -avz --progress -h --remove-source-files Y* /x23/tv/U-Z/
+rsync -avz --progress -h --remove-source-files Z* /x23/tv/U-Z/
+
+echo "Empty directories will be deleted:"
+find -type d -empty
+find -type d -empty -delete
+
+echo "Applying permissions"
+plex-perms

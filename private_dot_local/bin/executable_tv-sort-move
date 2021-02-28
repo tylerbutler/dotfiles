@@ -1,3 +1,7 @@
+rsync -avz --progress -h --remove-source-files Bob\'s\ Burgers /wolverine/tv/_keep/
+rsync -avz --progress -h --remove-source-files Family\ Guy /wolverine/tv/_keep/
+
+
 rsync -avz --progress -h --remove-source-files A* /wolverine/tv/A-C/
 rsync -avz --progress -h --remove-source-files B* /wolverine/tv/A-C/
 rsync -avz --progress -h --remove-source-files b* /wolverine/tv/A-C/

@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+curl https://get.volta.sh | bash
+
+{{ else -}}
+
+# choco install volta
+
+{{ end -}}

@@ -16,9 +16,9 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied t
 # listings and navigation
 alias cdr="cd-gitroot"
 # general use
-alias ls='exa'                                                          # ls
-alias l='exa -lbF --git'                                                # list, size, type, git
-alias ll='exa -lbGF --git'                                             # long list
+alias ls='exa --git'                                                   # ls
+alias l='exa -lbF --git --color-scale'                                 # list, size, type, git
+alias ll='exa -lbGF --git --color-scale'                               # long list
 alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
 alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
 alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
@@ -51,16 +51,20 @@ alias lsd='ls -d */'
 # fi
 
 # disk usage
-alias df="df -h "
-alias du='du -hd1 | sort -h'
+#alias df="df -h "
+#alias du='du -hd1 | sort -h'
 
 # git
 alias gpo="git push -u origin HEAD"
 alias gst="git status -u ."
 alias gs="git sync"
 alias gsc="git clone --filter=tree:0"
+alias gnd="git clean -dn"
+alias gndd="git clean -df"
 
-alias default-npm-packages="npm i -g pnpm; xargs pnpm i -g <~/.default-npm-packages"
+alias default-cargo-crates="xargs cargo install <~/.default-cargo-crates"
+alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"
+alias default-python-packages="xargs pip install <~/.default-python-packages"
 
 alias zfs-space="zfs list -o space -r deadpool wolverine x23"
 alias zfs-snaps="zfs list -t snapshot -S creation "

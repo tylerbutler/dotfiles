@@ -1,4 +1,0 @@
-module.exports = {
-    // Either define single root containing all repositories
-    "repositoryRoot": "./code",
-}

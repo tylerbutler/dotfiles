@@ -1,6 +1,7 @@
 [user]
 	email = tyler@tylerbutler.com
 	name = Tyler Butler
+	signingKey = 5D2C75A714558ED9
 [alias]
 	delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
 	delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
@@ -44,11 +45,11 @@
 	changed = green
 	untracked = cyan
 [commit]
-	gpgSign = false
+	gpgSign = true
 [core]
 	autocrlf = input
-	editor = code --wait
-	editor = "if [[ $EDITOR -eq 'code' ]]; then ED='code --wait'; else ED=$EDITOR; fi; $ED"
+	editor = micro
+	# editor = "if [[ $EDITOR -eq 'code' ]]; then ED='code --wait'; else ED=$EDITOR; fi; $ED"
 	longpaths = true
 	# pager = diff-so-fancy | less --tabs=4 -RFX
 	pager = delta
@@ -87,11 +88,15 @@
 [tag]
 	forceSignAnnotated = false
 [hub]
+{{- if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+	protocol = ssh
+{{ else }}
 	protocol = https
+{{ end -}}
 
-{{ if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "linux" -}}
 [difftool "bc3"]
-	trustExitCode = true
+  trustExitCode = true
 [gpg]
 	program = gpg
 [mergetool "bc3"]
@@ -99,9 +104,11 @@
 {{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
 [credential]
 	helper = cache --timeout=3600
+
 {{ else }}
 [credential]
 	helper = manager
+
 {{ end }}
 {{ end }}
 

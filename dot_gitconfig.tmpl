@@ -1,7 +1,7 @@
 [user]
 	email = tyler@tylerbutler.com
 	name = Tyler Butler
-	signingKey = 5D2C75A714558ED9
+	signingkey = 9952362D2D6FEF8B
 [alias]
 	delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
 	delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
@@ -68,7 +68,7 @@
 	submodule = log
 	tool = bc3
 [fetch]
-	# Push push submodule changes to the remote before pushing the main project.
+	# Push submodule changes to the remote before pushing the main project.
 	# If a submodule fails to push the main project will not be pushed.
 	recurseSubmodules = on-demand
 [interactive]

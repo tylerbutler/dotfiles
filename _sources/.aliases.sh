@@ -24,7 +24,7 @@ alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all lis
 alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 
 # specialty views
-alias lS='exa -1'                                                              # one column, just names
+alias lS='exa -1'                                                       # one column, just names
 alias lt='exa --tree --level=2'                                         # tree
 
 alias k="k --human"
@@ -55,6 +55,7 @@ alias lsd='ls -d */'
 #alias du='du -hd1 | sort -h'
 
 # git
+alias gcam="git add -A && git commit -m"
 alias gpo="git push -u origin HEAD"
 alias gst="git status -u ."
 alias gs="git sync"

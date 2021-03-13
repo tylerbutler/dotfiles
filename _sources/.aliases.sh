@@ -17,8 +17,8 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied t
 alias cdr="cd-gitroot"
 # general use
 alias ls='exa --git'                                                   # ls
-alias l='exa -lbF --git --color-scale'                                 # list, size, type, git
-alias ll='exa -lbGF --git --color-scale'                               # long list
+alias l='exa -lbF --git'                                 # list, size, type, git
+alias ll='exa -lbGF --git'                               # long list
 alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
 alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
 alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
@@ -56,6 +56,8 @@ alias lsd='ls -d */'
 
 # git
 alias gcam="git add -A && git commit -m"
+alias gcd="cd-gitroot"
+alias glo="git log --oneline --decorate --graph -10"
 alias gpo="git push -u origin HEAD"
 alias gst="git status -u ."
 alias gs="git sync"

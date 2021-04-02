@@ -1,8 +1,8 @@
 act 0.2.17
 bat 0.17.1
 container-diff 0.16.0
+deno 1.8.1
 direnv 2.27.0
-dust 0.5.4
 fd 8.2.1
 fzf 0.25.0
 github-cli 1.7.0

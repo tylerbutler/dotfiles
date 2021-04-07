@@ -12,8 +12,10 @@ echo "$command `$str_args"`n
 Set-Alias nba New-BashStyleAlias
 
 # Remove some default aliases
-Remove-Item Alias:gl -Force
-Remove-Item Alias:gp -Force
+Remove-Item Alias:\gc -Force
+Remove-Item Alias:\gl -Force
+Remove-Item Alias:\gm -Force
+Remove-Item Alias:\gp -Force
 
 function windows_explorer { explorer . }
 
@@ -25,6 +27,7 @@ Set-Alias git hub
 nba g "hub"
 nba gb "hub branch"
 nba gba "hub branch --all"
+nba gcam "hub add -A ; hub commit -m"
 nba gco "hub checkout"
 nba gd "hub diff"
 nba gf "hub fetch"
@@ -35,11 +38,12 @@ nba glgg "hub log --graph"
 nba glgga "hub log --graph --decorate --all"
 nba glgm "hub log --graph --max-count=10"
 nba glgp "hub log --stat -p"
-nba glo "hub log --oneline --decorate"
+nba glo "hub log --oneline --decorate --graph -10"
 nba glog "hub log --oneline --decorate --graph"
 nba gloga "hub log --oneline --decorate --graph --all"
-Remove-Item Alias:\gm -Force # Remove default gm alias
 nba gm "hub merge"
+nba gnd "git clean -dn"
+nba gndd "git clean -df"
 nba gp "hub push"
 nba gpf "hub push --force-with-lease"
 nba gpo "hub push -u origin HEAD"

@@ -88,7 +88,7 @@
 [tag]
 	forceSignAnnotated = false
 [hub]
-{{- if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+{{- if and (eq .chezmoi.os "linux") (not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease))) }}
 	protocol = ssh
 {{ else }}
 	protocol = https

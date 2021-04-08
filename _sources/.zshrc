@@ -24,7 +24,7 @@ source $HOME/antigen.zsh
 antigen init $HOME/.antigenrc
 
 # Aliases
-source ~/.aliases.sh
+source $HOME/.aliases.sh
 
 # ZSH settings
 ##############
@@ -52,11 +52,11 @@ precmd() {
 
 export LS_COLORS="$(vivid generate solarized-dark)"
 # export LS_COLORS="$(vivid generate jellybeans)"
-# test -r "~/.dir_colors"
-# eval $(dircolors ~/.dir_colors/nord.txt)
+# test -r "$HOME/.dir_colors"
+# eval $(dircolors $HOME/.dir_colors/nord.txt)
 
 # load env variables
-source ~/.env.zsh
+source $HOME/.env.zsh
 
 fpath=($HOME/.zsh/completions $fpath)
 
@@ -67,8 +67,8 @@ compinit
 # eval "$(starship init zsh)"
 # POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
 # nvm config; disabled and replaced by a zsh plugin
 # export NVM_DIR="$HOME/.nvm"

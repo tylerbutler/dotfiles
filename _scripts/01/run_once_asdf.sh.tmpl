@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "linux" -}}
+{{ if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux")  -}}
 #!/bin/bash
 
 if [ -d "$HOME/.asdf" ]; then
@@ -9,13 +9,11 @@ if [ -d "$HOME/.asdf" ]; then
 )
 else
     # clone asdf
-    {{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
-        git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
-    {{ else -}}
-        git clone https://github.com/asdf-vm/asdf.git  "$HOME/.asdf" --branch v0.8.0
-    {{ end -}}
+    git clone https://github.com/asdf-vm/asdf.git  "$HOME/.asdf" --branch v0.8.0
 fi
+{{ end }}
 
+{{ if eq .chezmoi.os "linux" -}}
 # sudo apt update
 
 # asdf-nodejs deps
@@ -45,6 +43,7 @@ sudo apt install --yes --no-install-recommends \
     wget \
     xz-utils \
     zlib1g-dev
+{{ end }}
 
 . $HOME/.asdf/asdf.sh
 
@@ -83,5 +82,3 @@ asdf plugin add tmux
 asdf install
 
 echo "!!! asdf setup complete !!!"
-
-{{ end -}}

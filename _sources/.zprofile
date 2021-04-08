@@ -7,3 +7,8 @@
 #if [[ -z "$STY" ]]; then
 #   screen -xRR default
 #fi
+# {{ if (eq .chezmoi.os "darwin") -}}
+
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# {{ end -}}

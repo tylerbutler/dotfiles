@@ -7,7 +7,7 @@ if (Test-Path($ChocolateyProfile)) {
 Import-Module PowerShellGet
 
 Write-Output "Sourcing aliases..."
-. ~\.aliases.ps1
+. $HOME/.aliases.ps1
 
 # Prompt
 Import-Module posh-git

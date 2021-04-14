@@ -2,6 +2,8 @@
 	email = tyler@tylerbutler.com
 	name = Tyler Butler
 	signingkey = 9952362D2D6FEF8B
+[init]
+  defaultBranch = main
 [alias]
 	delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
 	delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -

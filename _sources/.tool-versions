@@ -4,6 +4,7 @@ container-diff 0.16.0
 deno 1.9.0
 direnv 2.28.0
 fzf 0.26.0
+github-cli 1.9.1
 gitui 0.13.0
 gohugo extended_0.81.0
 golang 1.16

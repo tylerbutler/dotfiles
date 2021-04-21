@@ -12,10 +12,10 @@ echo "$command `$str_args"`n
 Set-Alias nba New-BashStyleAlias
 
 # Remove some default aliases
-Remove-Item Alias:\gc -Force
-Remove-Item Alias:\gl -Force
-Remove-Item Alias:\gm -Force
-Remove-Item Alias:\gp -Force
+# Remove-Item Alias:\gc -Force
+# Remove-Item Alias:\gl -Force
+# Remove-Item Alias:\gm -Force
+# Remove-Item Alias:\gp -Force
 
 function windows_explorer { explorer . }
 

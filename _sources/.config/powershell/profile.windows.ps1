@@ -10,9 +10,9 @@ Write-Output "Sourcing aliases..."
 . $HOME/.aliases.ps1
 
 # Prompt
-Import-Module posh-git
 Import-Module oh-my-posh
-Set-Theme tylerbu
+Set-PoshPrompt -Theme jandedobbeleer
+
 Set-Variable -name DefaultUser 'tylerbu'
 
 # Starship

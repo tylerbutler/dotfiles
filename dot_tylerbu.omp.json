@@ -4,15 +4,15 @@
     {
       "alignment": "right",
       "type": "prompt",
-      "vertical_offset": -1,
+      "vertical_offset": 0,
       "segments": [
         {
           "type": "exit",
-          "style": "diamond",
-          "foreground": "red",
-          "background": "default",
-          "leading_diamond": "\uE0B6",
-          "trailing_diamond": "\uE0B4",
+          "style": "powerline",
+          "foreground": "black",
+          "background": "lightRed",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
           "properties": {
             "display_exit_code": true,
             "color_foreground": true,
@@ -22,14 +22,15 @@
         },
         {
           "type": "executiontime",
-          "style": "diamond",
+          "style": "powerline",
           "foreground": "black",
-          "background": "white",
-          "trailing_diamond": "\uE0B4",
+          "background": "cyan",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
           "properties": {
             "threshold": 500,
             "style": "austin",
-            "prefix": " <#fefefe>\ufbab</> "
+            "prefix": "<black>\ufbab </>"
           }
         },
         {
@@ -47,27 +48,75 @@
           }
         },
         {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
+          "foreground": "white",
+          "background": "#026e00",
+          "properties": {
+            "prefix": " \uE235 "
+          }
+        },
+        {
           "type": "go",
           "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "white",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
+          "foreground": "black",
           "background": "#7FD5EA",
           "properties": {
-            "prefix": " \uFCD1 "
+            "prefix": " \uF1A0 "
+          }
+        },
+        {
+          "type": "spotify",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
+          "foreground": "black",
+          "background": "#1BD760",
+          "properties": {
+            "prefix": "\uF9C6 ",
+            "playing_icon": "\uE602 ",
+            "paused_icon": "\uF8E3 ",
+            "stopped_icon": "\uF04D ",
+            "track_separator": " - "
           }
         },
         {
           "type": "time",
           "style": "powerline",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
           "foreground": "black",
           "background": "white",
           "leading_diamond": "<white>\uE0C5</>",
           "trailing_diamond": "<white>\uE0C4</>",
-          "powerline_symbol": "\ue0b2",
-          "invert_powerline": true,
           "properties": {
             "time_format": "3:04:05 PM",
             "prefix": "\ufa1a "
+          }
+        },
+        {
+          "type": "battery",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
+          "foreground": "black",
+          "background": "yellow",
+          "properties": {
+            "battery_icon":"\uf58d",
+            "discharging_icon": "\uE231 ",
+            "charging_icon": "\uE234 ",
+            "charged_icon": "\uE22F ",
+            "color_background": true,
+            "charged_color": "green",
+            "charging_color": "lightGreen",
+            "discharging_color": "#ff5722",
+            "display_charging": true,
+            "display_error": true,
+            "template": "{{.Icon}}{{ if and (not .Error) (gt .Percentage 0) }}{{.Percentage}}\uF8EF {{ end }}{{.Error}}"
           }
         }
       ]
@@ -80,6 +129,7 @@
         {
           "type": "os",
           "style": "powerline",
+          "powerline_symbol": "",
           "foreground": "#26C6DA",
           "background": "#546E7A",
           "properties": {
@@ -88,17 +138,29 @@
           }
         },
         {
+          "type": "session",
+          "style": "powerline",
+          "powerline_symbol": "",
           "background": "blue",
           "foreground": "white",
-          "powerline_symbol": "",
-          "style": "powerline",
-          "type": "session",
           "properties": {
             "default_user_name": "tylerbu",
             "display_user": false
           }
         },
         {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "white",
+          "background": "lightBlue",
+          "properties": {
+            "postfix": " \uFCB5 "
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
           "background": "#91ddff",
           "foreground": "#100e23",
           "powerline_symbol": "",
@@ -106,26 +168,19 @@
             "folder_icon": "",
             "folder_separator_icon": "  ",
             "home_icon": "",
-            "style": "agnoster"
-          },
-          "style": "powerline",
-          "type": "path"
-        },
-        {
-          "background": "#95ffa4",
-          "foreground": "#193549",
-          "powerline_symbol": "",
-          "style": "powerline",
-          "type": "git",
-          "properties": {
-            "display_stash_count": true
+            "style": "agnoster_short"
           }
         },
         {
-          "type": "root",
+          "type": "git",
           "style": "powerline",
+          "background": "#95ffa4",
+          "foreground": "#193549",
+          "powerline_symbol": "",
           "properties": {
-            "root_icon": "\uF0E7"
+            "branch_icon": "  ",
+            "display_stash_count": true,
+            "display_upstream_icon": true
           }
         }
       ]
@@ -136,7 +191,27 @@
     {
       "type": "prompt",
       "alignment": "left",
-      "segments": []
+      "vertical_offset": 1,
+      "segments": [
+        {
+          "type": "root",
+          "style": "powerline",
+          "properties": {
+            "root_icon": "\uF0E7"
+          }
+        },
+
+        {
+          "type": "text",
+          "style": "powerline",
+          "foreground": "default",
+          "background": "default",
+          "properties": {
+            "prefix": "",
+            "text": " \u276F"
+          }
+        }
+      ]
     }
   ],
   "final_space": true

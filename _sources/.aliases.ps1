@@ -11,6 +11,17 @@ echo "$command `$str_args"`n
 }
 Set-Alias nba New-BashStyleAlias
 
+function Get-Colors() {
+  $colors = [enum]::GetValues([System.ConsoleColor])
+  Foreach ($bgcolor in $colors) {
+    Foreach ($fgcolor in $colors) {
+      Write-Host "$fgcolor|"  -ForegroundColor $fgcolor -BackgroundColor $bgcolor -NoNewLine
+    }
+    Write-Host " on $bgcolor"
+  }
+}
+Set-Alias colors Get-Colors
+
 # Remove some default aliases
 # Remove-Item Alias:\gc -Force
 # Remove-Item Alias:\gl -Force

@@ -5,6 +5,7 @@ Write-Output "Sourcing aliases..."
 . $HOME/.aliases.ps1
 
 # Prompt
+Write-Output "Setting prompt..."
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme $HOME/.tylerbu.omp.json
 

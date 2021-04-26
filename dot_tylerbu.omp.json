@@ -106,7 +106,7 @@
           "foreground": "black",
           "background": "yellow",
           "properties": {
-            "battery_icon":"\uf58d",
+            "battery_icon": "\uf58d",
             "discharging_icon": "\uE231 ",
             "charging_icon": "\uE234 ",
             "charged_icon": "\uE22F ",
@@ -200,7 +200,6 @@
             "root_icon": "\uF0E7"
           }
         },
-
         {
           "type": "text",
           "style": "powerline",

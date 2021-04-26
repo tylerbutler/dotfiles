@@ -1,1 +1,1 @@
-. $HOME/.config/powershell/profile.shared.ps1
+. profile.shared.ps1

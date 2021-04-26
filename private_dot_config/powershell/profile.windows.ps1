@@ -4,4 +4,4 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-. ./profile.shared.ps1
+. $HOME/.config/powershell/profile.shared.ps1

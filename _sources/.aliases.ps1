@@ -23,10 +23,10 @@ function Get-Colors() {
 Set-Alias colors Get-Colors
 
 # Remove some default aliases
-# Remove-Item Alias:\gc -Force
-# Remove-Item Alias:\gl -Force
-# Remove-Item Alias:\gm -Force
-# Remove-Item Alias:\gp -Force
+Remove-Item Alias:\gc -Force
+Remove-Item Alias:\gl -Force
+Remove-Item Alias:\gm -Force
+Remove-Item Alias:\gp -Force
 
 function windows_explorer { explorer . }
 

@@ -1,4 +1,1 @@
-Write-Output "Sourcing aliases..."                                                                                       |
-. $HOME/.aliases.ps1
-
-# Invoke-Expression (&starship init powershell)
+. $HOME/.config/powershell/profile.shared.ps1

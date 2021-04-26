@@ -4,4 +4,4 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-. profile.shared.ps1
+. ./profile.shared.ps1

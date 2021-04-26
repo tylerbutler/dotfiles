@@ -1,2 +1,21 @@
-wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O ~/.local/bin/oh-my-posh
-chmod +x ~/.local/bin/oh-my-posh
+if [ -d "$HOME/.local/bin/oh-my-posh" ]; then
+(
+    echo "!!! oh-my-posh installed already !!!"
+)
+else
+    wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O $HOME/.local/bin/posh-linux-amd64
+    ln -s $HOME/.local/bin/posh-linux-amd64 $HOME/.local/bin/oh-my-posh
+    chmod +x $HOME/.local/bin/oh-my-posh
+fi
+
+if [ -d "$HOME/.poshthemes" ]; then
+(
+    echo "!!! oh-my-posh themes installed already !!!"
+)
+else
+    mkdir $HOME/.poshthemes
+    wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O $HOME/.poshthemes/themes.zip
+    unzip $HOME/.poshthemes/themes.zip -d $HOME/.poshthemes
+    chmod u+rw $HOME/.poshthemes/*.json
+    rm $HOME/.poshthemes/themes.zip
+fi

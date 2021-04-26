@@ -36,5 +36,5 @@ echo "Empty directories will be deleted:"
 find -type d -empty
 find -type d -empty -delete
 
-echo "Applying permissions"
-plex-perms
+# echo "Applying permissions"
+# plex-perms

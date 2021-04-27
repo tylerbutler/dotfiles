@@ -1,0 +1,11 @@
+[hub]
+  protocol = https
+
+[credential]
+	helper = manager
+
+[difftool "bc3"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+
+[mergetool "bc3"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe

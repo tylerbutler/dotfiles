@@ -1,0 +1,11 @@
+[include]
+  path = linux.gitconfig
+
+[commit]
+	gpgSign = false
+
+[hub]
+  protocol = https
+
+[credential]
+	helper = manager

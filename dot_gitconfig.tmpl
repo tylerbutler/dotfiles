@@ -1,7 +1,6 @@
 [user]
 	email = tyler@tylerbutler.com
 	name = Tyler Butler
-	signingkey = 9952362D2D6FEF8B
 [init]
   defaultBranch = main
 [alias]
@@ -46,8 +45,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[commit]
-	gpgSign = true
 [core]
 	autocrlf = input
 	editor = micro
@@ -89,39 +86,19 @@
 	submoduleSummary = true
 [tag]
 	forceSignAnnotated = false
-[hub]
+
 {{- if (eq .chezmoi.os "linux") -}}
-	{{- if (not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease))) }}
-	protocol = ssh
-	{{ end }}
+	{{- if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+[include]
+  path = {{ .chezmoi.homeDir }}/.config/git/wsl.gitconfig
+  {{ else -}}
+[include]
+  path = {{ .chezmoi.homeDir }}/.config/git/linux.gitconfig
+  {{ end -}}
 {{ else if (eq .chezmoi.os "darwin") }}
-	protocol = ssh
-	protocol = https
+[include]
+  path = {{ .chezmoi.homeDir }}/.config/git/mac.gitconfig
+{{ else if (eq .chezmoi.os "windows") }}
+[include]
+  path = {{ .chezmoi.homeDir }}/.config/git/windows.gitconfig
 {{ end -}}
-
-{{ if eq .chezmoi.os "linux" -}}
-[difftool "bc3"]
-  trustExitCode = true
-[gpg]
-	program = gpg
-[mergetool "bc3"]
-	trustExitCode = true
-{{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
-[credential]
-	helper = cache --timeout=3600
-
-{{ else }}
-[credential]
-	helper = manager
-
-{{ end }}
-{{ end }}
-
-{{ if eq .chezmoi.os "windows" }}
-[credential]
-	helper = manager
-[difftool "bc3"]
-	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
-[mergetool "bc3"]
-	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
-{{ end }}

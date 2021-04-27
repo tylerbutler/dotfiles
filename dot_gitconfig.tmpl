@@ -100,5 +100,5 @@
   path = {{ .chezmoi.homeDir }}/.config/git/mac.gitconfig
 {{ else if (eq .chezmoi.os "windows") }}
 [include]
-  path = {{ .chezmoi.homeDir }}/.config/git/windows.gitconfig
+  path = {{ ((splitList "\\" .chezmoi.homeDir) | join "\\\\" ) }}{{ "\\\\.config\\\\git\\\\windows.gitconfig" }}
 {{ end -}}

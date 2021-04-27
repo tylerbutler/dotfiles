@@ -11,7 +11,6 @@ else
     # clone asdf
     git clone https://github.com/asdf-vm/asdf.git  "$HOME/.asdf" --branch v0.8.0
 fi
-{{ end }}
 
 {{ if eq .chezmoi.os "linux" -}}
 # sudo apt update
@@ -44,7 +43,7 @@ sudo apt install --yes --no-install-recommends \
     xz-utils \
     zlib1g-dev
 
-{{ end }}
+{{- end -}}
 
 . $HOME/.asdf/asdf.sh
 
@@ -83,3 +82,5 @@ asdf plugin add tmux
 asdf install
 
 echo "!!! asdf setup complete !!!"
+
+{{- end -}}

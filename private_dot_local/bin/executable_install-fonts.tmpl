@@ -7,6 +7,6 @@ Powershell.exe -executionpolicy remotesigned -File "{{.chezmoi.sourceDir}}/_scri
 #!/bin/sh
 
 mkdir -p .fonts
-cp {{ .chezmoi.sourceDir }}/_fonts/**/*.ttf ~/.fonts
+cp {{ .chezmoi.sourceDir }}/_fonts/**/*.ttf $HOME/.fonts
 {{ end -}}
 {{ end -}}

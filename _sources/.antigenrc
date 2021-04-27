@@ -199,9 +199,11 @@ export SESS_PROJECT_ROOT=~/code
 export forgit_diff=gdi
 
 # Export nvm settings for zsh-nvm plugin
-export NVM_AUTO_USE=true
-export NVM_COMPLETION=true
-antigen bundle lukechilds/zsh-nvm
+if [ "$SYSTEM_TYPE" != "Darwin" ]; then
+  export NVM_AUTO_USE=true
+  export NVM_COMPLETION=true
+  antigen bundle lukechilds/zsh-nvm
+fi
 
 if (($+commands[exa])); then
   antigen bundle hermitmaster/zsh-exa-plugin

@@ -16,4 +16,9 @@ sudo add-apt-repository universe
 # Install PowerShell
 sudo apt-get install -y powershell
 
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew install --cask powershell
+
 {{ end -}}

@@ -6,4 +6,8 @@
 
 {{ .chezmoi.sourceDir }}/private_dot_config/powershell/profile.windows.ps1
 
+{{ else if eq .chezmoi.os "darwin" -}}
+
+{{ .chezmoi.sourceDir }}/_sources/.config/powershell/profile.mac.ps1
+
 {{ end -}}

@@ -19,6 +19,13 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 export PATH="$PATH:/root/.local/bin"
 
+export SYSTEM_TYPE=$(uname -s)
+
+if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+     # eval $(gdircolors $HOME/.dir_colors)
+     eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Antigen load and bootstrap
 source $HOME/antigen.zsh
 antigen init $HOME/.antigenrc
@@ -80,3 +87,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# MAC OS ONLY
+# fnm
+if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+    export PATH=/Users/tylerbu/.fnm:$PATH
+    eval "`fnm env`"
+fi

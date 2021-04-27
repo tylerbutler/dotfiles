@@ -6,4 +6,9 @@ wget -O ~/delta.deb "https://github.com/dandavison/delta/releases/download/0.5.1
 sudo apt install ~/delta.deb -y
 rm ~/delta.deb
 
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+
+brew install git-delta
+
 {{ end -}}

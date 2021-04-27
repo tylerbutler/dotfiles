@@ -6,4 +6,11 @@ wget -O ~/vivid.deb "https://github.com/sharkdp/vivid/releases/download/v0.6.0/v
 sudo dpkg -i ~/vivid.deb
 rm ~/vivid.deb
 
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+
+# install vivid, which is used to set $LS_COLORS
+brew install coreutils
+brew install vivid
+
 {{ end -}}

@@ -134,7 +134,7 @@
           "background": "#546E7A",
           "properties": {
             "postfix": " \uE0B1",
-            "macos": "mac"
+            "wsl_separator": "-"
           }
         },
         {
@@ -142,18 +142,19 @@
           "style": "powerline",
           "powerline_symbol": "",
           "background": "blue",
-          "foreground": "white",
+          "foreground": "black",
           "properties": {
             "default_user_name": "tylerbu",
-            "display_user": false
+            "display_user": false,
+            "template": "{{ if .SSHSession}}\uF6FF {{.ComputerName}}{{ else if eq .ComputerName \"tylerbu-desktop\" }}{{.ComputerName}}{{end}}"
           }
         },
         {
           "type": "shell",
           "style": "powerline",
           "powerline_symbol": "",
-          "foreground": "white",
-          "background": "lightBlue",
+          "foreground": "black",
+          "background": "magenta",
           "properties": {
             "postfix": " \uFCB5 "
           }
@@ -206,7 +207,6 @@
           "foreground": "default",
           "background": "default",
           "properties": {
-            "prefix": "",
             "text": " \u276F"
           }
         }

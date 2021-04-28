@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "linux" }}
 if [ -d "$HOME/.local/bin/oh-my-posh" ]; then
 (
     echo "!!! oh-my-posh installed already !!!"
@@ -19,3 +20,9 @@ else
     chmod u+rw $HOME/.poshthemes/*.json
     rm $HOME/.poshthemes/themes.zip
 fi
+
+{{ else if eq .chezmoi.os "darwin" }}
+brew tap jandedobbeleer/oh-my-posh
+brew install oh-my-posh
+
+{{ end }}

@@ -5,19 +5,11 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  # source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 GITSTATUS_LOG_LEVEL=DEBUG
-
-# PATH updates
-export PATH="/usr/sbin:/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/snap/bin:$PATH"
-export PATH="$PATH:/root/.local/bin"
 
 export SYSTEM_TYPE=$(uname -s)
 
@@ -72,10 +64,11 @@ autoload -Uz compinit
 compinit
 
 # eval "$(starship init zsh)"
-# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
-[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+# [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
 # nvm config; disabled and replaced by a zsh plugin
 # export NVM_DIR="$HOME/.nvm"
@@ -91,6 +84,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # MAC OS ONLY
 # fnm
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
-    export PATH=/Users/tylerbu/.fnm:$PATH
+    export PATH="$HOME/.fnm:$PATH"
     eval "`fnm env`"
 fi

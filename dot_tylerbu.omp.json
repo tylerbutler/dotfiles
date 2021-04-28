@@ -129,11 +129,11 @@
         {
           "type": "os",
           "style": "powerline",
-          "powerline_symbol": "",
+          "powerline_symbol": "",
           "foreground": "#26C6DA",
           "background": "#546E7A",
           "properties": {
-            "postfix": " \uE0B1",
+            "postfix": " ",
             "wsl_separator": "-"
           }
         },
@@ -146,7 +146,7 @@
           "properties": {
             "default_user_name": "tylerbu",
             "display_user": false,
-            "template": "{{ if .SSHSession}}\uF6FF {{.ComputerName}}{{ else if eq .ComputerName \"tylerbu-desktop\" }}{{.ComputerName}}{{end}}"
+            "template": "{{ if .SSHSession}}\uF6FF {{.ComputerName}}{{ else if ne .ComputerName \"tylerbu-desktop\" }}{{.ComputerName}}{{end}}"
           }
         },
         {
@@ -156,7 +156,7 @@
           "foreground": "black",
           "background": "magenta",
           "properties": {
-            "postfix": " \uFCB5 "
+            "prefix": " \uFCB5 "
           }
         },
         {

@@ -33,6 +33,8 @@ function windows_explorer { explorer . }
 # I find typing 'chezmoi' awkward
 Set-Alias dotfiles chezmoi
 
+# Set-Alias sudo gsudo
+
 # git
 Set-Alias git hub
 nba g "hub"

@@ -115,8 +115,7 @@
             "charging_color": "lightGreen",
             "discharging_color": "#ff5722",
             "display_charging": true,
-            "display_error": true,
-            "template": "{{.Icon}}{{ if and (not .Error) (gt .Percentage 0) }}{{.Percentage}}\uF8EF {{ end }}{{.Error}}"
+            "display_error": false
           }
         }
       ]
@@ -128,10 +127,11 @@
       "segments": [
         {
           "type": "os",
-          "style": "powerline",
+          "style": "diamond",
           "powerline_symbol": "",
           "foreground": "#26C6DA",
           "background": "#546E7A",
+          "invert_powerline": true,
           "properties": {
             "postfix": " ",
             "wsl_separator": "-"
@@ -162,8 +162,8 @@
         {
           "type": "path",
           "style": "powerline",
-          "background": "#91ddff",
-          "foreground": "#100e23",
+          "background": "lightCyan",
+          "foreground": "black",
           "powerline_symbol": "",
           "properties": {
             "folder_icon": "",
@@ -175,8 +175,8 @@
         {
           "type": "git",
           "style": "powerline",
-          "background": "#95ffa4",
-          "foreground": "#193549",
+          "background": "lightYellow",
+          "foreground": "black",
           "powerline_symbol": "",
           "properties": {
             "branch_icon": "  ",
@@ -197,6 +197,8 @@
         {
           "type": "root",
           "style": "powerline",
+          "background": "default",
+          "foreground": "yellow",
           "properties": {
             "root_icon": "\uF0E7"
           }

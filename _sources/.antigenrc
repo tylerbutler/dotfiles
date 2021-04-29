@@ -213,7 +213,7 @@ antigen bundle 3v1n0/zsh-bash-completions-fallback
 
 # Load the theme
 # antigen theme robbyrussell/oh-my-zsh themes/mh
-antigen theme romkatv/powerlevel10k
+# antigen theme romkatv/powerlevel10k
 
 # Tell antigen that we're done
 antigen apply

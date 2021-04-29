@@ -1,1 +1,5 @@
-{{ .chezmoi.sourceDir }}/_sources/mac.zshrc
+{{ if eq .chezmoi.os "linux" }}
+  {{ .chezmoi.sourceDir }}/_sources/.zshrc
+{{ else if eq .chezmoi.os "darwin" }}
+  {{ .chezmoi.sourceDir }}/_sources/mac.zshrc
+{{ end }}

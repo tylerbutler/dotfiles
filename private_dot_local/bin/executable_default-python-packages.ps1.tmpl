@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.os "windows" -}}
+
+$packages = get-content {{ .chezmoi.sourceDir }}\_sources\.default-python-packages
+$cmd = $packages | Join-String -Separator " " | ForEach-Object{ "pip install $_" }
+
+Write-Output $cmd
+
+Invoke-Expression "& $cmd"
+
+{{ end -}}

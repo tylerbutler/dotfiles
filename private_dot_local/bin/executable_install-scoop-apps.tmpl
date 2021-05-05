@@ -1,5 +1,0 @@
-{{ if eq .chezmoi.os "windows" -}}
-
-get-content .\_sources\.default-scoop-packages | Join-String -Separator " " |%{ "scoop install $_" }
-
-{{ end -}}

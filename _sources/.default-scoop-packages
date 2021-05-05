@@ -13,6 +13,7 @@ jq
 ln
 nircmd
 ripgrep
+rustup
 sd
 tre-command
 wget

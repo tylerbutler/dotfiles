@@ -1,8 +1,11 @@
-[hub]
-  protocol = https
+[core]
+	editor = "code --wait"
 
 [credential]
 	helper = manager
+
+[hub]
+	protocol = https
 
 [difftool "bc3"]
 	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe

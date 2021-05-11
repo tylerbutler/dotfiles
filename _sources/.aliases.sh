@@ -16,11 +16,11 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied t
 # listings and navigation
 alias cdr="cd-gitroot"
 # general use
-alias ls='exa --git'                                                   # ls
-alias l='exa -lbF --git'                                 # list, size, type, git
-alias ll='exa -lbGF --git'                               # long list
+# alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+# alias ls='exa --git'                                                   # ls
+# alias l='exa -lbF --git'                                 # list, size, type, git
+# alias ll='exa -lbGF --git'                               # long list
 alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
-alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
 alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 
 # specialty views
@@ -41,7 +41,7 @@ alias lsd='ls -d */'
 #alias lsf="ls -rtF | grep -v '.*/'"
 #alias l='ls -l'
 
-# grc overides for ls; brew install coreutils
+# grc overrides for ls; brew install coreutils
 # if $(gls &>/dev/null)
 # then
 #   alias ls="gls -F --color"

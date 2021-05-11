@@ -97,26 +97,6 @@
             "time_format": "3:04:05 PM",
             "prefix": "\ufa1a "
           }
-        },
-        {
-          "type": "battery",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B2",
-          "invert_powerline": true,
-          "foreground": "black",
-          "background": "yellow",
-          "properties": {
-            "battery_icon": "\uf58d",
-            "discharging_icon": "\uE231 ",
-            "charging_icon": "\uE234 ",
-            "charged_icon": "\uE22F ",
-            "color_background": true,
-            "charged_color": "green",
-            "charging_color": "lightGreen",
-            "discharging_color": "#ff5722",
-            "display_charging": true,
-            "display_error": false
-          }
         }
       ]
     },

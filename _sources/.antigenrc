@@ -112,7 +112,7 @@ antigen bundles <<EOBUNDLES
   ###############
   Aloxaf/fzf-tab
   # akoenig/npm-run.plugin.zsh # broken?
-  arzzen/calc.plugin.zsh
+  # arzzen/calc.plugin.zsh
 
   # disabled
   # b4b4r07/enhancd
@@ -205,11 +205,10 @@ if [ "$SYSTEM_TYPE" != "Darwin" ]; then
   antigen bundle lukechilds/zsh-nvm
 fi
 
-if (($+commands[exa])); then
-  antigen bundle hermitmaster/zsh-exa-plugin
-fi
-
 antigen bundle 3v1n0/zsh-bash-completions-fallback
+antigen bundle olets/zsh-abbr
+antigen bundle zpm-zsh/ls
+antigen bundle zpm-zsh/material-colors
 
 # Load the theme
 # antigen theme robbyrussell/oh-my-zsh themes/mh

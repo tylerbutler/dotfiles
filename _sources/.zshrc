@@ -18,6 +18,8 @@ if [ "$SYSTEM_TYPE" = "Darwin" ]; then
      eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+fpath=($HOME/.zsh/completions $fpath)
+
 # Antigen load and bootstrap
 source $HOME/antigen.zsh
 antigen init $HOME/.antigenrc
@@ -57,11 +59,11 @@ export LS_COLORS="$(vivid generate solarized-dark)"
 # load env variables
 source $HOME/.env.zsh
 
-fpath=($HOME/.zsh/completions $fpath)
-
 # initialize completions with ZSH's compinit
 autoload -Uz compinit
 compinit
+
+# curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/.zsh/completions/_exa
 
 # eval "$(starship init zsh)"
 eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"

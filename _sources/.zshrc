@@ -18,6 +18,11 @@ if [ "$SYSTEM_TYPE" = "Darwin" ]; then
      eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+if [ "$SYSTEM_TYPE" = "Linux" ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
+fi
+
 fpath=($HOME/.zsh/completions $fpath)
 
 # Antigen load and bootstrap

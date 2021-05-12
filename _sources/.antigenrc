@@ -5,20 +5,20 @@ antigen bundle willghatch/zsh-saneopt
 # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # asdf setup
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 
 # Hook direnv into the shell
 # echo "Hooking direnv"
-eval "$(asdf exec direnv hook zsh)"
+# eval "$(asdf exec direnv hook zsh)"
 
 # A shortcut for asdf managed direnv.
-direnv() { asdf exec direnv "$@"; }
+# direnv() { asdf exec direnv "$@"; }
 
 # append asdf completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
 # fzf prerequisites
-export FZF_BASE="$(asdf where fzf)"
+#export FZF_BASE="$(asdf where fzf)"
 
 # Setting rg as the default source for fzf
 export FZF_DEFAULT_OPTS="--height 96%"
@@ -151,7 +151,7 @@ antigen bundles <<EOBUNDLES
   mollifier/cd-gitroot
 
   # auto-switch pipenvs
-  owenstranathan/pipenv.zsh
+  # owenstranathan/pipenv.zsh
 
   # oldratlee/hacker-quotes # broken?
 

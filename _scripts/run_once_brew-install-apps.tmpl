@@ -1,8 +1,16 @@
-{{ if eq .chezmoi.os "darwin" -}}
+{{ if ne .chezmoi.os "windows" -}}
 #!/bin/bash
 
 brew install \
 bat \
-micro
+direnv \
+fzf \
+gh \
+gitui \
+golang \
+hub \
+micro \
+python \
+rust
 
 {{ end -}}

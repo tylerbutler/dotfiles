@@ -1,6 +1,6 @@
 
 # import use asdf command
-source "$(asdf direnv hook asdf)"
+# source "$(asdf direnv hook asdf)"
 
 # Uncomment the following line to make direnv silent by default.
 # export DIRENV_LOG_FORMAT=""

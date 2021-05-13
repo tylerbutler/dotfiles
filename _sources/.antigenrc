@@ -207,7 +207,7 @@ fi
 
 antigen bundle 3v1n0/zsh-bash-completions-fallback
 antigen bundle olets/zsh-abbr
-antigen bundle zpm-zsh/ls
+# antigen bundle zpm-zsh/ls
 antigen bundle zpm-zsh/material-colors
 
 # Load the theme

@@ -21,7 +21,12 @@ fi
 if [ "$SYSTEM_TYPE" = "Linux" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
+    eval "$(pyenv init -)"
 fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 fpath=($HOME/.zsh/completions $fpath)
 

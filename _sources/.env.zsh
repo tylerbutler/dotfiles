@@ -5,6 +5,9 @@ export LANG='en_US.UTF-8'
 export GPG_TTY=$(tty)
 export BAT_CONFIG_PATH="$HOME/.bat.conf"
 
+# paths for brew-installed python bins
+# export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     SESSION_TYPE=remote/ssh

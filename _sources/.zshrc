@@ -14,8 +14,9 @@ GITSTATUS_LOG_LEVEL=DEBUG
 export SYSTEM_TYPE=$(uname -s)
 
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
-     # eval $(gdircolors $HOME/.dir_colors)
-     eval "$(/opt/homebrew/bin/brew shellenv)"
+    # eval $(gdircolors $HOME/.dir_colors)
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+	fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
 
 if [ "$SYSTEM_TYPE" = "Linux" ]; then

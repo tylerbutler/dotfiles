@@ -1,9 +1,7 @@
 # sane defaults
 antigen bundle willghatch/zsh-saneopt
 
-# linuxbrew
-# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
+#### ASDF ####
 # asdf setup
 # . $HOME/.asdf/asdf.sh
 
@@ -19,11 +17,8 @@ antigen bundle willghatch/zsh-saneopt
 
 # fzf prerequisites
 # export FZF_BASE="$(asdf where fzf)"
+################
 
-# Setting rg as the default source for fzf
-export FZF_DEFAULT_OPTS="--height 96%"
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Load oh-my-zsh's library
 #antigen use oh-my-zsh

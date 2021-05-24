@@ -1,11 +1,14 @@
 [include]
-  path = linux.gitconfig
+	path = linux.gitconfig
 
 [commit]
 	gpgSign = false
 
-[hub]
-  protocol = https
+[core]
+	editor = "code --wait"
 
 [credential]
 	helper = manager
+
+[hub]
+	protocol = https

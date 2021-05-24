@@ -2,10 +2,10 @@
 	signingkey = 9952362D2D6FEF8B
 
 [hub]
-  protocol = ssh
+	protocol = ssh
 
 [difftool "bc3"]
-  trustExitCode = true
+	trustExitCode = true
 
 [gpg]
 	program = gpg

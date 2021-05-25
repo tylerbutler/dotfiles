@@ -3,5 +3,6 @@ carbon-now-cli
 npkill
 npm-check-updates
 rimraf
+sort-package-json
 vsts-npm-auth
 yarn

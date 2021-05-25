@@ -35,6 +35,11 @@ fpath=($HOME/.zsh/completions $fpath)
 source $HOME/antigen.zsh
 antigen init $HOME/.antigenrc
 
+# Setting rg as the default source for fzf
+export FZF_DEFAULT_OPTS="--height 96%"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Aliases
 source $HOME/.aliases.sh
 

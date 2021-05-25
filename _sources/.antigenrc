@@ -1,9 +1,7 @@
 # sane defaults
 antigen bundle willghatch/zsh-saneopt
 
-# linuxbrew
-# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
+#### ASDF ####
 # asdf setup
 # . $HOME/.asdf/asdf.sh
 
@@ -15,66 +13,63 @@ antigen bundle willghatch/zsh-saneopt
 # direnv() { asdf exec direnv "$@"; }
 
 # append asdf completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# fpath=(${ASDF_DIR}/completions $fpath)
 
 # fzf prerequisites
-#export FZF_BASE="$(asdf where fzf)"
+# export FZF_BASE="$(asdf where fzf)"
+################
 
-# Setting rg as the default source for fzf
-export FZF_DEFAULT_OPTS="--height 96%"
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Load oh-my-zsh's library
-antigen use oh-my-zsh
+#antigen use oh-my-zsh
 
 antigen bundles <<EOBUNDLES
   # Bundles from oh-my-zsh
   ########################
-  alias-finder
+  #alias-finder
   # ansible
-  bgnotify
+  #bgnotify
 
   # syntax highlighting
   # colorize  # replaced by fast-syntax-highlighting
 
   # suggest packages to install when commands aren't found
-  command-not-found
+  #command-not-found
 
   # enable compleat-powered completions
-  compleat
+  # compleat
 
   # cpv command uses rsync
-  cp
+  #cp
 
-  # hook direnv into the shell; it's installed by asdf
-  direnv
+  # hook direnv into the shell; it's installed by asdf/brew
+  #direnv
 
   # alt-left, alt-right to go back and forth in dirs
-  dirhistory
+  #dirhistory
 
   # docker completions and aliases
-  docker
+  #docker
 
-  # installed using asdf
-  fzf
+  # installed using brew/asdf
+  #fzf
 
-  git
-  gitfast
-  github
-  git-auto-fetch
-  git-escape-magic
-  git-extras
+  #git
+  #gitfast
+  #github
+  #git-auto-fetch
+  #git-escape-magic
+  #git-extras
   # git-prompt  # replaced by powerlevel10k
 
   # golang completions and aliases
-  golang
+  #golang
 
   # load the last working dir on shell init
-  last-working-dir
+  #last-working-dir
 
   # just press enter
-  magic-enter
+  # magic-enter
 
   # npm completions
   # npm  # replaced by zsh-better-npm-completion
@@ -88,21 +83,21 @@ antigen bundles <<EOBUNDLES
   # rand-quote
 
   # rsync completions
-  rsync
+  #rsync
 
-  shrink-path
+  #shrink-path
 
   # corrections with esc-esc
-  thefuck
+  #thefuck
 
   # output time after every command
-  timer
+  #timer
 
   # tmux completions
-  tmux
+  #tmux
 
   # add 'src' command to reload shell
-  zsh_reload
+  # zsh_reload
 
   # zsh-interactive-cd
 
@@ -206,8 +201,8 @@ if [ "$SYSTEM_TYPE" != "Darwin" ]; then
 fi
 
 antigen bundle 3v1n0/zsh-bash-completions-fallback
-antigen bundle olets/zsh-abbr
-# antigen bundle zpm-zsh/ls
+# antigen bundle olets/zsh-abbr
+antigen bundle zpm-zsh/ls
 antigen bundle zpm-zsh/material-colors
 
 # Load the theme

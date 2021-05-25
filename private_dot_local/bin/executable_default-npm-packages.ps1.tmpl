@@ -1,7 +1,9 @@
 {{ if eq .chezmoi.os "windows" -}}
 
+npm install -g pnpm
+
 $packages = get-content {{ .chezmoi.sourceDir }}\_sources\.default-npm-packages
-$cmd = $packages | Join-String -Separator " " | ForEach-Object{ "npm install -g $_" }
+$cmd = $packages | Join-String -Separator " " | ForEach-Object{ "pnpm install -g $_" }
 
 Write-Output $cmd
 

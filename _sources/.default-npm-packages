@@ -2,7 +2,6 @@ auto-install
 carbon-now-cli
 npkill
 npm-check-updates
-pnpm
 rimraf
 vsts-npm-auth
 yarn

@@ -41,6 +41,7 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Aliases
+echo "aliases init"
 source $HOME/.aliases.sh
 
 # ZSH settings
@@ -67,7 +68,7 @@ precmd() {
     fi
 }
 
-export LS_COLORS="$(vivid generate solarized-dark)"
+# export LS_COLORS="$(vivid generate solarized-dark)"
 # export LS_COLORS="$(vivid generate jellybeans)"
 # test -r "$HOME/.dir_colors"
 # eval $(dircolors $HOME/.dir_colors/nord.txt)
@@ -94,14 +95,16 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+# echo "base16 shell"
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+    # [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        # eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # MAC OS ONLY
 # fnm
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+    echo "fnm init"
     export PATH="$HOME/.fnm:$PATH"
     eval "`fnm env`"
 fi

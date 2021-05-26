@@ -10,6 +10,9 @@
 	dm-f = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
 	truncate = !bash -c 'git checkout --orphan temp $1 && git commit -m \"Truncated history\" && git checkout master && git rebase --onto temp $1 master && git branch -D temp'
 
+	local-branches = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
+	lb = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
+
 	# Stash all files, including untracked files and directories
 	stash-all = stash save --include-untracked
 

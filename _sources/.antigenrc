@@ -21,52 +21,51 @@ antigen bundle willghatch/zsh-saneopt
 
 
 # Load oh-my-zsh's library
-#antigen use oh-my-zsh
+antigen use oh-my-zsh
 
 antigen bundles <<EOBUNDLES
   # Bundles from oh-my-zsh
   ########################
-  #alias-finder
-  # ansible
-  #bgnotify
-
-  # syntax highlighting
-  # colorize  # replaced by fast-syntax-highlighting
+  alias-finder
+  bgnotify
 
   # suggest packages to install when commands aren't found
-  #command-not-found
-
-  # enable compleat-powered completions
-  # compleat
-
-  # cpv command uses rsync
-  #cp
+  command-not-found
 
   # hook direnv into the shell; it's installed by asdf/brew
-  #direnv
+  direnv
 
   # alt-left, alt-right to go back and forth in dirs
   #dirhistory
 
   # docker completions and aliases
-  #docker
+  docker
 
   # installed using brew/asdf
-  #fzf
+  fzf
 
-  #git
-  #gitfast
-  #github
+  # git aliases
+  git
+
+  # git completions
+  gitfast
+
+  # completions for hub
+  github
+
   #git-auto-fetch
-  #git-escape-magic
-  #git-extras
-  # git-prompt  # replaced by powerlevel10k
+
+  # usability
+  git-escape-magic
+
+  # completions for git-extras
+  git-extras
 
   # golang completions and aliases
-  #golang
+  golang
 
   # load the last working dir on shell init
-  #last-working-dir
+  last-working-dir
 
   # just press enter
   # magic-enter
@@ -75,7 +74,7 @@ antigen bundles <<EOBUNDLES
   # npm  # replaced by zsh-better-npm-completion
 
   # nvm completions
-  # nvm
+  nvm
 
   # ctrl-G to switch between local and global history
   # per-directory-history
@@ -83,103 +82,101 @@ antigen bundles <<EOBUNDLES
   # rand-quote
 
   # rsync completions
-  #rsync
+  rsync
 
   #shrink-path
 
   # corrections with esc-esc
-  #thefuck
+  thefuck
 
   # output time after every command
-  #timer
+  timer
 
   # tmux completions
-  #tmux
+  tmux
 
   # add 'src' command to reload shell
-  # zsh_reload
+  zsh_reload
 
   # zsh-interactive-cd
 
   # zsh-navigation-tools  # unneeded?
 
-  # Other plugins
-  ###############
-  Aloxaf/fzf-tab
-  # akoenig/npm-run.plugin.zsh # broken?
-  # arzzen/calc.plugin.zsh
-
-  # disabled
-  # b4b4r07/enhancd
-
-  # expand aliases when they're used
-  brymck/print-alias
-
-  # adds sess command for tmux session management
-  ChrisPenner/session-sauce
-
-  # git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
-  ddollar/git-utils
-
-  # run ls on every cd; disabled
-  # desyncr/auto-ls
-
-  # asdf venv manager hook
-  # kiurchv/asdf.plugin.zsh
-
-  # Support ... and .... etc.
-  knu/zsh-manydots-magic
-
-  # npm completions
-  lukechilds/zsh-better-npm-completion
-
-  # horizontal rules ftw
-  LuRsT/hr
-
-  # auto-complete integration; disabled
-  # marlonrichert/zsh-autocomplete
-
-  # need to install using npm i -g safe-rm
-  mattmc3/zsh-safe-rm
-
-  # add shortcut to root of git repo
-  mollifier/cd-gitroot
-
-  # auto-switch pipenvs
-  # owenstranathan/pipenv.zsh
-
-  # oldratlee/hacker-quotes # broken?
-
-  # rupa/z@master  # replaced by zoxide
-
-  # nicer dir listings
-  # supercrabtree/k  # original
-  # tylerbutler/k@master
-  # tylerbutler/k@env-vars  # personal fork with env var overrides - but it's (too) slow
-  tylerbutler/k@branch-color  # overrides only the branch color
-
-  # auto-update antigen
-  unixorn/autoupdate-antigen.zshplugin
-
-  unixorn/git-extra-commands
-  wfxr/forgit
-  wfxr/emoji-cli
-  zdharma/fast-syntax-highlighting
-  zlsun/solarized-man
-
-  # fish-style autosuggestions; disabled
-  # zsh-users/zsh-autosuggestions@master
-
-  # extra completions
-  zsh-users/zsh-completions
-
-  # type a command then up or down to find history
-  # entries that match
-  # zsh-users/zsh-history-substring-search  # unneeded?
-
 EOBUNDLES
 
-export SESS_PROJECT_ROOT=~/code
+# Other plugins
+###############
+antigen bundle Aloxaf/fzf-tab
+# antigen bundle akoenig/npm-run.plugin.zsh # broken?
+# antigen bundle arzzen/calc.plugin.zsh
+
+# disabled
+# antigen bundle b4b4r07/enhancd
+
+# expand aliases when they're used
+antigen bundle brymck/print-alias
+
+# adds sess command for tmux session management
+antigen bundle ChrisPenner/session-sauce
+
+# git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
+# antigen bundle ddollar/git-utils
+
+# run ls on every cd; disabled
+# antigen bundle desyncr/auto-ls
+
+# asdf venv manager hook
+# antigen bundle kiurchv/asdf.plugin.zsh
+
+# Support ... and .... etc.
+antigen bundle knu/zsh-manydots-magic
+
+# npm completions
+antigen bundle lukechilds/zsh-better-npm-completion
+
+# horizontal rules ftw
+antigen bundle LuRsT/hr
+
+# auto-complete integration; disabled
+# antigen bundle marlonrichert/zsh-autocomplete
+
+# need to install using npm i -g safe-rm
+# antigen bundle mattmc3/zsh-safe-rm
+
+# add shortcut to root of git repo
+antigen bundle mollifier/cd-gitroot
+
+# auto-switch pipenvs
+antigen bundle owenstranathan/pipenv.zsh
+
+# antigen bundle oldratlee/hacker-quotes # broken?
+
+# nicer dir listings
+# antigen bundle supercrabtree/k  # original
+# antigen bundle tylerbutler/k@master
+# antigen bundle tylerbutler/k@env-vars  # personal fork with env var overrides - but it's (too) slow
+antigen bundle tylerbutler/k@branch-color  # overrides only the branch color
+
+# auto-update antigen
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+
+antigen bundle unixorn/git-extra-commands
+# antigen bundle wfxr/forgit
+antigen bundle wfxr/emoji-cli
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zlsun/solarized-man
+
+# fish-style autosuggestions; disabled
+# antigen bundle zsh-users/zsh-autosuggestions@master
+
+# extra completions
+antigen bundle zsh-users/zsh-completions
+
+# type a command then up or down to find history
+# entries that match
+# antigen bundle zsh-users/zsh-history-substring-search  # unneeded?
+
+export SESS_PROJECT_ROOT="$HOME/code"
 
 # export ENHANCD_FILTER='fzf'
 # When entering a git repo do a git status, othewise do an ls
@@ -202,8 +199,9 @@ fi
 
 antigen bundle 3v1n0/zsh-bash-completions-fallback
 # antigen bundle olets/zsh-abbr
-antigen bundle zpm-zsh/ls
+# antigen bundle zpm-zsh/ls
 antigen bundle zpm-zsh/material-colors
+antigen bundle zimfw/exa
 
 # Load the theme
 # antigen theme robbyrussell/oh-my-zsh themes/mh
@@ -224,7 +222,7 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # git
 #####
-GIT_AUTO_FETCH_INTERVAL=1200 # in seconds
+GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
 
 # k
 ###

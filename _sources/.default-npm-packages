@@ -4,5 +4,6 @@ npkill
 npm-check-updates
 rimraf
 sort-package-json
+tiged
 vsts-npm-auth
 yarn

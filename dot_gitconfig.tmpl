@@ -1,97 +1,97 @@
 [user]
-	email = tyler@tylerbutler.com
-	name = Tyler Butler
+  email = tyler@tylerbutler.com
+  name = Tyler Butler
 [init]
   defaultBranch = main
 [alias]
-	delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
-	delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
-	dm = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
-	dm-f = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
-	truncate = !bash -c 'git checkout --orphan temp $1 && git commit -m \"Truncated history\" && git checkout master && git rebase --onto temp $1 master && git branch -D temp'
+  delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
+  delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
+  dm = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
+  dm-f = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
+  truncate = !bash -c 'git checkout --orphan temp $1 && git commit -m \"Truncated history\" && git checkout master && git rebase --onto temp $1 master && git branch -D temp'
 
-	local-branches = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
-	lb = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
+  local-branches = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
+  lb = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
 
-	# Stash all files, including untracked files and directories
-	stash-all = stash save --include-untracked
+  # Stash all files, including untracked files and directories
+  stash-all = stash save --include-untracked
 
-	# Show the branches, ordered by most recently updated closest to prompt
-	# Also shows the last commit and committer for each branch listed.
-	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+  # Show the branches, ordered by most recently updated closest to prompt
+  # Also shows the last commit and committer for each branch listed.
+  recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 
-	# Graph/Log aliases
-	lp = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	graph = log --graph --all --decorate --stat --date=iso
-	graph1 = log --date-order --decorate --graph --oneline --no-show-signature
+  # Graph/Log aliases
+  lp = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  graph = log --graph --all --decorate --stat --date=iso
+  graph1 = log --date-order --decorate --graph --oneline --no-show-signature
 
 [color]
-	ui = true
+  ui = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "diff"]
-	meta = yellow
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 [core]
-	autocrlf = input
-	editor = micro
-	# editor = "if [[ $EDITOR -eq 'code' ]]; then ED='code --wait'; else ED=$EDITOR; fi; $ED"
-	longpaths = true
-	# pager = diff-so-fancy | less --tabs=4 -RFX
-	pager = delta
+  autocrlf = input
+  editor = micro
+  # editor = "if [[ $EDITOR -eq 'code' ]]; then ED='code --wait'; else ED=$EDITOR; fi; $ED"
+  longpaths = true
+  # pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
 
-	# Global gitignore rules
-	excludesfile = ~/.gitignore_global
+  # Global gitignore rules
+  excludesfile = ~/.gitignore_global
 
-	# Pay attention to case, even on OSX and Windows
-	ignorecase = false
+  # Pay attention to case, even on OSX and Windows
+  ignorecase = false
 [delta]
-	syntax-theme = "Solarized (dark)"
-	plus-color = "#012800"
-	minus-color = "#340001"
+  syntax-theme = "Solarized (dark)"
+  plus-color = "#012800"
+  minus-color = "#340001"
 [diff]
-	# Show submodules changes in diffs as a list of commits like `git log` shows
-	submodule = log
-	tool = bc3
+  # Show submodules changes in diffs as a list of commits like `git log` shows
+  submodule = log
+  tool = bc3
 [fetch]
-	# Push submodule changes to the remote before pushing the main project.
-	# If a submodule fails to push the main project will not be pushed.
-	recurseSubmodules = on-demand
+  # Push submodule changes to the remote before pushing the main project.
+  # If a submodule fails to push the main project will not be pushed.
+  recurseSubmodules = on-demand
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [merge]
-	tool = bc3
+  tool = bc3
 [merge "npm-merge-driver"]
-	name = automatically merge npm lockfiles
-	driver = npx npm-merge-driver merge %A %O %B %P
+  name = automatically merge npm lockfiles
+  driver = npx npm-merge-driver merge %A %O %B %P
 [pager]
-	# Don't use pager when listing branches
-	# Taken from https://stackoverflow.com/a/48370253/1245380
-	branch = false
+  # Don't use pager when listing branches
+  # Taken from https://stackoverflow.com/a/48370253/1245380
+  branch = false
 [status]
-	# Show status of git submodules in git status output
-	submoduleSummary = true
+  # Show status of git submodules in git status output
+  submoduleSummary = true
 [tag]
-	forceSignAnnotated = false
+  forceSignAnnotated = false
 
 {{- if (eq .chezmoi.os "linux") -}}
-	{{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+  {{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
 [include]
   path = {{ .chezmoi.homeDir }}/.config/git/wsl.gitconfig
   {{ else -}}

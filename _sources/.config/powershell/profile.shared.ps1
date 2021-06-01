@@ -1,7 +1,5 @@
-$env:Path = "$HOME/.local/bin;" + $env:Path
-$env:Path = "$HOME/scoop/apps/python/3.9.5/Scripts;" + $env:Path
+$env:Path = "$HOME/.local/bin;$HOME/scoop/shims;$HOME/scoop/apps/python/3.9.5/Scripts;" + $env:Path
 
-Import-Module PowerShellGet
 Import-Module -Name Terminal-Icons
 
 Write-Output "Sourcing aliases..."

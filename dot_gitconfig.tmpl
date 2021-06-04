@@ -94,10 +94,10 @@
   {{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
 [include]
   path = {{ .chezmoi.homeDir }}/.config/git/wsl.gitconfig
-  {{ else -}}
+  {{ else }}
 [include]
   path = {{ .chezmoi.homeDir }}/.config/git/linux.gitconfig
-  {{ end -}}
+  {{ end }}
 {{ else if (eq .chezmoi.os "darwin") }}
 [include]
   path = {{ .chezmoi.homeDir }}/.config/git/mac.gitconfig

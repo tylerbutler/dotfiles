@@ -1,5 +1,5 @@
 [user]
-	signingkey = 9952362D2D6FEF8B
+#	signingkey = 9952362D2D6FEF8B
 
 [hub]
 	protocol = ssh
@@ -16,5 +16,5 @@
 [credential]
 	helper = cache --timeout=3600
 
-[commit]
-	gpgSign = true
+#[commit]
+#	gpgSign = true

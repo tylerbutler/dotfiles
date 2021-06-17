@@ -66,7 +66,8 @@ alias gnd="git clean -dn"
 alias gndd="git clean -df"
 
 alias default-cargo-crates="xargs cargo install <~/.default-cargo-crates"
-alias default-npm-packages="npm install -g pnpm ; xargs pnpm i -g <~/.default-npm-packages"
+alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"
+alias extra-npm-packages="xargs npm i -g <~/.extra-npm-packages"
 alias default-python-packages="xargs pip install <~/.default-python-packages"
 
 alias zfs-space="zfs list -o space -r deadpool wolverine x23"

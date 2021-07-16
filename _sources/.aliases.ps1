@@ -71,3 +71,5 @@ nba gsc "hub clone --filter=tree:0"
 nba gsi "hub submodule update --init --recursive"
 nba gst "hub status -u ."
 nba gsu "hub submodule update"
+
+nba z "zoxide"

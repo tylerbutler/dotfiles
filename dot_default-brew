@@ -1,6 +1,7 @@
 bat
 direnv
 fd
+fnm
 fzf
 gh
 gitui

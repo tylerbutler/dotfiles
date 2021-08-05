@@ -76,3 +76,7 @@ alias zfs-sync="syncoid --no-stream --no-sync-snap --create-bookmark "
 alias zfs-snap-delete="sudo zfs destroy -v "
 
 alias rmlint="\rmlint -g -C "
+
+# brew
+alias b="brew"
+alias bupg="brew update && brew upgrade"

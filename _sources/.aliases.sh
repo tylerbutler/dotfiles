@@ -65,6 +65,7 @@ alias gsc="git clone --filter=tree:0"
 alias gnd="git clean -dn"
 alias gndd="git clean -df"
 
+alias default-brew="xargs brew install <~/.default-brew"
 alias default-cargo-crates="xargs cargo install <~/.default-cargo-crates"
 alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"
 alias extra-npm-packages="xargs npm i -g <~/.extra-npm-packages"

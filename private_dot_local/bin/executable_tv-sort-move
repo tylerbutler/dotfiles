@@ -1,3 +1,4 @@
+rsync -avz --progress -h --remove-source-files American\ Dad! /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files Bob\'s\ Burgers /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files Family\ Guy /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files Top\ Chef /wolverine/tv/_keep/

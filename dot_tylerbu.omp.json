@@ -159,6 +159,7 @@
           "foreground": "black",
           "powerline_symbol": "",
           "properties": {
+            "display_status": true,
             "branch_icon": "  ",
             "display_stash_count": true,
             "display_upstream_icon": true

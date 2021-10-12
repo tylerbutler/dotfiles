@@ -191,11 +191,11 @@ export SESS_PROJECT_ROOT="$HOME/code"
 export forgit_diff=gdi
 
 # Export nvm settings for zsh-nvm plugin
-if [ "$SYSTEM_TYPE" != "Darwin" ]; then
-  export NVM_AUTO_USE=true
-  export NVM_COMPLETION=true
-  antigen bundle lukechilds/zsh-nvm
-fi
+# if [ "$SYSTEM_TYPE" != "Darwin" ]; then
+  # export NVM_AUTO_USE=true
+  # export NVM_COMPLETION=true
+  # antigen bundle lukechilds/zsh-nvm
+# fi
 
 antigen bundle 3v1n0/zsh-bash-completions-fallback
 # antigen bundle olets/zsh-abbr

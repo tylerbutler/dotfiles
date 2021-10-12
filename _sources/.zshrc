@@ -16,7 +16,7 @@ export SYSTEM_TYPE=$(uname -s)
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     # eval $(gdircolors $HOME/.dir_colors)
     eval "$(/opt/homebrew/bin/brew shellenv)"
-	fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+    fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
 
 if [ "$SYSTEM_TYPE" = "Linux" ]; then
@@ -101,10 +101,6 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
     # [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         # eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-# MAC OS ONLY
-# fnm
-if [ "$SYSTEM_TYPE" = "Darwin" ]; then
-    echo "fnm init"
-    export PATH="$HOME/.fnm:$PATH"
-    eval "`fnm env`"
-fi
+echo "fnm init"
+export PATH="$HOME/.fnm:$PATH"
+eval "`fnm env`"

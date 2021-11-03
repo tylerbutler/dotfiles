@@ -81,3 +81,7 @@ alias rmlint="\rmlint -g -C "
 # brew
 alias b="brew"
 alias bupg="brew update && brew upgrade"
+
+# I use fnm for node management on Linux and mac, but nvs on Windows
+alias nvm="fnm"
+alias nvs="fnm"

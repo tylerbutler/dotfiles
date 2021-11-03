@@ -15,6 +15,7 @@ hub
 jq
 ln
 nircmd
+nvs
 ripgrep
 rustup
 sd

@@ -73,3 +73,7 @@ nba gst "hub status -u ."
 nba gsu "hub submodule update"
 
 nba z "zoxide"
+
+# I use fnm for node management on Linux and mac, but nvs on Windows
+nba fnm "nvs"
+nba nvm "nvs"

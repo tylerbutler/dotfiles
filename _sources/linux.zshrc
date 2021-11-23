@@ -14,3 +14,4 @@ base16_helios
 # base16_materia
 # base16_paraiso
 # base16_tomorrow-night-eighties
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}

@@ -41,7 +41,7 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Aliases
-echo "aliases init"
+# echo "aliases init"
 source $HOME/.aliases.sh
 
 # ZSH settings
@@ -82,8 +82,13 @@ compinit
 
 # curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/.zsh/completions/_exa
 
+# PROMPT CONFIG
 # eval "$(starship init zsh)"
-eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"
+# eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"
+source $HOME/_vendor/headline.zsh-theme
+HEADLINE_DO_GIT_STATUS_COUNTS=true
+HEADLINE_LINE_MODE="on"
+
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
@@ -101,6 +106,7 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
     # [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         # eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-echo "fnm init"
+# fnm (fast node manager)
+# echo "fnm init"
 export PATH="$HOME/.fnm:$PATH"
 eval "`fnm env`"

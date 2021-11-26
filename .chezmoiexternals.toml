@@ -1,0 +1,4 @@
+["_vendor/headline.zsh-theme"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/moarram/headline/main/headline.zsh-theme"
+    refreshPeriod = "168h" # 1 week

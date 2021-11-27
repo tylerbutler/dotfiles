@@ -7,6 +7,7 @@ alias zshconfig="$EDITOR ~/.zshrc"
 
 # I find typing 'chezmoi' awkward
 alias dotfiles=chezmoi
+alias df=dotfiles
 
 # Pipe my public key to the clipboard
 alias pbcopy="xclip -selection clipboard"

@@ -1,7 +1,7 @@
 {
   "indent": "2",
   "readmeFile": "README.md",
-  "licenseFile": "LICENSE.md",
+  "licenseFile": "LICENSE",
   "aliases": {
     "node": ["license", "readme", "editorconfig", "gitignore"]
   }

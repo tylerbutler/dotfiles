@@ -11,10 +11,63 @@
   "final_space": true,
   "blocks": [
     {
-      "type": "rprompt",
-      "alignment": "right",
-      "vertical_offset": 0,
+      "type": "prompt",
+      "alignment": "left",
+      "vertical_offset": -1,
       "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "magenta",
+          "properties": {
+            "display_user": true,
+            "display_host": false,
+            "ssh_icon": "(ssh) ",
+            "prefix": "",
+            "postfix": "",
+            "template": "<b>{{.UserName}}</b>"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "darkGray",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": " @ "
+          }
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "yellow",
+          "properties": {
+            "template": "<b>{{.ComputerName}}</b>",
+            "prefix": "",
+            "postfix": ""
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "darkGray",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": ": "
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "blue",
+          "properties": {
+            "prefix": "<b>",
+            "postfix": "</b>",
+            "style": "full"
+          }
+        },
         {
           "type": "git",
           "style": "plain",
@@ -29,98 +82,16 @@
     {
       "type": "prompt",
       "alignment": "left",
-      "vertical_offset": 0,
+      "newline": true,
       "segments": [
         {
-          "type": "session",
-          "style": "plain",
-          "foreground": "lightMagenta",
-          "properties": {
-            "display_user": true,
-            "display_host": false,
-            "ssh_icon": "(ssh) ",
-            "prefix": ""
-          }
-        },
-        {
-          "type": "os",
+          "type": "text",
           "style": "plain",
           "foreground": "default",
           "properties": {
             "prefix": "",
             "postfix": "",
-            "wsl_separator": "-",
-            "linux": "",
-            "windows": ""
-          }
-        },
-        {
-          "type": "session",
-          "style": "plain",
-          "foreground": "yellow",
-          "properties": {
-            "prefix": " ",
-            "postfix": "",
-            "display_user": false,
-            "display_host": true,
-            "ssh_icon": ""
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": ": "
-          }
-        },
-        {
-          "type": "path",
-          "style": "plain",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "blue",
-          "properties": {
-            "prefix": " ",
-            "style": "full"
-          }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "newline": true,
-      "vertical_offset": 1,
-      "segments": [
-        {
-          "type": "exit",
-          "style": "diamond",
-          "foreground": "black",
-          "background": "red",
-          "powerline_symbol": "\uE0B2",
-          "invert_powerline": true,
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "properties": {
-            "display_exit_code": true,
-            "color_foreground": true,
-            "always_enabled": false,
-            "prefix": "\uE3BF "
-          }
-        },
-        {
-          "type": "shell",
-          "style": "diamond",
-          "powerline_symbol": "",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "foreground": "black",
-          "background": "lightMagenta",
-          "properties": {
-            "prefix": " \uFCB5 "
+            "text": "$"
           }
         }
       ]

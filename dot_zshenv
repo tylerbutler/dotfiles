@@ -1,7 +1,9 @@
+
 # APPEND (first entry is highest)
 export PATH="$PATH:/root/.local/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 # PREPEND (last entry is highest)
 export PATH="/usr/sbin:/sbin:$PATH"
@@ -17,3 +19,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+export GOPATH="$HOME/go/bin"

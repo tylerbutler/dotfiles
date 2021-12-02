@@ -63,14 +63,15 @@
           "style": "plain",
           "foreground": "blue",
           "properties": {
-            "prefix": "<b>",
-            "postfix": "</b>",
+            "prefix": "",
+            "postfix": "",
             "style": "full"
           }
         },
         {
           "type": "git",
           "style": "plain",
+          "foreground": "cyan",
           "properties": {
             "fetch_status": true,
             "fetch_stash_count": true,

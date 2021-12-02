@@ -85,8 +85,8 @@ compinit
 # PROMPT CONFIG
 # eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"
-eval "$(oh-my-posh --init --shell zsh --config ~/.headline.omp.json)"
-# source $HOME/_vendor/headline.zsh-theme
+# eval "$(oh-my-posh --init --shell zsh --config ~/.headline.omp.json)"
+source $HOME/_vendor/headline.zsh-theme
 HEADLINE_DO_GIT_STATUS_COUNTS=true
 HEADLINE_LINE_MODE="on"
 

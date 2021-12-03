@@ -92,22 +92,9 @@ HEADLINE_LINE_MODE="on"
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
-# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
-# [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
-
-# nvm config; disabled and replaced by a zsh plugin
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Base16 Shell
-# echo "base16 shell"
-# BASE16_SHELL="$HOME/.config/base16-shell/"
-# [ -n "$PS1" ] && \
-    # [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        # eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 # fnm (fast node manager)
 # echo "fnm init"
 export PATH="$HOME/.fnm:$PATH"
 eval "`fnm env`"
+
+function gig() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}

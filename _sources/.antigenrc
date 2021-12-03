@@ -1,25 +1,6 @@
 # sane defaults
 antigen bundle willghatch/zsh-saneopt
 
-#### ASDF ####
-# asdf setup
-# . $HOME/.asdf/asdf.sh
-
-# Hook direnv into the shell
-# echo "Hooking direnv"
-# eval "$(asdf exec direnv hook zsh)"
-
-# A shortcut for asdf managed direnv.
-# direnv() { asdf exec direnv "$@"; }
-
-# append asdf completions to fpath
-# fpath=(${ASDF_DIR}/completions $fpath)
-
-# fzf prerequisites
-# export FZF_BASE="$(asdf where fzf)"
-################
-
-
 # Load oh-my-zsh's library
 antigen use oh-my-zsh
 
@@ -41,7 +22,7 @@ antigen bundles <<EOBUNDLES
   # docker completions and aliases
   docker
 
-  # installed using brew/asdf
+  # installed using brew
   fzf
 
   # git aliases
@@ -52,8 +33,6 @@ antigen bundles <<EOBUNDLES
 
   # completions for hub
   github
-
-  #git-auto-fetch
 
   # usability
   git-escape-magic
@@ -67,24 +46,8 @@ antigen bundles <<EOBUNDLES
   # load the last working dir on shell init
   last-working-dir
 
-  # just press enter
-  # magic-enter
-
-  # npm completions
-  # npm  # replaced by zsh-better-npm-completion
-
-  # nvm completions
-  nvm
-
-  # ctrl-G to switch between local and global history
-  # per-directory-history
-
-  # rand-quote
-
   # rsync completions
   rsync
-
-  #shrink-path
 
   # corrections with esc-esc
   thefuck
@@ -95,38 +58,17 @@ antigen bundles <<EOBUNDLES
   # tmux completions
   tmux
 
-  # add 'src' command to reload shell
-  zsh_reload
-
-  # zsh-interactive-cd
-
-  # zsh-navigation-tools  # unneeded?
-
 EOBUNDLES
 
 # Other plugins
 ###############
 antigen bundle Aloxaf/fzf-tab
-# antigen bundle akoenig/npm-run.plugin.zsh # broken?
-# antigen bundle arzzen/calc.plugin.zsh
-
-# disabled
-# antigen bundle b4b4r07/enhancd
 
 # expand aliases when they're used
 antigen bundle brymck/print-alias
 
 # adds sess command for tmux session management
 antigen bundle ChrisPenner/session-sauce
-
-# git incoming, outgoing, wtf; more info https://github.com/ddollar/git-utils
-# antigen bundle ddollar/git-utils
-
-# run ls on every cd; disabled
-# antigen bundle desyncr/auto-ls
-
-# asdf venv manager hook
-# antigen bundle kiurchv/asdf.plugin.zsh
 
 # Support ... and .... etc.
 antigen bundle knu/zsh-manydots-magic
@@ -140,16 +82,11 @@ antigen bundle LuRsT/hr
 # auto-complete integration; disabled
 # antigen bundle marlonrichert/zsh-autocomplete
 
-# need to install using npm i -g safe-rm
-# antigen bundle mattmc3/zsh-safe-rm
-
 # add shortcut to root of git repo
 antigen bundle mollifier/cd-gitroot
 
 # auto-switch pipenvs
 antigen bundle owenstranathan/pipenv.zsh
-
-# antigen bundle oldratlee/hacker-quotes # broken?
 
 # nicer dir listings
 # antigen bundle supercrabtree/k  # original
@@ -163,7 +100,7 @@ antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle unixorn/git-extra-commands
 # antigen bundle wfxr/forgit
 antigen bundle wfxr/emoji-cli
-antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zlsun/solarized-man
 
 # fish-style autosuggestions; disabled
@@ -172,30 +109,10 @@ antigen bundle zlsun/solarized-man
 # extra completions
 antigen bundle zsh-users/zsh-completions
 
-# type a command then up or down to find history
-# entries that match
-# antigen bundle zsh-users/zsh-history-substring-search  # unneeded?
-
 export SESS_PROJECT_ROOT="$HOME/code"
-
-# export ENHANCD_FILTER='fzf'
-# When entering a git repo do a git status, othewise do an ls
-# export ENHANCD_HOOK_AFTER_CD='([ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1) && git status || ll'
-# export ENHANCD_COMMAND='c'
-# export ENHANCD_DISABLE_HOME=1
-# export ENHANCD_DISABLE_HYPHEN=1
-# export ENHANCD_DISABLE_DOT=1
-# export ENHANCD_HYPHEN_ARG=_
 
 # Set gdi as an alias for interactive git diff
 export forgit_diff=gdi
-
-# Export nvm settings for zsh-nvm plugin
-# if [ "$SYSTEM_TYPE" != "Darwin" ]; then
-  # export NVM_AUTO_USE=true
-  # export NVM_COMPLETION=true
-  # antigen bundle lukechilds/zsh-nvm
-# fi
 
 antigen bundle 3v1n0/zsh-bash-completions-fallback
 # antigen bundle olets/zsh-abbr
@@ -224,31 +141,6 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 #####
 GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
 
-# k
-###
-# K_COLOR_DI=${K_CUSTOM_COLOR_DI:-"0;34"}  # di:directory
-# K_COLOR_LN=${K_CUSTOM_COLOR_LN:-"0;35"}  # ln:symlink
-# K_COLOR_SO=${K_CUSTOM_COLOR_SO:-"0;32"}  # so:socket
-# K_COLOR_PI=${K_CUSTOM_COLOR_PI:-"0;33"}  # pi:pipe
-# K_COLOR_EX=${K_CUSTOM_COLOR_EX:-"0;31"}  # ex:executable
-# K_COLOR_BD=${K_CUSTOM_COLOR_BD:-"34;46"} # bd:block special
-# K_COLOR_CD=${K_CUSTOM_COLOR_CD:-"34;43"} # cd:character special
-# K_COLOR_SU=${K_CUSTOM_COLOR_SU:-"30;41"} # su:executable with setuid bit set
-# K_COLOR_SG=${K_CUSTOM_COLOR_SG:-"30;46"} # sg:executable with setgid bit set
-# K_COLOR_TW=${K_CUSTOM_COLOR_TW:-"30;42"} # tw:directory writable to others, with sticky bit
-# K_COLOR_OW=${K_CUSTOM_COLOR_OW:-"30;43"} # ow:directory writable to others, without sticky bit
-# K_COLOR_BR=${K_CUSTOM_COLOR_BR:-"0;30"}  # branch
-
-export K_CUSTOM_COLOR_ENABLE=true
-# export K_CUSTOM_COLOR_BR="32;40"
-export K_CUSTOM_COLOR_BR="92;40"
-# . "$HOME/.local/share/lscolors.sh"
-
-# magic-enter
-#############
-MAGIC_ENTER_GIT_COMMAND="git status -sb;ll;echo '\n'"
-MAGIC_ENTER_OTHER_COMMAND="ll;echo '\n'"
-
 # thefuck
 #########
 # alias fuck to oops
@@ -266,32 +158,3 @@ zstyle ':autocomplete:*' frecent-dirs off
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=241,bold"
 # Bind ctrl-space to autosuggest accept
 bindkey "^ " autosuggest-accept
-
-# nvm config
-############
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# place this after nvm initialization!
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#   echo "Loading node from .nvmrc..."
-#   local node_version="$(nvm version)"
-#   local nvmrc_path="$(nvm_find_nvmrc)"
-
-#   if [ -n "$nvmrc_path" ]; then
-#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-#     if [ "$nvmrc_node_version" = "N/A" ]; then
-#       nvm install
-#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#       nvm use
-#     fi
-#   elif [ "$node_version" != "$(nvm version default)" ]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc

@@ -1,0 +1,7 @@
+if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+    base16_darktooth
+fi
+
+if [ "$SYSTEM_TYPE" = "Linux" ]; then
+    base16_helios
+fi

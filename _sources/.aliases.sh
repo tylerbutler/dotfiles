@@ -86,3 +86,7 @@ alias bupg="brew update && brew upgrade"
 # I use fnm for node management on Linux and mac, but nvs on Windows
 alias nvm="fnm"
 alias nvs="fnm"
+
+alias edit="$EDITOR"
+alias aliases="$EDITOR $HOME/.aliases.sh"
+alias refreshenv="omz reload"

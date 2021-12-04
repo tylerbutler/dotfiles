@@ -13,7 +13,10 @@ antigen bundles <<EOBUNDLES
   # suggest packages to install when commands aren't found
   command-not-found
 
-  # hook direnv into the shell; it's installed by asdf/brew
+  common-aliases
+  deno
+
+  # hook direnv into the shell; it's installed by brew
   direnv
 
   # alt-left, alt-right to go back and forth in dirs
@@ -46,6 +49,8 @@ antigen bundles <<EOBUNDLES
   # load the last working dir on shell init
   last-working-dir
 
+  rand-quote
+
   # rsync completions
   rsync
 
@@ -57,6 +62,9 @@ antigen bundles <<EOBUNDLES
 
   # tmux completions
   tmux
+
+  zbell
+  #zsh-interactive-cd
 
 EOBUNDLES
 

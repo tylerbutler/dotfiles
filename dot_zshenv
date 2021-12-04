@@ -1,3 +1,5 @@
+export EDITOR="micro"
+export VISUAL="code --wait"
 
 # APPEND (first entry is highest)
 export PATH="$PATH:/root/.local/bin"

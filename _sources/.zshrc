@@ -12,6 +12,16 @@ zstyle ':autocomplete:*' min-delay 0.0  # float
 zstyle ':autocomplete:*' min-input 1  # int
 # Wait until this many characters have been typed, before showing completions.
 
+zstyle ':autocomplete:*' list-lines 8  # int
+# If there are fewer than this many lines below the prompt, move the prompt up
+# to make room for showing this many lines of completions (approximately).
+
+zstyle ':autocomplete:history-search:*' list-lines 8  # int
+# Show this many history lines when pressing ↑.
+
+zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  # int
+# Show this many history lines when pressing ⌃R or ⌃S.
+
 zstyle ':autocomplete:*' recent-dirs zoxide
 # cdr:  Use Zsh's `cdr` function to show recent directories as completions.
 # no:   Don't show recent directories.

@@ -87,9 +87,6 @@ antigen bundle lukechilds/zsh-better-npm-completion
 # horizontal rules ftw
 antigen bundle LuRsT/hr
 
-# auto-complete integration; disabled
-# antigen bundle marlonrichert/zsh-autocomplete
-
 # add shortcut to root of git repo
 antigen bundle mollifier/cd-gitroot
 
@@ -156,9 +153,9 @@ eval "$(thefuck --alias oops)"
 
 # zsf-autocomplete
 ##################
-zstyle ':autocomplete:list-choices:*' min-input 3
-zstyle ':autocomplete:space:*' magic correct-word expand-history
-zstyle ':autocomplete:*' frecent-dirs off
+# zstyle ':autocomplete:list-choices:*' min-input 3
+# zstyle ':autocomplete:space:*' magic correct-word expand-history
+# zstyle ':autocomplete:*' frecent-dirs off
 
 # zsh-users/zsh-autosuggestions
 ###############################

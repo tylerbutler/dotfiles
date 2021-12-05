@@ -4,7 +4,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "24h"
-["_vendor/headline.zsh-theme"]
+[".local/headline.zsh-theme"]
     type = "file"
     url = "https://raw.githubusercontent.com/moarram/headline/main/headline.zsh-theme"
     refreshPeriod = "168h" # 1 week

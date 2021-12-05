@@ -67,7 +67,6 @@ fpath=($HOME/.zsh/completions $fpath)
 
 # Antigen load and bootstrap
 source $HOME/.local/antigen.zsh # see .chezmoiexternals.toml
-# source $HOME/antigen.zsh
 
 antigen init $HOME/.antigenrc
 
@@ -125,7 +124,7 @@ source $HOME/.env.zsh
 # eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.headline.omp.json)"
-source $HOME/_vendor/headline.zsh-theme
+source $HOME/.local/headline.zsh-theme
 HEADLINE_DO_GIT_STATUS_COUNTS=true
 HEADLINE_LINE_MODE="on"
 

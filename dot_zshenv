@@ -23,3 +23,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export GOPATH="$HOME/go/bin"
+export EMPLACE_CONFIG="$HOME/.config/emplace.toml"

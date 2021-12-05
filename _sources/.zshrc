@@ -14,7 +14,6 @@ GITSTATUS_LOG_LEVEL=DEBUG
 export SYSTEM_TYPE=$(uname -s)
 
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
-    # eval $(gdircolors $HOME/.dir_colors)
     eval "$(/opt/homebrew/bin/brew shellenv)"
     fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
@@ -32,7 +31,9 @@ export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 fpath=($HOME/.zsh/completions $fpath)
 
 # Antigen load and bootstrap
-source $HOME/antigen.zsh
+source $HOME/.local/antigen.zsh # see .chezmoiexternals.toml
+# source $HOME/antigen.zsh
+
 antigen init $HOME/.antigenrc
 
 # Setting rg as the default source for fzf
@@ -75,6 +76,9 @@ precmd() {
 
 # load env variables
 source $HOME/.env.zsh
+
+eval "$(emplace init zsh)"
+source <(blindspot completion -s zsh)
 
 # initialize completions with ZSH's compinit
 autoload -Uz compinit

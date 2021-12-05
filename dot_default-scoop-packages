@@ -6,6 +6,7 @@ chezmoi
 curl
 delta
 dust
+emplace
 fd
 findutils
 fnm
@@ -16,6 +17,7 @@ gsudo
 hub
 jq
 ln
+lsd
 nircmd
 nvs
 ripgrep

@@ -2,16 +2,41 @@
 # zshrc
 #######
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  # source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+zstyle ':autocomplete:*' default-context history-incremental-search-backward
+# '': Start each new command line with normal autocompletion.
+# history-incremental-search-backward: Start in live history search mode.
+
+zstyle ':autocomplete:*' min-delay 0.0  # float
+# Wait this many seconds for typing to stop, before showing completions.
+
+zstyle ':autocomplete:*' min-input 1  # int
+# Wait until this many characters have been typed, before showing completions.
+
+zstyle ':autocomplete:*' recent-dirs zoxide
+# cdr:  Use Zsh's `cdr` function to show recent directories as completions.
+# no:   Don't show recent directories.
+# zsh-z|zoxide|z.lua|z.sh|autojump|fasd: Use this instead (if installed).
+# ⚠️ NOTE: This setting can NOT be changed at runtime.
+
+zstyle ':autocomplete:*' insert-unambiguous no
+# no:  Tab inserts the top completion.
+# yes: Tab first inserts a substring common to all listed completions, if any.
+
+zstyle ':autocomplete:*' widget-style complete-word
+# complete-word: (Shift-)Tab inserts the top (bottom) completion.
+# menu-complete: Press again to cycle to next (previous) completion.
+# menu-select:   Same as `menu-complete`, but updates selection in menu.
+# ⚠️ NOTE: This setting can NOT be changed at runtime.
+
+zstyle ':autocomplete:*' fzf-completion yes
+# no:  Tab uses Zsh's completion system only.
+# yes: Tab first tries Fzf's completion, then falls back to Zsh's.
+# ⚠️ NOTE: This setting can NOT be changed at runtime and requires that you
+# have installed Fzf's shell extensions.
+
+source $HOME/.local/zsh-autocomplete/zsh-autocomplete.plugin.zsh # see .chezmoiexternals.toml
 
 GITSTATUS_LOG_LEVEL=DEBUG
-
-export SYSTEM_TYPE=$(uname -s)
 
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -77,12 +102,12 @@ precmd() {
 # load env variables
 source $HOME/.env.zsh
 
-eval "$(emplace init zsh)"
-source <(blindspot completion -s zsh)
+# eval "$(emplace init zsh)"
+# source <(blindspot completion -s zsh)
 
 # initialize completions with ZSH's compinit
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/.zsh/completions/_exa
 

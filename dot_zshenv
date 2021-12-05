@@ -1,3 +1,7 @@
+skip_global_compinit=1
+
+export SYSTEM_TYPE=$(uname -s)
+
 export EDITOR="micro"
 export VISUAL="code --wait"
 
@@ -24,3 +28,4 @@ fi
 
 export GOPATH="$HOME/go/bin"
 export EMPLACE_CONFIG="$HOME/.config/emplace.toml"
+

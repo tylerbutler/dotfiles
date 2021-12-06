@@ -1,9 +1,6 @@
 [core]
 	editor = "code --wait"
 
-[credential]
-	helper = manager
-
 [hub]
 	protocol = https
 

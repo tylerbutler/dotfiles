@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.os "linux" -}}
-{{- if eq .chezmoi.osRelease.idLike "debian" -}}
+{{- if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
 #!/bin/bash
 
 sudo apt update

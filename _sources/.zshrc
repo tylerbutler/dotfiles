@@ -2,7 +2,7 @@
 # zshrc
 #######
 
-source $HOME/.local/zsh-autocomplete-settings.zsh
+# source $HOME/.local/zsh-autocomplete-settings.zsh
 
 GITSTATUS_LOG_LEVEL=DEBUG
 

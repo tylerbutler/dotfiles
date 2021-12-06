@@ -72,6 +72,10 @@ source $HOME/.env.zsh
 # eval "$(emplace init zsh)"
 # source <(blindspot completion -s zsh)
 
+# tab multiplexer configuration: https://github.com/austinjones/tab-rs/
+source "$HOME/.local/share/tab/completion/zsh-history.zsh"
+# end tab configuration
+
 # initialize completions with ZSH's compinit
 # autoload -Uz compinit
 # compinit

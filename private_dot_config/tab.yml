@@ -1,0 +1,18 @@
+# This is your workspace root.
+# Whenever tab is invoked from within this directory (or any subdirectory),
+#   the repositories and tabs you define here will be available
+
+workspace:
+  # global tabs
+  - tab: code
+    doc: "code"
+    dir: code
+
+  - tab: "Fluid/docs"
+    dir: code/FluidFramework/docs
+
+  - repo: code/FluidFramework
+    # tabs:
+      # - tab: FluidFramework
+      # - tab: FluidFramework/docs
+      # - tab: FluidFramework/server/routerlicious

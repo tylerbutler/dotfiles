@@ -6,20 +6,18 @@
 sudo pacman -Syyu
 
 # install zsh and change the default shell to it
-sudo pacman -Sy zsh
-chsh -s $(which zsh)
+sudo pacman -S --needed zsh
+chsh -s /usr/bin/zsh
 
 # Some apt-installable packages
 
-sudo pacman -Sy \
+sudo pacman -S --needed \
     base-devel \
     ccze \
     curl \
     git \
-    git-extras \
     htop \
     mc \
-    ntpdate \
     pv \
     wget \
 

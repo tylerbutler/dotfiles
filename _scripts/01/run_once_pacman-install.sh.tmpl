@@ -1,0 +1,27 @@
+{{- if eq .chezmoi.os "linux" -}}
+{{- if eq .chezmoi.osRelease.id "arch" -}}
+#!/bin/bash
+
+# update packages to latest version
+sudo pacman -Syyu
+
+# install zsh and change the default shell to it
+sudo pacman -Sy zsh
+chsh -s $(which zsh)
+
+# Some apt-installable packages
+
+sudo pacman -Sy \
+    build-essential \
+    ccze \
+    curl \
+    git \
+    git-extras \
+    htop \
+    mc \
+    ntpdate \
+    pv \
+    wget \
+
+{{ end -}}
+{{ end -}}

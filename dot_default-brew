@@ -1,4 +1,7 @@
 bat
+bottom
+chezmoi
+choose-rust
 direnv
 fd
 fnm
@@ -17,4 +20,7 @@ python
 rg
 rust
 sd
+tealdeer
+thefuck
 willdoescode/natls/natls
+zoxide

@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "windows" -}}
 
-$packages = get-content {{ .chezmoi.sourceDir }}\_sources\.default-scoop-packages
+$packages = get-content $HOME\.default-scoop-packages
 $cmd = $packages | Join-String -Separator " " | ForEach-Object{ "scoop install $_" }
 
 Write-Output $cmd

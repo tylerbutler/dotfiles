@@ -1,4 +1,4 @@
-$env:Path = "$HOME/.local/bin;$HOME/scoop/shims;$HOME/scoop/apps/python/3.9.5/Scripts;" + $env:Path
+$env:Path = "$HOME/.local/bin;$HOME/scoop/shims;$HOME/scoop/apps/python/current/Scripts;" + $env:Path
 
 Import-Module -Name Terminal-Icons
 
@@ -13,7 +13,7 @@ Invoke-Expression (& {
     (zoxide init --hook $hook powershell) -join "`n"
 })
 
-#For PowerShell v3
+# gitignore.io function
 Function gig {
   param(
     [Parameter(Mandatory=$true)]

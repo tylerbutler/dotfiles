@@ -32,6 +32,7 @@ function windows_explorer { explorer . }
 
 # I find typing 'chezmoi' awkward
 Set-Alias dotfiles chezmoi
+Set-Alias df chezmoi
 
 # Set-Alias sudo gsudo
 

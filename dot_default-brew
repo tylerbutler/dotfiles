@@ -2,6 +2,7 @@ bat
 bottom
 chezmoi
 choose-rust
+deno
 direnv
 fd
 fnm

@@ -1,13 +1,13 @@
 {{- if eq .chezmoi.os "linux" -}}
 
-{{ .chezmoi.sourceDir }}/_sources/.config/powershell/profile.linux.ps1
+{{- .chezmoi.homeDir -}}/.config/powershell/profile.linux.ps1
 
 {{- else if eq .chezmoi.os "windows" }}
 
-{{ .chezmoi.sourceDir }}/_sources/.config/powershell/profile.windows.ps1
+{{- .chezmoi.homeDir -}}/.config/powershell/profile.windows.ps1
 
 {{- else if eq .chezmoi.os "darwin" -}}
 
-{{ .chezmoi.sourceDir }}/_sources/.config/powershell/profile.mac.ps1
+{{- .chezmoi.homeDir -}}/.config/powershell/profile.mac.ps1
 
 {{- end -}}

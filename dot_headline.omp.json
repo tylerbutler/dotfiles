@@ -13,7 +13,7 @@
     {
       "type": "prompt",
       "alignment": "left",
-      "vertical_offset": -1,
+      "vertical_offset": 0,
       "segments": [
         {
           "type": "session",
@@ -23,7 +23,7 @@
             "display_user": true,
             "display_host": false,
             "ssh_icon": "(ssh) ",
-            "prefix": "",
+            "prefix": " ",
             "postfix": "",
             "template": "<b>{{.UserName}}</b>"
           }
@@ -44,7 +44,7 @@
           "foreground": "yellow",
           "properties": {
             "template": "<b>{{.ComputerName}}</b>",
-            "prefix": "",
+            "prefix": " ",
             "postfix": ""
           }
         },
@@ -63,9 +63,40 @@
           "style": "plain",
           "foreground": "blue",
           "properties": {
-            "prefix": "",
+            "prefix": " ",
             "postfix": "",
             "style": "full"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "newline": false,
+      "segments": [
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "cyan",
+          "properties": {
+            "fetch_status": true,
+            "fetch_stash_count": false,
+            "fetch_upstream_icon": false,
+            "template": "{{- .HEAD -}}",
+            "prefix": " ",
+            "postfix": " ",
+            "branch_icon": ""
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "darkGray",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": "["
           }
         },
         {
@@ -74,8 +105,34 @@
           "foreground": "cyan",
           "properties": {
             "fetch_status": true,
-            "fetch_stash_count": true,
-            "fetch_upstream_icon": true
+            "fetch_stash_count": false,
+            "fetch_upstream_icon": false,
+            "template": "u{{.Working.Unmerged}} d{{.Working.Deleted}} a{{.Working.Added}} m{{.Working.Modified}}",
+            "prefix": "",
+            "postfix": ""
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "cyan",
+          "properties": {
+            "fetch_status": true,
+            "fetch_stash_count": false,
+            "fetch_upstream_icon": false,
+            "template": "u{{.Staging.Unmerged}} d{{.Staging.Deleted}} a{{.Staging.Added}} m{{.Staging.Modified}}",
+            "prefix": "",
+            "postfix": ""
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "darkGray",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": "]"
           }
         }
       ]

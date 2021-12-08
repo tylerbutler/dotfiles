@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "windows" -}}
 
-{{ .chezmoi.sourceDir }}/_sources/.config/powershell/profile.windows.ps1
+{{- .chezmoi.homeDir -}}/.config/powershell/profile.windows.ps1
 
 {{ end -}}

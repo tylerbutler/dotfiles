@@ -84,9 +84,8 @@ source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 
 # PROMPT CONFIG
 # eval "$(starship init zsh)"
-# eval "$(oh-my-posh --init --shell zsh --config ~/.tylerbu.omp.json)"
-# eval "$(oh-my-posh --init --shell zsh --config ~/.headline.omp.json)"
-source $HOME/.local/headline.zsh-theme
+# eval "$(oh-my-posh --init --shell zsh --config ~/.config/oh-my-posh/headline-tylerbu.omp.json)"
+source $HOME/.config/oh-my-posh/headline.zsh-theme
 HEADLINE_DO_GIT_STATUS_COUNTS=true
 HEADLINE_LINE_MODE="on"
 

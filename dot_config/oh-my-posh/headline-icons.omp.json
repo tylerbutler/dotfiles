@@ -16,6 +16,23 @@
       "vertical_offset": 0,
       "segments": [
         {
+          "type": "text",
+          "style": "plain",
+          "foreground": "magenta",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": "{{repeat (len .User) \"_\"}}"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
           "type": "session",
           "style": "plain",
           "foreground": "magenta",
@@ -83,9 +100,9 @@
             "fetch_status": true,
             "fetch_stash_count": false,
             "fetch_upstream_icon": false,
-            "template": "{{- .HEAD -}}",
-            "prefix": " ",
-            "postfix": " ",
+            "template": "{{.HEAD}}",
+            "prefix": "",
+            "postfix": "",
             "branch_icon": ""
           }
         },
@@ -102,25 +119,12 @@
         {
           "type": "git",
           "style": "plain",
-          "foreground": "cyan",
+          "foreground": "lightMagenta",
           "properties": {
             "fetch_status": true,
-            "fetch_stash_count": false,
+            "fetch_stash_count": true,
             "fetch_upstream_icon": false,
-            "template": "u{{.Working.Unmerged}} d{{.Working.Deleted}} a{{.Working.Added}} m{{.Working.Modified}}",
-            "prefix": "",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "git",
-          "style": "plain",
-          "foreground": "cyan",
-          "properties": {
-            "fetch_status": true,
-            "fetch_stash_count": false,
-            "fetch_upstream_icon": false,
-            "template": "u{{.Staging.Unmerged}} d{{.Staging.Deleted}} a{{.Staging.Added}} m{{.Staging.Modified}}",
+            "template": "{{if gt .Behind 0}}{{.Behind}}↓{{end}}{{if gt .Ahead 0}}{{.Ahead}}↑{{end}}{{if .Staging.Changed}}staging:{{add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}+{{end}}{{if .Working.Changed}}working:{{add .Working.Modified .Working.Deleted .Working.Unmerged}}!{{.Working.Added}}?{{end}}{{if (gt .StashCount 0)}}{{.StashCount}}*{{end}}",
             "prefix": "",
             "postfix": ""
           }

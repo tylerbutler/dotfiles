@@ -1,0 +1,4 @@
+diff:
+  pager: "delta"
+git:
+  autoAdd: true

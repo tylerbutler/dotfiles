@@ -83,13 +83,7 @@ source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 # curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/.zsh/completions/_exa
 
 # PROMPT CONFIG
-# eval "$(starship init zsh)"
-# eval "$(oh-my-posh --init --shell zsh --config ~/.config/oh-my-posh/headline-tylerbu.omp.json)"
-source $HOME/.config/oh-my-posh/headline.zsh-theme
-HEADLINE_DO_GIT_STATUS_COUNTS=true
-HEADLINE_LINE_MODE="on"
-
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+source $HOME/.config/.zsh/prompt.zsh
 
 # fnm (fast node manager)
 # echo "fnm init"

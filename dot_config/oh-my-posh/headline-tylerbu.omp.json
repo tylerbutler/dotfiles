@@ -39,8 +39,8 @@
             "fetch_status": true,
             "fetch_stash_count": false,
             "fetch_upstream_icon": false,
-            "template": "{{$ahead := (ternary (.Ahead | toString | len) 0 (eq .Ahead 0))}}{{$behind := (ternary (.Behind | toString | len) 0 (eq .Behind 0))}}{{$sum := (add $ahead 1 $behind 1) | int }}<p:git-branch>{{repeat (len .HEAD) \"_\"}}</><p:joint>__</><p:git-status>{{repeat $sum \"_\"}}</><p:joint>_</>",
-            "prefix": "",
+            "template": "{{$stagedCount := add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}{{$staged := (ternary 0 (add 1 ($stagedCount | toString | len)) (eq $stagedCount 0))}}{{$workingCount := add .Working.Modified .Working.Deleted .Working.Unmerged}}{{$working := (ternary 0 (add 1 ($workingCount | toString | len)) (eq $workingCount 0))}}{{$unstaged := (ternary 0 (add 1 (.Working.Added | toString | len)) (eq .Working.Added 0))}}{{$stash := (ternary 0 (add 1 (.StashCount | toString | len)) (eq .StashCount 0))}}{{$ahead := (ternary 0 (add 1 (.Ahead | toString | len)) (eq .Ahead 0))}}{{$behind := (ternary 0 (add 1 (.Behind | toString | len)) (eq .Behind 0))}}{{$sum := add $ahead $behind $staged $working $unstaged $stash}}<p:git-branch>{{repeat (len .HEAD) \"_\"}}</>{{if (ne (trim .BranchStatus) \"≡\")}}<p:joint>__</><p:git-status>{{repeat (int $sum) \"_\"}}</><p:joint>_</>{{end}}",
+            "prefix": " ",
             "postfix": "",
             "branch_icon": ""
           }
@@ -90,18 +90,8 @@
             "fetch_upstream_icon": false,
             "template": "{{.HEAD}}",
             "prefix": "",
-            "postfix": " ",
-            "branch_icon": ""
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:joint",
-          "properties": {
-            "prefix": "",
             "postfix": "",
-            "text": "["
+            "branch_icon": ""
           }
         },
         {
@@ -112,19 +102,9 @@
             "fetch_status": true,
             "fetch_stash_count": true,
             "fetch_upstream_icon": false,
-            "template": "{{if gt .Behind 0}}{{.Behind}}↓{{end}}{{if gt .Ahead 0}}{{.Ahead}}↑{{end}}{{if .Staging.Changed}}{{add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}+{{end}}{{if .Working.Changed}}{{add .Working.Modified .Working.Deleted .Working.Unmerged}}!{{end}}{{if gt .Working.Added 0}}{{.Working.Added}}?{{end}}{{if (gt .StashCount 0)}}{{.StashCount}}*{{end}}",
+            "template": "{{if (ne (trim .BranchStatus) \"≡\")}}<p:joint> [</>{{$staged := add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}{{$working := add .Working.Modified .Working.Deleted .Working.Unmerged}}{{$unstaged := .Working.Added}}{{if gt .Behind 0}}{{.Behind}}↓{{end}}{{if gt .Ahead 0}}{{.Ahead}}↑{{end}}{{if .Staging.Changed}}{{$staged}}+{{end}}{{if .Working.Changed}}{{$working}}!{{end}}{{if gt $unstaged 0}}{{$unstaged}}?{{end}}{{if (gt .StashCount 0)}}{{.StashCount}}*{{end}}<p:joint>]</>{{end}}",
             "prefix": "",
             "postfix": ""
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:joint",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": "]"
           }
         }
       ]

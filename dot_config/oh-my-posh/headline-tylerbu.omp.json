@@ -18,51 +18,31 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:user",
           "properties": {
             "prefix": "",
             "postfix": "",
-            "text": "{{repeat (len .User) \"_\"}}"
+            "text": "<p:user>{{repeat (len .User) \"_\"}}</><p:joint>___</><p:host>{{repeat (len .Host) \"_\"}}</><p:joint>__</><p:path>{{repeat (len .Path) \"_\"}}</>"
           }
-        },
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "vertical_offset": 0,
+      "segments": [
         {
-          "type": "text",
+          "type": "git",
           "style": "plain",
-          "foreground": "p:joint",
+          "foreground": "default",
           "properties": {
+            "fetch_status": true,
+            "fetch_stash_count": false,
+            "fetch_upstream_icon": false,
+            "template": "{{$ahead := (ternary (.Ahead | toString | len) 0 (eq .Ahead 0))}}{{$behind := (ternary (.Behind | toString | len) 0 (eq .Behind 0))}}{{$sum := (add $ahead 1 $behind 1) | int }}<p:git-branch>{{repeat (len .HEAD) \"_\"}}</><p:joint>__</><p:git-status>{{repeat $sum \"_\"}}</><p:joint>_</>",
             "prefix": "",
             "postfix": "",
-            "text": "___"
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:host",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": "{{repeat (len .Host) \"_\"}}"
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:joint",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": "__"
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:path",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": "{{repeat (len .Path) \"_\"}}"
+            "branch_icon": ""
           }
         }
       ]
@@ -80,37 +60,7 @@
             "ssh_icon": "",
             "prefix": "",
             "postfix": "",
-            "template": "<b>{{.UserName}}</b>"
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:joint",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": " @ "
-          }
-        },
-        {
-          "type": "session",
-          "style": "plain",
-          "foreground": "p:host",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "template": "<b>{{.ComputerName}}</b>"
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:joint",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": ": "
+            "template": "<p:user><b>{{.UserName}}</b></><p:joint> @ </><p:host><b>{{.ComputerName}}</b></><p:joint>: </>"
           }
         },
         {

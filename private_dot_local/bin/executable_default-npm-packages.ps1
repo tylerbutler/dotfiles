@@ -1,12 +1,8 @@
-{{ if eq .chezmoi.os "windows" -}}
-
 npm install -g pnpm
 
-$packages = get-content {{ .chezmoi.sourceDir }}\_sources\.default-npm-packages
+$packages = get-content ~\.default-npm-packages
 $cmd = $packages | Join-String -Separator " " | ForEach-Object{ "npm install -g $_" }
 
 Write-Output $cmd
 
 Invoke-Expression "& $cmd"
-
-{{ end -}}

@@ -15,543 +15,314 @@
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
-  WINIT_X11_SCALE_FACTOR: "1.0"
+    # TERM variable
+    #
+    # This value is used to set the `$TERM` environment variable for
+    # each instance of Alacritty. If it is not present, alacritty will
+    # check the local terminfo database and use `alacritty` if it is
+    # available, otherwise `xterm-256color` is used.
+    TERM: alacritty
+
+    # This is to fix weird font scaling on X11
+    # Solution: https://github.com/alacritty/alacritty/issues/1501#issuecomment-614867213
+    WINIT_X11_SCALE_FACTOR: "1.0"
 
 window:
-  # Window dimensions (changes require restart)
-  #
-  # Specified in number of columns/lines, not pixels.
-  # If both are `0`, this setting is ignored.
-  dimensions:
-    columns: 0
-    lines: 0
+    # Window dimensions (changes require restart)
+    #
+    # Number of lines/columns (not pixels) in the terminal. The number of columns
+    # must be at least `2`, while using a value of `0` for columns and lines will
+    # fall back to the window manager's recommended size.
+    #dimensions:
+    #  columns: 0
+    #  lines: 0
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+    # Window position (changes require restart)
+    #
+    # Specified in number of pixels.
+    # If the position is not set, the window manager will handle the placement.
+    #position:
+    #  x: 0
+    #  y: 0
 
-  # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is scaled
-  # by DPI and the specified value is always added at both opposing sides.
-  padding:
-    x: 0
-    y: 0
+    # Window padding (changes require restart)
+    #
+    # Blank space added around the window in pixels. This padding is scaled
+    # by DPI and the specified value is always added at both opposing sides.
+    #padding:
+    #  x: 0
+    #  y: 0
 
-  # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+    # Spread additional padding evenly around the terminal content.
+    dynamic_padding: true
 
-  # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
-  #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+    # Window decorations
+    #
+    # Values for `decorations`:
+    #     - full: Borders and title bar
+    #     - none: Neither borders nor title bar
+    #
+    # Values for `decorations` (macOS only):
+    #     - transparent: Title bar, transparent background and title bar buttons
+    #     - buttonless: Title bar, transparent background and no title bar buttons
+    decorations: none
 
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
-  #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
-  startup_mode: Windowed
+    # Startup Mode (changes require restart)
+    #
+    # Values for `startup_mode`:
+    #   - Windowed
+    #   - Maximized
+    #   - Fullscreen
+    #
+    # Values for `startup_mode` (macOS only):
+    #   - SimpleFullscreen
+    startup_mode: Maximized
 
-  # Window title
-  #title: Alacritty
+    # Window title
+    #title: Alacritty
 
-  # Window class (Linux only):
-  #class:
+    # Allow terminal applications to change Alacritty's window title.
+    dynamic_title: true
+
+    # Window class (Linux/BSD only):
+    #class:
     # Application instance name
     #instance: Alacritty
     # General application class
     #general: Alacritty
 
-  # GTK theme variant (Linux only)
-  #
-  # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
-  # Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
+    # GTK theme variant (Linux/BSD only)
+    #
+    # Override the variant of the GTK theme. Commonly supported values are `dark`
+    # and `light`. Set this to `None` to use the default theme variant.
+    #gtk_theme_variant: None
 
-  # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+#scrolling:
+# Maximum number of lines in the scrollback buffer.
+# Specifying '0' will disable scrolling.
+#history: 10000
 
-scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
-  history: 10000
+# Scrolling distance multiplier.
+#multiplier: 3
 
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
-  multiplier: 3
-
-# Font configuration (changes require restart)
+# Font configuration
 font:
-  # Normal (roman) font face
-  #normal:
-    # Font family
+    # Normal (roman) font face
+    normal:
+        # Font family
+        #
+        # Default:
+        #   - (macOS) Menlo
+        #   - (Linux/BSD) monospace
+        #   - (Windows) Consolas
+        family: Fira Code
+
+        # The `style` can be specified to pick a specific face.
+        style: Regular
+
+    # Bold font face
+    bold:
+        # Font family
+        #
+        # If the bold family is not specified, it will fall back to the
+        # value specified for the normal font.
+        family: Fira Code
+
+        # The `style` can be specified to pick a specific face.
+        #style: Bold
+
+    # Italic font face
+    italic:
+        # Font family
+        #
+        # If the italic family is not specified, it will fall back to the
+        # value specified for the normal font.
+        family: monospace
+
+        # The `style` can be specified to pick a specific face.
+        style: Italic
+
+    # Bold italic font face
+    bold_italic:
+        # Font family
+        #
+        # If the bold italic family is not specified, it will fall back to the
+        # value specified for the normal font.
+        family: monospace
+
+        # The `style` can be specified to pick a specific face.
+        style: Bold Italic
+
+    # Point size
+    size: 11.5
+
+    # Offset is the extra space around each character. `offset.y` can be thought
+    # of as modifying the line spacing, and `offset.x` as modifying the letter
+    # spacing.
+    #offset:
+    #  x: 0
+    #  y: 0
+
+    # Glyph offset determines the locations of the glyphs within their cells with
+    # the default being at the bottom. Increasing `x` moves the glyph to the
+    # right, increasing `y` moves the glyph upward.
+    #glyph_offset:
+    #  x: 0
+    #  y: 0
+
+    # Thin stroke font rendering (macOS only)
     #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux) monospace
-    #   - (Windows) Consolas
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Regular
-
-  # Bold font face
-  #bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Bold
-
-  # Italic font face
-  #italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Italic
-
-  # Bold italic font face
-  #bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
-
-  # Point size
-  size: 10.0
-
-  # Offset is the extra space around each character. `offset.y` can be thought of
-  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-  offset:
-    x: 0
-    y: 0
-
-  # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increasing `x` moves the glyph to the right,
-  # increasing `y` moves the glyph upwards.
-  glyph_offset:
-    x: 0
-    y: 0
-
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  use_thin_strokes: true
+    # Thin strokes are suitable for retina displays, but for non-retina screens
+    # it is recommended to set `use_thin_strokes` to `false`.
+    #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+#draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night Bright)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x000000'
-#     foreground: '0xeaeaea'
-#
-#     # Bright and dim foreground colors
-#     #
-#     # The dimmed foreground color is calculated automatically if it is not present.
-#     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-#     # is `false`, the normal foreground color will be used.
-#     #dim_foreground: '0x9a9a9a'
-#     #bright_foreground: '0xffffff'
-#
-#   # Cursor colors
-#   #
-#   # Colors which should be used to draw the terminal cursor. If these are unset,
-#   # the cursor color will be the inverse of the cell color.
-#   #cursor:
-#   #  text: '0x000000'
-#   #  cursor: '0xffffff'
-#
-#   # Selection colors
-#   #
-#   # Colors which should be used to draw the selection area. If selection
-#   # background is unset, selection color will be the inverse of the cell colors.
-#   # If only text is unset the cell text color will remain the same.
-#   #selection:
-#   #  text: '0xeaeaea'
-#   #  background: '0x404040'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x000000'
-#     red:     '0xd54e53'
-#     green:   '0xb9ca4a'
-#     yellow:  '0xe6c547'
-#     blue:    '0x7aa6da'
-#     magenta: '0xc397d8'
-#     cyan:    '0x70c0ba'
-#     white:   '0xeaeaea'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x666666'
-#     red:     '0xff3334'
-#     green:   '0x9ec400'
-#     yellow:  '0xe7c547'
-#     blue:    '0x7aa6da'
-#     magenta: '0xb77ee0'
-#     cyan:    '0x54ced6'
-#     white:   '0xffffff'
-#
-#   # Dim colors
-#   #
-#   # If the dim colors are not set, they will be calculated automatically based
-#   # on the `normal` colors.
-#   #dim:
-#   #  black:   '0x000000'
-#   #  red:     '0x8c3336'
-#   #  green:   '0x7a8530'
-#   #  yellow:  '0x97822e'
-#   #  blue:    '0x506d8f'
-#   #  magenta: '0x80638e'
-#   #  cyan:    '0x497e7a'
-#   #  white:   '0x9a9a9a'
-#
-#   # Indexed Colors
-#   #
-#   # The indexed colors include all colors from 16 to 256.
-#   # When these are not set, they're filled with sensible defaults.
-#   #
-#   # Example:
-#   #   `- { index: 16, color: '0xff00ff' }`
-#   #
-
-# Colors (Gruvbox Material Dark Hard)
-# https://gist.github.com/sainnhe/587a1bba123cb25a3ed83ced613c20c0
+# Colors (Nord)
 colors:
-  primary:
-    background: '0x1d2021'
-    foreground: '0xd4be98'
+    # Default colors
+    primary:
+        background: "#1a1a1a"
+        foreground: "#D8DEE9"
 
-  normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xd8a657'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xd4be98'
+        # Bright and dim foreground colors
+        #
+        # The dimmed foreground color is calculated automatically if it is not
+        # present. If the bright foreground color is not set, or
+        # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
+        # color will be used.
+        dim_foreground: "#a5abb6"
+        #bright_foreground: '#eaeaea'
 
-  bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xd8a657'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xd4be98'
+    # Cursor colors
+    #
+    # Colors which should be used to draw the terminal cursor.
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    # cursor:
+    #     text: "#1a1a1a"
+    #     cursor: "#d8dee9"
 
-## Colors (Gruvbox Material Dark Medium)
-#colors:
-#  primary:
-#    background: '0x282828'
-#    foreground: '0xdfbf8e'
-#
-#  normal:
-#    black:   '0x665c54'
-#    red:     '0xea6962'
-#    green:   '0xa9b665'
-#    yellow:  '0xe78a4e'
-#    blue:    '0x7daea3'
-#    magenta: '0xd3869b'
-#    cyan:    '0x89b482'
-#    white:   '0xdfbf8e'
-#
-#  bright:
-#    black:   '0x928374'
-#    red:     '0xea6962'
-#    green:   '0xa9b665'
-#    yellow:  '0xe3a84e'
-#    blue:    '0x7daea3'
-#    magenta: '0xd3869b'
-#    cyan:    '0x89b482'
-#    white:   '0xdfbf8e'
+    # Vi mode cursor colors
+    #
+    # Colors for the cursor when the vi mode is active.
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    vi_mode_cursor:
+        text: "#1a1a1a"
+        cursor: "#d8dee9"
 
-# Colors (Gruvbox dark)
-#colors:
-#  # Default colors
-#  primary:
-#    # hard contrast: background = '0x1d2021'
-#    # medium contrast: background = '0x282828'
-#    background: '0x1d2021'
-#    # soft contrast: background = '0x32302f'
-#    foreground: '0xebdbb2'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x282828'
-#    red:     '0xcc241d'
-#    green:   '0x98971a'
-#    yellow:  '0xd79921'
-#    blue:    '0x458588'
-#    magenta: '0xb16286'
-#    cyan:    '0x689d6a'
-#    white:   '0xa89984'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x928374'
-#    red:     '0xfb4934'
-#    green:   '0xb8bb26'
-#    yellow:  '0xfabd2f'
-#    blue:    '0x83a598'
-#    magenta: '0xd3869b'
-#    cyan:    '0x8ec07c'
-#    white:   '0xebdbb2'
+    # Search colors
+    #
+    # Colors used for the search bar and match highlighting.
+    search:
+        # Allowed values are CellForeground/CellBackground, which reference the
+        # affected cell, or hexadecimal colors like #ff00ff.
+        matches:
+            foreground: CellBackground
+            background: "#88c0d0"
+        focused_match:
+            background: "#434c5e"
+            foreground: "#d8dee9"
 
-## Base16 Gruvbox dark, hard 256 - alacritty color config
-## Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x1d2021'
-#    foreground: '0xd5c4a1'
-#
-#  # Colors the cursor will use if `custom_cursor_colors` is true
-#  cursor:
-#    text: '0x1d2021'
-#    cursor: '0xd5c4a1'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x1d2021'
-#    red:     '0xfb4934'
-#    green:   '0xb8bb26'
-#    yellow:  '0xfabd2f'
-#    blue:    '0x83a598'
-#    magenta: '0xd3869b'
-#    cyan:    '0x8ec07c'
-#    white:   '0xd5c4a1'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x665c54'
-#    red:     '0xfb4934'
-#    green:   '0xb8bb26'
-#    yellow:  '0xfabd2f'
-#    blue:    '0x83a598'
-#    magenta: '0xd3869b'
-#    cyan:    '0x8ec07c'
-#    white:   '0xfbf1c7'
-#
-#  indexed_colors:
-#    - { index: 16, color: '0xfe8019' }
-#    - { index: 17, color: '0xd65d0e' }
-#    - { index: 18, color: '0x3c3836' }
-#    - { index: 19, color: '0x504945' }
-#    - { index: 20, color: '0xbdae93' }
-#    - { index: 21, color: '0xebdbb2' }
+    #bar:
+    #  background: '#c5c8c6'
+    #  foreground: '#1d1f21'
 
-## Base16 Gruvbox dark, hard - alacritty color config
-## Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x1d2021'
-#    foreground: '0xd5c4a1'
-#
-#  # Colors the cursor will use if `custom_cursor_colors` is true
-#  cursor:
-#    text: '0x1d2021'
-#    cursor: '0xd5c4a1'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x1d2021'
-#    red:     '0xfb4934'
-#    green:   '0xb8bb26'
-#    yellow:  '0xfabd2f'
-#    blue:    '0x83a598'
-#    magenta: '0xd3869b'
-#    cyan:    '0x8ec07c'
-#    white:   '0xd5c4a1'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x665c54'
-#    red:     '0xfe8019'
-#    green:   '0x3c3836'
-#    yellow:  '0x504945'
-#    blue:    '0xbdae93'
-#    magenta: '0xebdbb2'
-#    cyan:    '0xd65d0e'
-#    white:   '0xfbf1c7'
+    # Keyboard hints
+    #hints:
+    # Fist character in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #start:
+    #  foreground: '#1d1f21'
+    #  background: '#e9ff5e'
 
-## Colors (Hybrid)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x27292c'
-#    foreground: '0xd0d2d1'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x35383b'
-#    red:     '0xb05655'
-#    green:   '0x769972'
-#    yellow:  '0xe1a574'
-#    blue:    '0x7693ac'
-#    magenta: '0x977ba0'
-#    cyan:    '0x749e99'
-#    white:   '0x848b92'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x484c52'
-#    red:     '0xd27c7b'
-#    green:   '0xdffebe'
-#    yellow:  '0xf0d189'
-#    blue:    '0x96b1c9'
-#    magenta: '0xbfa5c7'
-#    cyan:    '0x9fc9c3'
-#    white:   '0xfcf7e2'
+    # All characters after the first one in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #end:
+    #  foreground: '#e9ff5e'
+    #  background: '#1d1f21'
 
-# Colors (Tomorrow Night)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x1d1f21'
-#     foreground: '0xc5c8c6'
-#
-#   # Colors the cursor will use if `custom_cursor_colors` is true
-#   cursor:
-#     text: '0x1d1f21'
-#     cursor: '0xffffff'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x1d1f21'
-#     red:     '0xcc6666'
-#     green:   '0xb5bd68'
-#     yellow:  '0xe6c547'
-#     blue:    '0x81a2be'
-#     magenta: '0xb294bb'
-#     cyan:    '0x70c0ba'
-#     white:   '0x373b41'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x666666'
-#     red:     '0xff3334'
-#     green:   '0x9ec400'
-#     yellow:  '0xf0c674'
-#     blue:    '0x81a2be'
-#     magenta: '0xb77ee0'
-#     cyan:    '0x54ced6'
-#     white:   '0x282a2e'
+    # Line indicator
+    #
+    # Color used for the indicator displaying the position in history during
+    # search and vi mode.
+    #
+    # By default, these will use the opposing primary color.
+    #line_indicator:
+    #  foreground: None
+    #  background: None
 
-# Colors (Seoul256)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x3a3a3a'
-#     foreground: '0xd0d0d0'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x4e4e4e'
-#     red:     '0xd68787'
-#     green:   '0x5f865f'
-#     yellow:  '0xd8af5f'
-#     blue:    '0x85add4'
-#     magenta: '0xd7afaf'
-#     cyan:    '0x87afaf'
-#     white:   '0xd0d0d0'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x626262'
-#     red:     '0xd75f87'
-#     green:   '0x87af87'
-#     yellow:  '0xffd787'
-#     blue:    '0xadd4fb'
-#     magenta: '0xffafaf'
-#     cyan:    '0x87d7d7'
-#     white:   '0xe4e4e4'
+    # Selection colors
+    #
+    # Colors which should be used to draw the selection area.
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    selection:
+        text: CellForeground
+        background: "#4c566a"
 
-# Colors (Darkside)
-# colors:
-#   primary:
-#     background: "0x222324"
-#     foreground: "0xBABABA"
-#
-#   # Normal colors
-#   normal:
-#     black:    "0x000000"
-#     red:      "0xE8341C"
-#     green:    "0x68C256"
-#     yellow:   "0xF2D42C"
-#     blue:     "0x1C98E8"
-#     magenta:  "0x8E69C9"
-#     cyan:     "0x1C98E8"
-#     white:    "0xBABABA"
-#
-#   # Bright colors
-#   bright:
-#     black:    "0x666666"
-#     red:      "0xE05A4F"
-#     green:    "0x77B869"
-#     yellow:   "0xEFD64B"
-#     blue:     "0x387CD3"
-#     magenta:  "0x957BBE"
-#     cyan:     "0x3D97E2"
-#     white:    "0xBABABA"
+    # Normal colors
+    normal:
+        black: "#3B4252"
+        red: "#BF616A"
+        green: "#A3BE8C"
+        yellow: "#EBCB8B"
+        blue: "#81A1C1"
+        magenta: "#B48EAD"
+        cyan: "#88C0D0"
+        white: "#E5E9F0"
 
-# Visual Bell
+    # Bright colors
+    bright:
+        black: "#4C566A"
+        red: "#BF616A"
+        green: "#A3BE8C"
+        yellow: "#EBCB8B"
+        blue: "#81A1C1"
+        magenta: "#B48EAD"
+        cyan: "#8FBCBB"
+        white: "#ECEFF4"
+
+    # Dim colors
+    #
+    # If the dim colors are not set, they will be calculated automatically based
+    # on the `normal` colors.
+    dim:
+        black: "#373e4d"
+        red: "#94545d"
+        green: "#809575"
+        yellow: "#b29e75"
+        blue: "#68809a"
+        magenta: "#8c738c"
+        cyan: "#6d96a5"
+        white: "#aeb3bb"
+
+    # Indexed Colors
+    #
+    # The indexed colors include all colors from 16 to 256.
+    # When these are not set, they're filled with sensible defaults.
+    #
+    # Example:
+    #   `- { index: 16, color: '#ff00ff' }`
+    #
+    #indexed_colors: []
+
+# Bell
 #
-# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. You can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). You can also
-# configure the transition function by setting the `animation` property.
+# The bell is rung every time the BEL control character is received.
+#bell:
+# Visual Bell Animation
+#
+# Animation effect for flashing the screen when the visual bell is rung.
 #
 # Values for `animation`:
 #   - Ease
@@ -564,73 +335,92 @@ colors:
 #   - EaseOutExpo
 #   - EaseOutCirc
 #   - Linear
+#animation: EaseOutExpo
+
+# Duration of the visual bell flash in milliseconds. A `duration` of `0` will
+# disable the visual bell animation.
+#duration: 0
+
+# Visual bell animation color.
+#color: '#ffffff'
+
+# Bell Command
 #
-# Specifying a `duration` of `0` will disable the visual bell.
-bell:
-  animation: EaseOutExpo
-  duration: 0
-  color: '0xffffff'
+# This program is executed whenever the bell is rung.
+#
+# When set to `command: None`, no command will be executed.
+#
+# Example:
+#   command:
+#     program: notify-send
+#     args: ["Hello, World!"]
+#
+#command: None
 
 # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+#background_opacity: 1.0
 
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>="
+    # This string contains all characters that are used as separators for
+    # "semantic words" in Alacritty.
+    #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
-  # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+    # When set to `true`, selected text will be copied to the primary clipboard.
+    save_to_clipboard: true
 
 cursor:
-  # Cursor style
-  #
-  # Values for `style`:
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
-  style: Block
+    # Cursor style
+    style:
+        # Cursor shape
+        #
+        # Values for `shape`:
+        #   - ▇ Block
+        #   - _ Underline
+        #   - | Beam
+        shape: Block
 
-  # Cursor blinking state
-  #
-  # Values for `blinking`:
-  #   - Never: Prevent the cursor from ever blinking
-  #   - Off: Disable blinking by default
-  #   - On: Enable blinking by default
-  #   - Always: Force the cursor to always blink
-  blinking: Off
+        # Cursor blinking state
+        #
+        # Values for `blinking`:
+        #   - Never: Prevent the cursor from ever blinking
+        #   - Off: Disable blinking by default
+        #   - On: Enable blinking by default
+        #   - Always: Force the cursor to always blink
+        # blinking: Off
 
-  # Vi mode cursor style
-  #
-  # If the vi mode cursor style is `None` or not specified, it will fall back to
-  # the style of the active value of the normal cursor.
-  #
-  # See `cursor.style` for available options.
-  #vi_mode_style: Beam
+    # Vi mode cursor style
+    #
+    # If the vi mode cursor style is `None` or not specified, it will fall back to
+    # the style of the active value of the normal cursor.
+    #
+    # See `cursor.style` for available options.
+    #vi_mode_style: None
 
-  # Cursor blinking interval in milliseconds.
-  #blink_interval: 750
+    # Cursor blinking interval in milliseconds.
+    #blink_interval: 750
 
-  # If this is `true`, the cursor will be rendered as a hollow box when the
-  # window is not focused.
-  unfocused_hollow: true
+    # If this is `true`, the cursor will be rendered as a hollow box when the
+    # window is not focused.
+    #unfocused_hollow: true
 
-  # Thickness of the cursor relative to the cell width as floating point number
-  # from `0.0` to `1.0`.
-  #thickness: 0.15
-
+    # Thickness of the cursor relative to the cell width as floating point number
+    # from `0.0` to `1.0`.
+    # thickness: 1.0
 # Live config reload (changes require restart)
-live_config_reload: true
+#live_config_reload: true
 
 # Shell
 #
-# You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
-# Entries in `shell.args` are passed unmodified as arguments to the shell.
+# You can set `shell.program` to the path of your favorite shell, e.g.
+# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
+# shell.
 #
 # Default:
 #   - (macOS) /bin/bash --login
-#   - (Linux) user login shell
+#   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #shell:
 #  program: /bin/bash
@@ -641,55 +431,64 @@ live_config_reload: true
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
-working_directory: None
-
-# WinPTY backend (Windows only)
-#
-# Alacritty defaults to using the newer ConPTY backend if it is available,
-# since it resolves a lot of bugs and is quite a bit faster. If it is not
-# available, the WinPTY backend will be used instead.
-#
-# Setting this option to `true` makes Alacritty use the legacy WinPTY backend,
-# even if the ConPTY backend is available.
-winpty_backend: false
+#working_directory: None
 
 # Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: true
+#alt_send_esc: true
 
-mouse:
-  # Click settings
-  #
-  # The `double_click` and `triple_click` settings control the time
-  # alacritty should wait for accepting multiple clicks as one double
-  # or triple click.
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
+#mouse:
+# Click settings
+#
+# The `double_click` and `triple_click` settings control the time
+# alacritty should wait for accepting multiple clicks as one double
+# or triple click.
+#double_click: { threshold: 300 }
+#triple_click: { threshold: 300 }
 
-  # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: false
+# If this is `true`, the cursor is temporarily hidden when typing.
+#hide_when_typing: false
 
-  hints:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a
-    # URL. The URL is always added to the command as the last parameter.
-    #
-    # When set to `launcher: None`, URL launching will be disabled completely.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux/BSD) xdg-open
-    #   - (Windows) explorer
-    #launcher:
-    #  program: xdg-open
-    #  args: []
+# Regex hints
+#
+# Terminal hints can be used to find text in the visible part of the terminal
+# and pipe it to other applications.
+#hints:
+# Keys used for the hint labels.
+#alphabet: "jfkdls;ahgurieowpq"
 
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when
-    # clicking on them. The available modifiers are documented in the key
-    # binding section.
-    modifiers: Control
+# List with all available hints
+#
+# Each hint must have a `regex` and either an `action` or a `command` field.
+# The fields `mouse`, `binding` and `post_processing` are optional.
+#
+# The fields `command`, `binding.key`, `binding.mods` and `mouse.mods` accept
+# the same values as they do in the `key_bindings` section.
+#
+# The `mouse.enabled` field controls if the hint should be underlined while
+# the mouse with all `mouse.mods` keys held or the vi mode cursor is above it.
+#
+# If the `post_processing` field is set to `true`, heuristics will be used to
+# shorten the match if there are characters likely not to be part of the hint
+# (e.g. a trailing `.`). This is most useful for URIs.
+#
+# Values for `action`:
+#   - Copy
+#       Copy the hint's text to the clipboard.
+#   - Paste
+#       Paste the hint's text to the terminal or search.
+#   - Select
+#       Select the hint's text.
+#enabled:
+# - regex: "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+#           [^\u0000-\u001F\u007F-\u009F<>\" {-}\\^⟨⟩`]+"
+#   command: xdg-open
+#   post_processing: true
+#   mouse:
+#     enabled: true
+#     mods: None
+#   binding:
+#     key: U
+#     mods: Control|Shift
 
 # Mouse bindings
 #
@@ -714,8 +513,8 @@ mouse:
 # And optionally:
 #
 # - `mods` (see key bindings)
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
+#mouse_bindings:
+#  - { mouse: Middle, action: PasteSelection }
 
 # Key bindings
 #
@@ -921,219 +720,134 @@ mouse_bindings:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-key_bindings:
-  - { key: V,        mods: Control|Shift,    action: Paste               }
-  - { key: C,        mods: Control|Shift,    action: Copy                }
-  - { key: V,        mods: Control|Alt,      action: Paste               }
-  - { key: C,        mods: Control|Alt,      action: Copy                }
-  - { key: Paste,                   action: Paste                        }
-  - { key: Copy,                    action: Copy                         }
-  - { key: Q,        mods: Command, action: Quit                         }
-  - { key: W,        mods: Command, action: Quit                         }
-  - { key: Insert,   mods: Shift,   action: PasteSelection               }
-  - { key: Key0,     mods: Control, action: ResetFontSize                }
-  - { key: Equals,   mods: Control, action: IncreaseFontSize             }
-  - { key: Plus,   mods: Control|Shift, action: IncreaseFontSize         }
-  - { key: Minus, mods: Control, action: DecreaseFontSize                }
-  - { key: L,        mods: Control, action: ClearLogNotice               }
-  - { key: L,        mods: Control, chars: "\x0c"                        }
-  - { key: Return,   mods: Shift,   chars: "\x1b[13;2u"                  }
-  - { key: Return,   mods: Control, chars: "\x1b[13;5u"                  }
-  - { key: Space,   mods: Shift,    chars: "\x1b[32;2u"                  }
-  - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
-  - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
-  - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
-  - { key: End,                     chars: "\x1b[F",   mode: ~AppCursor  }
-  - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~"                   }
-  - { key: PageUp,   mods: Control, chars: "\x1b[5;5~"                   }
-  - { key: PageUp,                  chars: "\x1b[5~"                     }
-  - { key: PageDown, mods: Shift,   chars: "\x1b[6;2~"                   }
-  - { key: PageDown, mods: Control, chars: "\x1b[6;5~"                   }
-  - { key: PageDown,                chars: "\x1b[6~"                     }
-  - { key: PageUp,    mods: Alt,   mode: ~Alt,        action: ScrollPageUp,  }
-  - { key: PageDown,  mods: Alt,   mode: ~Alt,        action: ScrollPageDown }
-  - { key: Home,      mods: Alt,   mode: ~Alt,        action: ScrollToTop,   }
-  - { key: End,       mods: Alt,   mode: ~Alt,        action: ScrollToBottom }
-  - { key: Tab,      mods: Shift,   chars: "\x1b[Z"                      }
-  - { key: Back,                    chars: "\x7f"                        }
-  - { key: Back,     mods: Alt,     chars: "\x1b\x7f"                    }
-  - { key: Insert,                  chars: "\x1b[2~"                     }
-  - { key: Delete,                  chars: "\x1b[3~"                     }
-  - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
-  - { key: Left,     mods: Control, chars: "\x1b[1;5D"                   }
-  - { key: Left,     mods: Alt,     chars: "\x1b[1;3D"                   }
-  - { key: Left,     mods: Alt|Shift,         chars: "\x1b[1;4D"         }
-  - { key: Left,     mods: Control|Shift,     chars: "\x1b[1;6D"         }
-  - { key: Left,     mods: Control|Alt,       chars: "\x1b[1;7D"         }
-  - { key: Left,     mods: Control|Alt|Shift, chars: "\x1b[1;8D"         }
-  - { key: Left,                    chars: "\x1b[D",   mode: ~AppCursor  }
-  - { key: Left,                    chars: "\x1bOD",   mode: AppCursor   }
-  - { key: Right,    mods: Shift,   chars: "\x1b[1;2C"                   }
-  - { key: Right,    mods: Control, chars: "\x1b[1;5C"                   }
-  - { key: Right,    mods: Alt,     chars: "\x1b[1;3C"                   }
-  - { key: Right,    mods: Alt|Shift,         chars: "\x1b[1;4C"         }
-  - { key: Right,    mods: Control|Shift,     chars: "\x1b[1;6C"         }
-  - { key: Right,    mods: Control|Alt,       chars: "\x1b[1;7C"         }
-  - { key: Right,    mods: Control|Alt|Shift, chars: "\x1b[1;8C"         }
-  - { key: Right,                   chars: "\x1b[C",   mode: ~AppCursor  }
-  - { key: Right,                   chars: "\x1bOC",   mode: AppCursor   }
-  - { key: Up,       mods: Shift,   chars: "\x1b[1;2A"                   }
-  - { key: Up,       mods: Control, chars: "\x1b[1;5A"                   }
-  - { key: Up,       mods: Alt,     chars: "\x1b[1;3A"                   }
-  - { key: Up,       mods: Alt|Shift,         chars: "\x1b[1;4A"         }
-  - { key: Up,       mods: Control|Shift,     chars: "\x1b[1;6A"         }
-  - { key: Up,       mods: Control|Alt,       chars: "\x1b[1;7A"         }
-  - { key: Up,       mods: Control|Alt|Shift, chars: "\x1b[1;8A"         }
-  - { key: Up,                      chars: "\x1b[A",   mode: ~AppCursor  }
-  - { key: Up,                      chars: "\x1bOA",   mode: AppCursor   }
-  - { key: Down,     mods: Shift,   chars: "\x1b[1;2B"                   }
-  - { key: Down,     mods: Control, chars: "\x1b[1;5B"                   }
-  - { key: Down,     mods: Alt,     chars: "\x1b[1;3B"                   }
-  - { key: Down,     mods: Alt|Shift,         chars: "\x1b[1;4B"         }
-  - { key: Down,     mods: Control|Shift,     chars: "\x1b[1;6B"         }
-  - { key: Down,     mods: Control|Alt,       chars: "\x1b[1;7B"         }
-  - { key: Down,     mods: Control|Alt|Shift, chars: "\x1b[1;8B"         }
-  - { key: Down,                    chars: "\x1b[B",   mode: ~AppCursor  }
-  - { key: Down,                    chars: "\x1bOB",   mode: AppCursor   }
-  - { key: Key1,        mods: Control|Alt, chars: "±"                   }
-  # - { key: Key2,        mods: Alt|Control, chars: "M-@"                   }
-  # - { key: Key3,        mods: Alt|Control, chars: "M-Esc"                   }
-  # - { key: Key4,        mods: Alt|Control, chars: "M-C-\"                   }
-  # - { key: Key5,        mods: Alt|Control, chars: "M-C-]"                   }
-  # - { key: Key6,        mods: Alt|Control, chars: "M-C-^"                   }
-  # - { key: Key7,        mods: Alt|Control, chars: "M-C-_"                   }
-  - { key: Key8,        mods: Alt|Control, chars: "ÿ"                   }
-  - { key: Key9,        mods: Alt|Control, chars: "¹"                   }
-  - { key: Key0,        mods: Alt|Control, chars: "°"                   }
-  - { key: F1,                      chars: "\x1bOP"                      }
-  - { key: F2,                      chars: "\x1bOQ"                      }
-  - { key: F3,                      chars: "\x1bOR"                      }
-  - { key: F4,                      chars: "\x1bOS"                      }
-  - { key: F5,                      chars: "\x1b[15~"                    }
-  - { key: F6,                      chars: "\x1b[17~"                    }
-  - { key: F7,                      chars: "\x1b[18~"                    }
-  - { key: F8,                      chars: "\x1b[19~"                    }
-  - { key: F9,                      chars: "\x1b[20~"                    }
-  - { key: F10,                     chars: "\x1b[21~"                    }
-  - { key: F11,                     chars: "\x1b[23~"                    }
-  - { key: F12,                     chars: "\x1b[24~"                    }
-  - { key: F1,       mods: Shift,   chars: "\x1b[1;2P"                   }
-  - { key: F2,       mods: Shift,   chars: "\x1b[1;2Q"                   }
-  - { key: F3,       mods: Shift,   chars: "\x1b[1;2R"                   }
-  - { key: F4,       mods: Shift,   chars: "\x1b[1;2S"                   }
-  - { key: F5,       mods: Shift,   chars: "\x1b[15;2~"                  }
-  - { key: F6,       mods: Shift,   chars: "\x1b[17;2~"                  }
-  - { key: F7,       mods: Shift,   chars: "\x1b[18;2~"                  }
-  - { key: F8,       mods: Shift,   chars: "\x1b[19;2~"                  }
-  - { key: F9,       mods: Shift,   chars: "\x1b[20;2~"                  }
-  - { key: F10,      mods: Shift,   chars: "\x1b[21;2~"                  }
-  - { key: F11,      mods: Shift,   chars: "\x1b[23;2~"                  }
-  - { key: F12,      mods: Shift,   chars: "\x1b[24;2~"                  }
-  - { key: F1,       mods: Control, chars: "\x1b[1;5P"                   }
-  - { key: F2,       mods: Control, chars: "\x1b[1;5Q"                   }
-  - { key: F3,       mods: Control, chars: "\x1b[1;5R"                   }
-  - { key: F4,       mods: Control, chars: "\x1b[1;5S"                   }
-  - { key: F5,       mods: Control, chars: "\x1b[15;5~"                  }
-  - { key: F6,       mods: Control, chars: "\x1b[17;5~"                  }
-  - { key: F7,       mods: Control, chars: "\x1b[18;5~"                  }
-  - { key: F8,       mods: Control, chars: "\x1b[19;5~"                  }
-  - { key: F9,       mods: Control, chars: "\x1b[20;5~"                  }
-  - { key: F10,      mods: Control, chars: "\x1b[21;5~"                  }
-  - { key: F11,      mods: Control, chars: "\x1b[23;5~"                  }
-  - { key: F12,      mods: Control, chars: "\x1b[24;5~"                  }
-  - { key: F1,       mods: Alt,     chars: "\x1b[1;3P"                   }
-  - { key: F2,       mods: Alt,     chars: "\x1b[1;3Q"                   }
-  - { key: F3,       mods: Alt,     chars: "\x1b[1;3R"                   }
-  - { key: F4,       mods: Alt,     chars: "\x1b[1;3S"                   }
-  - { key: F5,       mods: Alt,     chars: "\x1b[15;3~"                  }
-  - { key: F6,       mods: Alt,     chars: "\x1b[17;3~"                  }
-  - { key: F7,       mods: Alt,     chars: "\x1b[18;3~"                  }
-  - { key: F8,       mods: Alt,     chars: "\x1b[19;3~"                  }
-  - { key: F9,       mods: Alt,     chars: "\x1b[20;3~"                  }
-  - { key: F10,      mods: Alt,     chars: "\x1b[21;3~"                  }
-  - { key: F11,      mods: Alt,     chars: "\x1b[23;3~"                  }
-  - { key: F12,      mods: Alt,     chars: "\x1b[24;3~"                  }
-  - { key: F1,       mods: Super,   chars: "\x1b[OP"                     }
-  - { key: F2,       mods: Super,   chars: "\x1b[OQ"                     }
-  - { key: F3,       mods: Super,   chars: "\x1b[OR"                     }
-  - { key: F4,       mods: Super,   chars: "\x1b[OS"                     }
-  - { key: F5,       mods: Super,   chars: "\x1b[15~"                    }
-  - { key: F6,       mods: Super,   chars: "\x1b[17~"                    }
-  - { key: F7,       mods: Super,   chars: "\x1b[18~"                    }
-  - { key: F8,       mods: Super,   chars: "\x1b[19~"                    }
-  - { key: F9,       mods: Super,   chars: "\x1b[20~"                    }
-  - { key: F10,      mods: Super,   chars: "\x1b[21~"                    }
-  - { key: F11,      mods: Super,   chars: "\x1b[23~"                    }
-  - { key: F12,      mods: Super,   chars: "\x1b[24~"                    }
-  - { key: F1,       mods: Control|Shift,   chars: "\x1b[1;6P"           }
-  - { key: F2,       mods: Control|Shift,   chars: "\x1b[1;6Q"           }
-  - { key: F3,       mods: Control|Shift,   chars: "\x1b[1;6R"           }
-  - { key: F4,       mods: Control|Shift,   chars: "\x1b[1;6S"           }
-  - { key: F5,       mods: Control|Shift,   chars: "\x1b[15;6~"          }
-  - { key: F6,       mods: Control|Shift,   chars: "\x1b[17;6~"          }
-  - { key: F7,       mods: Control|Shift,   chars: "\x1b[18;6~"          }
-  - { key: F8,       mods: Control|Shift,   chars: "\x1b[19;6~"          }
-  - { key: F9,       mods: Control|Shift,   chars: "\x1b[20;6~"          }
-  - { key: F10,      mods: Control|Shift,   chars: "\x1b[21;6~"          }
-  - { key: F11,      mods: Control|Shift,   chars: "\x1b[23;6~"          }
-  - { key: F12,      mods: Control|Shift,   chars: "\x1b[24;6~"          }
-  - { key: F1,       mods: Alt|Shift,   chars: "\x1b[1;4P"               }
-  - { key: F2,       mods: Alt|Shift,   chars: "\x1b[1;4Q"               }
-  - { key: F3,       mods: Alt|Shift,   chars: "\x1b[1;4R"               }
-  - { key: F4,       mods: Alt|Shift,   chars: "\x1b[1;4S"               }
-  - { key: F5,       mods: Alt|Shift,   chars: "\x1b[15;4~"              }
-  - { key: F6,       mods: Alt|Shift,   chars: "\x1b[17;4~"              }
-  - { key: F7,       mods: Alt|Shift,   chars: "\x1b[18;4~"              }
-  - { key: F8,       mods: Alt|Shift,   chars: "\x1b[19;4~"              }
-  - { key: F9,       mods: Alt|Shift,   chars: "\x1b[20;4~"              }
-  - { key: F10,      mods: Alt|Shift,   chars: "\x1b[21;4~"              }
-  - { key: F11,      mods: Alt|Shift,   chars: "\x1b[23;4~"              }
-  - { key: F12,      mods: Alt|Shift,   chars: "\x1b[24;4~"              }
-  - { key: F1,       mods: Alt|Control,   chars: "\x1b[1;7P"            }
-  - { key: F2,       mods: Alt|Control,   chars: "\x1b[1;7Q"            }
-  - { key: F3,       mods: Alt|Control,   chars: "\x1b[1;7R"            }
-  - { key: F4,       mods: Alt|Control,   chars: "\x1b[1;7S"            }
-  - { key: F5,       mods: Alt|Control,   chars: "\x1b[15;7~"           }
-  - { key: F6,       mods: Alt|Control,   chars: "\x1b[17;7~"           }
-  - { key: F7,       mods: Alt|Control,   chars: "\x1b[18;7~"           }
-  - { key: F8,       mods: Alt|Control,   chars: "\x1b[19;7~"           }
-  - { key: F9,       mods: Alt|Control,   chars: "\x1b[20;7~"           }
-  - { key: F10,      mods: Alt|Control,   chars: "\x1b[21;7~"           }
-  - { key: F11,      mods: Alt|Control,   chars: "\x1b[23;7~"           }
-  - { key: F12,      mods: Alt|Control,   chars: "\x1b[24;7~"           }
-  - { key: F1,       mods: Alt|Control|Shift,   chars: "\x1b[1;8P"      }
-  - { key: F2,       mods: Alt|Control|Shift,   chars: "\x1b[1;8Q"      }
-  - { key: F3,       mods: Alt|Control|Shift,   chars: "\x1b[1;8R"      }
-  - { key: F4,       mods: Alt|Control|Shift,   chars: "\x1b[1;8S"      }
-  - { key: F5,       mods: Alt|Control|Shift,   chars: "\x1b[15;8~"     }
-  - { key: F6,       mods: Alt|Control|Shift,   chars: "\x1b[17;8~"     }
-  - { key: F7,       mods: Alt|Control|Shift,   chars: "\x1b[18;8~"     }
-  - { key: F8,       mods: Alt|Control|Shift,   chars: "\x1b[19;8~"     }
-  - { key: F9,       mods: Alt|Control|Shift,   chars: "\x1b[20;8~"     }
-  - { key: F10,      mods: Alt|Control|Shift,   chars: "\x1b[21;8~"     }
-  - { key: F11,      mods: Alt|Control|Shift,   chars: "\x1b[23;8~"     }
-  - { key: F12,      mods: Alt|Control|Shift,   chars: "\x1b[24;8~"     }
+#key_bindings:
+#- { key: Paste,                                       action: Paste          }
+#- { key: Copy,                                        action: Copy           }
+#- { key: L,         mods: Control,                    action: ClearLogNotice }
+#- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
+#- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
+#- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
+#- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,   }
+#- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
 
-debug:
-  # Display the time it takes to redraw each frame.
-  render_timer: false
+# Vi Mode
+#- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
+#- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
+#- { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
+#- { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
+#- { key: I,                           mode: Vi|~Search, action: ToggleViMode            }
+#- { key: C,      mods: Control,       mode: Vi|~Search, action: ToggleViMode            }
+#- { key: Y,      mods: Control,       mode: Vi|~Search, action: ScrollLineUp            }
+#- { key: E,      mods: Control,       mode: Vi|~Search, action: ScrollLineDown          }
+#- { key: G,                           mode: Vi|~Search, action: ScrollToTop             }
+#- { key: G,      mods: Shift,         mode: Vi|~Search, action: ScrollToBottom          }
+#- { key: B,      mods: Control,       mode: Vi|~Search, action: ScrollPageUp            }
+#- { key: F,      mods: Control,       mode: Vi|~Search, action: ScrollPageDown          }
+#- { key: U,      mods: Control,       mode: Vi|~Search, action: ScrollHalfPageUp        }
+#- { key: D,      mods: Control,       mode: Vi|~Search, action: ScrollHalfPageDown      }
+#- { key: Y,                           mode: Vi|~Search, action: Copy                    }
+#- { key: Y,                           mode: Vi|~Search, action: ClearSelection          }
+#- { key: Copy,                        mode: Vi|~Search, action: ClearSelection          }
+#- { key: V,                           mode: Vi|~Search, action: ToggleNormalSelection   }
+#- { key: V,      mods: Shift,         mode: Vi|~Search, action: ToggleLineSelection     }
+#- { key: V,      mods: Control,       mode: Vi|~Search, action: ToggleBlockSelection    }
+#- { key: V,      mods: Alt,           mode: Vi|~Search, action: ToggleSemanticSelection }
+#- { key: Return,                      mode: Vi|~Search, action: Open                    }
+#- { key: K,                           mode: Vi|~Search, action: Up                      }
+#- { key: J,                           mode: Vi|~Search, action: Down                    }
+#- { key: H,                           mode: Vi|~Search, action: Left                    }
+#- { key: L,                           mode: Vi|~Search, action: Right                   }
+#- { key: Up,                          mode: Vi|~Search, action: Up                      }
+#- { key: Down,                        mode: Vi|~Search, action: Down                    }
+#- { key: Left,                        mode: Vi|~Search, action: Left                    }
+#- { key: Right,                       mode: Vi|~Search, action: Right                   }
+#- { key: Key0,                        mode: Vi|~Search, action: First                   }
+#- { key: Key4,   mods: Shift,         mode: Vi|~Search, action: Last                    }
+#- { key: Key6,   mods: Shift,         mode: Vi|~Search, action: FirstOccupied           }
+#- { key: H,      mods: Shift,         mode: Vi|~Search, action: High                    }
+#- { key: M,      mods: Shift,         mode: Vi|~Search, action: Middle                  }
+#- { key: L,      mods: Shift,         mode: Vi|~Search, action: Low                     }
+#- { key: B,                           mode: Vi|~Search, action: SemanticLeft            }
+#- { key: W,                           mode: Vi|~Search, action: SemanticRight           }
+#- { key: E,                           mode: Vi|~Search, action: SemanticRightEnd        }
+#- { key: B,      mods: Shift,         mode: Vi|~Search, action: WordLeft                }
+#- { key: W,      mods: Shift,         mode: Vi|~Search, action: WordRight               }
+#- { key: E,      mods: Shift,         mode: Vi|~Search, action: WordRightEnd            }
+#- { key: Key5,   mods: Shift,         mode: Vi|~Search, action: Bracket                 }
+#- { key: Slash,                       mode: Vi|~Search, action: SearchForward           }
+#- { key: Slash,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
+#- { key: N,                           mode: Vi|~Search, action: SearchNext              }
+#- { key: N,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
 
-  # Keep the log file after quitting Alacritty.
-  persistent_logging: false
+# Search Mode
+#- { key: Return,                mode: Search|Vi,  action: SearchConfirm         }
+#- { key: Escape,                mode: Search,     action: SearchCancel          }
+#- { key: C,      mods: Control, mode: Search,     action: SearchCancel          }
+#- { key: U,      mods: Control, mode: Search,     action: SearchClear           }
+#- { key: W,      mods: Control, mode: Search,     action: SearchDeleteWord      }
+#- { key: P,      mods: Control, mode: Search,     action: SearchHistoryPrevious }
+#- { key: N,      mods: Control, mode: Search,     action: SearchHistoryNext     }
+#- { key: Up,                    mode: Search,     action: SearchHistoryPrevious }
+#- { key: Down,                  mode: Search,     action: SearchHistoryNext     }
+#- { key: Return,                mode: Search|~Vi, action: SearchFocusNext       }
+#- { key: Return, mods: Shift,   mode: Search|~Vi, action: SearchFocusPrevious   }
 
-  # Log level
-  #
-  # Values for `log_level`:
-  #   - None
-  #   - Error
-  #   - Warn
-  #   - Info
-  #   - Debug
-  #   - Trace
-  log_level: Warn
+# (Windows, Linux, and BSD only)
+#- { key: V,              mods: Control|Shift, mode: ~Vi,        action: Paste            }
+#- { key: C,              mods: Control|Shift,                   action: Copy             }
+#- { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
+#- { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
+#- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
+#- { key: Insert,         mods: Shift,                           action: PasteSelection   }
+#- { key: Key0,           mods: Control,                         action: ResetFontSize    }
+#- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+#- { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+#- { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+#- { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+#- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
-  # Print all received window events.
-  print_events: false
+# (Windows only)
+#- { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
-  # Record all characters and escape sequences as test data.
-  ref_test: false
+# (macOS only)
+#- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
+#- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
+#- { key: Key0,           mods: Command,                    action: ResetFontSize         }
+#- { key: Equals,         mods: Command,                    action: IncreaseFontSize      }
+#- { key: Plus,           mods: Command,                    action: IncreaseFontSize      }
+#- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize      }
+#- { key: Minus,          mods: Command,                    action: DecreaseFontSize      }
+#- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize      }
+#- { key: V,              mods: Command,                    action: Paste                 }
+#- { key: C,              mods: Command,                    action: Copy                  }
+#- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection        }
+#- { key: H,              mods: Command,                    action: Hide                  }
+#- { key: H,              mods: Command|Alt,                action: HideOtherApplications }
+#- { key: M,              mods: Command,                    action: Minimize              }
+#- { key: Q,              mods: Command,                    action: Quit                  }
+#- { key: W,              mods: Command,                    action: Quit                  }
+#- { key: N,              mods: Command,                    action: SpawnNewInstance      }
+#- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
+#- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
+#- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
+
+#debug:
+# Display the time it takes to redraw each frame.
+#render_timer: false
+
+# Keep the log file after quitting Alacritty.
+#persistent_logging: false
+
+# Log level
+#
+# Values for `log_level`:
+#   - Off
+#   - Error
+#   - Warn
+#   - Info
+#   - Debug
+#   - Trace
+#log_level: Warn
+
+# Print all received window events.
+#print_events: false

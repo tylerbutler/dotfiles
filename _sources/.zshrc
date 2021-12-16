@@ -21,7 +21,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 # eval "$(pyenv init --path)"
 
-fpath=($HOME/.zsh/completions $fpath)
+fpath=($HOME/zsh/completions $fpath)
 
 # Antigen load and bootstrap
 source $HOME/.local/antigen.zsh # see .chezmoiexternals.toml
@@ -80,10 +80,10 @@ source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 # autoload -Uz compinit
 # compinit
 
-# curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/.zsh/completions/_exa
+# curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/zsh/completions/_exa
 
 # PROMPT CONFIG
-source $HOME/.config/.zsh/prompt.zsh
+source $HOME/.config/zsh/prompt.zsh
 
 # fnm (fast node manager)
 # echo "fnm init"

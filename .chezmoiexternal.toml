@@ -8,6 +8,21 @@
     type = "file"
     url = "https://github.com/alacritty/alacritty/raw/master/alacritty.yml"
     refreshPeriod = "168h" # 1 week
+[".config/alacritty/themes/catppuccin.yml"]
+    type = "file"
+    url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin.yml"
+    refreshPeriod = "168h" # 1 week
+
+[".config/alacritty/themes/melange_dark.yml"]
+    type = "file"
+    url = "https://github.com/savq/melange/raw/master/term/alacritty/melange_dark.yml"
+    refreshPeriod = "168h" # 1 week
+
+[".config/alacritty/themes/melange_light.yml"]
+    type = "file"
+    url = "https://github.com/savq/melange/raw/master/term/alacritty/melange_light.yml"
+    refreshPeriod = "168h" # 1 week
+
 [".config/alacritty/themes/rigel.yml"]
     type = "file"
     url = "https://raw.githubusercontent.com/Rigellute/rigel/master/alacritty.yml"

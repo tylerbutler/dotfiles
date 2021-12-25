@@ -8,7 +8,6 @@ export VISUAL="code --wait"
 # APPEND (first entry is highest)
 export PATH="$PATH:/root/.local/bin"
 export PATH="$PATH:/opt/homebrew/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/go/bin"
 
 # PREPEND (last entry is highest)
@@ -29,3 +28,4 @@ fi
 export GOPATH="$HOME/go/bin"
 export EMPLACE_CONFIG="$HOME/.config/emplace.toml"
 
+. "$HOME/.cargo/env"

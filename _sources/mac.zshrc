@@ -11,6 +11,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # base16_atelier-estuary
 # base16_helios
 # base16_hopscotch
-base16_materia
+# base16_materia
 # base16_paraiso
 # base16_tomorrow-night-eighties

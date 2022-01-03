@@ -91,3 +91,6 @@ alias nvs="fnm"
 alias edit="$EDITOR"
 alias aliases="$EDITOR $HOME/.aliases.sh"
 alias refreshenv="omz reload"
+
+# Fluid Framework helpers
+alias flub="fluid-build"

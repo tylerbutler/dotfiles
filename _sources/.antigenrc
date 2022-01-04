@@ -91,7 +91,7 @@ antigen bundle LuRsT/hr
 antigen bundle mollifier/cd-gitroot
 
 # auto-switch pipenvs
-antigen bundle owenstranathan/pipenv.zsh
+# antigen bundle owenstranathan/pipenv.zsh
 
 # nicer dir listings
 # antigen bundle supercrabtree/k  # original
@@ -100,9 +100,9 @@ antigen bundle owenstranathan/pipenv.zsh
 antigen bundle tylerbutler/k@branch-color  # overrides only the branch color
 
 # auto-update antigen
-antigen bundle unixorn/autoupdate-antigen.zshplugin
+# antigen bundle unixorn/autoupdate-antigen.zshplugin
 
-antigen bundle unixorn/git-extra-commands
+# antigen bundle unixorn/git-extra-commands
 # antigen bundle wfxr/forgit
 antigen bundle wfxr/emoji-cli
 antigen bundle zdharma-continuum/fast-syntax-highlighting

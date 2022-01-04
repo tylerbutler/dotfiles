@@ -1,6 +1,3 @@
-[user]
-#	signingkey = 9952362D2D6FEF8B
-
 [hub]
 	protocol = ssh
 
@@ -12,3 +9,6 @@
 
 [mergetool "bc3"]
 	trustExitCode = true
+
+[credential "https://github.com"]
+  helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential

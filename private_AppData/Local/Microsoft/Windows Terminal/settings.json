@@ -41,10 +41,10 @@
                 "window",
                 "taskbar"
             ],
-            "colorScheme": "SpaceDuck",
+            "colorScheme": "One Half Dark",
             "font": 
             {
-                "face": "CaskaydiaCove NF",
+                "face": "BlexMono NF",
                 "size": 11
             },
             "intenseTextStyle": "all"
@@ -88,6 +88,16 @@
                 "hidden": false,
                 "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "commandline": "ssh tylerbu@mac-mini.local",
+                "guid": "{372bcad6-7523-40ed-8145-76bb17321004}",
+                "name": "mac-mini"
+            },
+            {
+                "commandline": "ssh tylerbu@erised.local",
+                "guid": "{31c566b9-31ca-49b1-8c30-df4f1213ddd3}",
+                "name": "erised"
             }
         ]
     },

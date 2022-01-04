@@ -37,8 +37,8 @@ Set-Alias df chezmoi
 # Set-Alias sudo gsudo
 
 # git
-Set-Alias git hub
-nba g "hub"
+# Set-Alias git hub
+nba g "git"
 nba gb "hub branch"
 nba gba "hub branch --all"
 nba gcam "hub add -A ; hub commit -m"
@@ -55,6 +55,7 @@ nba glgp "hub log --stat -p"
 nba glo "hub log --oneline --decorate --graph -10"
 nba glog "hub log --oneline --decorate --graph"
 nba gloga "hub log --oneline --decorate --graph --all"
+nba glr "git pull --rebase"
 nba gm "hub merge"
 nba gnd "git clean -dn"
 nba gndd "git clean -df"

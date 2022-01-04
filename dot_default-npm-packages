@@ -1,3 +1,4 @@
+@fluidframework/build-tools@latest
 generate
 generate-license
 auto-install

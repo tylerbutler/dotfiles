@@ -4,6 +4,7 @@ chezmoi
 choose-rust
 deno
 direnv
+dust
 fd
 fnm
 fzf

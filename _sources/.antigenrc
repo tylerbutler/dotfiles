@@ -35,7 +35,7 @@ antigen bundles <<EOBUNDLES
   gitfast
 
   # completions for hub
-  github
+  # github
 
   # usability
   git-escape-magic

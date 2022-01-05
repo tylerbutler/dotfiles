@@ -5,6 +5,7 @@ choose-rust
 deno
 direnv
 dust
+exa
 fd
 fnm
 fzf
@@ -14,7 +15,9 @@ golang
 grex
 jq
 lsd
+mc
 micro
+nnn
 pueue
 procs
 python

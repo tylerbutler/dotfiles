@@ -13,44 +13,6 @@
     {
       "type": "prompt",
       "alignment": "left",
-      "vertical_offset": 0,
-      "segments": [
-        {
-          "type": "text",
-          "style": "plain",
-          "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": "<p:user>{{repeat (len .User) \"_\"}}</><p:joint>___</><p:host>{{repeat (len .Host) \"_\"}}</><p:joint>__</><p:path>{{repeat (len .Path) \"_\"}}</>"
-          }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "right",
-      "vertical_offset": 0,
-      "segments": [
-        {
-          "type": "git",
-          "style": "plain",
-          "foreground": "default",
-          "properties": {
-            "fetch_status": true,
-            "fetch_stash_count": true,
-            "fetch_upstream_icon": true,
-            "fetch_worktree_count": false,
-            "template": "{{$stagedCount := add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}{{$staged := (ternary 0 (add 1 ($stagedCount | toString | len)) (eq $stagedCount 0))}}{{$workingCount := add .Working.Modified .Working.Deleted .Working.Unmerged}}{{$working := (ternary 0 (add 1 ($workingCount | toString | len)) (eq $workingCount 0))}}{{$unstaged := (ternary 0 (add 1 (.Working.Added | toString | len)) (eq .Working.Added 0))}}{{$stash := (ternary 0 (add 1 (.StashCount | toString | len)) (eq .StashCount 0))}}{{$ahead := (ternary 0 (add 1 (.Ahead | toString | len)) (eq .Ahead 0))}}{{$behind := (ternary 0 (add 1 (.Behind | toString | len)) (eq .Behind 0))}}{{$sum := add $ahead $behind $staged $working $unstaged $stash}}<p:git-branch>{{repeat (len .HEAD) \"_\"}}</>{{if (ne $sum 0)}}<p:joint>__</><p:git-status>{{repeat (int $sum) \"_\"}}</><p:joint>_</>{{end}}",
-            "prefix": " ",
-            "postfix": "",
-            "branch_icon": ""
-          }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
       "newline": true,
       "segments": [
         {

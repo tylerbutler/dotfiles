@@ -1,13 +1,11 @@
 if [ "$SYSTEM_TYPE" = "Linux" ]; then
-    if [ "$OS_ID" = "arch"]; then
+    if [ "$OS_ID" = "arch" ]; then
         base16_hopscotch
     else
         base16_materia # blue-ish
     fi
-else
-  if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+elif [ "$SYSTEM_TYPE" = "Darwin" ]; then
       base16_material-palenight # light purple-ish
-  fi
 fi
 
 # base16_flat

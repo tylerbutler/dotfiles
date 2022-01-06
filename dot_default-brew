@@ -2,7 +2,6 @@ bat
 bottom
 chezmoi
 choose-rust
-deno
 direnv
 dust
 exa
@@ -20,6 +19,7 @@ micro
 nnn
 pueue
 procs
+pyenv
 python
 rg
 rustup

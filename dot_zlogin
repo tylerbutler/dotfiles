@@ -1,10 +1,23 @@
-if [ "$SYSTEM_TYPE" = "Darwin" ]; then
-    base16_darktooth
+if [ "$SYSTEM_TYPE" = "Linux" ]; then
+    if [ "$OS_ID" = "arch"]; then
+        base16_hopscotch
+    else
+        base16_materia # blue-ish
+    fi
+else
+  if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+      base16_material-palenight # light purple-ish
+  fi
 fi
 
-if [ "$SYSTEM_TYPE" = "Linux" ]; then
-    base16_helios
-fi
+# base16_flat
+# base16_atelier-estuary # green-ish
+# base16_helios
+# base16_hopscotch
+# base16_materia
+# base16_material-palenight # light purple-ish
+# base16_paraiso # dark purple-ish
+# base16_tomorrow-night-eighties
 
 # display_octozen
 quote

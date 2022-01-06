@@ -1,6 +1,7 @@
 skip_global_compinit=1
 
 export SYSTEM_TYPE=$(uname -s)
+export OS_ID=$(cat /etc/*-release | uniq -u | grep -oP '(?<=^ID=).*(?=$)')
 
 export EDITOR="micro"
 export VISUAL="code --wait"

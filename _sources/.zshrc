@@ -91,3 +91,9 @@ export PATH="$HOME/.fnm:$PATH"
 eval "`fnm env`"
 
 function gig() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"

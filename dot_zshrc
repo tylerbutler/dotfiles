@@ -87,8 +87,7 @@ source $HOME/.config/zsh/prompt.zsh
 
 # fnm (fast node manager)
 # echo "fnm init"
-export PATH="$HOME/.fnm:$PATH"
-eval "`fnm env`"
+eval "$(fnm env --use-on-cd)"
 
 function gig() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 

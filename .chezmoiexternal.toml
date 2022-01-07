@@ -4,6 +4,13 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "24h"
+
+[".local/bin/ssh-ident"]
+    type = "file"
+    url = "https://github.com/ccontavalli/ssh-ident/raw/master/ssh-ident"
+    executable = true
+    refreshPeriod = "168h"
+
 [".config/alacritty/default.yml"]
     type = "file"
     url = "https://github.com/alacritty/alacritty/raw/master/alacritty.yml"

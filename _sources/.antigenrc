@@ -87,6 +87,9 @@ antigen bundle lukechilds/zsh-better-npm-completion
 # horizontal rules ftw
 antigen bundle LuRsT/hr
 
+# completions for cargo/rust
+antigen bundle MenkeTechnologies/zsh-cargo-completion
+
 # add shortcut to root of git repo
 antigen bundle mollifier/cd-gitroot
 

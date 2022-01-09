@@ -1,13 +1,13 @@
 #!/bin/bash
 
 sudo chown tylerbu:plex /deadpool/tv/ -R
+sudo chown tylerbu:plex /deadpool/movies2/ -R
 sudo chown tylerbu:plex /wolverine/tv/ -R
 sudo chown tylerbu:plex /x23/tv/ -R
 sudo chown tylerbu:plex /x23/movies/ -R
-sudo chown tylerbu:plex /deadpool/movies2/ -R
 
 chmod +775 /deadpool/tv/ -R
+chmod +775 /deadpool/movies2/ -R
 chmod +775 /wolverine/tv/ -R
 chmod +775 /x23/tv/ -R
 chmod +775 /x23/movies/ -R
-chmod +775 /deadpool/movies2/ -R

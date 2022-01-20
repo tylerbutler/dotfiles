@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.os "windows" -}}
+if (Get-Command "scoop" -ErrorAction SilentlyContinue) {
+  scoop install beyondcompare
+}
+{{ end -}}

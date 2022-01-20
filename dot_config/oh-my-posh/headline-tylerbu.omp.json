@@ -23,8 +23,8 @@
             "ssh_icon": "",
             "prefix": "",
             "postfix": "",
-            "template": "<p:user><b>{{.UserName}}</b></><p:joint> @ </><p:host><b>{{.ComputerName}}</b></><p:joint>: </>"
-          }
+            "template": "<p:user><b>{{.UserName}}</b></><p:joint> @ </><p:host><b>{{.HostName}}</b></><p:joint>: </>"
+           }
         },
         {
           "type": "path",

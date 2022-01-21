@@ -2,3 +2,6 @@ diff:
   pager: "delta"
 git:
   autoAdd: true
+encryption: "age"
+age:
+  passphrase: true

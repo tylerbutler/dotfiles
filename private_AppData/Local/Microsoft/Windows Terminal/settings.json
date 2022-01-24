@@ -80,13 +80,15 @@
             {
                 "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
                 "hidden": false,
+                "icon": "C:\\Users\\tylerbu\\ghq\\github.com\\TheFern2\\windows-terminal-icons\\icons\\arch.png",
                 "name": "Arch",
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
                 "hidden": false,
-                "name": "Ubuntu-20.04",
+                "icon": "C:\\Users\\tylerbu\\ghq\\github.com\\TheFern2\\windows-terminal-icons\\icons\\kali-dragon-sqaure-detailed.png",
+                "name": "kali-linux",
                 "source": "Windows.Terminal.Wsl"
             },
             {

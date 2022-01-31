@@ -1,0 +1,6 @@
+{{ if or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
+{{ end -}}

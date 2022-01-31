@@ -3,7 +3,6 @@ alias :q="exit"
 alias cls="clear"
 alias reboot="sudo shutdown -r now"
 alias reset-time="sudo ntpdate -sb time.nist.gov"
-alias yay="yay -S"
 alias zshconfig="$EDITOR ~/.zshrc"
 
 # I find typing 'chezmoi' awkward
@@ -71,6 +70,7 @@ alias gndd="git clean -df"
 alias default-blindspot-packages="xargs blindspot install <~/.default-blindspot-packages"
 alias default-brew="xargs brew install <~/.default-brew"
 alias default-cargo-crates="xargs cargo install <~/.default-cargo-crates"
+alias default-nix-packages="xargs nix-env -iA <~/.default-nix-packages"
 alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"
 alias extra-npm-packages="xargs npm i -g <~/.extra-npm-packages"
 alias default-python-packages="xargs pip install <~/.default-python-packages"
@@ -84,7 +84,7 @@ alias rmlint="\rmlint -g -C "
 
 # brew
 alias b="brew"
-alias bupg="brew update && brew upgrade"
+alias bupg="brew update && brew outdated && brew upgrade"
 
 # I use fnm for node management on Linux and mac, but nvs on Windows
 alias nvm="fnm"

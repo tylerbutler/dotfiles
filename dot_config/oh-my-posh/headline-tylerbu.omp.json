@@ -1,5 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 1,
+  "final_space": true,
   "palette": {
     "git-branch": "cyan",
     "git-status": "lightMagenta",
@@ -8,7 +10,6 @@
     "path": "blue",
     "user": "magenta"
   },
-  "final_space": true,
   "blocks": [
     {
       "type": "prompt",
@@ -20,20 +21,16 @@
           "style": "plain",
           "foreground": "p:user",
           "properties": {
-            "ssh_icon": "",
-            "prefix": "",
-            "postfix": "",
             "template": "<p:user><b>{{.UserName}}</b></><p:joint> @ </><p:host><b>{{.HostName}}</b></><p:joint>: </>"
-           }
+          }
         },
         {
           "type": "path",
           "style": "plain",
           "foreground": "p:path",
           "properties": {
-            "prefix": "",
-            "postfix": "",
-            "style": "full"
+            "style": "full",
+            "template": "{{ .Path }}"
           }
         }
       ]
@@ -41,20 +38,17 @@
     {
       "type": "prompt",
       "alignment": "right",
-      "newline": false,
       "segments": [
         {
           "type": "git",
           "style": "plain",
           "foreground": "p:git-branch",
           "properties": {
-            "fetch_status": true,
+            "branch_icon": "",
             "fetch_stash_count": false,
+            "fetch_status": true,
             "fetch_upstream_icon": false,
-            "template": "{{.HEAD}}",
-            "prefix": "",
-            "postfix": "",
-            "branch_icon": ""
+            "template": "{{.HEAD}}"
           }
         },
         {
@@ -62,13 +56,11 @@
           "style": "plain",
           "foreground": "p:git-status",
           "properties": {
-            "fetch_status": true,
             "fetch_stash_count": true,
+            "fetch_status": true,
             "fetch_upstream_icon": false,
-            "template": "{{if (or (.Working.Changed) (.Staging.Changed) (gt .Ahead 0) (gt .Behind 0) (gt .StashCount 0))}}<p:joint> [</>{{$staged := add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}{{$working := add .Working.Modified .Working.Deleted .Working.Unmerged}}{{$unstaged := .Working.Added}}{{if gt .Behind 0}}{{.Behind}}↓{{end}}{{if gt .Ahead 0}}{{.Ahead}}↑{{end}}{{if .Staging.Changed}}{{$staged}}+{{end}}{{if .Working.Changed}}{{$working}}!{{end}}{{if gt $unstaged 0}}{{$unstaged}}?{{end}}{{if (gt .StashCount 0)}}{{.StashCount}}*{{end}}<p:joint>]</>{{end}}",
-            "prefix": "",
-            "postfix": ""
-          }
+            "template": "{{if (or (.Working.Changed) (.Staging.Changed) (gt .Ahead 0) (gt .Behind 0) (gt .StashCount 0))}}<p:joint> [</>{{$staged := add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}{{$working := add .Working.Modified .Working.Deleted .Working.Unmerged}}{{$unstaged := .Working.Added}}{{if gt .Behind 0}}{{.Behind}}\u2193{{end}}{{if gt .Ahead 0}}{{.Ahead}}\u2191{{end}}{{if .Staging.Changed}}{{$staged}}+{{end}}{{if .Working.Changed}}{{$working}}!{{end}}{{if gt $unstaged 0}}{{$unstaged}}?{{end}}{{if (gt .StashCount 0)}}{{.StashCount}}*{{end}}<p:joint>]</>{{end}}"
+          },
         }
       ]
     },
@@ -82,9 +74,7 @@
           "style": "plain",
           "foreground": "default",
           "properties": {
-            "prefix": "",
-            "postfix": "",
-            "text": "$"
+            "template": "$"
           }
         }
       ]

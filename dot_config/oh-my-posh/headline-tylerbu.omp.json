@@ -60,7 +60,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": false,
             "template": "{{if (or (.Working.Changed) (.Staging.Changed) (gt .Ahead 0) (gt .Behind 0) (gt .StashCount 0))}}<p:joint> [</>{{$staged := add .Staging.Added .Staging.Modified .Staging.Deleted .Staging.Unmerged}}{{$working := add .Working.Modified .Working.Deleted .Working.Unmerged}}{{$unstaged := .Working.Added}}{{if gt .Behind 0}}{{.Behind}}\u2193{{end}}{{if gt .Ahead 0}}{{.Ahead}}\u2191{{end}}{{if .Staging.Changed}}{{$staged}}+{{end}}{{if .Working.Changed}}{{$working}}!{{end}}{{if gt $unstaged 0}}{{$unstaged}}?{{end}}{{if (gt .StashCount 0)}}{{.StashCount}}*{{end}}<p:joint>]</>{{end}}"
-          },
+          }
         }
       ]
     },

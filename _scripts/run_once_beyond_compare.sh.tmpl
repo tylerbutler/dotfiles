@@ -1,4 +1,5 @@
 {{ if eq .chezmoi.os "linux" -}}
+{{ if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
 {{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}
 #!/bin/sh
 
@@ -9,5 +10,6 @@ sudo apt-get install gdebi-core --yes
 sudo gdebi bcompare-4.3.7.25118_amd64.deb
 rm bcompare-4.3.7.25118_amd64.deb
 
+{{ end -}}
 {{ end -}}
 {{ end -}}

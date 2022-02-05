@@ -17,8 +17,8 @@ if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ]; then
     eval "$(pyenv init -)"
 fi
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 # eval "$(pyenv init --path)"
 
 fpath=($HOME/zsh/completions $fpath)

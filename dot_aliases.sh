@@ -73,6 +73,7 @@ alias default-cargo-crates="xargs cargo install <~/.default-cargo-crates"
 alias default-nix-packages="xargs nix-env -iA <~/.default-nix-packages"
 alias default-npm-packages="xargs npm i -g <~/.default-npm-packages"
 alias extra-npm-packages="xargs npm i -g <~/.extra-npm-packages"
+alias default-pacman="sudo xargs pacman -Syyu --needed --noconfirm <~/.default-pacman-packages"
 alias default-python-packages="xargs pip install <~/.default-python-packages"
 
 alias zfs-space="zfs list -o space -r deadpool wolverine x23"

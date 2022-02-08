@@ -5,7 +5,7 @@
 	protocol = https
 
 [difftool "bc3"]
-	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+	path = C:\\Users\\tylerbu\\scoop\\apps\\beyondcompare\\current\\BCompare.exe
 
 [mergetool "bc3"]
-	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+	path = C:\\Users\\tylerbu\\scoop\\apps\\beyondcompare\\current\\BCompare.exe

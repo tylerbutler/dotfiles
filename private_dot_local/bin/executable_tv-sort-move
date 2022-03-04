@@ -2,7 +2,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Cowboy Bebop" /wolv
 rsync -avz --progress -h --remove-source-files --copy-links "The Big Bang Theory" /wolverine/tv/_ended_1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "The Cosby Show" /wolverine/tv/_ended_1TB-01/
 
-rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /wolverine/tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links American\ Dad\! /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Bob\'s\ Burgers /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /wolverine/tv/_keep/

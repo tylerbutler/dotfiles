@@ -1,6 +1,7 @@
 **/.keep
 
 install
+install.sh
 install/*
 README.md
 _ps1

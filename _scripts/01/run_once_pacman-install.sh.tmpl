@@ -1,3 +1,4 @@
+{{ if not .codespaces -}}
 {{- if eq .chezmoi.os "linux" -}}
 {{- if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
@@ -21,5 +22,6 @@ sudo pacman -S --needed \
     pv \
     wget \
 
+{{ end -}}
 {{ end -}}
 {{ end -}}

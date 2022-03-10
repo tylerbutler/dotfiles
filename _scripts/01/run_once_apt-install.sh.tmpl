@@ -1,3 +1,4 @@
+{{ if not .codespaces -}}
 {{- if eq .chezmoi.os "linux" -}}
 {{- if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
 #!/bin/bash
@@ -32,5 +33,6 @@ sudo apt install --yes --no-install-recommends \
 
 sudo ufw allow ssh
 
+{{ end -}}
 {{ end -}}
 {{ end -}}

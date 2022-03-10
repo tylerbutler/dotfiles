@@ -1,4 +1,4 @@
-{{ if not .chezmoidata.codespaces -}}
+{{ if not .codespaces -}}
 {{ if eq .chezmoi.os "linux" -}}
 {{ if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
 {{ if not (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) -}}

@@ -1,4 +1,4 @@
-{{ if not .chezmoidata.codespaces -}}
+{{ if not .codespaces -}}
 {{ if (and (ne .chezmoi.os "windows") (ne .chezmoi.arch "arm64")) -}}
 #!/bin/bash
 

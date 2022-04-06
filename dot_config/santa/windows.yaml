@@ -1,7 +1,15 @@
+elves:
+  - name: example
+    emoji: 🧪
+    shell_command: echo
+    install_command: "echo"
+    check_command: "echo"
+
 sources:
   - scoop
   - cargo
   - npm
+
 packages:
   - bat
   - bottom

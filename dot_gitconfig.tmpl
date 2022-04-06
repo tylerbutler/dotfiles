@@ -13,6 +13,9 @@
   local-branches = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
   lb = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
 
+  # Squash all commits on the current branch to a single commit
+  squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
+
   # Stash all files, including untracked files and directories
   stash-all = stash save --include-untracked
 

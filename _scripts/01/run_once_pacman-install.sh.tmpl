@@ -1,4 +1,4 @@
-{{ if not .codespaces -}}
+
 {{- if eq .chezmoi.os "linux" -}}
 {{- if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
@@ -8,9 +8,9 @@ sudo pacman -Syyu
 
 # install zsh and change the default shell to it
 sudo pacman -S --needed zsh
-chsh -s /usr/bin/zsh
+chsh -s /usr/zsh
 
-# Some apt-installable packages
+# Some initial pacman-installable packages
 
 sudo pacman -S --needed \
     base-devel \
@@ -18,10 +18,8 @@ sudo pacman -S --needed \
     curl \
     git \
     htop \
-    mc \
     pv \
     wget \
 
-{{ end -}}
 {{ end -}}
 {{ end -}}

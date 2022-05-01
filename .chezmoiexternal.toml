@@ -38,17 +38,17 @@
 
 [".config/themes/alacritty/rose-pine.yml"]
     type = "file"
-    url = "https://github.com/rose-pine/alacritty/raw/main/rose-pine.yml"
+    url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine.yml"
     refreshPeriod = "168h" # 1 week
 
 [".config/themes/alacritty/rose-pine-dawn.yml"]
     type = "file"
-    url = "https://github.com/rose-pine/alacritty/raw/main/rose-pine-dawn.yml"
+    url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-dawn.yml"
     refreshPeriod = "168h" # 1 week
 
 [".config/themes/alacritty/rose-pine-moon.yml"]
     type = "file"
-    url = "https://github.com/rose-pine/alacritty/raw/main/rose-pine-moon.yml"
+    url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-moon.yml"
     refreshPeriod = "168h" # 1 week
 
 [".config/themes/alacritty/selenized-black.yml"]

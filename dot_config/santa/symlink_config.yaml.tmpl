@@ -1,9 +1,0 @@
-{{- if (eq .chezmoi.os "windows") -}}
-{{ .chezmoi.homeDir }}/.config/santa/windows.yaml
-{{ end -}}
-
-{{- if eq .chezmoi.os "linux" -}}
-{{- if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
-{{ .chezmoi.homeDir }}/.config/santa/debian.yaml
-{{ end -}}
-{{ end -}}

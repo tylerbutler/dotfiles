@@ -1,14 +1,27 @@
-elves:
-  - name: example
-    emoji: 🧪
-    shell_command: echo
-    install_command: "echo"
-    check_command: "echo"
-
+{{- if (eq .chezmoi.os "windows") -}}
 sources:
   - scoop
   - cargo
   - npm
+{{ end -}}
+
+{{- if eq .chezmoi.os "linux" -}}
+{{- if (eq (index .chezmoi.osRelease "idLike") "arch") -}}
+sources:
+  - pacman
+  - aur
+  - cargo
+  - npm
+{{ end -}}
+
+{{- if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
+sources:
+  - brew
+  - cargo
+  - npm
+  - apt
+{{ end -}}
+{{ end -}}
 
 packages:
   - bat
@@ -43,7 +56,6 @@ packages:
   - thefuck
   - tmux
   - viu
-  - wget:apt
   - zellij
   - zoxide
 

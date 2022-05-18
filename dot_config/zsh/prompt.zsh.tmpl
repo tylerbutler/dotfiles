@@ -1,0 +1,13 @@
+# PROMPT CONFIG
+
+# eval "$(starship init zsh)"
+
+{{- if not .codespaces -}}
+  source $HOME/.config/.zsh/headline.zsh-theme
+  HEADLINE_DO_GIT_STATUS_COUNTS=true
+  HEADLINE_LINE_MODE="on"
+{{ else }}
+  eval "$(oh-my-posh --init --shell zsh --config ~/.config/oh-my-posh/headline-tylerbu.omp.json)"
+{{ end -}}
+
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

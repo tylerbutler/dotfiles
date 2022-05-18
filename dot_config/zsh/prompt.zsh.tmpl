@@ -2,7 +2,7 @@
 
 # eval "$(starship init zsh)"
 
-{{- if not .codespaces -}}
+{{- if .codespaces -}}
   source $HOME/.config/.zsh/headline.zsh-theme
   HEADLINE_DO_GIT_STATUS_COUNTS=true
   HEADLINE_LINE_MODE="on"

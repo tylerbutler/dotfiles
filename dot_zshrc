@@ -11,7 +11,7 @@ if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
 
-if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ] && [ "$CODESPACES" != "true"]; then
+if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ] && [ "$CODESPACES" != "true" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
     # eval "$(pyenv init -)"

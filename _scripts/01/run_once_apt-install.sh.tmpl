@@ -24,7 +24,17 @@ sudo apt install --yes --no-install-recommends \
     ssh \
     thefuck \
 
-{{ if not .codespaces -}}
+{{ if .codespaces }}
+# Codespace-only packages
+sudo apt install --yes --no-install-recommends \
+    fd-find \
+    tmux \
+
+# Install fnm (fast node manager)
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+{{ end }}
+
+{{ if not .codespaces }}
 # Non-codespace packages
 sudo apt install --yes --no-install-recommends \
     borgmatic \

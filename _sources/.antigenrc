@@ -137,7 +137,9 @@ antigen apply
 
 # zoxide
 ########
-eval "$(zoxide init zsh)"
+if [ "$CODESPACES" != "true" ]; then
+    eval "$(zoxide init zsh)"
+fi
 
 # Plugin settings
 # alias-finder

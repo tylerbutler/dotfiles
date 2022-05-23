@@ -1,4 +1,5 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
@@ -53,14 +54,12 @@
         [
             {
                 "colorScheme": "One Half Dark",
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
                 "colorScheme": "Tango Dark",
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
@@ -100,6 +99,24 @@
                 "commandline": "ssh tylerbu@erised.local",
                 "guid": "{31c566b9-31ca-49b1-8c30-df4f1213ddd3}",
                 "name": "erised"
+            },
+            {
+                "colorScheme": "Tango Dark",
+                "commandline": "ssh tylerbu@workules.local",
+                "guid": "{de12ccb8-2be8-4636-91af-bec35cf61663}",
+                "name": "workules"
+            },
+            {
+                "guid": "{e1f6ea66-eb31-5470-ab05-677dc5ccb6f3}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{a2b93b75-386c-528a-b70c-9232ee36754d}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },

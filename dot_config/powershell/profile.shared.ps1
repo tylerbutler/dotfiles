@@ -26,7 +26,7 @@ Function gig {
 #use PSReadLine only for PowerShell and VS Code
 if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) {
     #ensure the correct version is loaded
-    Import-Module PSReadline -RequiredVersion 2.2.0
+    # Import-Module PSReadline -RequiredVersion 2.2.0
     #ListView currently works only with -EditMode Windows properly
     Set-PSReadLineOption -EditMode Windows
     if ($host.Version.Major -eq 7){

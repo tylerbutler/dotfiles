@@ -11,7 +11,7 @@ if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
 
-if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ] && [ "$CODESPACES" != "true" ]; then
+if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
     # eval "$(pyenv init -)"
@@ -86,7 +86,7 @@ source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 source $HOME/.config/zsh/prompt.zsh
 
 # fnm (fast node manager)
-export PATH=$HOME/.fnm:$PATH
+# echo "fnm init"
 eval "$(fnm env --use-on-cd)"
 
 function gig() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
@@ -96,3 +96,5 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+eval "$(atuin init zsh)"

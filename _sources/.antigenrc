@@ -100,7 +100,7 @@ antigen bundle mollifier/cd-gitroot
 # antigen bundle supercrabtree/k  # original
 # antigen bundle tylerbutler/k@master
 # antigen bundle tylerbutler/k@env-vars  # personal fork with env var overrides - but it's (too) slow
-antigen bundle tylerbutler/k@branch-color  # overrides only the branch color
+# antigen bundle tylerbutler/k@branch-color  # overrides only the branch color
 
 # auto-update antigen
 # antigen bundle unixorn/autoupdate-antigen.zshplugin

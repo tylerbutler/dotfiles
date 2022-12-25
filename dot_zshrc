@@ -100,6 +100,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # eval "$(atuin init zsh)"
 
 # pnpm
-export PNPM_HOME="/home/tylerbu/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end

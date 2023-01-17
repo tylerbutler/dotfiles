@@ -1,2 +1,2 @@
 [global]
-to = "~/.local/bin"
+target = "~/.local/bin"

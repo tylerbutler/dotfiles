@@ -57,14 +57,15 @@
   editor = micro
   # editor = "if [[ $EDITOR -eq 'code' ]]; then ED='code --wait'; else ED=$EDITOR; fi; $ED"
   longpaths = true
-  pager = diff-so-fancy | less --tabs=4 -RFX
-  # pager = delta
+  # pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
 
   # Global gitignore rules
   excludesfile = ~/.gitignore_global
 
   # Pay attention to case, even on OSX and Windows
   ignorecase = false
+
 [delta]
   syntax-theme = "Solarized (dark)"
   plus-color = "#012800"
@@ -81,6 +82,7 @@
   submodule = log
   tool = difftastic
   guitool = bc3
+  external = difft
 
 [fetch]
   # Push submodule changes to the remote before pushing the main project.
@@ -89,6 +91,7 @@
   
 [interactive]
   diffFilter = delta --color-only
+  # diffFilter = diff-so-fancy --patch
   
 [merge]
   tool = bc3

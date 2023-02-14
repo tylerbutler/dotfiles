@@ -126,3 +126,6 @@
 [include]
   path = {{ ((splitList "\\" .chezmoi.homeDir) | join "\\\\" ) }}{{ "\\\\.config\\\\git\\\\windows.gitconfig" }}
 {{ end -}}
+
+[gc]
+  worktreePruneExpire = 3.weeks.ago

@@ -13,6 +13,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /deadpool/tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /x23/tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Prodigy" /wolverine/tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /wolverine/tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "Scandal (2012)" /wolverine/tv/1TB-02/
@@ -20,6 +21,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /wolve
 rsync -avz --progress -h --remove-source-files --copy-links "Solar Opposites" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Tales of the Walking Dead" /x23/tv/2TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /x23/tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /x23/tv/2TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /x23/tv/2TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Strain" /wolverine/tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Sex Lives of College Girls" /wolverine/tv/1TB-03/

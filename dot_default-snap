@@ -1,0 +1,3 @@
+sudo snap install chezmoi --classic
+sudo snap install direnv
+sudo snap install micro --classic

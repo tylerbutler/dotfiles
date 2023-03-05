@@ -4,12 +4,13 @@
 
 workspace:
   # global tabs
+  - tab: home
   - tab: code
     doc: "code"
     dir: code
 
-  - tab: "Fluid/docs"
-    dir: code/FluidFramework/docs
+  # - tab: "Fluid/docs"
+    # dir: code/FluidFramework/docs
 
   - repo: code/FluidFramework
     # tabs:

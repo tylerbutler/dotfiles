@@ -42,3 +42,5 @@ if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) 
     #change the key to accept suggestions (default is right arrow)
     Set-PSReadLineKeyHandler -Function AcceptSuggestion -Key 'ALT+r'
 }
+
+fnm env --use-on-cd | Out-String | Invoke-Expression

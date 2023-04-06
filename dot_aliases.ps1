@@ -77,5 +77,5 @@ nba gsu "git submodule update"
 nba z "zoxide"
 
 # I use fnm for node management on Linux and mac, but nvs on Windows
-nba fnm "nvs"
-nba nvm "nvs"
+nba nvs "fnm"
+nba nvm "fnm"

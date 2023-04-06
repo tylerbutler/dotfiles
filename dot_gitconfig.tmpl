@@ -66,6 +66,15 @@
   # Pay attention to case, even on OSX and Windows
   ignorecase = false
 
+[credential]
+  # According to the docs at https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/rename.md: When
+  # updating the Git configuration file in your home directory ($HOME/.gitconfig or %USERPROFILE%\.gitconfig) you should
+  # ensure there are is an additional blank entry for credential.helper before the GCM entry.
+  helper =
+	helper = manager
+[credential "helperselector"]
+	selected = manager
+
 [delta]
   syntax-theme = "Solarized (dark)"
   plus-color = "#012800"

@@ -40,7 +40,7 @@ zstyle ':autocomplete:*' fzf-completion yes
 # ⚠️ NOTE: This setting can NOT be changed at runtime and requires that you
 # have installed Fzf's shell extensions.
 
-source $HOME/.local/zsh-autocomplete/zsh-autocomplete.plugin.zsh # see .chezmoiexternals.toml
+source $HOME/.local/zsh-autocomplete/zsh-autocomplete.plugin.zsh # see .chezmoiexternal.toml
 
 # Up arrow:
 bindkey '\e[A' up-line-or-history

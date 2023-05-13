@@ -25,15 +25,24 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-
-# eval "$(pyenv init --path)"
-
 fpath=($HOME/zsh/completions $fpath)
 
 # Antigen load and bootstrap
-source $HOME/.local/antigen.zsh # see .chezmoiexternals.toml
-
+source $HOME/.local/antigen.zsh # see .chezmoiexternal.toml
 antigen init $HOME/.antigenrc
+
+# zplug load and bootstrap
+export ZPLUG_HOME=$HOME/.zplug
+if [[ ! -d $ZPLUG_HOME ]]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+fi
+
+source $ZPLUG_HOME/init.zsh && zplug update
+# source $HOME/.zplugrc
+
+# pnpm tab completion
+zplug "g-plane/pnpm-shell-completion", hook-build:"./zplug.zsh", defer:2
+zplug load
 
 # Setting rg as the default source for fzf
 export FZF_DEFAULT_OPTS="--height 96%"

@@ -11,76 +11,76 @@
     executable = true
     refreshPeriod = "168h"
 
-[".config/alacritty/default.yml"]
-    type = "file"
-    url = "https://github.com/alacritty/alacritty/raw/master/alacritty.yml"
-    refreshPeriod = "168h" # 1 week
+# [".config/alacritty/default.yml"]
+    # type = "file"
+    # url = "https://github.com/alacritty/alacritty/raw/main/alacritty.yml"
+    # refreshPeriod = "168h" # 1 week
 
-[".config/themes/alacritty/catppuccin-latte.yml"]
-    type = "file"
-    url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-latte.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/catppuccin-frappe.yml"]
-    type = "file"
-    url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-frappe.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/catppuccin-macchiato.yml"]
-    type = "file"
-    url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-macchiato.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/catppuccin-mocha.yml"]
-    type = "file"
-    url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/melange_dark.yml"]
-    type = "file"
-    url = "https://github.com/savq/melange/raw/master/term/alacritty/melange_dark.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/melange_light.yml"]
-    type = "file"
-    url = "https://github.com/savq/melange/raw/master/term/alacritty/melange_light.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/rigel.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/Rigellute/rigel/master/alacritty.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/rose-pine.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/rose-pine-dawn.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-dawn.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/rose-pine-moon.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-moon.yml"
-    refreshPeriod = "168h" # 1 week
-
-[".config/themes/alacritty/selenized-black.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-black.yml"
-
-[".config/themes/alacritty/selenized-dark.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-dark.yml"
-
-[".config/themes/alacritty/selenized-light.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-light.yml"
-
-[".config/themes/alacritty/selenized-white.yml"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-white.yml"
+# [".config/themes/alacritty/catppuccin-latte.yml"]
+    # type = "file"
+    # url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-latte.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/catppuccin-frappe.yml"]
+    # type = "file"
+    # url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-frappe.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/catppuccin-macchiato.yml"]
+    # type = "file"
+    # url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-macchiato.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/catppuccin-mocha.yml"]
+    # type = "file"
+    # url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/melange_dark.yml"]
+    # type = "file"
+    # url = "https://github.com/savq/melange/raw/master/term/alacritty/melange_dark.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/melange_light.yml"]
+    # type = "file"
+    # url = "https://github.com/savq/melange/raw/master/term/alacritty/melange_light.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/rigel.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/Rigellute/rigel/master/alacritty.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/rose-pine.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/rose-pine-dawn.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-dawn.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/rose-pine-moon.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-moon.yml"
+    # refreshPeriod = "168h" # 1 week
+# 
+# [".config/themes/alacritty/selenized-black.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-black.yml"
+# 
+# [".config/themes/alacritty/selenized-dark.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-dark.yml"
+# 
+# [".config/themes/alacritty/selenized-light.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-light.yml"
+# 
+# [".config/themes/alacritty/selenized-white.yml"]
+    # type = "file"
+    # url = "https://raw.githubusercontent.com/jan-warchol/selenized/master/terminals/alacritty/selenized-white.yml"
 
 [".config/oh-my-posh/hanselman.omp.json"]
     type = "file"

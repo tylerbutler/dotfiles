@@ -14,7 +14,9 @@ antigen bundles <<EOBUNDLES
   command-not-found
 
   common-aliases
-  deno
+  
+  # seems broken; disabled
+  # deno
 
   # hook direnv into the shell; it's installed by brew
   direnv

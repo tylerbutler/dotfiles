@@ -3,50 +3,50 @@ zplug "g-plane/pnpm-shell-completion", hook-build:"./zplug.zsh", defer:2
 
 ##########################################################################################
 # sane defaults
-zplug willghatch/zsh-saneopt
+# zplug willghatch/zsh-saneopt
 
 # zplug "./oh-my-zsh", from:oh-my-zsh
 # zplug "lib/completion", from:oh-my-zsh
 # zplug "lib/history", from:oh-my-zsh
 
-zplug "plugins/alias-finder", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
+# zplug "plugins/alias-finder", from:oh-my-zsh
+# zplug "plugins/common-aliases", from:oh-my-zsh
 
 # docker completions and aliases
-zplug "plugins/docker", from:oh-my-zsh
+# zplug "plugins/docker", from:oh-my-zsh
 
 # installed using brew
-zplug "plugins/fzf", from:oh-my-zsh, defer:2
+# zplug "plugins/fzf", from:oh-my-zsh, defer:2
 
 # git aliases
-zplug "plugins/git", from:oh-my-zsh
+# zplug "plugins/git", from:oh-my-zsh
 
 # git completions
-zplug "plugins/gitfast", from:oh-my-zsh, defer:2
+# zplug "plugins/gitfast", from:oh-my-zsh, defer:2
 
 # usability
-zplug "plugins/git-escape-magic", from:oh-my-zsh, defer:2
+# zplug "plugins/git-escape-magic", from:oh-my-zsh, defer:2
 
 # completions for git-extras
-zplug "plugins/git-extras", from:oh-my-zsh, defer:2
+# zplug "plugins/git-extras", from:oh-my-zsh, defer:2
 
-zplug "plugins/last-working-dir", from:oh-my-zsh
+# zplug "plugins/last-working-dir", from:oh-my-zsh
 
-zplug "plugins/rand-quote", from:oh-my-zsh
-zplug "plugins/rsync", from:oh-my-zsh, defer:2
-zplug "plugins/timer", from:oh-my-zsh
+# zplug "plugins/rand-quote", from:oh-my-zsh
+# zplug "plugins/rsync", from:oh-my-zsh, defer:2
+# zplug "plugins/timer", from:oh-my-zsh
 
 # fzf tab completion
-zplug "Aloxaf/fzf-tab", defer:2
+# zplug "Aloxaf/fzf-tab", defer:2
 
 # expand aliases when they're used
-zplug "brymck/print-alias"
+# zplug "brymck/print-alias"
 
 # adds sess command for tmux session management
-zplug "ChrisPenner/session-sauce", as:command
+# zplug "ChrisPenner/session-sauce", as:command
 
 # Support ... and .... etc.
-zplug "knu/zsh-manydots-magic", as:command
+# zplug "knu/zsh-manydots-magic", as:command
 
 # npm completions
 # zplug lukechilds/zsh-better-npm-completion
@@ -55,10 +55,10 @@ zplug "knu/zsh-manydots-magic", as:command
 # zplug LuRsT/hr
 
 # completions for cargo/rust
-zplug MenkeTechnologies/zsh-cargo-completion
+# zplug MenkeTechnologies/zsh-cargo-completion
 
 # add shortcut to root of git repo
-zplug mollifier/cd-gitroot
+# zplug mollifier/cd-gitroot
 
 # auto-switch pipenvs
 # zplug owenstranathan/pipenv.zsh
@@ -66,31 +66,31 @@ zplug mollifier/cd-gitroot
 # zplug unixorn/git-extra-commands
 # zplug wfxr/forgit
 # zplug wfxr/emoji-cli
-zplug zdharma-continuum/fast-syntax-highlighting
-zplug zlsun/solarized-man
+# zplug zdharma-continuum/fast-syntax-highlighting
+# zplug zlsun/solarized-man
 
 # fish-style autosuggestions; disabled
 # zplug zsh-users/zsh-autosuggestions@master
 
 # extra completions
-zplug zsh-users/zsh-completions
+# zplug zsh-users/zsh-completions
 
-export SESS_PROJECT_ROOT="$HOME/code"
+# export SESS_PROJECT_ROOT="$HOME/code"
 
 # Set gdi as an alias for interactive git diff
-export forgit_diff=gdi
+# export forgit_diff=gdi
 
 # zplug "3v1n0/zsh-bash-completions-fallback"
 # zplug olets/zsh-abbr
 # zplug zpm-zsh/ls
-
-zplug zimfw/utility
-zplug zimfw/exa
+# 
+# zplug zimfw/utility
+# zplug zimfw/exa
 ##########################################################################################
-
-if ! zplug check --verbose; then
-    zplug install
-fi
+# 
+# if ! zplug check --verbose; then
+    # zplug install
+# fi
 
 # Tell zplug that we're done
-zplug load
+# zplug load

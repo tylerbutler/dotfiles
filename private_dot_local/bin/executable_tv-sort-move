@@ -7,14 +7,15 @@ rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /wolverine
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /wolverine/tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /wolverine/tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /wolverine/tv/1TB-01/
-rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /x23/tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /wolverine/tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /x23/tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /x23/tv/2TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /deadpool/tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /wolverine/tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /x23/tv/1TB-09/
-rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Prodigy" /wolverine/tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /wolverine/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /wolverine/tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "Scandal (2012)" /wolverine/tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /wolverine/tv/1TB-02/
@@ -43,6 +44,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora F
 rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Bob\'s\ Burgers /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /wolverine/tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Futurama /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /wolverine/tv/_keep/

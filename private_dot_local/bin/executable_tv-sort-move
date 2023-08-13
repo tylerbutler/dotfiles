@@ -1,4 +1,4 @@
-rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /x23/tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /x2/tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /deadpool/tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /wolverine/tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /wolverine/tv/1TB-03/
@@ -7,11 +7,13 @@ rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /wolverine
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /wolverine/tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /wolverine/tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /wolverine/tv/1TB-01/
-rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /wolverine/tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /x23/tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /x23/tv/2TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /deadpool/tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /wolverine/tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Miracle Workers (2019)" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /x23/tv/1TB-09/
@@ -42,15 +44,16 @@ rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in Amer
 rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora From Queens" /wolverine/tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links Bob\'s\ Burgers /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links Futurama /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "The Simpsons" /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links How\ I\ Met\ Your\ Mother /wolverine/tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Bob\'s\ Burgers /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Futurama /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links "The Simpsons" /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links How\ I\ Met\ Your\ Mother /tv/_keep/
 
+rsync -avz --progress -h --remove-source-files --copy-links "Invincible (2021)" /tv/1TB-04/
 
 echo "Empty directories will be deleted:"
 find -type d -empty

@@ -2,6 +2,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" 
 rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /deadpool/tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /wolverine/tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /wolverine/tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /wolverine/tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /wolverine/tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /wolverine/tv/1TB-06/
@@ -12,9 +13,11 @@ rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /x23/tv/2TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /deadpool/tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Mrs. Davis" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Miracle Workers (2019)" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /x23/tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Secret Invasion" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /x23/tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /wolverine/tv/1TB-09/

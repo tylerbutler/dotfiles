@@ -1,52 +1,53 @@
-rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /x2/tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /deadpool/tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /wolverine/tv/1TB-01/
-rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /wolverine/tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /wolverine/tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /wolverine/tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /wolverine/tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /wolverine/tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /wolverine/tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
+rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /tv/1TB-06/
+rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /tv/1TB-06/
+rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /tv/1TB-06/
+rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /x23/tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
-rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /deadpool/tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Mrs. Davis" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Miracle Workers (2019)" /tv/1TB-05/
-rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /x23/tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Secret Invasion" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /x23/tv/1TB-09/
-rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /x23/tv/1TB-09/
-rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /wolverine/tv/1TB-09/
-rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /wolverine/tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Scandal (2012)" /wolverine/tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /wolverine/tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Solar Opposites" /x23/tv/1TB-09/
-rsync -avz --progress -h --remove-source-files --copy-links "Tales of the Walking Dead" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "Ted Lasso" /wolverine/tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /x23/tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The Strain" /wolverine/tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "The Sex Lives of College Girls" /wolverine/tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "The Great British Bake Off" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The Handmaid's Tale" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The League" /wolverine/tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "The Walking Dead" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The White Lotus" /x23/tv/2TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /x23/tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "This Is Us" /x23/tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "Harley Quinn" /wolverine/tv/1TB-07/
-rsync -avz --progress -h --remove-source-files --copy-links "His Dark Materials" /wolverine/tv/1TB-07/
-rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /wolverine/tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /x23/tv/1TB-12/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "Scandal (2012)" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "Solar Opposites" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Tales of the Walking Dead" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "Ted Lasso" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Strain" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "The Sex Lives of College Girls" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "The Great British Bake Off" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Handmaid's Tale" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The League" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "The Walking Dead" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The White Lotus" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "This Is Us" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "Harley Quinn" /tv/1TB-07/
+rsync -avz --progress -h --remove-source-files --copy-links "His Dark Materials" /tv/1TB-07/
+rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/
 
-rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora From Queens" /wolverine/tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /wolverine/tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora From Queens" /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Bob\'s\ Burgers /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Futurama /tv/_keep/

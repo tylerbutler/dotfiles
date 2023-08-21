@@ -126,15 +126,3 @@
     executable = true
     url = "https://gist.githubusercontent.com/rene-d/b5370efb61db005d7de0ad47959cd46c/raw/b32aa98a602b5f53d5c1977f2cb1a4cf87e28e90/shell_colors"
     refreshPeriod = "168h"
-[".local/share/navi/cheats/navi.cheat"]
-    type = "file"
-    url = "https://github.com/denisidoro/navi/raw/master/docs/navi.cheat"
-[".local/share/navi/cheats/brew.cheat"]
-    type = "file"
-    url = "https://github.com/denisidoro/cheats/raw/master/pkg_mgr/apt.cheat"
-[".local/share/navi/cheats/apt.cheat"]
-    type = "file"
-    url = "https://github.com/denisidoro/cheats/raw/master/pkg_mgr/brew.cheat"
-[".local/share/navi/cheats/javascript.cheat"]
-    type = "file"
-    url = "https://github.com/denisidoro/cheats/raw/master/pkg_mgr/javascript.cheat"

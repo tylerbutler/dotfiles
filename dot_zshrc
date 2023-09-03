@@ -58,7 +58,6 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Aliases
-# echo "aliases init"
 source $HOME/.aliases.sh
 
 # ZSH settings
@@ -85,11 +84,6 @@ precmd() {
     fi
 }
 
-# export LS_COLORS="$(vivid generate solarized-dark)"
-# export LS_COLORS="$(vivid generate jellybeans)"
-# test -r "$HOME/.dir_colors"
-# eval $(dircolors $HOME/.dir_colors/nord.txt)
-
 # load env variables
 source $HOME/.env.zsh
 
@@ -104,14 +98,16 @@ source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 # autoload -Uz compinit
 # compinit
 
-# curl -L https://raw.githubusercontent.com/ogham/exa/master/completions/completions.zsh > $HOME/zsh/completions/_exa
-
 # PROMPT CONFIG
 source $HOME/.config/zsh/prompt.zsh
 
 # fnm (fast node manager)
-# echo "fnm init"
 eval "$(fnm env --use-on-cd)"
+
+# flub
+if command -v flub >/dev/null 2>&1; then
+    eval $(flub autocomplete script zsh)
+fi
 
 function gig() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 

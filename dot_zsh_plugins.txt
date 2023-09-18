@@ -1,0 +1,59 @@
+#sane defaults
+willghatch/zsh-saneopt
+
+# add even more completions
+zsh-users/zsh-completions
+
+### BEGIN oh-my-zsh plugins
+
+# omz lib, needed by some plugins
+ohmyzsh/ohmyzsh path:lib
+
+# alias finder
+ohmyzsh/ohmyzsh path:plugins/alias-finder
+
+# notify when in bg
+ohmyzsh/ohmyzsh path:plugins/bgnotify
+
+# suggest packages to install when commands aren't found
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+ohmyzsh/ohmyzsh path:plugins/common-aliases
+
+# hook direnv into the shell; it's installed by brew
+ohmyzsh/ohmyzsh path:plugins/direnv
+
+# installed using brew
+ohmyzsh/ohmyzsh path:plugins/fzf
+
+# git aliases
+ohmyzsh/ohmyzsh path:plugins/git
+
+# git completions
+ohmyzsh/ohmyzsh path:plugins/gitfast
+
+# completions for git-extras
+ohmyzsh/ohmyzsh path:plugins/git-extras
+
+# golang completions and aliases
+ohmyzsh/ohmyzsh path:plugins/golang
+
+# load the last working dir on shell init
+ohmyzsh/ohmyzsh path:plugins/last-working-dir
+
+# support for quote command
+ohmyzsh/ohmyzsh path:plugins/rand-quote
+
+# rsync completions
+ohmyzsh/ohmyzsh path:plugins/rsync
+
+# corrections with esc-esc
+# FAILING ohmyzsh/ohmyzsh path:plugins/thefuck
+
+# output time after every command
+ohmyzsh/ohmyzsh path:plugins/timer
+
+### END oh-my-zsh plugins
+
+# now, configure and run compinit to initialize completions
+belak/zsh-utils path:completion

@@ -5,6 +5,7 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
+# flub autocomplete
 if command -v flub &> /dev/null
 then
 	eval $(flub autocomplete script zsh)
@@ -28,25 +29,36 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 
-# pnpm
+# BEGIN pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+# END pnpm
 
 fpath=($HOME/zsh/completions $fpath)
 
-# Antigen load and bootstrap
-source $HOME/.local/antigen.zsh # see .chezmoiexternal.toml
-antigen init $HOME/.antigenrc
+# BEGIN Antigen load and bootstrap
+# source $HOME/.local/antigen.zsh # see .chezmoiexternal.toml
+# antigen init $HOME/.antigenrc
+# END Antigen load and bootstrap
 
-# zplug load and bootstrap
-# export ZPLUG_HOME=$HOME/.zplug
-# if [[ ! -d $ZPLUG_HOME ]]; then
-    # git clone https://github.com/zplug/zplug $ZPLUG_HOME
+# BEGIN antidote load and boostrapping
+# export ANTIDOTE_HOME=${ZDOTDIR:-~}/.antidote
+# if [[ ! -d $ANTIDOTE_HOME ]]; then
+#     git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
 # fi
-# 
-# source $ZPLUG_HOME/init.zsh && zplug update
-# source $HOME/.zplugrc
+# source $ANTIDOTE_HOME/antidote.zsh
+# antidote load
+# END antidote
+
+# BEGIN zplug load and bootstrap
+export ZPLUG_HOME=$HOME/.zplug
+if [[ ! -d $ZPLUG_HOME ]]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+fi
+
+source $ZPLUG_HOME/init.zsh && zplug update
+source $HOME/.zplugrc
+# END zplug load and bootstrap
 
 # pnpm tab completion
 # zplug "g-plane/pnpm-shell-completion", hook-build:"./zplug.zsh", defer:2
@@ -93,10 +105,6 @@ source $HOME/.env.zsh
 # tab multiplexer configuration: https://github.com/austinjones/tab-rs/
 source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 # end tab configuration
-
-# initialize completions with ZSH's compinit
-# autoload -Uz compinit
-# compinit
 
 # PROMPT CONFIG
 source $HOME/.config/zsh/prompt.zsh

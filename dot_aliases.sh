@@ -21,12 +21,12 @@ alias cdr="cd-gitroot"
 # alias ls='exa --git'                                                   # ls
 # alias l='exa -lbF --git'                                 # list, size, type, git
 # alias ll='exa -lbGF --git'                               # long list
-alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
-alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+# alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
+# alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 
 # specialty views
-alias lS='exa -1'                                                       # one column, just names
-alias lt='exa --tree --level=2'                                         # tree
+# alias lS='exa -1'                                                       # one column, just names
+# alias lt='exa --tree --level=2'                                         # tree
 
 alias k="k --human"
 alias kl="k --human --almost-all"
@@ -37,7 +37,7 @@ alias kl="k --human --almost-all"
 alias mkdir="mkdir -p "
 
 # list only directories
-alias lsd='ls -d */'
+# alias lsd='ls -d */'
 # list only files
 #alias lsf="ls -rtF | grep -v '.*/'"
 #alias l='ls -l'

@@ -1,11 +1,6 @@
 #sane defaults
 willghatch/zsh-saneopt
 
-# add even more completions
-zsh-users/zsh-completions
-
-### BEGIN oh-my-zsh plugins
-
 # omz lib, needed by some plugins
 ohmyzsh/ohmyzsh path:lib
 
@@ -32,12 +27,6 @@ ohmyzsh/ohmyzsh path:plugins/git
 # git completions
 ohmyzsh/ohmyzsh path:plugins/gitfast
 
-# completions for git-extras
-ohmyzsh/ohmyzsh path:plugins/git-extras
-
-# golang completions and aliases
-ohmyzsh/ohmyzsh path:plugins/golang
-
 # load the last working dir on shell init
 ohmyzsh/ohmyzsh path:plugins/last-working-dir
 
@@ -47,13 +36,35 @@ ohmyzsh/ohmyzsh path:plugins/rand-quote
 # rsync completions
 ohmyzsh/ohmyzsh path:plugins/rsync
 
-# corrections with esc-esc
-# FAILING ohmyzsh/ohmyzsh path:plugins/thefuck
-
 # output time after every command
 ohmyzsh/ohmyzsh path:plugins/timer
 
 ### END oh-my-zsh plugins
+
+# npm completions
+#lukechilds/zsh-better-npm-completion
+
+# completions for cargo/rust
+#MenkeTechnologies/zsh-cargo-completion
+
+# add shortcut to root of git repo
+#mollifier/cd-gitroot
+
+# git-extras and completions
+unixorn/git-extra-commands
+ohmyzsh/ohmyzsh path:plugins/git-extras
+
+# syntax highlighting
+# zdharma-continuum/fast-syntax-highlighting
+
+zsh-users/zsh-history-substring-search
+
+# extra completions
+zsh-users/zsh-completions
+3v1n0/zsh-bash-completions-fallback
+
+# ls/exa aliases
+zpm-zsh/ls
 
 # now, configure and run compinit to initialize completions
 belak/zsh-utils path:completion

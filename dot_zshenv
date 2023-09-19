@@ -34,5 +34,6 @@ fi
 
 export GOPATH="$HOME/go/bin"
 export EMPLACE_CONFIG="$HOME/.config/emplace.toml"
+export ZSH_LS_BACKEND="exa"
 
 . "$HOME/.cargo/env"

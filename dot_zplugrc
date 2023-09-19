@@ -15,7 +15,9 @@ zplug "willghatch/zsh-saneopt"
 zplug "zsh-users/zsh-history-substring-search"
 
 zplug "plugins/alias-finder", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
+
+# DISABLED
+# zplug "plugins/common-aliases", from:oh-my-zsh
 
 # fzf is installed using brew
 zplug "plugins/fzf", from:oh-my-zsh, defer:2

@@ -5,12 +5,6 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-# flub autocomplete
-if command -v flub &> /dev/null
-then
-	eval $(flub autocomplete script zsh)
-fi
-
 # source $HOME/.local/zsh-autocomplete-settings.zsh
 
 GITSTATUS_LOG_LEVEL=DEBUG
@@ -42,22 +36,22 @@ fpath=($HOME/zsh/completions $fpath)
 # END Antigen load and bootstrap
 
 # BEGIN antidote load and boostrapping
-# export ANTIDOTE_HOME=${ZDOTDIR:-~}/.antidote
-# if [[ ! -d $ANTIDOTE_HOME ]]; then
-#     git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
-# fi
-# source $ANTIDOTE_HOME/antidote.zsh
-# antidote load
+export ANTIDOTE_HOME=${ZDOTDIR:-~}/.antidote
+if [[ ! -d $ANTIDOTE_HOME ]]; then
+    git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
+fi
+source $ANTIDOTE_HOME/antidote.zsh
+antidote load
 # END antidote
 
 # BEGIN zplug load and bootstrap
-export ZPLUG_HOME=$HOME/.zplug
-if [[ ! -d $ZPLUG_HOME ]]; then
-    git clone https://github.com/zplug/zplug $ZPLUG_HOME
-fi
+# export ZPLUG_HOME=$HOME/.zplug
+# if [[ ! -d $ZPLUG_HOME ]]; then
+#     git clone https://github.com/zplug/zplug $ZPLUG_HOME
+# fi
 
-source $ZPLUG_HOME/init.zsh && zplug update
-source $HOME/.zplugrc
+# source $ZPLUG_HOME/init.zsh && zplug update
+# source $HOME/.zplugrc
 # END zplug load and bootstrap
 
 # pnpm tab completion
@@ -90,6 +84,8 @@ setopt SHARE_HISTORY
 setopt extended_glob
 setopt longlistjobs
 
+setopt autocd
+
 precmd() {
     if [ "$(id -u)" -ne 0 ]; then
         echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history | tail -n 1)" >>! $HOME/history/zsh-history-$(date "+%Y-%m-%d").log;
@@ -112,7 +108,7 @@ source $HOME/.config/zsh/prompt.zsh
 # fnm (fast node manager)
 eval "$(fnm env --use-on-cd)"
 
-# flub
+# flub autocomplete
 if command -v flub >/dev/null 2>&1; then
     eval $(flub autocomplete script zsh)
 fi
@@ -125,9 +121,44 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-# eval "$(atuin init zsh)"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide
+########
+if [ "$CODESPACES" != "true" ]; then
+    eval "$(zoxide init zsh)"
+fi
+
+# Plugin settings
+# alias-finder
+##############
+# show shorter aliases before every command
+ZSH_ALIAS_FINDER_AUTOMATIC=true
+
+# git
+#####
+GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
+
+# thefuck
+#########
+# alias fuck to oops
+eval "$(thefuck --alias oops)"
+
+# zsf-autocomplete
+##################
+# zstyle ':autocomplete:list-choices:*' min-input 3
+# zstyle ':autocomplete:space:*' magic correct-word expand-history
+# zstyle ':autocomplete:*' frecent-dirs off
+
+# zsh-users/zsh-autosuggestions
+###############################
+# Style for Solarized Dark
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=241,bold"
+# Bind ctrl-space to autosuggest accept
+bindkey "^ " autosuggest-accept
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

@@ -39,16 +39,14 @@ ohmyzsh/ohmyzsh path:plugins/rsync
 # output time after every command
 ohmyzsh/ohmyzsh path:plugins/timer
 
-### END oh-my-zsh plugins
-
 # npm completions
-#lukechilds/zsh-better-npm-completion
+lukechilds/zsh-better-npm-completion
 
 # completions for cargo/rust
-#MenkeTechnologies/zsh-cargo-completion
+MenkeTechnologies/zsh-cargo-completion
 
 # add shortcut to root of git repo
-#mollifier/cd-gitroot
+mollifier/cd-gitroot
 
 # git-extras and completions
 unixorn/git-extra-commands
@@ -66,5 +64,7 @@ zsh-users/zsh-completions
 # ls/exa aliases
 zpm-zsh/ls
 
+wfxr/emoji-cli
+
 # now, configure and run compinit to initialize completions
-belak/zsh-utils path:completion
+mattmc3/zephyr path:plugins/completion

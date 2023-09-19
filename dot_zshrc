@@ -5,6 +5,8 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
+autoload -Uz compinit && compinit
+
 # source $HOME/.local/zsh-autocomplete-settings.zsh
 
 GITSTATUS_LOG_LEVEL=DEBUG
@@ -154,6 +156,7 @@ eval "$(thefuck --alias oops)"
 ###############################
 # Style for Solarized Dark
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=241,bold"
+
 # Bind ctrl-space to autosuggest accept
 bindkey "^ " autosuggest-accept
 

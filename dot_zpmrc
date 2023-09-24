@@ -38,12 +38,12 @@ fpath=($HOME/zsh/completions $fpath)
 # END Antigen load and bootstrap
 
 # BEGIN antidote load and boostrapping
-# export ANTIDOTE_HOME=${ZDOTDIR:-~}/.antidote
-# if [[ ! -d $ANTIDOTE_HOME ]]; then
-#     git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
-# fi
-# source $ANTIDOTE_HOME/antidote.zsh
-# antidote load
+export ANTIDOTE_HOME=${ZDOTDIR:-~}/.antidote
+if [[ ! -d $ANTIDOTE_HOME ]]; then
+    git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
+fi
+source $ANTIDOTE_HOME/antidote.zsh
+antidote load
 # END antidote
 
 # BEGIN zplug load and bootstrap
@@ -59,16 +59,6 @@ fpath=($HOME/zsh/completions $fpath)
 # pnpm tab completion
 # zplug "g-plane/pnpm-shell-completion", hook-build:"./zplug.zsh", defer:2
 # zplug load
-
-# BEGIN zgenom init
-export ZGENOM_HOME="$HOME/.zgenom"
-if [[ ! -d $ZGENOM_HOME ]]; then
-    git clone https://github.com/jandamm/zgenom.git $ZGENOM_HOME
-fi
-source "${HOME}/.zgenom/zgenom.zsh"
-source "${HOME}/.zgenomrc"
-
-# END zgenom init
 
 # Setting rg as the default source for fzf
 export FZF_DEFAULT_OPTS="--height 96%"

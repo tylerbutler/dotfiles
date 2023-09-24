@@ -1,0 +1,52 @@
+# Check for plugin and zgenom updates every 7 days
+# This does not increase the startup time.
+zgenom autoupdate
+
+# if the init script doesn't exist
+if ! zgenom saved; then
+    echo "Creating a zgenom save"
+
+    # Add this if you experience issues with missing completions or errors mentioning compdef.
+    # zgenom compdef
+
+    # Ohmyzsh base library
+    zgenom ohmyzsh
+
+    # plugins
+    zgenom ohmyzsh plugins/alias-finder
+    zgenom ohmyzsh plugins/bgnotify
+    zgenom ohmyzsh plugins/command-not-found
+    zgenom ohmyzsh plugins/common-aliases
+    zgenom ohmyzsh plugins/direnv
+    zgenom ohmyzsh plugins/fzf
+    zgenom ohmyzsh plugins/git
+    zgenom ohmyzsh plugins/gitfast
+    zgenom ohmyzsh plugins/last-working-dir
+    # Install ohmyzsh osx plugin if on macOS
+    [[ "$(uname -s)" = Darwin ]] && zgenom ohmyzsh plugins/macos
+    zgenom ohmyzsh plugins/rand-quote
+    zgenom ohmyzsh plugins/rsync
+    zgenom ohmyzsh plugins/sudo
+    zgenom ohmyzsh plugins/timer
+
+    zgenom load lukechilds/zsh-better-npm-completion
+    zgenom load MenkeTechnologies/zsh-cargo-completion
+    zgenom load mollifier/cd-gitroot
+    zgenom load unixorn/git-extra-commands
+    zgenom load zsh-users/zsh-syntax-highlighting
+
+    # extra completions
+    zgenom load zsh-users/zsh-completions
+    zgenom load 3v1n0/zsh-bash-completions-fallback
+
+    zgenom load zpm-zsh/ls
+    zgenom load wfxr/emoji-cli
+
+    zgenom bin tj/git-extras
+
+    # save all to init script
+    zgenom save
+
+    # Compile your zsh files
+    zgenom compile "$HOME/.zshrc"
+fi

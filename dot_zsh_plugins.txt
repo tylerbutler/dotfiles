@@ -1,4 +1,4 @@
-#sane defaults
+# sane defaults
 willghatch/zsh-saneopt
 
 # omz lib, needed by some plugins

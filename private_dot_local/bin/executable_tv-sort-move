@@ -16,10 +16,11 @@ rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight w
 rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Mrs. Davis" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Miracle Workers (2019)" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Secret Invasion" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/

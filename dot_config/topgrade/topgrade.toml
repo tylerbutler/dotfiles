@@ -15,7 +15,7 @@ pre_sudo = true
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["zgenom", "zplug", "npm", "pnpm"]
+disable = ["shell", "node", "pnpm"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
@@ -226,5 +226,5 @@ use_sudo = true
 # use_root = false
 
 # containers = ["archlinux-latest"]
-[containers]
+# [containers]
 # ignored_containers = ["ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest"]

@@ -15,10 +15,10 @@ pre_sudo = true
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["shell", "node", "pnpm"]
+disable = ["shell", "node", "pnpm", "containers"]
 
 # Ignore failures for these steps
-# ignore_failures = ["powershell"]
+ignore_failures = ["shell", "node", "pnpm"]
 
 # List of remote machines with Topgrade installed on them
 # remote_topgrades = ["toothless", "pi", "parnas"]

@@ -69,10 +69,15 @@ source "${HOME}/.zgenom/zgenom.zsh"
 source "${HOME}/.zgenomrc"
 # END zgenom init
 
-# Setting rg as the default source for fzf
-export FZF_DEFAULT_OPTS="--height 96%"
+# Set rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
+# Set fd as default source
+# export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+export FZF_DEFAULT_OPTS="--height 40%"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# bind up arrow to fzf history
+bindkey "${key[Up]}" fzf-history-widget
 
 # Options to fzf command
 export FZF_COMPLETION_OPTS='--border --info=inline'
@@ -155,15 +160,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # zoxide
 ########
-# if [ "$CODESPACES" != "true" ]; then
-#     eval "$(zoxide init zsh)"
-# fi
+if [ "$CODESPACES" != "true" ]; then
+    eval "$(zoxide init zsh)"
+fi
 
 # atuin
 #######
-if [ "$CODESPACES" != "true" ]; then
-	eval "$(atuin init zsh)"
-fi
+# if [ "$CODESPACES" != "true" ]; then
+# 	eval "$(atuin init zsh --disable-up-arrow)"
+# fi
 
 # Plugin settings
 # alias-finder

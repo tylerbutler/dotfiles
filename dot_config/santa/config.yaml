@@ -1,35 +1,15 @@
-{{- if (eq .chezmoi.os "windows") -}}
-sources:
-  - scoop
-  - cargo
-  - npm
-{{ end -}}
-
-{{- if eq .chezmoi.os "linux" -}}
-{{- if (eq (index .chezmoi.osRelease "idLike") "arch") -}}
-sources:
-  - pacman
-  - aur
-  - cargo
-  - npm
-{{ end -}}
-
-{{- if (eq (index .chezmoi.osRelease "idLike") "debian") -}}
 sources:
   - brew
   - cargo
   - npm
   - apt
-{{ end -}}
-{{ end -}}
-
 packages:
   - bat
   - bottom
   - chezmoi
   - direnv
   - dust
-  - exa
+  - eza
   - fd
   - fnm
   - fzf

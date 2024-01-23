@@ -140,9 +140,6 @@ source $HOME/.config/zsh/prompt.zsh
 # fnm (fast node manager)
 eval "$(fnm env --use-on-cd)"
 
-# rtx tool manager
-# eval "$(rtx activate zsh)"
-
 # flub autocomplete
 if command -v flub >/dev/null 2>&1; then
     eval $(flub autocomplete script zsh)

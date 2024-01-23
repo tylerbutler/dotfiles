@@ -79,9 +79,9 @@ zplug "zsh-users/zsh-completions"
 
 zplug "3v1n0/zsh-bash-completions-fallback"
 
-# ls/exa aliases
+# ls/eza aliases
 zplug zpm-zsh/ls
-export ZSH_LS_BACKEND="exa"
+export ZSH_LS_BACKEND="eza"
 
 # zplug zimfw/utility
 ##########################################################################################

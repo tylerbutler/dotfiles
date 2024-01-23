@@ -8,7 +8,6 @@ nixpkgs.bottom-rs
 nixpkgs.chezmoi
 nixpkgs.delta
 nixpkgs.direnv
-nixpkgs.exa
 nixpkgs.fd
 nixpkgs.fnm
 nixpkgs.fzf

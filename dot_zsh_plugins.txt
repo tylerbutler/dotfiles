@@ -61,7 +61,7 @@ zsh-users/zsh-history-substring-search
 zsh-users/zsh-completions
 3v1n0/zsh-bash-completions-fallback
 
-# ls/exa aliases
+# ls/eza aliases
 zpm-zsh/ls
 
 wfxr/emoji-cli

@@ -34,6 +34,10 @@ fi
 
 export GOPATH="$HOME/go/bin"
 export EMPLACE_CONFIG="$HOME/.config/emplace.toml"
-export ZSH_LS_BACKEND="eza"
+
+if command -v eza >/dev/null 2>&1; then
+	export ZSH_LS_BACKEND="eza"
+fi
+
 
 . "$HOME/.cargo/env"

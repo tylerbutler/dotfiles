@@ -1,3 +1,5 @@
+echo "=== .aliases START ==="
+
 # shortcuts
 alias :q="exit"
 alias cls="clear"
@@ -102,3 +104,5 @@ alias aliases="$EDITOR $HOME/.aliases.sh"
 alias refreshenv="omz reload"
 
 alias ssh="ssh-ident"
+
+echo "=== .aliases END ==="

@@ -5,6 +5,7 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
+echo "=== .zshrc START ==="
 autoload -Uz compinit && compinit
 
 # source $HOME/.local/zsh-autocomplete-settings.zsh
@@ -21,6 +22,12 @@ if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ]; then
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
     # eval "$(pyenv init -)"
 fi
+
+# load env variables
+source $HOME/.env.zsh
+
+# Aliases
+source $HOME/.aliases.sh
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
@@ -95,9 +102,6 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-# Aliases
-source $HOME/.aliases.sh
-
 # ZSH settings
 ##############
 # Enable command auto-correction
@@ -124,9 +128,6 @@ precmd() {
     fi
 }
 
-# load env variables
-source $HOME/.env.zsh
-
 # eval "$(emplace init zsh)"
 # source <(blindspot completion -s zsh)
 
@@ -138,7 +139,9 @@ source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 source $HOME/.config/zsh/prompt.zsh
 
 # fnm (fast node manager)
-eval "$(fnm env --use-on-cd)"
+if command -v fnm >/dev/null 2>&1; then
+	eval "$(fnm env --use-on-cd)"
+fi
 
 # flub autocomplete
 if command -v flub >/dev/null 2>&1; then
@@ -180,7 +183,9 @@ GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
 # thefuck
 #########
 # alias fuck to oops
-eval "$(thefuck --alias oops)"
+if command -v thefuck >/dev/null 2>&1; then
+	eval "$(thefuck --alias oops)"
+fi
 
 # zsf-autocomplete
 ##################
@@ -191,13 +196,15 @@ eval "$(thefuck --alias oops)"
 # zsh-users/zsh-autosuggestions
 ###############################
 # Style for Solarized Dark
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=241,bold"
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=241,bold"
 
 # Bind ctrl-space to autosuggest accept
-bindkey "^ " autosuggest-accept
+# bindkey "^ " autosuggest-accept
+# 
+# bindkey '^[[A' history-substring-search-up
+# bindkey '^[[B' history-substring-search-down
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+echo "=== .zshrc END ==="
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

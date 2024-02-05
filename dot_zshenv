@@ -1,3 +1,5 @@
+echo "=== .zshenv START ==="
+
 skip_global_compinit=1
 
 export SYSTEM_TYPE=$(uname -s)
@@ -7,15 +9,13 @@ if [ "$SYSTEM_TYPE" = "Linux" ]; then
     export OS_ID=$(cat /etc/*-release | uniq -u | grep -oP '(?<=^ID=).*(?=$)')
 fi
 
-export EDITOR="micro"
-export VISUAL="code --wait"
-
 # APPEND (first entry is highest)
 export PATH="$PATH:/root/.local/bin"
-export PATH="$HOME/.deno/bin:$PATH"
 export PATH="$PATH:$HOME/go/bin"
 
 # PREPEND (last entry is highest)
+export PATH="$HOME/.deno/bin:$PATH"
+export PATH="$HOME/.nix-profile/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="/usr/sbin:/sbin:$PATH"
@@ -35,9 +35,15 @@ fi
 export GOPATH="$HOME/go/bin"
 export EMPLACE_CONFIG="$HOME/.config/emplace.toml"
 
+. "$HOME/.cargo/env"
+
 if command -v eza >/dev/null 2>&1; then
 	export ZSH_LS_BACKEND="eza"
 fi
 
+if command -v micro >/dev/null 2>&1; then
+	export EDITOR="micro"
+fi
+export VISUAL="code --wait"
 
-. "$HOME/.cargo/env"
+echo "=== .zshenv END ==="

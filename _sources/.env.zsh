@@ -1,3 +1,5 @@
+echo "=== .env.zsh START ==="
+
 # We need this so that tmux uses zsh when started in a zsh shell
 export SHELL='/bin/zsh'
 
@@ -21,3 +23,5 @@ else
     esac
     export EDITOR="code"
 fi
+
+echo "=== .env.zsh END ==="

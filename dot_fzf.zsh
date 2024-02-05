@@ -14,7 +14,7 @@ if [ "$SYSTEM_TYPE" = "Darwin" ]; then
   # ------------
   source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 
-else
+elif [ "$SYSTEM_ARCH" != "aarch64" ]; then
 
   # Setup fzf
   # ---------

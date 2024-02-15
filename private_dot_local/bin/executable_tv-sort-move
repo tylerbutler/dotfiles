@@ -16,6 +16,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An
 rsync -avz --progress -h --remove-source-files --copy-links "Insecure" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Mr. & Mrs. Smith (2024)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Mrs. Davis" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
@@ -33,6 +34,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /tv/1T
 rsync -avz --progress -h --remove-source-files --copy-links "Solar Opposites" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Tales of the Walking Dead" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Ted Lasso" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /tv/1TB-11/

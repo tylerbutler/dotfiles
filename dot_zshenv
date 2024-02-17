@@ -12,15 +12,15 @@ fi
 # APPEND (first entry is highest)
 export PATH="$PATH:/root/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.nix-profile/bin"
 
 # PREPEND (last entry is highest)
 export PATH="$HOME/.deno/bin:$PATH"
-export PATH="$HOME/.nix-profile/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/snap/bin:$PATH"
 export PATH="/usr/sbin:/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="/snap/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then

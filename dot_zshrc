@@ -84,7 +84,7 @@ export FZF_DEFAULT_OPTS="--height 40%"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # bind up arrow to fzf history
-bindkey "${key[Up]}" fzf-history-widget
+# bindkey "${key[Up]}" fzf-history-widget
 
 # Options to fzf command
 export FZF_COMPLETION_OPTS='--border --info=inline'
@@ -132,7 +132,7 @@ precmd() {
 # source <(blindspot completion -s zsh)
 
 # tab multiplexer configuration: https://github.com/austinjones/tab-rs/
-source "$HOME/.local/share/tab/completion/zsh-history.zsh"
+# source "$HOME/.local/share/tab/completion/zsh-history.zsh"
 # end tab configuration
 
 # PROMPT CONFIG
@@ -166,9 +166,10 @@ fi
 
 # atuin
 #######
-# if [ "$CODESPACES" != "true" ]; then
-# 	eval "$(atuin init zsh --disable-up-arrow)"
-# fi
+if [ "$CODESPACES" != "true" ]; then
+	eval "$(atuin init zsh)"
+	# eval "$(atuin init zsh --disable-up-arrow)"
+fi
 
 # Plugin settings
 # alias-finder

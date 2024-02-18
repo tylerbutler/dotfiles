@@ -1,9 +1,10 @@
 dialect = "us" 								
-search_mode = "fulltext"
+# search_mode = "fulltext"
 # style = "compact"
 
-invert = true
+# invert = true
 workspaces = true
 
 filter_mode = "host"
 # filter_mode_shell_up_key_binding = "session" # or directory or host
+inline_height = 10

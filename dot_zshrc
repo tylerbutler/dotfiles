@@ -26,19 +26,6 @@ fi
 # load env variables
 source $HOME/.env.zsh
 
-# Aliases
-source $HOME/.aliases.sh
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
-
-# BEGIN pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# END pnpm
-
-fpath=($HOME/zsh/completions $fpath)
-
 # BEGIN Antigen load and bootstrap
 # source $HOME/.local/antigen.zsh # see .chezmoiexternal.toml
 # antigen init $HOME/.antigenrc
@@ -75,6 +62,11 @@ fi
 source "${HOME}/.zgenom/zgenom.zsh"
 source "${HOME}/.zgenomrc"
 # END zgenom init
+
+# Aliases
+source $HOME/.aliases.sh
+
+fpath=($HOME/zsh/completions $fpath)
 
 # Set rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"

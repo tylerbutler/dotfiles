@@ -31,8 +31,6 @@ alias cdr="cd-gitroot"
 # alias lS='eza -1'                                                       # one column, just names
 # alias lt='eza --tree --level=2'                                         # tree
 
-alias k="k --human"
-alias kl="k --human --almost-all"
 alias mkdir="mkdir -p "
 
 # list only directories

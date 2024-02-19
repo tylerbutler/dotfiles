@@ -3,7 +3,7 @@ dialect = "us"
 # style = "compact"
 
 # invert = true
-workspaces = true
+workspaces = false
 
 filter_mode = "host"
 # filter_mode_shell_up_key_binding = "session" # or directory or host

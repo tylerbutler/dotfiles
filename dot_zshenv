@@ -9,6 +9,8 @@ if [ "$SYSTEM_TYPE" = "Linux" ]; then
     export OS_ID=$(cat /etc/*-release | uniq -u | grep -oP '(?<=^ID=).*(?=$)')
 fi
 
+export PNPM_HOME="$HOME/.local/share/pnpm"
+
 # APPEND (first entry is highest)
 export PATH="$PATH:/root/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
@@ -21,6 +23,7 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 export PATH="/usr/sbin:/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="$PNPM_HOME:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then

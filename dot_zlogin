@@ -1,3 +1,5 @@
+echo "=== .zprofile START ==="
+
 if [ "$SYSTEM_TYPE" = "Linux" ]; then
     if [ "$OS_ID" = "arch" ]; then
         base16_hopscotch # gray-brown-ish
@@ -16,6 +18,8 @@ fi
 # base16_material-palenight # light purple-ish
 # base16_paraiso # dark purple-ish
 # base16_tomorrow-night-eighties
+
+echo "=== .zprofile END ==="
 
 # display_octozen
 quote

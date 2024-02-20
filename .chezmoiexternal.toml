@@ -120,9 +120,9 @@
 [".local/antigen.zsh"]
     type = "file"
     url = "https://git.io/antigen"
-    refreshPeriod = "168h"
+    refreshPeriod = "168h" # 1 week
 [".local/bin/shell_colors"]
     type = "file"
     executable = true
     url = "https://gist.githubusercontent.com/rene-d/b5370efb61db005d7de0ad47959cd46c/raw/b32aa98a602b5f53d5c1977f2cb1a4cf87e28e90/shell_colors"
-    refreshPeriod = "168h"
+    refreshPeriod = "168h" # 1 week

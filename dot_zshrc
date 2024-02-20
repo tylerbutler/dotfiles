@@ -20,8 +20,9 @@ fi
 if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
-    # eval "$(pyenv init -)"
 fi
+
+fpath=($HOME/.config/zsh/completions $fpath)
 
 # load env variables
 source $HOME/.env.zsh
@@ -65,8 +66,6 @@ source "${HOME}/.zgenomrc"
 
 # Aliases
 source $HOME/.aliases.sh
-
-fpath=($HOME/zsh/completions $fpath)
 
 # Set rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
@@ -147,7 +146,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         source "$BASE16_SHELL/profile_helper.sh"
-        
+
+# fzf
+########        
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # zoxide

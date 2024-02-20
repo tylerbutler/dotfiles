@@ -4,6 +4,7 @@ dialect = "us"
 
 # invert = true
 workspaces = false
+enter_accept = true
 
 filter_mode = "host"
 # filter_mode_shell_up_key_binding = "session" # or directory or host
@@ -13,4 +14,16 @@ inline_height = 10
 ## with ^ or end with $, they'll match anywhere in the command.
 history_filter = [
    "^yt-dlp"
+]
+
+common_subcommands = [
+  "cargo",
+  "go",
+  "git",
+  "g",
+  "npm",
+  "yarn",
+  "pnpm",
+  "kubectl",
+  "flub",
 ]

@@ -12,17 +12,19 @@ rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Insecure" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Mr. & Mrs. Smith (2024)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Mrs. Davis" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Miracle Workers (2019)" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Nurse Jackie" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Our Flag Means Death" /tv/1TB-05/
+rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "PEN15" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Secret Invasion" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-04/
@@ -47,6 +49,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "The Walking Dead" /
 rsync -avz --progress -h --remove-source-files --copy-links "The White Lotus" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "This Is Us" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "Harley Quinn" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "His Dark Materials" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /tv/1TB-03/

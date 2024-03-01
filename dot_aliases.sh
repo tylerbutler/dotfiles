@@ -10,7 +10,7 @@ alias zshrc="$EDITOR ~/.zshrc"
 
 # I find typing 'chezmoi' awkward
 alias dotfiles=chezmoi
-alias df=dotfiles
+alias df=chezmoi
 
 # Pipe my public key to the clipboard
 alias pbcopy="xclip -selection clipboard"
@@ -20,16 +20,16 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied t
 # listings and navigation
 alias cdr="cd-gitroot"
 # general use
-# alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
-# alias ls='eza --git'                                                   # ls
-# alias l='eza -lbF --git'                                 # list, size, type, git
-# alias ll='eza -lbGF --git'                               # long list
-# alias llm='eza -lbGd --git --sort=modified'                            # long list, modified date sort
-# alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+alias ls='eza -lbF --git'                                                   # ls
+alias l='eza --git'                                 # list, size, type, git
+alias ll='eza -lbGF --git'                               # long list
+alias llm='eza -lbGd --git --sort=modified'                            # long list, modified date sort
+alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 
 # specialty views
 # alias lS='eza -1'                                                       # one column, just names
-# alias lt='eza --tree --level=2'                                         # tree
+alias lt='eza --tree --level=2'                                         # tree
 
 alias mkdir="mkdir -p "
 
@@ -49,8 +49,8 @@ alias mkdir="mkdir -p "
 # fi
 
 # disk usage
-#alias df="df -h "
-#alias du='du -hd1 | sort -h'
+alias df="df -h "
+alias du='du -hd1 | sort -h'
 
 # git
 alias gcam="git add -A && git commit -m"

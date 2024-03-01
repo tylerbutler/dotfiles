@@ -1,12 +1,11 @@
 sources:
   - brew
   - cargo
-  - npm
+  # - npm
   - apt
 packages:
   - bat
   - bottom
-  - chezmoi
   - direnv
   - dust
   - eza
@@ -17,34 +16,21 @@ packages:
   - ghq
   - git-delta
   - gitui
-  - golang
-  - grex
   - hub
   - jq
-  - lsd
   - mc
   - micro
   - nnn
-  - pueue
-  - procs
-  - pyenv
-  - python
   - rg
-  - rustup
   - sd
   - tealdeer
   - thefuck
   - tmux
-  - viu
   - zellij
   - zoxide
 
   # npm-only packages
   - "@fluidframework/build-tools@latest"
-  - generate
-  - generate-license
-  - auto-install
-  - npkill
   - npm-check-updates
   - rimraf
   - sort-package-json

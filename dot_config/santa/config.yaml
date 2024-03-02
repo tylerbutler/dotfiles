@@ -1,12 +1,14 @@
 sources:
   - brew
+  - apt
   - cargo
   # - npm
-  - apt
 packages:
+  - atuin
   - bat
   - bottom
   - direnv
+  - difftastic
   - dust
   - eza
   - fd
@@ -17,15 +19,11 @@ packages:
   - git-delta
   - gitui
   - hub
-  - jq
-  - mc
   - micro
   - nnn
   - rg
   - sd
   - tealdeer
-  - thefuck
-  - tmux
   - zellij
   - zoxide
 
@@ -33,7 +31,6 @@ packages:
   - "@fluidframework/build-tools@latest"
   - npm-check-updates
   - rimraf
-  - sort-package-json
   - tiged
   - vsts-npm-auth
   - yarn
@@ -41,4 +38,3 @@ packages:
   # cargo packages
   - blindspot
   - cargo-update
-  - when-cli

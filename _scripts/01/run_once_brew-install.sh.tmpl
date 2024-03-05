@@ -1,9 +1,11 @@
-{{ if not .codespaces -}}
-{{ if (and (ne .chezmoi.os "windows") (ne .chezmoi.arch "arm64")) -}}
+{{- if not .codespaces -}}
+{{- if (and (ne .chezmoi.os "windows") (ne .chezmoi.arch "arm64")) -}}
+{{- if (ne (index .chezmoi.osRelease "idLike") "arch") -}}
 #!/bin/bash
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-{{ end -}}
-{{ end -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
 

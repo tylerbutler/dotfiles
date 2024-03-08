@@ -5,6 +5,8 @@ skip_global_compinit=1
 export SYSTEM_TYPE=$(uname -s)
 export SYSTEM_ARCH=$(uname -m)
 
+export LC_ALL=en_US.UTF-8
+
 if [ "$SYSTEM_TYPE" = "Linux" ]; then
     export OS_ID=$(cat /etc/*-release | uniq -u | grep -oP '(?<=^ID=).*(?=$)')
 fi

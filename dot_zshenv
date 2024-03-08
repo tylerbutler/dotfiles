@@ -1,4 +1,4 @@
-echo "=== .zshenv START ==="
+# echo "=== .zshenv START ==="
 
 skip_global_compinit=1
 
@@ -49,4 +49,4 @@ if command -v micro >/dev/null 2>&1; then
 fi
 export VISUAL="code --wait"
 
-echo "=== .zshenv END ==="
+# echo "=== .zshenv END ==="

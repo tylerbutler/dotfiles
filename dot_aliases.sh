@@ -49,7 +49,6 @@ alias mkdir="mkdir -p "
 # fi
 
 # disk usage
-alias df="df -h "
 alias du='du -hd1 | sort -h'
 
 # git

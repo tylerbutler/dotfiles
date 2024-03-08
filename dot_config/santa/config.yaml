@@ -14,16 +14,17 @@ packages:
   - fd
   - fnm
   - fzf
-  - gh
+  - github-cli
   - ghq
   - git-delta
   - gitui
   - hub
   - micro
   - nnn
-  - rg
+  - ripgrep
   - sd
   - tealdeer
+  - topgrade
   - zellij
   - zoxide
 

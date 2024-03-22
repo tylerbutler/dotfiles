@@ -2,6 +2,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" 
 rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Billions" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /tv/1TB-06/

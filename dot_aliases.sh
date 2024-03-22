@@ -86,11 +86,11 @@ alias b="brew"
 alias bupd="brew update && brew outdated"
 alias bupg="brew upgrade"
 
+alias pi="pnpm i --frozen-lockfile"
 # macOS-specific aliases
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     alias dircolors="gdircolors"
 fi
-
 
 # I use fnm for node management on Linux and mac, but nvs on Windows
 alias nvm="fnm"

@@ -20,16 +20,19 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied t
 # listings and navigation
 alias cdr="cd-gitroot"
 # general use
-alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
-alias ls='eza -lbF --git'                                                   # ls
-alias l='eza --git'                                 # list, size, type, git
-alias ll='eza -lbGF --git'                               # long list
-alias llm='eza -lbGd --git --sort=modified'                            # long list, modified date sort
-alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 
-# specialty views
-# alias lS='eza -1'                                                       # one column, just names
-alias lt='eza --tree --level=2'                                         # tree
+if command -v fnm >/dev/null 2>&1; then
+	alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+	alias ls='eza -lbF --git'                                                   # ls
+	alias l='eza --git'                                 # list, size, type, git
+	alias ll='eza -lbGF --git'                               # long list
+	alias llm='eza -lbGd --git --sort=modified'                            # long list, modified date sort
+	alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+
+	# specialty views
+	# alias lS='eza -1'                                                       # one column, just names
+	alias lt='eza --tree --level=2'                                         # tree
+fi
 
 alias mkdir="mkdir -p "
 
@@ -86,6 +89,7 @@ alias b="brew"
 alias bupd="brew update && brew outdated"
 alias bupg="brew upgrade"
 
+alias p="pnpm"
 alias pi="pnpm i --frozen-lockfile"
 # macOS-specific aliases
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then

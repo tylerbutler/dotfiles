@@ -10,6 +10,7 @@ enter_accept = true
 
 filter_mode = "host"
 # filter_mode_shell_up_key_binding = "session" # or directory or host
+filter_mode_shell_up_key_binding = "directory" # or directory or host
 inline_height = 10
 
 ## Note that these regular expressions are unanchored, i.e. if they don't start

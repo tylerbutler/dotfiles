@@ -66,6 +66,7 @@ alias gsv="HUB_VERBOSE=1 hub sync"
 alias gsc="git clone --filter=tree:0"
 alias gnd="git clean -dn"
 alias gndd="git clean -df"
+alias gui="gitui"
 
 alias default-blindspot-packages="xargs blindspot install <~/.default-blindspot-packages"
 alias default-brew="xargs brew install <~/.default-brew"
@@ -105,5 +106,7 @@ alias aliases="$EDITOR $HOME/.aliases.sh"
 alias refreshenv="omz reload"
 
 alias ssh="ssh-ident"
+
+# alias bun="docker run --rm --init --ulimit memlock=-1:-1 oven/bun"
 
 echo "=== .aliases END ==="

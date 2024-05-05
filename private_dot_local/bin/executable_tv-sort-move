@@ -14,7 +14,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
-rsync -avz --progress -h --remove-source-files --copy-links "Helter Skelter - An American Myth" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Insecure" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/

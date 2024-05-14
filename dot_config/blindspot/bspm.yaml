@@ -1,0 +1,13 @@
+---
+packages:
+  - name: blindspot
+    installer:
+      url: "https://github.com/xermicus/blindspot/releases/download/v1.2.2/blindspot_linux-x86_64"
+      path: /home/tylerbu/.local/bin/blindspot
+      compression: ~
+      archive: ~
+      backup: ~
+    release:
+      Version: v1.2.2
+    last_update: ~
+    github: xermicus/blindspot

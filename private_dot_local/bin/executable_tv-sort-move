@@ -11,6 +11,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /tv
 rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
@@ -29,6 +30,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" 
 rsync -avz --progress -h --remove-source-files --copy-links "PEN15" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Secret Invasion" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Discovery" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
@@ -43,6 +45,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /tv/1TB-
 rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Last Man on Earth" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "The Strain" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Sex Lives of College Girls" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Great British Bake Off" /tv/1TB-11/
@@ -58,7 +61,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Harley Quinn" /tv/1
 rsync -avz --progress -h --remove-source-files --copy-links "His Dark Materials" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/
-
+rsync -avz --progress -h --remove-source-files --copy-links "X-Men - The Animated Series" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora From Queens" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /tv/_keep/

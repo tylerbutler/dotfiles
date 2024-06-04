@@ -16,10 +16,6 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -27,11 +23,21 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
@@ -46,7 +52,7 @@
             "font": 
             {
                 "face": "FiraCode NFM Retina",
-                "size": 12
+                "size": 12.0
             },
             "intenseTextStyle": "all"
         },
@@ -75,20 +81,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
-                "icon": "C:\\Users\\tylerbu\\ghq\\github.com\\TheFern2\\windows-terminal-icons\\icons\\arch.png",
-                "name": "Arch",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-                "hidden": false,
-                "icon": "C:\\Users\\tylerbu\\ghq\\github.com\\TheFern2\\windows-terminal-icons\\icons\\kali-dragon-sqaure-detailed.png",
-                "name": "kali-linux",
-                "source": "Windows.Terminal.Wsl"
             },
             {
                 "commandline": "ssh tylerbu@mac-mini.local",
@@ -411,5 +403,6 @@
             "yellow": "#B58900"
         }
     ],
-    "startOnUserLogin": true
+    "startOnUserLogin": true,
+    "themes": []
 }

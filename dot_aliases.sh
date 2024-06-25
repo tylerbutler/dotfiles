@@ -91,7 +91,8 @@ alias bupd="brew update && brew outdated"
 alias bupg="brew upgrade"
 
 alias p="pnpm"
-alias pi="pnpm i --frozen-lockfile"
+alias pi="pnpm i"
+alias pif="pnpm i --frozen-lockfile"
 # macOS-specific aliases
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     alias dircolors="gdircolors"

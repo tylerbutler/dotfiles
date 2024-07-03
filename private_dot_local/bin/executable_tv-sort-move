@@ -8,6 +8,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine"
 rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /tv/1TB-06/
+rsync -avz --progress -h --remove-source-files --copy-links "Cougar Town" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /tv/1TB-08/

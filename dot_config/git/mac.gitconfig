@@ -1,2 +1,22 @@
 [hub]
 	protocol = ssh
+
+# According to the docs at https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/rename.md: When
+# updating the Git configuration file in your home directory ($HOME/.gitconfig or %USERPROFILE%\.gitconfig) you should
+# ensure there are is an additional blank entry for credential.helper before the GCM entry.
+#
+# The blank entry is important as it makes sure GCM is the only credential helper that is configured, and overrides any
+# helpers configured at the system/ machine-wide level.
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[protocol "file"]
+	allow = always

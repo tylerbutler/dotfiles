@@ -24,9 +24,9 @@ trusted_config_paths = [
     '~/code/',
 ]
 
-verbose = true     # set to true to see full installation output, see `RTX_VERBOSE`
+verbose = false     # set to true to see full installation output, see `RTX_VERBOSE`
 asdf_compat = false # set to true to ensure .tool-versions will be compatible with asdf, see `RTX_ASDF_COMPAT`
-jobs = 4            # number of plugins or runtimes to install in parallel. The default is `4`.
+jobs = 8            # number of plugins or runtimes to install in parallel. The default is `4`.
 raw = false         # set to true to directly pipe plugins to stdin/stdout/stderr
 yes = false         # set to true to automatically answer yes to all prompts
 
@@ -39,6 +39,6 @@ disable_default_shorthands = false # disable the default shorthands, see `RTX_DI
 
 experimental = false # enable experimental features
 
-# [alias.node]
-# my_custom_node = '20'  # makes `rtx install node@my_custom_node` install node-20.x
-                       # this can also be specified in a plugin (see below in "Aliases")
+[settings.status]
+show_env = true
+show_tools = true

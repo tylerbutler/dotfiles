@@ -17,7 +17,7 @@ if ! zgenom saved; then
     zgenom ohmyzsh plugins/bgnotify
     zgenom ohmyzsh plugins/command-not-found
     zgenom ohmyzsh plugins/common-aliases
-    zgenom ohmyzsh plugins/direnv
+    # zgenom ohmyzsh plugins/direnv
     zgenom ohmyzsh plugins/fzf
     zgenom ohmyzsh plugins/git
     zgenom ohmyzsh plugins/gitfast

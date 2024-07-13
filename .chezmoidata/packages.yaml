@@ -1,8 +1,10 @@
 packages:
   darwin:
     brews:
+    - atuin
     - bat
     - bat-extras
+    - difftastic
     - dust
     - fd
     - fnm
@@ -13,11 +15,14 @@ packages:
     - git-delta
     - gitui
     - hub
+    - jq
     - micro
     - mise
     - nnn
+    - ripgrep
     - sd
     - tealdeer
+    - topgrade
     - tre-command
     - viu
     - zellij

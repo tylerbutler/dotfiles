@@ -1,12 +1,10 @@
 [user]
-  email = tyler@tylerbutler.com
   name = Tyler Butler
 [init]
   defaultBranch = main
+  templatedir = ~/.config/git/template
 [alias]
   dft = difftool
-  delete-merged = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
-  delete-merged-force = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
   dm = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -
   dm-f = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -D' -
   truncate = !bash -c 'git checkout --orphan temp $1 && git commit -m \"Truncated history\" && git checkout master && git rebase --onto temp $1 master && git branch -D temp'
@@ -29,6 +27,9 @@
   ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   graph = log --graph --all --decorate --stat --date=iso
   graph1 = log --date-order --decorate --graph --oneline --no-show-signature
+
+  # final-config = "!git config --list --show-origin | awk -F '[ =]' '{key=$3; for (i=4; i<=NF; i++) key=key\" \"$i; cfg[key]=$1\" \"$2\"=\"$key} END {for (key in cfg) print cfg[key]}'"
+  final-config = "!git config --list --show-origin | awk -F '[ =]' '{key=$3; for (i=4; i<=NF; i++) key=key\" \"$i; if (key !~ /^alias\\./) cfg[key]=$1\" \"$2\"=\"$key} END {for (key in cfg) print cfg[key]}'"
 
 [color]
   ui = true
@@ -110,18 +111,19 @@
 [gc]
   worktreePruneExpire = 3.weeks.ago
 
-{{- if (eq .chezmoi.os "linux") -}}
-  {{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
 [include]
-  path = {{ .chezmoi.homeDir }}/.config/git/wsl.gitconfig
-  {{ else }}
-[include]
-  path = {{ .chezmoi.homeDir }}/.config/git/linux.gitconfig
-  {{ end }}
-{{ else if (eq .chezmoi.os "darwin") }}
-[include]
-  path = {{ .chezmoi.homeDir }}/.config/git/mac.gitconfig
-{{ else if (eq .chezmoi.os "windows") }}
-[include]
-  path = {{ ((splitList "\\" .chezmoi.homeDir) | join "\\\\" ) }}{{ "\\\\.config\\\\git\\\\windows.gitconfig" }}
-{{ end -}}
+  path = ~/.config/git/_route.gitconfig
+
+[includeIf "hasconfig:remote.*.url:https://github.com/tylerbutler/*"]
+  path = ~/.config/git/user.gitconfig
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/tylerbutler/*"]
+  path = ~/.config/git/user.gitconfig
+[includeIf "hasconfig:remote.*.url:git@github.com:tylerbutler/*"]
+  path = ~/.config/git/user.gitconfig
+
+[includeIf "hasconfig:remote.*.url:https://github.com/microsoft/*"]
+  path = ~/.config/git/user-work.gitconfig
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/microsoft/*"]
+  path = ~/.config/git/user-work.gitconfig
+[includeIf "hasconfig:remote.*.url:git@github.com:microsoft/*"]
+  path = ~/.config/git/user-work.gitconfig

@@ -1,0 +1,12 @@
+[include]
+{{- if (eq .chezmoi.os "linux") -}}
+  {{ if (or (contains "Microsoft" .chezmoi.kernel.osrelease) (contains "microsoft" .chezmoi.kernel.osrelease)) }}
+  path = wsl.gitconfig
+  {{ else }}
+  path = linux.gitconfig
+  {{ end }}
+{{ else if (eq .chezmoi.os "darwin") }}
+  path = mac.gitconfig
+{{ else if (eq .chezmoi.os "windows") }}
+  path = windows.gitconfig
+{{ end -}}

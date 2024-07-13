@@ -1,11 +1,5 @@
 @fluidframework/build-tools@latest
-generate
-generate-license
-auto-install
-npkill
+@fluid-tools/build-cli@latest
+@tylerbu/cli
 npm-check-updates
 rimraf
-sort-package-json
-tiged
-vsts-npm-auth
-yarn

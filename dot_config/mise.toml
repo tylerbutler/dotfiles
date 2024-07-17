@@ -1,7 +1,6 @@
 [env]
-NODE_ENV = 'production'
 MISE_NODE_COREPACK = 1
-# MISE_NODE_DEFAULT_PACKAGES_FILE = ''
+MISE_NODE_DEFAULT_PACKAGES_FILE = ''
 
 [tools]
 # global tool versions go here

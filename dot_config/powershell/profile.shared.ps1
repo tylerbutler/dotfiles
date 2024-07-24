@@ -43,4 +43,4 @@ if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) 
     Set-PSReadLineKeyHandler -Function AcceptSuggestion -Key 'ALT+r'
 }
 
-fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression

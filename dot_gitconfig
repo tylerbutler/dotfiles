@@ -117,6 +117,10 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 
+[diff "lockb"]
+	textconv = bun
+	binary = true
+
 [include]
   path = ~/.config/git/_route.gitconfig
 

@@ -3,6 +3,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /tv/
 rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Billions" /tv/1TB-06/
+rsync -avz --progress -h --remove-source-files --copy-links "Batman - Caped Crusader" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /tv/1TB-06/
@@ -32,6 +33,8 @@ rsync -avz --progress -h --remove-source-files --copy-links "PEN15" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Secret Invasion" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Discovery" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Deep Space Nine" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - The Next Generation" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
@@ -60,6 +63,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "This Is Us" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "Harley Quinn" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "His Dark Materials" /tv/1TB-07/
+rsync -avz --progress -h --remove-source-files --copy-links "Ugly Betty" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "X-Men - The Animated Series" /tv/1TB-12/

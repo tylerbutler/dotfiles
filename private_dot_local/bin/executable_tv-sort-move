@@ -15,6 +15,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "Freaks and Geeks" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/
@@ -49,6 +50,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /tv/1TB-
 rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Last Man on Earth" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Good Place" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "The Strain" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Sex Lives of College Girls" /tv/1TB-03/
@@ -67,6 +69,8 @@ rsync -avz --progress -h --remove-source-files --copy-links "Ugly Betty" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "X-Men - The Animated Series" /tv/1TB-12/
+rsync -avz --progress -h --remove-source-files --copy-links "Young Justice" /tv/1TB-12/
+
 rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora From Queens" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /tv/_keep/

@@ -3,9 +3,7 @@ MISE_NODE_COREPACK = 1
 MISE_NODE_DEFAULT_PACKAGES_FILE = 'none'
 
 [tools]
-# global tool versions go here
-# you can set these with `rtx use -g`
-node = '20'
+node = "20"
 # python = ['3.10', '3.11']
 
 [settings]

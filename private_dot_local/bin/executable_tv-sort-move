@@ -16,9 +16,11 @@ rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /
 rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Freaks and Geeks" /tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "Gen V" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/
+rsync -avz --progress -h --remove-source-files --copy-links "How to Die Alone" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Insecure" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/
@@ -44,8 +46,8 @@ rsync -avz --progress -h --remove-source-files --copy-links "Scandal (2012)" /tv
 rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "Solar Opposites" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Tales of the Walking Dead" /tv/1TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "Ted Lasso" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "The Boys" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Last Man on Earth" /tv/1TB-04/

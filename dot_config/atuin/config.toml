@@ -2,7 +2,7 @@ dialect = "us"
 # search_mode = "fulltext"
 # style = "compact"
 
-sync_address = "http://192.168.1.54:8888"
+sync_address = "http://192.168.1.4:8888"
 
 # invert = true
 workspaces = false

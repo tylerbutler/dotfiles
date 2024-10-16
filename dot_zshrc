@@ -124,7 +124,15 @@ precmd() {
 # end tab configuration
 
 # PROMPT CONFIG
-source $HOME/.config/zsh/prompt.zsh
+source $HOME/.config/themes/zsh/headline.zsh-theme
+HL_THIN='off'
+HL_OVERWRITE='on'
+HL_GIT_COUNT_MODE='on'
+HL_GIT_SEP_SYMBOL='|'
+HL_CLOCK_MODE='on'
+HL_ERR_MODE='detail'
+
+# source $HOME/.config/zsh/prompt.zsh
 
 # fnm (fast node manager)
 # if command -v fnm >/dev/null 2>&1; then
@@ -150,7 +158,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         source "$BASE16_SHELL/profile_helper.sh"
 
 # fzf
-########        
+########
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # zoxide
@@ -196,7 +204,7 @@ fi
 
 # Bind ctrl-space to autosuggest accept
 # bindkey "^ " autosuggest-accept
-# 
+#
 # bindkey '^[[A' history-substring-search-up
 # bindkey '^[[B' history-substring-search-down
 

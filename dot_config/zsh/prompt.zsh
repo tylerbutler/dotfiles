@@ -2,17 +2,19 @@
 
 headlinePrompt() {
 	# headline zsh theme
-	source ~/.config/themes/zsh/headline.zsh-theme
-	HEADLINE_DO_GIT_STATUS_COUNTS=true
-	HEADLINE_LINE_MODE="on"
-	HEADLINE_STATUS_TO_STATUS=""
-	HEADLINE_USER_BEGIN=""	
+	source $HOME/.config/themes/zsh/headline.zsh-theme
+	HL_THIN='off'
+	HL_OVERWRITE='on'
+	HL_GIT_COUNT_MODE='on'
+	HL_GIT_SEP_SYMBOL='|'
+	HL_CLOCK_MODE='on'
+	HL_ERR_MODE='detail'
 }
 
 starshipPrompt() {
 	if command -v starship >/dev/null 2>&1; then
 		# starship
-		eval "$(starship init zsh)"	
+		eval "$(starship init zsh)"
 	else
 		headlinePrompt
 	fi

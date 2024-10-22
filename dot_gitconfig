@@ -137,3 +137,7 @@
   path = ~/.config/git/user-work.gitconfig
 [includeIf "hasconfig:remote.*.url:git@github.com:microsoft/*"]
   path = ~/.config/git/user-work.gitconfig
+[pack]
+	usePathWalk = true
+[rebase]
+	updateRefs = true

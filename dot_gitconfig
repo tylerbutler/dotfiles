@@ -140,4 +140,4 @@
 [pack]
 	usePathWalk = true
 [rebase]
-	updateRefs = true
+	updateRefs = false

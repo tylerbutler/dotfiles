@@ -1,34 +1,23 @@
 rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "Agatha All Along" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "American Gods" /tv/1TB-01/
-rsync -avz --progress -h --remove-source-files --copy-links "American Horror Story" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Billions" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Batman - Caped Crusader" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Bad Monkey" /tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "Better Call Saul" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Atlanta" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "City on a Hill" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Cougar Town" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Derry Girls" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "DuckTales (2017)" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Fear the Walking Dead" /tv/1TB-08/
-rsync -avz --progress -h --remove-source-files --copy-links "Freaks and Geeks" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Gen V" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "House of Lies" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How to Die Alone" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Halo" /tv/1TB-07/
-rsync -avz --progress -h --remove-source-files --copy-links "Insecure" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Intervention" /tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "Invincible (2021)" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Living Single" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Mr. & Mrs. Smith (2024)" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Mrs. Davis" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Miracle Workers (2019)" /tv/1TB-05/
+rsync -avz --progress -h --remove-source-files --copy-links "Matlock (2024)" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "Nurse Jackie" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Our Flag Means Death" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Party Down" /tv/1TB-04/
@@ -44,33 +33,19 @@ rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower D
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Scandal (2012)" /tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Silverhawks" /tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Solar Opposites" /tv/1TB-09/
-rsync -avz --progress -h --remove-source-files --copy-links "Tales of the Walking Dead" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Boys" /tv/1TB-08/
-rsync -avz --progress -h --remove-source-files --copy-links "The Deuce" /tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "The Flash (2014)" /tv/1TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The Last Man on Earth" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "The Goldbergs (2013)" /tv/1TB-11/
+rsync -avz --progress -h --remove-source-files --copy-links "The Franchise (2024)" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "The Good Place" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "The Strain" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Sex Lives of College Girls" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Great British Bake Off" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Handmaid's Tale" /tv/1TB-11/
-rsync -avz --progress -h --remove-source-files --copy-links "The League" /tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "The Walking Dead" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The White Lotus" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Witcher" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "This Is Us" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
-rsync -avz --progress -h --remove-source-files --copy-links "Harley Quinn" /tv/1TB-07/
-rsync -avz --progress -h --remove-source-files --copy-links "His Dark Materials" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Ugly Betty" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Unbreakable Kimmy Schmidt" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "X-Men - The Animated Series" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "Young Justice" /tv/1TB-12/
@@ -83,11 +58,8 @@ rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /tv/_kee
 rsync -avz --progress -h --remove-source-files --copy-links Futurama /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "The Simpsons" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links How\ I\ Met\ Your\ Mother /tv/_keep/
-
-rsync -avz --progress -h --remove-source-files --copy-links "Invincible (2021)" /tv/1TB-04/
 
 echo "Empty directories will be deleted:"
 find -type d -empty

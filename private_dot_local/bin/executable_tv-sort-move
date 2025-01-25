@@ -25,7 +25,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Party Down" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "PEN15" /tv/1TB-04/
-rsync -avz --progress -h --remove-source-files --copy-links "Rick and Morty" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "St. Denis Medical" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Discovery" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Deep Space Nine" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - The Next Generation" /tv/1TB-03/

@@ -4,8 +4,6 @@ sudo zfs mount deadpool/movies2
 sudo zfs mount deadpool/tv/1TB-04
 sudo zfs mount deadpool/tv/1TB-05
 
-sudo zfs mount wolverine/tv/dvr
-
 sudo zfs mount x23/archives
 sudo zfs mount x23/dedication
 sudo zfs mount x23/home-videos

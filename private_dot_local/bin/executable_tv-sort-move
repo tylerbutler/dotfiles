@@ -19,6 +19,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Intervention" /tv/1
 rsync -avz --progress -h --remove-source-files --copy-links "Invincible (2021)" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Matlock (2024)" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "Made For Love" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Nurse Jackie" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Our Flag Means Death" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Party Down" /tv/1TB-04/
@@ -33,6 +34,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower D
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/
+rsync -avz --progress -h --remove-source-files --copy-links "Schitt's Creek" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Boys" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "The Franchise (2024)" /tv/1TB-01/
@@ -46,6 +48,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "The Witcher" /tv/1T
 rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "Ugly Betty" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Will Trent" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "X-Men - The Animated Series" /tv/1TB-12/
 rsync -avz --progress -h --remove-source-files --copy-links "Young Justice" /tv/1TB-12/

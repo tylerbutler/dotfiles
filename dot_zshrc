@@ -184,13 +184,6 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 #####
 GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
 
-# thefuck
-#########
-# alias fuck to oops
-if command -v thefuck >/dev/null 2>&1; then
-	eval "$(thefuck --alias oops)"
-fi
-
 # zsf-autocomplete
 ##################
 # zstyle ':autocomplete:list-choices:*' min-input 3
@@ -217,4 +210,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # git-subrepo
 [ -s "$HOME/ghq/github.com/ingydotnet/git-subrepo/.rc" ] && source $HOME/ghq/github.com/ingydotnet/git-subrepo/.rc
+
 echo "=== .zshrc END ==="

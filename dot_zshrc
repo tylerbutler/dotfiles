@@ -49,8 +49,8 @@ source $HOME/.env.zsh
 # END zplug load and bootstrap
 
 # pnpm tab completion
-# zplug "g-plane/pnpm-shell-completion", hook-build:"./zplug.zsh", defer:2
-# zplug load
+pnpm completion zsh > $HOME/.pnpmcompletion.zsh
+source $HOME/.pnpmcompletion.zsh
 
 # BEGIN zgenom init
 export ZGENOM_HOME="$HOME/.zgenom"

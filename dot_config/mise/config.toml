@@ -1,10 +1,10 @@
 [env]
 MISE_NODE_COREPACK = 1
-MISE_NODE_DEFAULT_PACKAGES_FILE = 'none'
 
 [tools]
+hk = "latest"
+pkl = "latest"
 node = "20"
-# python = ['3.10', '3.11']
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)

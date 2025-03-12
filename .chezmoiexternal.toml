@@ -11,6 +11,12 @@
     executable = true
     refreshPeriod = "168h"
 
+[".local/bin/zfs-prune-snapshots"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/bahamas10/zfs-prune-snapshots/refs/heads/master/zfs-prune-snapshots"
+    executable = true
+    refreshPeriod = "168h"
+
 # [".config/alacritty/default.yml"]
     # type = "file"
     # url = "https://github.com/alacritty/alacritty/raw/main/alacritty.yml"

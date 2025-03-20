@@ -1,5 +1,6 @@
 [env]
 MISE_NODE_COREPACK = 1
+LEFTHOOK = 0
 
 [tools]
 hk = "latest"

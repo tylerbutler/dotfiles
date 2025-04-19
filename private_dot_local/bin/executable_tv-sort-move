@@ -47,6 +47,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "The White Lotus" /t
 rsync -avz --progress -h --remove-source-files --copy-links "The Witcher" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "Top Chef - Last Chance Kitchen" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Ugly Betty" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Will Trent" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/

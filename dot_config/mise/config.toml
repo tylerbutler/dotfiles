@@ -6,6 +6,7 @@ LEFTHOOK = 0
 hk = "latest"
 pkl = "latest"
 node = "22"
+bun = "latest"
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)

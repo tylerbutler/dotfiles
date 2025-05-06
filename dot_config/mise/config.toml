@@ -42,6 +42,7 @@ disable_default_shorthands = false # disable the default shorthands, see `RTX_DI
 # disable_tools = ['node']           # disable specific tools, generally used to turn off core tools
 
 experimental = false # enable experimental features
+idiomatic_version_file_enable_tools = ["node"]
 
 [settings.status]
 show_env = true

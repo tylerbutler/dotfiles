@@ -11,6 +11,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Cougar Town" /tv/1T
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Gen V" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Challenge of the GoBots" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "House of Lies" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/

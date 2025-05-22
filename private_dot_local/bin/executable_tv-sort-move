@@ -27,6 +27,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Party Down" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "PEN15" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "Severance" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "St. Denis Medical" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Discovery" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Deep Space Nine" /tv/1TB-03/
@@ -35,7 +36,6 @@ rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower D
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/
-rsync -avz --progress -h --remove-source-files --copy-links "Schitt's Creek" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Boys" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "The Franchise (2024)" /tv/1TB-01/
@@ -64,7 +64,6 @@ rsync -avz --progress -h --remove-source-files --copy-links Futurama /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "The Simpsons" /tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links How\ I\ Met\ Your\ Mother /tv/_keep/
 
 echo "Empty directories will be deleted:"
 find -type d -empty

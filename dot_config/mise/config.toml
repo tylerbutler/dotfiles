@@ -37,7 +37,7 @@ yes = false         # set to true to automatically answer yes to all prompts
 # not_found_auto_install = true
 # task_output = "prefix" # see Task Runner for more information
 
-shorthands_file = '~/.config/rtx/shorthands.toml' # path to the shorthands file, see `RTX_SHORTHANDS_FILE`
+# shorthands_file = '~/.config/rtx/shorthands.toml' # path to the shorthands file, see `RTX_SHORTHANDS_FILE`
 disable_default_shorthands = false # disable the default shorthands, see `RTX_DISABLE_DEFAULT_SHORTHANDS`
 # disable_tools = ['node']           # disable specific tools, generally used to turn off core tools
 

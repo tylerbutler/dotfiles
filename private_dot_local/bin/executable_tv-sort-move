@@ -6,7 +6,6 @@ rsync -avz --progress -h --remove-source-files --copy-links "Bad Monkey" /tv/1TB
 rsync -avz --progress -h --remove-source-files --copy-links "Better Call Saul" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Catfish - The TV Show" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Cougar Town" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
@@ -14,7 +13,6 @@ rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03
 rsync -avz --progress -h --remove-source-files --copy-links "Gen V" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Challenge of the GoBots" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Harlots" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "House of Lies" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How to Die Alone" /tv/1TB-04/
@@ -28,7 +26,6 @@ rsync -avz --progress -h --remove-source-files --copy-links "Our Flag Means Deat
 rsync -avz --progress -h --remove-source-files --copy-links "Party Down" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Platonic (2023)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Poker Face (2023)" /tv/1TB-03/
-rsync -avz --progress -h --remove-source-files --copy-links "Peacemaker" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "PEN15" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Severance" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "St. Denis Medical" /tv/1TB-08/
@@ -52,7 +49,6 @@ rsync -avz --progress -h --remove-source-files --copy-links "The Witcher" /tv/1T
 rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "Top Chef - Last Chance Kitchen" /tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links "Top Chef - Masters" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Ugly Betty" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Will Trent" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "Worst Cooks in America" /tv/1TB-12/

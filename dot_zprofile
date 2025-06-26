@@ -1,5 +1,5 @@
-echo "=== .zprofile START ==="
+# echo "=== .zprofile START ==="
 
 eval "$(mise activate zsh --shims)"
 
-echo "=== .zprofile END ==="
+# echo "=== .zprofile END ==="

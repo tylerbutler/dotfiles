@@ -1,4 +1,4 @@
-echo "=== .aliases START ==="
+# echo "=== .aliases START ==="
 
 # shortcuts
 alias :q="exit"
@@ -110,4 +110,4 @@ alias ssh="ssh-ident"
 
 # alias bun="docker run --rm --init --ulimit memlock=-1:-1 oven/bun"
 
-echo "=== .aliases END ==="
+# echo "=== .aliases END ==="

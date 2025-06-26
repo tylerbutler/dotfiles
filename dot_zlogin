@@ -1,4 +1,4 @@
-echo "=== .zprofile START ==="
+# echo "=== .zprofile START ==="
 
 if [ "$SYSTEM_TYPE" = "Linux" ]; then
     if [ "$OS_ID" = "arch" ]; then
@@ -19,7 +19,7 @@ fi
 # base16_paraiso # dark purple-ish
 # base16_tomorrow-night-eighties
 
-echo "=== .zprofile END ==="
+# echo "=== .zprofile END ==="
 
 # display_octozen
-quote
+# quote

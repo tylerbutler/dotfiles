@@ -1,0 +1,180 @@
+# yaml-language-server: $schema=https://aliae.dev/schema.json
+alias:
+  - name: a
+    value: aliae
+  - name: g
+    value: git
+
+  # shortcuts
+  - name: ":q"
+    value: exit
+  - name: cls
+    value: clear
+  - name: reboot
+    value: sudo shutdown -r now
+  - name: reset-time
+    value: sudo ntpdate -sb time.nist.gov
+  - name: zshconfig
+    value: $EDITOR ~/.zshrc
+  - name: zshrc
+    value: $EDITOR ~/.zshrc
+
+  # chezmoi shortcuts
+  - name: dotfiles
+    value: chezmoi
+  - name: df
+    value: chezmoi
+
+  # clipboard utilities
+  - name: pbcopy
+    value: xclip -selection clipboard
+  - name: pbpaste
+    value: xclip -selection clipboard -o
+  - name: pubkey
+    value: more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'
+
+  # navigation
+  - name: cdr
+    value: cd-gitroot
+  - name: mkdir
+    value: mkdir -p
+
+  # disk usage
+  - name: du
+    value: du -hd1 | sort -h
+
+  # git aliases
+  - name: gcam
+    value: git add -A && git commit -m
+  - name: gcd
+    value: cd-gitroot
+  - name: glo
+    value: git log --oneline --decorate --graph -10
+  - name: glr
+    value: git pull --rebase
+  - name: gpo
+    value: git push -u origin HEAD
+  - name: gst
+    value: git status -u .
+  - name: gs
+    value: hub sync
+  - name: gsv
+    value: HUB_VERBOSE=1 hub sync
+  - name: gsc
+    value: git clone --filter=tree:0
+  - name: gnd
+    value: git clean -dn
+  - name: gndd
+    value: git clean -df
+  - name: gui
+    value: gitui
+
+  # package management
+  - name: default-blindspot-packages
+    value: xargs blindspot install <~/.default-blindspot-packages
+  - name: default-brew
+    value: xargs brew install <~/.default-brew
+  - name: default-cargo-crates
+    value: xargs cargo install <~/.default-cargo-crates
+  - name: default-eget
+    value: xargs eget <~/.default-eget
+  - name: default-nix-packages
+    value: xargs nix-env -iA <~/.default-nix-packages
+  - name: default-npm-packages
+    value: xargs npm i -g <~/.default-npm-packages
+  - name: extra-npm-packages
+    value: xargs npm i -g <~/.extra-npm-packages
+  - name: default-pacman
+    value: sudo xargs pacman -Syyu --needed --noconfirm <~/.default-pacman-packages
+  - name: default-python-packages
+    value: xargs pip install <~/.default-python-packages
+
+  # zfs utilities
+  - name: zfs-space
+    value: zfs list -o space -r deadpool wolverine x23
+  - name: zfs-snaps
+    value: zfs list -t snapshot -S creation
+  - name: zfs-sync
+    value: syncoid --no-stream --no-sync-snap --create-bookmark
+  - name: zfs-snap-delete
+    value: sudo zfs destroy -v
+
+  # utilities
+  - name: rmlint
+    value: \rmlint -g -C
+
+  # brew shortcuts
+  - name: b
+    value: brew
+  - name: bupd
+    value: brew update && brew outdated
+  - name: bupg
+    value: brew upgrade
+
+  # pnpm shortcuts
+  - name: p
+    value: pnpm
+  - name: pi
+    value: pnpm i
+  - name: pif
+    value: pnpm i --frozen-lockfile
+
+  # node version managers
+  - name: nvm
+    value: fnm
+  - name: nvs
+    value: fnm
+
+  # editor and config
+  - name: edit
+    value: $EDITOR
+  - name: aliases
+    value: $EDITOR $HOME/.aliases.sh
+  - name: refreshenv
+    value: omz reload
+
+  # ssh
+  - name: ssh
+    value: ssh-ident
+# env:
+#   - name: POSH_THEME
+#     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'
+#   - name: EDITOR
+#     value: code-insiders --wait
+# path:
+#   - value: |
+#       {{ .Home }}/homebrew/bin
+#       /usr/local/bin/
+#       /opt/local/bin/
+#     if: match .OS "darwin"
+#   - value: |
+#       {{ .Home }}/go/bin/
+# script:
+#   - value: |
+#       oh-my-posh init nu
+#       source ~/.oh-my-posh.nu
+#     if: match .Shell "nu"
+#   - value: |
+#       load(io.popen('oh-my-posh init cmd'):read("*a"))()
+#     if: match .Shell "cmd"
+#   - value: |
+#       oh-my-posh init pwsh | Invoke-Expression
+#     if: match .Shell "pwsh"
+#   - value: |
+#       xontrib load autovox
+#       xontrib load vox
+#       xontrib load voxapi
+#       xontrib load bashisms
+#       execx($(oh-my-posh init xonsh))
+#     if: match .Shell "xonsh"
+#   - value: |
+#       eval `oh-my-posh init tcsh`
+#     if: match .Shell "tcsh"
+#   - value: |
+#       eval "$(oh-my-posh init {{ .Shell }})"
+#     if: match .Shell "bash" "zsh"
+# link:
+#   - name: ~/.aliae.yaml
+#     target: ~/dotfiles/aliae.yaml
+#   - name: ~/.zshrc
+#     target: $DOTFILES/config/zsh/zshrc

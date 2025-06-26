@@ -62,7 +62,8 @@ source "${HOME}/.zgenomrc"
 # END zgenom init
 
 # Aliases
-source $HOME/.aliases.sh
+eval "$(aliae init zsh)"
+# source $HOME/.aliases.sh
 
 # Set rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
@@ -212,3 +213,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "$HOME/ghq/github.com/ingydotnet/git-subrepo/.rc" ] && source $HOME/ghq/github.com/ingydotnet/git-subrepo/.rc
 
 echo "=== .zshrc END ==="
+
+# setup funky
+command -v funky &>/dev/null && eval "$(funky --init zsh)"

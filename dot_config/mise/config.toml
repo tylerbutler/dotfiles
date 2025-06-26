@@ -8,6 +8,7 @@ pkl = "latest"
 node = "22"
 bun = "latest"
 deno = "latest"
+"ubi:jandedobbeleer/aliae" = "latest"
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)

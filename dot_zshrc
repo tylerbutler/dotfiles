@@ -2,7 +2,7 @@
 # zshrc
 #######
 
-echo "=== .zshrc START ==="
+# echo "=== .zshrc START ==="
 autoload -Uz compinit && compinit
 
 # source $HOME/.local/zsh-autocomplete-settings.zsh
@@ -212,7 +212,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # git-subrepo
 [ -s "$HOME/ghq/github.com/ingydotnet/git-subrepo/.rc" ] && source $HOME/ghq/github.com/ingydotnet/git-subrepo/.rc
 
-echo "=== .zshrc END ==="
+# echo "=== .zshrc END ==="
 
 # setup funky
 command -v funky &>/dev/null && eval "$(funky --init zsh)"

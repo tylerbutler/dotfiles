@@ -7,12 +7,10 @@ email = "tyler@tylerbutler.com"
 [ui]
 default-command = ["log"]
 diff-editor = ":builtin"
+diff-formatter = ":git"
 editor = "micro"
 pager = "delta"
 # pager = "difft"
-
-[ui.diff]
-format = "git"
 
 [fix.tools.biome-format]
 command = ["biome", "format", "$path", "--write"]

@@ -172,7 +172,6 @@ fi
 #######
 if [ "$CODESPACES" != "true" ]; then
 	eval "$(atuin init zsh)"
-	# eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
 # Plugin settings
@@ -203,7 +202,7 @@ GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
 # bindkey '^[[B' history-substring-search-down
 
 # bun completions
-[ -s "$HOME/.bun/_bun" ] && source "HOME/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -211,6 +210,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # git-subrepo
 [ -s "$HOME/ghq/github.com/ingydotnet/git-subrepo/.rc" ] && source $HOME/ghq/github.com/ingydotnet/git-subrepo/.rc
+
 
 # setup funky
 command -v funky &>/dev/null && eval "$(funky --init zsh)"

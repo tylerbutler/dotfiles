@@ -51,4 +51,5 @@ if command -v micro >/dev/null 2>&1; then
 fi
 export VISUAL="code --wait"
 
+export BW_SESSION="$(cat $HOME/.bwsession)"
 # echo "=== .zshenv END ==="

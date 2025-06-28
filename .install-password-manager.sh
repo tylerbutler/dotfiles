@@ -6,4 +6,5 @@ type bw >/dev/null 2>&1 && exit
 npm install -g @bitwarden/cli
 
 bw config server https://vaultwarden.btlr.org
+bw login tyler@tylerbutler.com
 bw unlock --raw > $HOME/.bwsession

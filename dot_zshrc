@@ -61,10 +61,6 @@ source "${HOME}/.zgenom/zgenom.zsh"
 source "${HOME}/.zgenomrc"
 # END zgenom init
 
-# Aliases
-eval "$(aliae init zsh)"
-# source $HOME/.aliases.sh
-
 # Set rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"
 # Set fd as default source
@@ -145,6 +141,12 @@ if command -v mise >/dev/null 2>&1; then
 	eval "$(mise activate zsh)"
 fi
 
+# Aliases
+if command -v aliae >/dev/null 2>&1; then
+    eval "$(aliae init zsh)"
+fi
+# source $HOME/.aliases.sh
+
 # flub autocomplete
 if command -v flub >/dev/null 2>&1; then
     eval $(flub autocomplete script zsh)
@@ -211,8 +213,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # git-subrepo
 [ -s "$HOME/ghq/github.com/ingydotnet/git-subrepo/.rc" ] && source $HOME/ghq/github.com/ingydotnet/git-subrepo/.rc
 
+# echo "=== .zshrc END ==="
 
 # setup funky
 command -v funky &>/dev/null && eval "$(funky --init zsh)"
-
-# echo "=== .zshrc END ==="

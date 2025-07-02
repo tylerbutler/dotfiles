@@ -24,6 +24,12 @@ fpath=($HOME/.config/zsh/completions $fpath)
 # load env variables
 source $HOME/.env.zsh
 
+if command -v bw >/dev/null 2>&1; then
+    if ! bw status | grep -q "unlocked"; then
+        export BW_SESSION=$(bw unlock --raw)
+    fi
+fi
+
 # BEGIN Antigen load and bootstrap
 # source $HOME/.local/antigen.zsh # see .chezmoiexternal.toml
 # antigen init $HOME/.antigenrc

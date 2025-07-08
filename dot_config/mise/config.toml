@@ -3,6 +3,7 @@ MISE_NODE_COREPACK = 1
 LEFTHOOK = 0
 
 [tools]
+go = "latest"
 hk = "latest"
 pkl = "latest"
 node = "latest"

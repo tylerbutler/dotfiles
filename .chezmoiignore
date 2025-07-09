@@ -10,3 +10,11 @@ _scripts/ignored
 _scripts/ignored/*
 _sources
 _sources/*
+
+{{ if ne .chezmoi.os "darwin" }}
+Library/Application Support/rbw/config.json
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/rbw/config.json
+{{ end }}

@@ -1,10 +1,20 @@
+
 #!/bin/sh
 
-# exit immediately if password-manager-binary is already in $PATH
-type bw >/dev/null 2>&1 && exit
+# exit immediately if rbw is already in $PATH
+type rbw >/dev/null 2>&1 && exit
 
-npm install -g @bitwarden/cli
-
-bw config server https://vaultwarden.btlr.org
-bw login tyler@tylerbutler.com
-bw unlock --raw > $HOME/.bwsession
+case "$(uname -s)" in
+Darwin)
+    # commands to install rbw on Darwin
+    brew install rbw
+    ;;
+Linux)
+    # commands to install rbw on Linux
+    brew install rbw
+    ;;
+*)
+    echo "unsupported OS"
+    exit 1
+    ;;
+esac

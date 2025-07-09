@@ -1,5 +1,5 @@
 packages:
-  darwin:
+  all:
     brews:
     - atuin
     - bat
@@ -15,18 +15,20 @@ packages:
     - git-delta
     - gitui
     - hub
-    - jq
     - micro
     - mise
     - nnn
+    - rbw
     - ripgrep
     - sd
+    - superfile
     - tealdeer
     - topgrade
     - tre-command
     - viu
     - zellij
     - zoxide
+  darwin:
     casks:
     - git-credential-manager
     - scroll-reverser

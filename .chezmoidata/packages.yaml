@@ -28,7 +28,15 @@ packages:
     - viu
     - zellij
     - zoxide
+    taps:
+    - homebrew/bundle
+    - homebrew/services
+    - oven-sh/bun
+    casks:
+
   darwin:
+    brews:
+    taps:
     casks:
     - git-credential-manager
     - scroll-reverser

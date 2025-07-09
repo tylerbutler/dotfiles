@@ -72,8 +72,6 @@ alias:
   # package management
   - name: default-blindspot-packages
     value: xargs blindspot install <~/.default-blindspot-packages
-  - name: default-brew
-    value: xargs brew install <~/.default-brew
   - name: default-cargo-crates
     value: xargs cargo install <~/.default-cargo-crates
   - name: default-eget

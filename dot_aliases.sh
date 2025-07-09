@@ -69,7 +69,6 @@ alias gndd="git clean -df"
 alias gui="gitui"
 
 alias default-blindspot-packages="xargs blindspot install <~/.default-blindspot-packages"
-alias default-brew="xargs brew install <~/.default-brew"
 alias default-cargo-crates="xargs cargo install <~/.default-cargo-crates"
 alias default-eget="xargs eget <~/.default-eget"
 alias default-nix-packages="xargs nix-env -iA <~/.default-nix-packages"

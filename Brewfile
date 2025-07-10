@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "oven-sh/bun"
 brew "atuin", restart_service: :changed
 brew "bat"
@@ -8,7 +6,7 @@ brew "biome"
 brew "bottom"
 brew "coreutils"
 brew "difftastic"
-brew "docker-credential-helper"
+brew "docker-credential-helper" if OS.mac?
 brew "dust"
 brew "eza"
 brew "fd"
@@ -27,7 +25,6 @@ brew "jq"
 brew "micro"
 brew "mise"
 brew "mosh"
-brew "nnn"
 brew "procs"
 brew "ripgrep"
 brew "sd"
@@ -37,8 +34,8 @@ brew "topgrade"
 brew "tre-command"
 brew "zellij"
 brew "zoxide"
-brew "zsh"
 brew "oven-sh/bun/bun"
-cask "ghostty"
-cask "git-credential-manager"
-cask "scroll-reverser"
+
+cask "ghostty" if OS.mac?
+cask "git-credential-manager" if OS.mac?
+cask "scroll-reverser" if OS.mac?

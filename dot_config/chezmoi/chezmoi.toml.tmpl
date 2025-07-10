@@ -1,0 +1,11 @@
+{{- $codespaces:= env "CODESPACES" | not | not -}}
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
+[hooks.read-source-state.pre]
+script = ".local/share/chezmoi/.install-password-manager.sh"
+
+[bitwarden]
+command = "rbw"
+
+[data]
+codespaces = {{ $codespaces }}

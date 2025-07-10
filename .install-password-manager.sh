@@ -1,17 +1,13 @@
-
 #!/bin/sh
-
-# exit immediately if rbw is already in $PATH
-type rbw >/dev/null 2>&1 && exit
 
 case "$(uname -s)" in
 Darwin)
     # commands to install rbw on Darwin
-    brew install rbw
+    sh .install-rbw.darwin.sh
     ;;
 Linux)
     # commands to install rbw on Linux
-    brew install rbw
+    sh .install-rbw.linux.sh
     ;;
 *)
     echo "unsupported OS"

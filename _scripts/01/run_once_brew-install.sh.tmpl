@@ -3,7 +3,7 @@
 {{- if (ne (index .chezmoi.osRelease "idLike") "arch") -}}
 #!/bin/bash
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sh $HOME/.local/share/chezmoi/.install-brew.sh
 
 {{- end -}}
 {{- end -}}

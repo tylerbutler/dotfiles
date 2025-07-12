@@ -10,10 +10,16 @@ encryption = "age"
   command = "rbw"
 
 [data]
+  name: "Tyler Butler"
+  email: "tyler@tylerbutler.com"
   codespaces = {{ $codespaces }}
 
 [diff]
   exclude = ["scripts"]
+  pager = "delta"
+
+[git]
+  autoAdd = true
 
 [scriptEnv]
   MY_VAR = "my_value"

@@ -1,3 +1,4 @@
-# input hash: {{ include "Brewfile" | sha256sum }}
+{{ $file := join .chezmoi.homeDir "age-key.txt" -}}
+# input hash: {{ if (stat $file) }}{{ include $file | sha256sum }}{{ else }}file-not-found{{ end }}
 
 {{ (rbw "age-key.txt").notes }}

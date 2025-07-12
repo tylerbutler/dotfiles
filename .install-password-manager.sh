@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# exit immediately if rbw is already in $PATH
+if type rbw >/dev/null 2>&1; then
+    rbw unlock && rbw sync
+    exit
+fi
+
 case "$(uname -s)" in
 Darwin)
     # commands to install rbw on Darwin

@@ -3,15 +3,15 @@ sourceDir = {{ .chezmoi.sourceDir | quote }}
 
 encryption = "age"
 
-# [hooks.read-source-state.pre]
-# script = ".local/share/chezmoi/.install-password-manager.sh"
+[hooks.read-source-state.pre]
+  script = ".local/share/chezmoi/.install-password-manager.sh"
 
 [bitwarden]
   command = "rbw"
 
 [data]
-  name: "Tyler Butler"
-  email: "tyler@tylerbutler.com"
+  name = "Tyler Butler"
+  email = "tyler@tylerbutler.com"
   codespaces = {{ $codespaces }}
 
 [diff]

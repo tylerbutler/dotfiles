@@ -4,7 +4,7 @@ brew "bat"
 brew "bat-extras"
 brew "biome"
 brew "bottom"
-brew "coreutils"
+brew "coreutils" if OS.mac?
 brew "difftastic"
 brew "docker-credential-helper" if OS.mac?
 brew "dust"

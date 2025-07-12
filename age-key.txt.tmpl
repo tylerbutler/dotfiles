@@ -1,4 +1,1 @@
-{{ $file := joinPath .chezmoi.homeDir "age-key.txt" -}}
-# input hash: {{ if (stat $file) }}{{ include $file | sha256sum }}{{ else }}file-not-found{{ end }}
-
 {{ (rbw "age-key.txt").notes }}

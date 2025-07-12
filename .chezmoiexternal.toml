@@ -5,11 +5,11 @@
     stripComponents = 1
     refreshPeriod = "24h"
 
-[".local/bin/ssh-ident"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/ssh-ident/ssh-ident1/refs/heads/dev/ssh-ident"
-    executable = true
-    refreshPeriod = "168h"
+# [".local/bin/ssh-ident"]
+#     type = "file"
+#     url = "https://raw.githubusercontent.com/ssh-ident/ssh-ident1/refs/heads/dev/ssh-ident"
+#     executable = true
+#     refreshPeriod = "168h"
 
 [".local/bin/zfs-prune-snapshots"]
     type = "file"

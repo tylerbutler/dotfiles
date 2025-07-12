@@ -6,16 +6,17 @@ if type rbw >/dev/null 2>&1; then
     exit
 fi
 
-export CHEZMOI_SOURCE_PATH="$(chezmoi source-path)"
+# List all environment variables that start with CHEZMOI_
+env | grep '^CHEZMOI_'
 
 case "$(uname -s)" in
 Darwin)
     # commands to install rbw on Darwin
-    sh "$CHEZMOI_SOURCE_PATH/.install-rbw.darwin.sh"
+    sh "$SOURCE_PATH/.install-rbw.darwin.sh"
     ;;
 Linux)
     # commands to install rbw on Linux
-    sh "$CHEZMOI_SOURCE_PATH/.install-rbw.linux.sh"
+    sh "$SOURCE_PATH/.install-rbw.linux.sh"
     ;;
 *)
     echo "unsupported OS"

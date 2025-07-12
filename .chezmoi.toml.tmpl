@@ -22,7 +22,7 @@ encryption = "age"
   autoAdd = true
 
 [scriptEnv]
-  MY_VAR = "my_value"
+  SOURCE_PATH = "{{ .chezmoi.sourceDir }}"
 
 [age]
   identity = "{{ .chezmoi.homeDir }}/age-key.txt"

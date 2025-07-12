@@ -1,22 +1,22 @@
 #!/bin/sh
 
+# List all environment variables that start with CHEZMOI_
+# env | grep '^CHEZMOI_'
+
 # exit immediately if rbw is already in $PATH
 if type rbw >/dev/null 2>&1; then
     rbw unlock && rbw sync
     exit
 fi
 
-# List all environment variables that start with CHEZMOI_
-env | grep '^CHEZMOI_'
-
 case "$(uname -s)" in
 Darwin)
     # commands to install rbw on Darwin
-    sh "$SOURCE_PATH/.install-rbw.darwin.sh"
+    sh "$CHEZMOI_SOURCE_DIR/.install-rbw.darwin.sh"
     ;;
 Linux)
     # commands to install rbw on Linux
-    sh "$SOURCE_PATH/.install-rbw.linux.sh"
+    sh "$CHEZMOI_SOURCE_DIR/.install-rbw.linux.sh"
     ;;
 *)
     echo "unsupported OS"

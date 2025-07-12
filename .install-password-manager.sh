@@ -6,14 +6,16 @@ if type rbw >/dev/null 2>&1; then
     exit
 fi
 
+export CHEZMOI_SOURCE_PATH="$(chezmoi source-path)"
+
 case "$(uname -s)" in
 Darwin)
     # commands to install rbw on Darwin
-    sh $HOME/.local/share/chezmoi/.install-rbw.darwin.sh
+    sh "$CHEZMOI_SOURCE_PATH/.install-rbw.darwin.sh"
     ;;
 Linux)
     # commands to install rbw on Linux
-    sh $HOME/.local/share/chezmoi/.install-rbw.linux.sh
+    sh "$CHEZMOI_SOURCE_PATH/.install-rbw.linux.sh"
     ;;
 *)
     echo "unsupported OS"

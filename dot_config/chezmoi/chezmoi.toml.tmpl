@@ -1,11 +1,23 @@
 {{- $codespaces:= env "CODESPACES" | not | not -}}
 sourceDir = {{ .chezmoi.sourceDir | quote }}
 
-[hooks.read-source-state.pre]
-script = ".local/share/chezmoi/.install-password-manager.sh"
+encryption = "age"
+
+# [hooks.read-source-state.pre]
+# script = ".local/share/chezmoi/.install-password-manager.sh"
 
 [bitwarden]
-command = "rbw"
+  command = "rbw"
 
 [data]
-codespaces = {{ $codespaces }}
+  codespaces = {{ $codespaces }}
+
+[diff]
+  exclude = ["scripts"]
+
+[scriptEnv]
+  MY_VAR = "my_value"
+
+[age]
+    identity = "{{ .chezmoi.homeDir }}/age-key.txt"
+    recipient = "age104jq0rfzu0v9vla2xtzup369lc9rv4ptmydq8lj5aynyv4j27dxqt38dea"

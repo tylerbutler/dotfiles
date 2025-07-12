@@ -6,7 +6,7 @@ type rbw >/dev/null 2>&1 && exit
 case "$(arch)" in
 arm64)
     # commands to install rbw on Darwin
-    sh $HOME/.local/share/chezmoi/.install-runstup.sh
+    sh $HOME/.local/bin/install-runstup.sh
     cargo install rbw
     ;;
 amd64)

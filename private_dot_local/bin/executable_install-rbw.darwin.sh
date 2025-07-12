@@ -4,6 +4,6 @@
 type rbw >/dev/null 2>&1 && exit
 
 # Install brew if needed
-sh $HOME/.local/share/chezmoi/.install-brew.sh
+sh $HOME/.local/bin/install-brew.sh
 
 brew install rbw

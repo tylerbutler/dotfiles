@@ -12,7 +12,7 @@ if [[ -z "$ZELLIJ" && (-n "$SSH_CLIENT" || -n "$SSH_TTY" || -n "$SSH_CONNECTION"
     if zellij list-sessions 2>/dev/null | grep -q "main"; then
         if [[ ! -f "$MARKER_FILE" ]]; then
             touch "$MARKER_FILE"
-            zellij attach main -c -n "$HOSTNAME"
+            zellij attach main --new-tab --tab-name "$HOSTNAME"
         else
             zellij attach main
         fi

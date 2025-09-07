@@ -47,6 +47,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "The Great British B
 rsync -avz --progress -h --remove-source-files --copy-links "The Handmaid's Tale" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The White Lotus" /tv/1TB-11/
 rsync -avz --progress -h --remove-source-files --copy-links "The Witcher" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "The West Wing" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Orville" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "True Detective" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "Top Chef - Last Chance Kitchen" /tv/_keep/
@@ -65,6 +66,7 @@ rsync -avz --progress -h --remove-source-files --copy-links Futurama /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "The Simpsons" /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links "Top Chef - Masters" /tv/_keep/
 
 echo "Empty directories will be deleted:"
 find -type d -empty

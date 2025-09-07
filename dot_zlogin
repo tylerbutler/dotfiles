@@ -4,7 +4,7 @@ if [ "$SYSTEM_TYPE" = "Linux" ]; then
     if [ "$OS_ID" = "arch" ]; then
         base16_hopscotch # gray-brown-ish
     else
-        base16_materia # blue-ish
+    	command -v base16_materia &>/dev/null && base16_materia # blue-ish
     fi
 elif [ "$SYSTEM_TYPE" = "Darwin" ]; then
       base16_material-palenight # light purple-ish

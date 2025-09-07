@@ -3,12 +3,14 @@ MISE_NODE_COREPACK = 1
 LEFTHOOK = 0
 
 [tools]
-go = "1.25.1"
-hk = "latest"
-pkl = "latest"
-node = "latest"
 bun = "latest"
 deno = "latest"
+go = "1.25.1"
+hk = "latest"
+node = "latest"
+pkl = "latest"
+python = "latest"
+
 "aqua:FiloSottile/age" = "latest"
 "ubi:jandedobbeleer/aliae" = "latest"
 "ubi:str4d/age-plugin-yubikey" = "latest"

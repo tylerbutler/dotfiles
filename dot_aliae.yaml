@@ -4,6 +4,8 @@ alias:
     value: aliae
   - name: g
     value: git
+  - name: j
+    value: just
 
   # shortcuts
   - name: ":q"

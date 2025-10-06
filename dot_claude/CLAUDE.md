@@ -44,3 +44,5 @@
 @MCP_Morphllm.md
 @MCP_Playwright.md
 @MCP_Serena.md
+- use rm -f to delete files
+- The mv and cp commands always prompt for comformation, so don't use them.

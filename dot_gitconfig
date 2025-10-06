@@ -30,6 +30,7 @@
 
   # final-config = "!git config --list --show-origin | awk -F '[ =]' '{key=$3; for (i=4; i<=NF; i++) key=key\" \"$i; cfg[key]=$1\" \"$2\"=\"$key} END {for (key in cfg) print cfg[key]}'"
   final-config = "!git config --list --show-origin | awk -F '[ =]' '{key=$3; for (i=4; i<=NF; i++) key=key\" \"$i; if (key !~ /^alias\\./) cfg[key]=$1\" \"$2\"=\"$key} END {for (key in cfg) print cfg[key]}'"
+	deleted = !git log --all --pretty=format: --name-only --diff-filter=D | sort -u
 
 [color]
   ui = true

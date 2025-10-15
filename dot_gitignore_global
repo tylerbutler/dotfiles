@@ -46,3 +46,8 @@ lefthook-local.toml
 .lefthook-local.toml
 lefthook-local.json
 .lefthook-local.json
+
+# mise local configs #
+######################
+mise.local.toml
+.mise.local.toml

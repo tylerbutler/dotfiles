@@ -33,14 +33,12 @@ autoload -Uz compinit && compinit
 
 # source $HOME/.local/zsh-autocomplete-settings.zsh
 
-GITSTATUS_LOG_LEVEL=DEBUG
-
-if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
 
-if [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ]; then
+if [[ "$SYSTEM_TYPE" = "Linux" && "$SYSTEM_ARCH" != "aarch64" ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
 fi
@@ -48,31 +46,7 @@ fi
 fpath=($HOME/.config/zsh/completions $fpath)
 
 # load env variables
-source $HOME/.env.zsh
-
-# BEGIN Antigen load and bootstrap
-# source $HOME/.local/antigen.zsh # see .chezmoiexternal.toml
-# antigen init $HOME/.antigenrc
-# END Antigen load and bootstrap
-
-# BEGIN antidote load and boostrapping
-# export ANTIDOTE_HOME=${ZDOTDIR:-~}/.antidote
-# if [[ ! -d $ANTIDOTE_HOME ]]; then
-#     git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
-# fi
-# source $ANTIDOTE_HOME/antidote.zsh
-# antidote load
-# END antidote
-
-# BEGIN zplug load and bootstrap
-# export ZPLUG_HOME=$HOME/.zplug
-# if [[ ! -d $ZPLUG_HOME ]]; then
-#     git clone https://github.com/zplug/zplug $ZPLUG_HOME
-# fi
-
-# source $ZPLUG_HOME/init.zsh && zplug update
-# source $HOME/.zplugrc
-# END zplug load and bootstrap
+[[ -f $HOME/.env.zsh ]] && source $HOME/.env.zsh
 
 # BEGIN zgenom init
 export ZGENOM_HOME="$HOME/.zgenom"
@@ -84,7 +58,9 @@ source "${HOME}/.zgenomrc"
 # END zgenom init
 
 # pnpm tab completion
-pnpm completion zsh > $HOME/.pnpmcompletion.zsh
+if [[ ! -f $HOME/.pnpmcompletion.zsh ]]; then
+    pnpm completion zsh > $HOME/.pnpmcompletion.zsh
+fi
 source $HOME/.pnpmcompletion.zsh
 
 # Aliases
@@ -137,11 +113,12 @@ setopt longlistjobs
 
 setopt autocd
 
-precmd() {
-    if [ "$(id -u)" -ne 0 ]; then
-        echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history | tail -n 1)" >>! $HOME/history/zsh-history-$(date "+%Y-%m-%d").log;
-    fi
-}
+# History logging disabled - atuin provides better history management
+# precmd() {
+#     if [ "$(id -u)" -ne 0 ]; then
+#         echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history | tail -n 1)" >>! $HOME/history/zsh-history-$(date "+%Y-%m-%d").log;
+#     fi
+# }
 
 # eval "$(emplace init zsh)"
 # source <(blindspot completion -s zsh)
@@ -151,7 +128,7 @@ precmd() {
 # end tab configuration
 
 # PROMPT CONFIG
-source $HOME/.config/themes/zsh/headline.zsh-theme
+[[ -f $HOME/.config/themes/zsh/headline.zsh-theme ]] && source $HOME/.config/themes/zsh/headline.zsh-theme
 HL_THIN='off'
 HL_OVERWRITE='on'
 HL_GIT_COUNT_MODE='on'
@@ -190,13 +167,13 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # zoxide
 ########
-if [ "$CODESPACES" != "true" ]; then
+if [[ "$CODESPACES" != "true" ]] && command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init zsh)"
 fi
 
 # atuin
 #######
-if [ "$CODESPACES" != "true" ]; then
+if [[ "$CODESPACES" != "true" ]] && command -v atuin >/dev/null 2>&1; then
 	eval "$(atuin init zsh)"
 fi
 
@@ -246,8 +223,7 @@ command -v funky &>/dev/null && eval "$(funky --init zsh)"
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-[[ ! -r '$HOME/.opam/opam-init/init.zsh' ]] || source '$HOME/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
 # END opam configuration
 
 # echo "=== .zshrc END ==="
-

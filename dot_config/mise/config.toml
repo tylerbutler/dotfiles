@@ -7,7 +7,7 @@ bun = "latest"
 deno = "latest"
 go = "1.25.1"
 hk = "latest"
-node = "latest"
+node = "24"
 pkl = "latest"
 python = "latest"
 

@@ -35,30 +35,169 @@ alias:
   - name: pubkey
     value: more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'
 
-  # navigation
+  # navigation shortcuts
   - name: cdr
     value: cd-gitroot
   - name: mkdir
     value: mkdir -p
+  - name: md
+    value: mkdir -p
+  - name: rd
+    value: rmdir
+  - name: ..
+    value: cd ..
+  - name: ...
+    value: cd ../..
+  - name: ....
+    value: cd ../../..
+  - name: .....
+    value: cd ../../../..
+  - name: ......
+    value: cd ../../../../..
+  - name: "1"
+    value: cd -1
+  - name: "2"
+    value: cd -2
+  - name: "3"
+    value: cd -3
+  - name: "4"
+    value: cd -4
+  - name: "5"
+    value: cd -5
+  - name: "6"
+    value: cd -6
+  - name: "7"
+    value: cd -7
+  - name: "8"
+    value: cd -8
+  - name: "9"
+    value: cd -9
+
+  # ls aliases
+  # NOTE: In zsh, l/la/ll/lla/lt/lta are overridden by zpm-zsh/ls plugin
+  # The plugin uses eza/lsd/exa with icons and git status if available
+  # All other aliases below (lsa/lr/ldot/lS/lart/lrt/lsr/lsn) work as defined
+  - name: l
+    value: ls -lFh
+  - name: la
+    value: ls -lAFh
+  - name: ll
+    value: ls -l
+  - name: lsa
+    value: ls -lah
+  - name: lr
+    value: ls -tRFh
+  - name: lt
+    value: ls -ltFh
+  - name: ldot
+    value: ls -ld .*
+  - name: lS
+    value: ls -1FSsh
+  - name: lart
+    value: ls -1Fcart
+  - name: lrt
+    value: ls -1Fcrt
+  - name: lsr
+    value: ls -lARFh
+  - name: lsn
+    value: ls -1
 
   # disk usage
   - name: du
     value: du -hd1 | sort -h
 
-  # git aliases
+  # utilities
+  - name: grep
+    value: grep --color
+  - name: rmlint
+    value: \rmlint -g -C
+
+  # rsync aliases
+  - name: rsync-copy
+    value: rsync -avz --progress -h
+  - name: rsync-move
+    value: rsync -avz --progress -h --remove-source-files
+  - name: rsync-update
+    value: rsync -avzu --progress -h
+  - name: rsync-synchronize
+    value: rsync -avzu --delete --progress -h
+
+  # git aliases - from usage history
+  - name: gco
+    value: git checkout
   - name: gcam
-    value: git add -A && git commit -m
+    value: git commit --all --message
+  - name: grhh
+    value: git reset --hard
+  - name: ga
+    value: git add
+  - name: gp
+    value: git push
+  - name: gba
+    value: git branch --all
+  - name: gwta
+    value: git worktree add
+  - name: grh
+    value: git reset
+  - name: gfa
+    value: git fetch --all
+  - name: gs
+    value: git status --short
+  - name: gpf
+    value: git push --force-with-lease
+  - name: gl
+    value: git pull
+  - name: gd
+    value: git diff
+  - name: gb
+    value: git branch
+  - name: gst
+    value: git status
+
+  # git aliases - recommended additions
+  - name: gaa
+    value: git add --all
+  - name: gcb
+    value: git checkout -b
+  - name: gcm
+    value: git checkout main
+  - name: gcan!
+    value: git commit --all --no-edit --amend
+  - name: glo
+    value: git log --oneline --decorate
+  - name: glol
+    value: git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+  - name: glola
+    value: git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all
+  - name: gsta
+    value: git stash push
+  - name: gstp
+    value: git stash pop
+  - name: gstl
+    value: git stash list
+  - name: gpr
+    value: git pull --rebase
+  - name: gpra
+    value: git pull --rebase --autostash
+  - name: gpsup
+    value: git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  - name: gdca
+    value: git diff --cached
+  - name: grbi
+    value: git rebase --interactive
+  - name: grbm
+    value: git rebase main
+  - name: grt
+    value: cd "$(git rev-parse --show-toplevel || echo .)"
+
+  # git aliases - existing custom ones
   - name: gcd
     value: cd-gitroot
-  - name: glo
-    value: git log --oneline --decorate --graph -10
   - name: glr
     value: git pull --rebase
   - name: gpo
     value: git push -u origin HEAD
-  - name: gst
-    value: git status -u .
-  - name: gs
+  - name: gsync
     value: hub sync
   - name: gsv
     value: HUB_VERBOSE=1 hub sync
@@ -99,10 +238,6 @@ alias:
   - name: zfs-snap-delete
     value: sudo zfs destroy -v
 
-  # utilities
-  - name: rmlint
-    value: \rmlint -g -C
-
   # brew shortcuts
   - name: b
     value: brew
@@ -129,52 +264,35 @@ alias:
   - name: edit
     value: $EDITOR
   - name: aliases
-    value: $EDITOR $HOME/.aliases.sh
+    value: $EDITOR $HOME/.aliae.yaml
   - name: refreshenv
-    value: omz reload
+    value: exec zsh
 
   # ssh
   - name: ssh
     value: ssh-ident
-# env:
-#   - name: POSH_THEME
-#     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'
-#   - name: EDITOR
-#     value: code-insiders --wait
-# path:
-#   - value: |
-#       {{ .Home }}/homebrew/bin
-#       /usr/local/bin/
-#       /opt/local/bin/
-#     if: match .OS "darwin"
-#   - value: |
-#       {{ .Home }}/go/bin/
-# script:
-#   - value: |
-#       oh-my-posh init nu
-#       source ~/.oh-my-posh.nu
-#     if: match .Shell "nu"
-#   - value: |
-#       load(io.popen('oh-my-posh init cmd'):read("*a"))()
-#     if: match .Shell "cmd"
-#   - value: |
-#       oh-my-posh init pwsh | Invoke-Expression
-#     if: match .Shell "pwsh"
-#   - value: |
-#       xontrib load autovox
-#       xontrib load vox
-#       xontrib load voxapi
-#       xontrib load bashisms
-#       execx($(oh-my-posh init xonsh))
-#     if: match .Shell "xonsh"
-#   - value: |
-#       eval `oh-my-posh init tcsh`
-#     if: match .Shell "tcsh"
-#   - value: |
-#       eval "$(oh-my-posh init {{ .Shell }})"
-#     if: match .Shell "bash" "zsh"
-# link:
-#   - name: ~/.aliae.yaml
-#     target: ~/dotfiles/aliae.yaml
-#   - name: ~/.zshrc
-#     target: $DOTFILES/config/zsh/zshrc
+
+# Script to define directory stack function, ff with fd fallback, and - alias
+script:
+  - value: |
+      # Directory stack viewer
+      function d () {
+        if [[ -n $1 ]]; then
+          dirs "$@"
+        else
+          dirs -v | head -n 10
+        fi
+      }
+
+      # Find files - use fd if available, fallback to find
+      function ff() {
+        if command -v fd >/dev/null 2>&1; then
+          fd --type f "$@"
+        else
+          find . -type f -name "$@"
+        fi
+      }
+
+      # Dash alias for cd to previous directory (needs special syntax)
+      alias -- -='cd -'
+    if: match .Shell "zsh"

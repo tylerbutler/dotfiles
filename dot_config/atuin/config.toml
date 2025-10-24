@@ -13,6 +13,9 @@ filter_mode = "host"
 # filter_mode_shell_up_key_binding = "session" # or directory or host
 filter_mode_shell_up_key_binding = "directory" # or directory or host
 inline_height = 10
+store_failed = false
+prefers_reduced_motion = true
+
 
 ## Note that these regular expressions are unanchored, i.e. if they don't start
 ## with ^ or end with $, they'll match anywhere in the command.
@@ -21,13 +24,32 @@ history_filter = [
 ]
 
 common_subcommands = [
+  "apt",
   "cargo",
-  "go",
+  "composer",
+  "dnf",
+  "docker",
   "git",
-  "g",
-  "npm",
-  "yarn",
-  "pnpm",
+  "go",
+  "ip",
   "kubectl",
+  "nix",
+  "nmcli",
+  "npm",
+  "pecl",
+  "pnpm",
+  "podman",
+  "port",
+  "systemctl",
+  "tmux",
+  "yarn",
+
+  "g",
   "flub",
 ]
+
+[sync]
+records = true
+
+[daemon]
+enabled = true

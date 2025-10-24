@@ -9,40 +9,41 @@ if ! zgenom saved; then
     # Add this if you experience issues with missing completions or errors mentioning compdef.
     # zgenom compdef
 
-    # Ohmyzsh base library
-    zgenom ohmyzsh
+    # ========================================
+    # OMZ PLUGINS (Minimal Selection)
+    # All other aliases now in ~/.aliae.yaml
+    # ========================================
 
-    # plugins
-    zgenom ohmyzsh plugins/alias-finder
-    zgenom ohmyzsh plugins/bgnotify
-    zgenom ohmyzsh plugins/command-not-found
-    zgenom ohmyzsh plugins/common-aliases
-    # zgenom ohmyzsh plugins/direnv
-    zgenom ohmyzsh plugins/fzf
-    zgenom ohmyzsh plugins/git
+    # Fast git completion
     zgenom ohmyzsh plugins/gitfast
-    zgenom ohmyzsh plugins/last-working-dir
-    # Install ohmyzsh osx plugin if on macOS
-    [[ "$(uname -s)" = Darwin ]] && zgenom ohmyzsh plugins/macos
+
+    # Alias suggestions (shows shorter aliases for commands)
+    zgenom ohmyzsh plugins/alias-finder
+
+    # Random quotes on terminal start
     zgenom ohmyzsh plugins/rand-quote
-    zgenom ohmyzsh plugins/rsync
-    zgenom ohmyzsh plugins/sudo
-    zgenom ohmyzsh plugins/timer
+
+    # ========================================
+    # NON-OMZ PLUGINS
+    # ========================================
 
     zgenom load lukechilds/zsh-better-npm-completion
     zgenom load MenkeTechnologies/zsh-cargo-completion
     zgenom load mollifier/cd-gitroot
-    zgenom load unixorn/git-extra-commands
+    # zgenom load unixorn/git-extra-commands  # 163 extra git commands - commented out (unused)
     zgenom load zsh-users/zsh-syntax-highlighting
 
     # extra completions
     zgenom load zsh-users/zsh-completions
     zgenom load 3v1n0/zsh-bash-completions-fallback
 
+    # Modern ls wrapper (uses eza/lsd/exa if available)
+    # NOTE: This overrides l/la/ll/lt aliases from .aliae.yaml
     zgenom load zpm-zsh/ls
-    zgenom load wfxr/emoji-cli
 
-    zgenom bin tj/git-extras
+    # zgenom load wfxr/emoji-cli  # Emoji picker via Alt+M - commented out (fuzzy-emoji not installed)
+
+    # zgenom bin tj/git-extras  # 74 extra git commands - commented out (unused)
 
     # save all to init script
     zgenom save

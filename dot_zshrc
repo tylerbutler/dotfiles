@@ -57,6 +57,9 @@ source "${HOME}/.zgenom/zgenom.zsh"
 source "${HOME}/.zgenomrc"
 # END zgenom init
 
+# Load custom keybinds
+[[ -f $HOME/.config/zsh/clear-line-keybind.zsh ]] && source $HOME/.config/zsh/clear-line-keybind.zsh
+
 # pnpm tab completion
 if [[ ! -f $HOME/.pnpmcompletion.zsh ]]; then
     pnpm completion zsh > $HOME/.pnpmcompletion.zsh
@@ -182,10 +185,6 @@ fi
 ##############
 # show shorter aliases before every command
 ZSH_ALIAS_FINDER_AUTOMATIC=true
-
-# git
-#####
-GIT_AUTO_FETCH_INTERVAL=3600 # in seconds
 
 # zsf-autocomplete
 ##################

@@ -141,8 +141,6 @@ alias:
     value: git reset
   - name: gfa
     value: git fetch --all
-  - name: gs
-    value: git status --short
   - name: gpf
     value: git push --force-with-lease
   - name: gl
@@ -164,6 +162,8 @@ alias:
   - name: gcan!
     value: git commit --all --no-edit --amend
   - name: glo
+    value: git log --oneline --decorate -10
+  - name: glog
     value: git log --oneline --decorate
   - name: glol
     value: git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
@@ -197,7 +197,7 @@ alias:
     value: git pull --rebase
   - name: gpo
     value: git push -u origin HEAD
-  - name: gsync
+  - name: gs
     value: hub sync
   - name: gsv
     value: HUB_VERBOSE=1 hub sync

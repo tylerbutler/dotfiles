@@ -13,7 +13,7 @@ filter_mode = "host"
 # filter_mode_shell_up_key_binding = "session" # or directory or host
 filter_mode_shell_up_key_binding = "directory" # or directory or host
 inline_height = 10
-store_failed = false
+store_failed = true # it's useful to save these for when you make a typo so it's easier to correct them
 prefers_reduced_motion = true
 
 
@@ -45,6 +45,8 @@ common_subcommands = [
   "yarn",
 
   "g",
+  "p",
+  "z",
   "flub",
 ]
 

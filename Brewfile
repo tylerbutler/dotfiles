@@ -1,5 +1,5 @@
 tap "oven-sh/bun"
-brew "atuin", restart_service: :changed
+brew "atuin"
 brew "bat"
 brew "bat-extras"
 brew "biome"

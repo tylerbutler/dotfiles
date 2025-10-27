@@ -122,6 +122,11 @@
 	textconv = bun
 	binary = true
 
+[pack]
+	usePathWalk = true
+[rebase]
+	updateRefs = false
+
 [include]
   path = ~/.config/git/_route.gitconfig
 
@@ -138,7 +143,3 @@
   path = ~/.config/git/user-work.gitconfig
 [includeIf "hasconfig:remote.*.url:git@github.com:microsoft/*"]
   path = ~/.config/git/user-work.gitconfig
-[pack]
-	usePathWalk = true
-[rebase]
-	updateRefs = false

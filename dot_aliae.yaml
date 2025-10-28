@@ -189,6 +189,8 @@ alias:
     value: git rebase main
   - name: grt
     value: cd "$(git rev-parse --show-toplevel || echo .)"
+  - name: grv
+    value: git remote --verbose
 
   # git aliases - existing custom ones
   - name: gcd
@@ -268,31 +270,45 @@ alias:
   - name: refreshenv
     value: exec zsh
 
-  # ssh
-  - name: ssh
-    value: ssh-ident
-
-# Script to define directory stack function, ff with fd fallback, and - alias
-script:
-  - value: |
-      # Directory stack viewer
-      function d () {
-        if [[ -n $1 ]]; then
-          dirs "$@"
-        else
-          dirs -v | head -n 10
-        fi
-      }
-
-      # Find files - use fd if available, fallback to find
-      function ff() {
-        if command -v fd >/dev/null 2>&1; then
-          fd --type f "$@"
-        else
-          find . -type f -name "$@"
-        fi
-      }
-
-      # Dash alias for cd to previous directory (needs special syntax)
-      alias -- -='cd -'
-    if: match .Shell "zsh"
+# env:
+#   - name: POSH_THEME
+#     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'
+#   - name: EDITOR
+#     value: code-insiders --wait
+# path:
+#   - value: |
+#       {{ .Home }}/homebrew/bin
+#       /usr/local/bin/
+#       /opt/local/bin/
+#     if: match .OS "darwin"
+#   - value: |
+#       {{ .Home }}/go/bin/
+# script:
+#   - value: |
+#       oh-my-posh init nu
+#       source ~/.oh-my-posh.nu
+#     if: match .Shell "nu"
+#   - value: |
+#       load(io.popen('oh-my-posh init cmd'):read("*a"))()
+#     if: match .Shell "cmd"
+#   - value: |
+#       oh-my-posh init pwsh | Invoke-Expression
+#     if: match .Shell "pwsh"
+#   - value: |
+#       xontrib load autovox
+#       xontrib load vox
+#       xontrib load voxapi
+#       xontrib load bashisms
+#       execx($(oh-my-posh init xonsh))
+#     if: match .Shell "xonsh"
+#   - value: |
+#       eval `oh-my-posh init tcsh`
+#     if: match .Shell "tcsh"
+#   - value: |
+#       eval "$(oh-my-posh init {{ .Shell }})"
+#     if: match .Shell "bash" "zsh"
+# link:
+#   - name: ~/.aliae.yaml
+#     target: ~/dotfiles/aliae.yaml
+#   - name: ~/.zshrc
+#     target: $DOTFILES/config/zsh/zshrc

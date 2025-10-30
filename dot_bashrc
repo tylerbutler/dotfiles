@@ -114,9 +114,6 @@ fi
 # fnm (fast node manager)
 eval "$(fnm env --use-on-cd)"
 
-# tab multiplexer configuration: https://github.com/austinjones/tab-rs/
-source "$HOME/.local/share/tab/completion/tab.bash"
-# end tab configuration
 . "$HOME/.cargo/env"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh

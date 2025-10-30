@@ -1,9 +1,0 @@
-{{ if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") }}
-{{ if ne .chezmoi.arch "arm64" }}
-brew tap jandedobbeleer/oh-my-posh
-brew install oh-my-posh
-{{ else }}
-sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-arm64 -O /usr/local/bin/oh-my-posh
-sudo chmod +x /usr/local/bin/oh-my-posh
-{{ end }}
-{{ end }}

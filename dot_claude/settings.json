@@ -2,13 +2,7 @@
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
-  "model": "sonnet",
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh",
-    "padding": 0
-  },
-  "alwaysThinkingEnabled": false,
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Bash(git status)",
@@ -28,5 +22,11 @@
       "Bash(pnpm start)"
     ]
   },
-  "includeCoAuthoredBy": false
+  "model": "sonnet",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "alwaysThinkingEnabled": false
 }

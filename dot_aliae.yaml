@@ -6,7 +6,8 @@ alias:
     value: git
   - name: j
     value: just
-
+  - name: fb
+    value: /home/tylerbu/code/FluidFramework/fluid-build-cache/build-tools/packages/build-tools/bin/fluid-build
   # shortcuts
   - name: ":q"
     value: exit

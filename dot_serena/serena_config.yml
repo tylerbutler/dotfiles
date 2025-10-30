@@ -82,8 +82,4 @@ token_count_estimator: TIKTOKEN_GPT4O
 # instruct Serena to activate the project by its path for first-time activation.
 # NOTE: Make sure there are no name collisions in the names of registered projects.
 projects:
-- /Volumes/Code/claude-workspace-ccl/ccl-test-data
-- /Volumes/Code/claude-workspace-ccl/claude-cleaner
-- /Volumes/Code/claude-workspace-ccl/tools-monorepo/packages/ccl-test-viewer
-- /Volumes/Code/svelte-radial
-- /Volumes/Code/tylerbutler.com-hugo
+- /home/tylerbu/code/FluidFramework/test-tylerbu-e2e-r11s-docker

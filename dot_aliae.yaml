@@ -194,6 +194,10 @@ alias:
     value: git remote --verbose
 
   # git aliases - existing custom ones
+  - name: gbd
+    value: git branch -d
+  - name: gbD
+    value: git branch -D
   - name: gcd
     value: cd-gitroot
   - name: glr

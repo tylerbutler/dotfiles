@@ -31,6 +31,10 @@ trap zellij_cleanup EXIT INT TERM
 
 autoload -Uz compinit && compinit
 
+# Case-insensitive tab completion with progressive matching
+# '' = exact matches preferred, then case-insensitive, then partial matching
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 # source $HOME/.local/zsh-autocomplete-settings.zsh
 
 if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then

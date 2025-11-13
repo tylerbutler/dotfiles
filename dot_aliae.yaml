@@ -8,6 +8,8 @@ alias:
     value: just
   - name: fb
     value: /home/tylerbu/code/FluidFramework/fluid-build-cache/build-tools/packages/build-tools/bin/fluid-build
+  - name: saill
+    value: /home/tylerbu/code/tools-monorepo/packages/sail/bin/run.js
   # shortcuts
   - name: ":q"
     value: exit

@@ -1,6 +1,7 @@
 [env]
 MISE_NODE_COREPACK = 1
 LEFTHOOK = 0
+LD_LIBRARY_PATH = "/home/linuxbrew/.linuxbrew/lib:${LD_LIBRARY_PATH}"
 
 [tools]
 bun = "latest"

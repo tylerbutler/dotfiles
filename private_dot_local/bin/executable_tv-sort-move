@@ -18,6 +18,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "House of Lies" /tv/
 rsync -avz --progress -h --remove-source-files --copy-links "House" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How to Die Alone" /tv/1TB-04/
+rsync -avz --progress -h --remove-source-files --copy-links "How I Met Your Mother" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Intervention" /tv/1TB-08/
 rsync -avz --progress -h --remove-source-files --copy-links "Invincible (2021)" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Last Week Tonight with John Oliver" /tv/1TB-04/

@@ -22,7 +22,6 @@
       "Bash(pnpm start)"
     ]
   },
-  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",

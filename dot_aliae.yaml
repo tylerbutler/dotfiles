@@ -7,9 +7,12 @@ alias:
   - name: j
     value: just
   - name: fb
-    value: /home/tylerbu/code/FluidFramework/fluid-build-cache/build-tools/packages/build-tools/bin/fluid-build
+    value: ~/code/FluidFramework/fluid-build-cache/build-tools/packages/build-tools/bin/fluid-build
   - name: saill
-    value: /home/tylerbu/code/tools-monorepo/packages/sail/bin/run.js
+    value: ~/code/tools-monorepo/packages/sail/bin/run.js
+  - name: flubber
+    value: ~/code/FluidFramework/build-tools/packages/build-cli/bin/run.js
+
   # shortcuts
   - name: ":q"
     value: exit
@@ -239,7 +242,7 @@ alias:
 
   # zfs utilities
   - name: zfs-space
-    value: zfs list -o space -r deadpool wolverine x23
+    value: zfs list -o space -r deadpool x23
   - name: zfs-snaps
     value: zfs list -t snapshot -S creation
   - name: zfs-sync
@@ -275,7 +278,7 @@ alias:
   - name: aliases
     value: $EDITOR $HOME/.aliae.yaml
   - name: refreshenv
-    value: exec zsh
+    value: source ~/.zshrc
 
 # env:
 #   - name: POSH_THEME

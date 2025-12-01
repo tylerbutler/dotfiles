@@ -1,0 +1,11 @@
+neovim =
+  = brew
+  = apt
+  = pacman
+  = nix
+
+docker =
+  apt = docker.io
+  _sources =
+    = brew
+    = pacman

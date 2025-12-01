@@ -11,16 +11,10 @@
 	trustExitCode = true
 
 [credential]
-  credentialStore = gpg
-  helper =
-  helper = /usr/local/bin/git-credential-manager
+	credentialStore = gpg
+	helper =
+	helper = /usr/local/bin/git-credential-manager
 	azreposCredentialType = oauth
-[credential "https://dev.azure.com"]
-    useHttpPath = true
 
-[credential "https://github.com"]
-	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+[credential "https://dev.azure.com"]
+	useHttpPath = true

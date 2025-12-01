@@ -17,6 +17,12 @@
     executable = true
     refreshPeriod = "168h"
 
+[".local/bin/git-sync"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/josh-project/josh/master/scripts/git-sync"
+    executable = true
+    refreshPeriod = "168h"
+
 # [".config/alacritty/default.yml"]
     # type = "file"
     # url = "https://github.com/alacritty/alacritty/raw/main/alacritty.yml"

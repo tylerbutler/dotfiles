@@ -3,9 +3,7 @@ $env:Path = "$HOME/.local/bin;$HOME/scoop/shims;$HOME/scoop/apps/python/current/
 Import-Module -Name Terminal-Icons
 
 Write-Output "Sourcing aliases..."
-. $HOME/.aliases.ps1
-
-# fnm env --use-on-cd | Out-String | Invoke-Expression
+aliae init pwsh | Invoke-Expression
 
 # zoxide integration
 Invoke-Expression (& {
@@ -43,4 +41,5 @@ if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) 
     Set-PSReadLineKeyHandler -Function AcceptSuggestion -Key 'ALT+r'
 }
 
-fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression
+mise activate pwsh | Out-String | Invoke-Expression
+

@@ -25,7 +25,7 @@ encryption = "age"
   identity = '{{ joinPath .chezmoi.homeDir "age-key.txt" }}'
   recipient = "age104jq0rfzu0v9vla2xtzup369lc9rv4ptmydq8lj5aynyv4j27dxqt38dea"
 
-{{- if ne .chezmoi.os "windows" -}}
+{{ if ne .chezmoi.os "windows" -}}
 [hooks.read-source-state.pre]
   script = '{{ joinPath .chezmoi.sourceDir ".install-password-manager.sh" }}'
 {{- end -}}

@@ -31,3 +31,10 @@ sources =
   = brew
   = apt
   = cargo
+
+custom_sources =
+  apt =
+    emoji = 🏚️
+    shell_command = apt
+    install = sudo apt install {package}
+    check = apt list --installed

@@ -189,10 +189,14 @@ alias:
     value: git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   - name: gdca
     value: git diff --cached
+  - name: gra
+    value: git remote add
   - name: grbi
     value: git rebase --interactive
   - name: grbm
     value: git rebase main
+  - name: grrm
+    value: git remote rm
   - name: grt
     value: cd "$(git rev-parse --show-toplevel || echo .)"
   - name: grv

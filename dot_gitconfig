@@ -2,7 +2,7 @@
   name = Tyler Butler
 [init]
   defaultBranch = main
-  templatedir = ~/.config/git/template
+  # templatedir = ~/.config/git/template
 [alias]
   dft = difftool
   dm = !bash -c 'REMOTE=$1 && REMOTE=${REMOTE:="origin"} && echo "Fetching $REMOTE" && git fetch $REMOTE --prune  && git branch -vv | grep "gone]" | awk \"{ print \\$1 }\" | xargs git branch -d' -

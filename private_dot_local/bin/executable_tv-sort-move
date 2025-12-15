@@ -63,7 +63,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "American Dad!" /tv/
 rsync -avz --progress -h --remove-source-files --copy-links "Awkwafina Is Nora From Queens" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Arrested\ Development /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Bob\'s\ Burgers /tv/_keep/
-rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /tv/_keep/
+rsync -avz --progress -h --remove-source-files --copy-links Family\ Guy /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links Futurama /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links "Sex and the City" /tv/_keep/
 rsync -avz --progress -h --remove-source-files --copy-links Top\ Chef /tv/_keep/

@@ -22,11 +22,22 @@
       "Bash(pnpm start)"
     ]
   },
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0
   },
-  "alwaysThinkingEnabled": false,
-  "model": "opus"
+  "enabledPlugins": {
+    "claude-mem@thedotmack": true,
+    "context7@claude-plugins-official": false,
+    "frontend-design@claude-plugins-official": false,
+    "serena@claude-plugins-official": false,
+    "github@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": false,
+    "code-review@claude-plugins-official": false,
+    "playwright@claude-plugins-official": false,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": false
+  }
 }

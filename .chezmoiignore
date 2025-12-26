@@ -18,3 +18,11 @@ Library/Application Support/rbw/config.json
 {{ if ne .chezmoi.os "linux" }}
 .config/rbw/config.json
 {{ end }}
+
+# Skip SSH private keys and age encryption key if rbw is not available
+# These files require rbw to retrieve secrets from Bitwarden
+{{ if not .use_rbw }}
+.ssh/id_ed25519
+.ssh/id_ed25519.pub
+age-key.txt
+{{ end }}

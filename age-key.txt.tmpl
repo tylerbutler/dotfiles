@@ -1,1 +1,5 @@
-{{/* {{ (rbw "age-key.txt").notes }} */}}
+{{- /* This template requires rbw to be installed and unlocked */ -}}
+{{- /* The file is skipped via .chezmoiignore when use_rbw is false */ -}}
+{{- if .use_rbw -}}
+{{ (rbw "age-key.txt").notes }}
+{{- end -}}

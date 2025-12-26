@@ -1,1 +1,5 @@
+{{- /* This template requires rbw to be installed and unlocked */ -}}
+{{- /* The file is skipped via .chezmoiignore when use_rbw is false */ -}}
+{{- if .use_rbw -}}
 {{ (index (rbw "tylerbu@sshKey").fields 0).value }} tyler@tylerbutler.com
+{{- end -}}

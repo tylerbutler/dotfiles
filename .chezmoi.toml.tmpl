@@ -1,15 +1,28 @@
 {{- $codespaces:= env "CODESPACES" | not | not -}}
+{{- /* Check if rbw is available and should be used */ -}}
+{{- $use_rbw := false -}}
+{{- if lookPath "rbw" -}}
+{{-   $use_rbw = true -}}
+{{- end -}}
+{{- /* Allow override via environment variable: CHEZMOI_USE_RBW=false to disable */ -}}
+{{- if eq (env "CHEZMOI_USE_RBW") "false" -}}
+{{-   $use_rbw = false -}}
+{{- end -}}
+
 sourceDir = {{ .chezmoi.sourceDir | quote }}
 
+{{ if $use_rbw -}}
 encryption = "age"
 
 [bitwarden]
   command = "rbw"
+{{ end -}}
 
 [data]
   name = "Tyler Butler"
   email = "tyler@tylerbutler.com"
   codespaces = {{ $codespaces }}
+  use_rbw = {{ $use_rbw }}
 
 [diff]
   exclude = ["scripts"]
@@ -21,6 +34,7 @@ encryption = "age"
 [scriptEnv]
   SOURCE_PATH = "{{ .chezmoi.sourceDir }}"
 
+{{ if $use_rbw -}}
 [age]
   identity = '{{ joinPath .chezmoi.homeDir "age-key.txt" }}'
   recipient = "age104jq0rfzu0v9vla2xtzup369lc9rv4ptmydq8lj5aynyv4j27dxqt38dea"
@@ -28,4 +42,5 @@ encryption = "age"
 {{ if ne .chezmoi.os "windows" -}}
 [hooks.read-source-state.pre]
   script = '{{ joinPath .chezmoi.sourceDir ".install-password-manager.sh" }}'
+{{ end -}}
 {{- end -}}

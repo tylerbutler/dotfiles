@@ -5,39 +5,32 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      "Bash(git status)",
-      "Bash(git diff:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(git pull:*)",
-      "Bash(git log:*)",
-      "Bash(npm run lint)",
-      "Bash(npm run test:*)",
-      "Bash(npm run build)",
-      "Bash(npm start)",
-      "Bash(pnpm run lint)",
-      "Bash(pnpm run test:*)",
-      "Bash(pnpm run build)",
-      "Bash(pnpm start)"
+      "Bash(cargo:*)",
+      "Bash(just:*)",
+      "Bash(gh:*)",
+      "Bash(git:*)",
+      "Bash(mise:*)",
+      "Bash(pnpm:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)"
     ]
   },
   "model": "opus",
   "statusLine": {
     "type": "command",
-    "command": "~/.claude/statusline.sh",
-    "padding": 0
+    "command": "printf '\\033[01;32m%s@%s\\033[00m:\\033[01;34m%s\\033[00m' \"$(whoami)\" \"$(hostname -s)\" \"$(pwd)\""
   },
   "enabledPlugins": {
     "claude-mem@thedotmack": true,
     "context7@claude-plugins-official": false,
     "frontend-design@claude-plugins-official": false,
     "serena@claude-plugins-official": false,
-    "github@claude-plugins-official": true,
+    "github@claude-plugins-official": false,
     "feature-dev@claude-plugins-official": false,
     "code-review@claude-plugins-official": false,
     "playwright@claude-plugins-official": false,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": false
   }
+  "alwaysThinkingEnabled": false
 }

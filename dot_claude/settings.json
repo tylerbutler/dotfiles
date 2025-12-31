@@ -29,8 +29,8 @@
     "feature-dev@claude-plugins-official": false,
     "code-review@claude-plugins-official": false,
     "playwright@claude-plugins-official": false,
-    "rust-analyzer-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": false,
     "typescript-lsp@claude-plugins-official": false
-  }
+  },
   "alwaysThinkingEnabled": false
 }

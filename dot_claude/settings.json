@@ -24,14 +24,15 @@
     "claude-mem@thedotmack": true,
     "context7@claude-plugins-official": false,
     "frontend-design@claude-plugins-official": false,
-    "serena@claude-plugins-official": false,
+    "serena@claude-plugins-official": true,
     "github@claude-plugins-official": false,
     "feature-dev@claude-plugins-official": false,
-    "code-review@claude-plugins-official": true,
+    "code-review@claude-plugins-official": false,
     "playwright@claude-plugins-official": false,
     "rust-analyzer-lsp@claude-plugins-official": false,
-    "typescript-lsp@claude-plugins-official": false,
-    "gopls-lsp@claude-plugins-official": false
+    "typescript-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": false
 }

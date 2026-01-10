@@ -38,6 +38,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - The Nex
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Voyager" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Boys" /tv/1TB-08/

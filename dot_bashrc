@@ -123,3 +123,5 @@ eval "$(atuin init bash)"
 
 # setup funky
 command -v funky &>/dev/null && eval "$(funky --init bash)"
+
+alias claude-mem='bun "/home/tylerbu/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'

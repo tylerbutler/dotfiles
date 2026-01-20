@@ -1,6 +1,12 @@
 ## Node.js
 - Prefer pnpm when working in node projects.
 
+## Bash
+- Prefer using:
+  - fd to find
+  - sd to sed
+  - rg to grep
+
 ## Testing
 - When asked to fix tests, don't fix some of them and leave others skipped. 
   When asked to fix tests, fix all of the ones requested.

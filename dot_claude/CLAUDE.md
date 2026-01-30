@@ -12,8 +12,6 @@
   When asked to fix tests, fix all of the ones requested.
 
 ## Git Configuration Rules
-- Do not include Co-Authored-By trailer in commits.
-- Do not include any Claude attribution trailers to the commits.
 - Use conventional commits when committing. 
   - Format: type(scope): description
   - Examples: feat: add user authentication, fix: resolve parsing error, docs: update README

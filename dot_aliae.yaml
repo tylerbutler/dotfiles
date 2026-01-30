@@ -284,6 +284,16 @@ alias:
   - name: refreshenv
     value: source ~/.zshrc
 
+  # claude code shortcuts
+  - name: claude-review
+    value: claude --plugins code-review@claude-plugins-official,code-simplifier@claude-plugins-official,commit-commands@claude-plugins-official
+
+  - name: claude-design
+    value: claude --plugins superpowers@claude-plugins-official,frontend-design@claude-plugins-official
+
+  - name: claude-code
+    value: claude --plugins code-review@claude-plugins-official,code-simplifier@claude-plugins-official,commit-commands@claude-plugins-official,superpowers@claude-plugins-official,frontend-design@claude-plugins-official
+
 # env:
 #   - name: POSH_THEME
 #     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'

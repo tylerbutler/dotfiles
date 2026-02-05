@@ -26,3 +26,6 @@ Library/Application Support/rbw/config.json
 .ssh/id_ed25519.pub
 age-key.txt
 {{ end }}
+
+# Claude Code machine-specific files
+.claude/plugins/known_marketplaces.json

@@ -296,6 +296,9 @@ alias:
   - name: claude-code
     value: claude --plugins code-review@claude-plugins-official,code-simplifier@claude-plugins-official,commit-commands@claude-plugins-official,superpowers@claude-plugins-official,frontend-design@claude-plugins-official
 
+  - name: claude-mem
+    value: bun "{{ .Home }}/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"
+
 # env:
 #   - name: POSH_THEME
 #     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'

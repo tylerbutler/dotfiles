@@ -3,6 +3,7 @@
 install
 install.sh
 install/*
+CLAUDE.md
 README.md
 _ps1
 _ps1/*

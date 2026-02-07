@@ -22,6 +22,18 @@
     ]
   },
   "model": "opus",
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ~/.local/bin/cleanup-mem.mjs"
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "printf '\\033[01;32m%s@%s\\033[00m:\\033[01;34m%s\\033[00m' \"$(whoami)\" \"$(hostname -s)\" \"$(pwd)\""
@@ -34,7 +46,7 @@
     "github@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "playwright@claude-plugins-official": false,
+    "playwright@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": false,
     "typescript-lsp@claude-plugins-official": false,
     "gopls-lsp@claude-plugins-official": false,

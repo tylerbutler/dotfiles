@@ -1,16 +1,14 @@
 [env]
 MISE_NODE_COREPACK = 1
 LEFTHOOK = 0
-LD_LIBRARY_PATH = "/home/linuxbrew/.linuxbrew/lib:${LD_LIBRARY_PATH}"
+LD_LIBRARY_PATH = "/home/linuxbrew/.linuxbrew/lib:${LD_LIBRARY_PATH:-}"
 
 [tools]
 bun = "latest"
 deno = "latest"
-go = "1.25.1"
 hk = "latest"
 node = "24"
 pkl = "latest"
-python = "latest"
 
 "aqua:FiloSottile/age" = "latest"
 "ubi:jandedobbeleer/aliae" = "latest"
@@ -22,13 +20,17 @@ python = "latest"
 # (note: this isn't currently implemented but there are plans to add it: https://github.com/jdx/rtx/issues/128)
 plugin_autoupdate_last_check_duration = '1 week' # set to 0 to disable updates
 
+# expand shell variables in env values (e.g. $HOME, $USER, etc.) -- this will be enabled by default in
+# future mise releases.
+env_shell_expand = true
+
 # config files with these prefixes will be trusted by default
 trusted_config_paths = [
     '~/code/',
 ]
 
 jobs = 8            # number of plugins or runtimes to install in parallel. The default is `4`.
-idiomatic_version_file_enable_tools = []
+idiomatic_version_file_enable_tools = ["erlang", "elixir"] # enable idiomatic version file support for these tools (e.g. rebar.config for erlang, mix.exs for elixir)
 
 [settings.status]
 show_env = true

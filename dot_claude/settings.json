@@ -39,7 +39,7 @@
     "command": "printf '\\033[01;32m%s@%s\\033[00m:\\033[01;34m%s\\033[00m' \"$(whoami)\" \"$(hostname -s)\" \"$(pwd)\""
   },
   "enabledPlugins": {
-    "claude-mem@thedotmack": true,
+    "claude-mem@thedotmack": false,
     "context7@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": false,
     "serena@claude-plugins-official": true,

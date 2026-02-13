@@ -1,1 +1,5 @@
-.claude
+# Ignore transient Claude Code files but keep project config
+.claude/*
+!.claude/settings.json
+!.claude/skills/
+!.claude/agents/

@@ -25,7 +25,8 @@ Chezmoi uses special prefixes to determine how files are processed:
 - **Root dotfiles** (`dot_*`): Standard dotfiles like `.bashrc`, `.zshrc`, `.gitconfig`
 - **dot_aliae.yaml**: Shell aliases managed by [aliae](https://github.com/JanDeDobbeleer/aliae) with cross-platform templating (`{{ .Home }}`)
 - **dot_config/**: XDG config directory (`~/.config`) — app configs for mise, git, gh, ghostty, atuin, etc.
-- **dot_claude/**: Claude Code config — `commands/`, `plugins/`, `settings.json`
+- **dot_claude/**: Global Claude Code config (`~/.claude/`) — `commands/`, `skills/`, `settings.json`
+- **.claude/**: Repo-local Claude Code config — `skills/`, `agents/`, `settings.json` (hooks)
 - **dot_claude-mem/**: Claude memory worker configuration
 - **Brewfile**: Homebrew dependencies (macOS), applied via `run_onchange_install-brewfile.sh.tmpl`
 - **_scripts/**: Chezmoi run scripts for system setup
@@ -74,8 +75,9 @@ chezmoi chattr +template <file>         # Convert file to template
 ### Encryption
 - Uses **age** encryption for sensitive files
 - Private key: `~/age-key.txt`
-- Encrypted files managed by chezmoi automatically
-- Password manager: **rbw** (Bitwarden CLI)
+- Password manager: **rbw** (Bitwarden CLI) — **disabled by default**
+- Enable with: `CHEZMOI_USE_RBW=true chezmoi apply`
+- Without rbw, SSH keys and age-key.txt are skipped via `.chezmoiignore`
 
 ### Template Variables
 - Standard: `.chezmoi.os`, `.chezmoi.arch`, `.chezmoi.homeDir`, `.chezmoi.sourceDir`
@@ -90,25 +92,12 @@ chezmoi chattr +template <file>         # Convert file to template
 - Platform detection: `$SYSTEM_TYPE` variable (Darwin, Linux, Windows)
 - Aliae templates: `{{ .Home }}`, `{{ .OS }}` for cross-platform aliases
 
-## Development Workflow
-
-### Adding New Dotfiles
-1. If file already exists: `chezmoi add <file>`
-2. If creating new: Create with proper prefix in source directory
-3. For templates: Add `.tmpl` suffix and use template syntax
-4. Apply: `chezmoi apply`
-
-### Modifying Existing Files
-1. **Preferred**: `chezmoi edit <file>` (edits in source directory)
-2. Or: Edit directly in `~/.local/share/chezmoi/` and apply
-3. **Avoid**: Editing files in home directory (changes will be overwritten)
-
 ## Special Configurations
 
 ### Shell Setup
-- Primary shell: **zsh** with custom prompt via Starship
+- Primary shell: **zsh** with Headline theme prompt
+- Plugin manager: **Zgenom** (auto-updates weekly)
 - Fallback: bash with similar configuration
-- Plugin manager: Native zsh plugin loading from `dot_zsh_plugins.txt`
 - SSH sessions: Auto-attach to Zellij terminal multiplexer
 
 ### Git Configuration
@@ -138,9 +127,8 @@ chezmoi chattr +template <file>         # Convert file to template
 - Prefer adding new aliases to `dot_aliae.yaml` rather than shell rc files
 
 ### Claude Code Integration
-- Commands: `dot_claude/commands/` - Custom slash commands
-- Plugins: `dot_claude/plugins/` - Plugin configuration
-- Settings: `dot_claude/settings.json`
+- Global config (`dot_claude/` → `~/.claude/`): commands, skills, plugins, settings
+- Repo-local config (`.claude/`): project-specific skills, agents, hooks
 
 ## File Operations Notes
 
@@ -155,3 +143,4 @@ chezmoi chattr +template <file>         # Convert file to template
 3. **Cross-platform**: Consider OS-specific logic in templates
 4. **Encryption**: Use chezmoi's encryption for sensitive data, not plain text
 5. **Scripts**: Place one-time setup scripts in `_scripts/` with proper `run_once_` prefix
+6. **Aliases**: Add new aliases to `dot_aliae.yaml`, not shell rc files

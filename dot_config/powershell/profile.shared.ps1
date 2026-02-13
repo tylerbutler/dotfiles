@@ -3,7 +3,12 @@ $env:Path = "$HOME/.local/bin;$HOME/scoop/shims;$HOME/scoop/apps/python/current/
 Import-Module -Name Terminal-Icons
 
 Write-Output "Sourcing aliases..."
-aliae init pwsh | Invoke-Expression
+if (Get-Command aliae -ErrorAction SilentlyContinue) {
+    aliae init pwsh | Invoke-Expression
+} else {
+    $fallback = Join-Path $HOME ".aliae_fallback.ps1"
+    if (Test-Path $fallback) { . $fallback }
+}
 
 # zoxide integration
 Invoke-Expression (& {

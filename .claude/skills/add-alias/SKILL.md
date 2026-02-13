@@ -14,7 +14,15 @@ Add a new alias to `dot_aliae.yaml` following existing patterns.
 2. Find the appropriate section for the new alias (or create a new section)
 3. Add the alias using aliae YAML format
 4. Validate YAML syntax
-5. Run `chezmoi diff` to preview the change
+5. Regenerate fallback files for all shells:
+   ```bash
+   chezmoi apply ~/.aliae.yaml
+   aliae init zsh > ~/.local/share/chezmoi/dot_aliae_fallback.zsh
+   aliae init bash > ~/.local/share/chezmoi/dot_aliae_fallback.bash
+   aliae init pwsh --print > ~/.local/share/chezmoi/dot_aliae_fallback.ps1
+   ```
+   Or just run `aliae-update-fallback` if aliae is loaded.
+6. Run `chezmoi diff` to preview the change
 
 ## Alias Format
 
@@ -48,3 +56,4 @@ OS-conditional:
 - Use aliae template syntax for paths and OS-specific commands
 - Keep alias names short and memorable
 - Check for conflicts with existing aliases before adding
+- Always regenerate all fallback files (`dot_aliae_fallback.{zsh,bash,ps1}`) after changes — these are used when aliae isn't installed

@@ -71,8 +71,11 @@ fi
 source $HOME/.pnpmcompletion.zsh
 
 # Aliases
-eval "$(aliae init zsh)"
-# source $HOME/.aliases.sh
+if command -v aliae &>/dev/null; then
+  eval "$(aliae init zsh)"
+else
+  source $HOME/.aliae_fallback.zsh
+fi
 
 # Set rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow"

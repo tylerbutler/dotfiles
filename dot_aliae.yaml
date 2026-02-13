@@ -285,6 +285,8 @@ alias:
     value: $EDITOR $HOME/.aliae.yaml
   - name: refreshenv
     value: source ~/.zshrc
+  - name: aliae-update-fallback
+    value: aliae init zsh > {{ .Home }}/.local/share/chezmoi/dot_aliae_fallback.zsh && aliae init bash > {{ .Home }}/.local/share/chezmoi/dot_aliae_fallback.bash && aliae init pwsh --print > {{ .Home }}/.local/share/chezmoi/dot_aliae_fallback.ps1
 
   # claude code shortcuts
   - name: claude-review

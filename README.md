@@ -26,16 +26,50 @@ chezmoi init --apply --verbose https://github.com/tylerbutler/dotfiles.git
 
 `~/.local/share/chezmoi`
 
+## Post-install setup scripts
 
-## Making changes to dotfiles
+After `chezmoi apply`, these scripts are available in `~/.local/bin/` and can be run manually as needed.
 
-TODO
+### Platform setup
 
+| Script | Platform | Description |
+|--------|----------|-------------|
+| `setup-apt` | Debian/Ubuntu | Install core APT packages, zsh, set default shell |
+| `setup-pacman` | Arch Linux | Install core pacman packages, zsh, set default shell |
+| `setup-scoop` | Windows | Install Scoop package manager |
+| `setup-psmodules` | Windows | Install PowerShell modules |
+| `setup-git-ppa` | Debian (non-WSL) | Add git-core PPA for latest stable git |
+| `setup-beyondcompare` | Windows | Install Beyond Compare via Scoop |
 
-### Adding files to chezmoi as symlinks
+### Tool installers
 
-TODO
+| Script | Description |
+|--------|-------------|
+| `install-brew` | Install Homebrew (skips if already installed) |
+| `install-rustup` | Install rustup with minimal stable toolchain |
+| `install-nix` | Install Nix package manager |
+| `install-eget` | Install eget binary downloader |
+| `install-docker` | Install Docker |
+| `install-powershell` | Install PowerShell on Linux |
+| `install-code` | Install VS Code via snap |
+| `install-fonts` | Install fonts |
+| `install-rclone` | Install rclone |
+| `install-lazygit` | Install lazygit |
+| `install-volta` | Install Volta (JS toolchain manager) |
+| `install-plex` | Install Plex Media Server |
+| `install-filebot` | Install FileBot |
+| `install-handbrake` | Install HandBrake |
+| `install-keybase` | Install Keybase |
+| `install-vorta` | Install Vorta (BorgBackup GUI) |
+| `install-base16-shell` | Install base16-shell color themes |
 
+### Automatic scripts
+
+These still run automatically via chezmoi:
+
+| Script | Trigger | Description |
+|--------|---------|-------------|
+| `run_onchange_install-brewfile.sh` | Brewfile content changes | Runs `brew bundle` to sync Homebrew packages |
 
 ## Pulling updates from GitHub
 

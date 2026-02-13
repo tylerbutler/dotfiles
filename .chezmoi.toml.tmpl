@@ -1,12 +1,8 @@
 {{- $codespaces:= env "CODESPACES" | not | not -}}
-{{- /* Check if rbw is available and should be used */ -}}
+{{- /* rbw (Bitwarden) is disabled by default. Set CHEZMOI_USE_RBW=true to enable. */ -}}
 {{- $use_rbw := false -}}
-{{- if lookPath "rbw" -}}
+{{- if and (eq (env "CHEZMOI_USE_RBW") "true") (lookPath "rbw") -}}
 {{-   $use_rbw = true -}}
-{{- end -}}
-{{- /* Allow override via environment variable: CHEZMOI_USE_RBW=false to disable */ -}}
-{{- if eq (env "CHEZMOI_USE_RBW") "false" -}}
-{{-   $use_rbw = false -}}
 {{- end -}}
 
 sourceDir = {{ .chezmoi.sourceDir | quote }}

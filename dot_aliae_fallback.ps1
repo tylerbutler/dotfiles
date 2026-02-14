@@ -1,12 +1,12 @@
-Set-Alias -Name a -Value aliae
-Set-Alias -Name g -Value git
-Set-Alias -Name j -Value just
-Set-Alias -Name fb -Value ~/code/FluidFramework/fluid-build-cache/build-tools/packages/build-tools/bin/fluid-build
-Set-Alias -Name r -Value repoverlay
-Set-Alias -Name saill -Value ~/code/tools-monorepo/packages/sail/bin/run.js
-Set-Alias -Name flubber -Value ~/code/FluidFramework/build-tools/packages/build-cli/bin/run.js
-Set-Alias -Name :q -Value exit
-Set-Alias -Name cls -Value clear
+Set-Alias -Name a -Value "aliae"
+Set-Alias -Name g -Value "git"
+Set-Alias -Name j -Value "just"
+Set-Alias -Name fb -Value "~/code/FluidFramework/fluid-build-cache/build-tools/packages/build-tools/bin/fluid-build"
+Set-Alias -Name r -Value "repoverlay"
+Set-Alias -Name saill -Value "~/code/tools-monorepo/packages/sail/bin/run.js"
+Set-Alias -Name flubber -Value "~/code/FluidFramework/build-tools/packages/build-cli/bin/run.js"
+Set-Alias -Name :q -Value "exit"
+Set-Alias -Name cls -Value "clear"
 function reboot() {
 	sudo shutdown -r now $args
 }
@@ -19,8 +19,8 @@ function zshconfig() {
 function zshrc() {
 	$EDITOR ~/.zshrc $args
 }
-Set-Alias -Name dotfiles -Value chezmoi
-Set-Alias -Name df -Value chezmoi
+Set-Alias -Name dotfiles -Value "chezmoi"
+Set-Alias -Name df -Value "chezmoi"
 function pbcopy() {
 	xclip -selection clipboard $args
 }
@@ -30,14 +30,14 @@ function pbpaste() {
 function pubkey() {
 	more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.' $args
 }
-Set-Alias -Name cdr -Value cd-gitroot
+Set-Alias -Name cdr -Value "cd-gitroot"
 function mkdir() {
 	mkdir -p $args
 }
 function md() {
 	mkdir -p $args
 }
-Set-Alias -Name rd -Value rmdir
+Set-Alias -Name rd -Value "rmdir"
 function ..() {
 	cd .. $args
 }
@@ -248,7 +248,7 @@ function gbd() {
 function gbD() {
 	git branch -D $args
 }
-Set-Alias -Name gcd -Value cd-gitroot
+Set-Alias -Name gcd -Value "cd-gitroot"
 function glr() {
 	git pull --rebase $args
 }
@@ -270,7 +270,7 @@ function gnd() {
 function gndd() {
 	git clean -df $args
 }
-Set-Alias -Name gui -Value gitui
+Set-Alias -Name gui -Value "gitui"
 function default-blindspot-packages() {
 	xargs blindspot install <~/.default-blindspot-packages $args
 }
@@ -307,23 +307,23 @@ function zfs-sync() {
 function zfs-snap-delete() {
 	sudo zfs destroy -v $args
 }
-Set-Alias -Name b -Value brew
+Set-Alias -Name b -Value "brew"
 function bupd() {
 	brew update && brew outdated $args
 }
 function bupg() {
 	brew upgrade $args
 }
-Set-Alias -Name p -Value pnpm
+Set-Alias -Name p -Value "pnpm"
 function pi() {
 	pnpm i $args
 }
 function pif() {
 	pnpm i --frozen-lockfile $args
 }
-Set-Alias -Name nvm -Value fnm
-Set-Alias -Name nvs -Value fnm
-Set-Alias -Name edit -Value $EDITOR
+Set-Alias -Name nvm -Value "fnm"
+Set-Alias -Name nvs -Value "fnm"
+Set-Alias -Name edit -Value "$EDITOR"
 function aliases() {
 	$EDITOR $HOME/.aliae.yaml $args
 }
@@ -331,7 +331,7 @@ function refreshenv() {
 	source ~/.zshrc $args
 }
 function aliae-update-fallback() {
-	aliae init zsh > /home/tylerbu/.local/share/chezmoi/dot_aliae_fallback.zsh && aliae init bash > /home/tylerbu/.local/share/chezmoi/dot_aliae_fallback.bash && aliae init pwsh --print > /home/tylerbu/.local/share/chezmoi/dot_aliae_fallback.ps1 $args
+	aliae init zsh > /Users/tylerbu/.local/share/chezmoi/dot_aliae_fallback.zsh && aliae init bash > /Users/tylerbu/.local/share/chezmoi/dot_aliae_fallback.bash && aliae init pwsh --print > /Users/tylerbu/.local/share/chezmoi/dot_aliae_fallback.ps1 $args
 }
 function claude-review() {
 	claude --plugins code-review@claude-plugins-official,code-simplifier@claude-plugins-official,commit-commands@claude-plugins-official $args
@@ -343,5 +343,14 @@ function claude-code() {
 	claude --plugins code-review@claude-plugins-official,code-simplifier@claude-plugins-official,commit-commands@claude-plugins-official,superpowers@claude-plugins-official,frontend-design@claude-plugins-official $args
 }
 function claude-mem() {
-	bun "/home/tylerbu/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs" $args
+	bun "/Users/tylerbu/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs" $args
+}
+function haiku() {
+	claude --model haiku $args
+}
+function sonnet() {
+	claude --model sonnet $args
+}
+function opus() {
+	claude --model opus $args
 }

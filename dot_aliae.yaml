@@ -301,6 +301,15 @@ alias:
   - name: claude-mem
     value: bun "{{ .Home }}/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"
 
+  - name: haiku
+    value: claude --model haiku
+
+  - name: sonnet
+    value: claude --model sonnet
+
+  - name: opus
+    value: claude --model opus
+
 # env:
 #   - name: POSH_THEME
 #     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'

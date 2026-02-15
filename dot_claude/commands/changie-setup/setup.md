@@ -218,6 +218,7 @@ jobs:
 - `labels`: `release` - comma-separated labels for the PR
 - `draft`: `false` - create as draft PR
 - `delete-branch`: `true` - delete branch after merge
+- `version-files`: empty (default) - newline-separated list of TOML files to bump with the release version. Format: `path:key` where `key` is a top-level TOML key. The version is written without the `v` prefix. Example: `gleam.toml:version` or `Cargo.toml:version`. The action uses `peter-evans/create-pull-request` which commits all working tree changes, so no extra git operations are needed.
 
 #### Auto-tag workflow (`.github/workflows/auto-tag.yml`)
 
@@ -247,6 +248,28 @@ jobs:
 **changie-auto-tag action inputs** (all optional):
 - `tag-prefix`: empty by default. `changie latest` already returns versions with `v` prefix (e.g. `v0.1.0`). Only set this for monorepo/multi-package repos that need package-scoped tags (e.g. `mypackage/`)
 - `working-directory`: `.` - directory containing `.changie.yaml`
+- `create-release`: `false` (default) - create a GitHub Release from the tag with changie version notes. When enabled, reads the version's changelog from `.changes/{version}.md` as the release body. Falls back to `--generate-notes` if the version file is missing.
+
+**Using the reusable auto-tag workflow:**
+
+Instead of using the composite action directly, you can use the reusable workflow which wraps the action with the `release` label check:
+
+```yaml
+name: Auto-tag release
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  auto-tag:
+    uses: tylerbutler/actions/.github/workflows/auto-tag.yml@main
+    with:
+      create-release: true  # optional, defaults to false
+```
+
+The reusable workflow accepts all the same inputs as the composite action (`changie-version`, `working-directory`, `tag-prefix`, `create-release`) and exposes `version` and `tag` as outputs.
 
 ### Step 7 (Go projects only): GoReleaser
 
@@ -452,29 +475,20 @@ jobs:
 
 #### Version bump in changie-release workflow
 
-When using release-plz, add a Cargo.toml version bump step to the changie-release workflow so the version in `Cargo.toml` stays in sync:
+When using release-plz, the `Cargo.toml` version needs to stay in sync. Use the `version-files` input:
 
 ```yaml
-      # After the changie-release step:
-      - name: Bump Cargo.toml version
-        if: steps.release.outputs.skipped != 'true'
-        env:
-          VERSION: ${{ steps.release.outputs.version }}
-          PR_BRANCH: ${{ steps.release.outputs.pr-branch }}
-        run: |
-          SEMVER="${VERSION#v}"
-          sed -i "s/^version = \".*\"/version = \"${SEMVER}\"/" Cargo.toml
-          cargo generate-lockfile
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout "$PR_BRANCH"
-          git add Cargo.toml Cargo.lock
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: bump version to ${SEMVER}"
-            git push origin "$PR_BRANCH"
-          fi
+      - uses: tylerbutler/actions/changie-release@main
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version-files: |
+            Cargo.toml:version
 ```
+
+The `version-files` input handles TOML version bumping automatically — no extra bash step or git operations needed. The changie-release action uses `peter-evans/create-pull-request` which commits all working tree changes in a single commit.
+
+**Note:** If you also need to update `Cargo.lock`, add a step after changie-release to run `cargo generate-lockfile` before the PR is created. The lock file change will be included in the same commit.
 
 #### Pipeline flow with release-plz + cargo-dist
 
@@ -551,9 +565,39 @@ changie merge --dry-run
 - `changie batch auto` exits non-zero when no unreleased fragments exist - the changie-release action handles this gracefully with `skip-if-no-changes: true`
 - Unreleased fragments are `.yaml` files in `.changes/unreleased/`
 - The `release` label on PRs is required for `auto-tag.yml` to trigger - the changie-release action adds this label automatically
-- The full pipeline flow is: push to main -> release.yml creates PR -> merge PR -> auto-tag.yml creates tag -> goreleaser.yml builds release
+- The full pipeline flow is: push to main -> release.yml creates PR -> merge PR -> auto-tag.yml creates tag (+ optional GitHub Release) -> downstream workflows triggered by tag push (e.g. goreleaser, cargo-dist, publish)
+- **`create-release` and downstream tag-triggered workflows**: If the project has a workflow triggered by tag push (`push: tags: ['v*']`), auto-tag's `create-release: true` creates the GitHub Release AND the tag push triggers that workflow. If no downstream workflow exists, enable `create-release` so the tag gets a proper GitHub Release with changie notes.
 
 ## Pipeline Flows
+
+### Standard projects (with create-release)
+
+For projects that don't need GoReleaser or release-plz, auto-tag can create the GitHub Release directly:
+
+```
+Developer pushes to main
+         |
+         v
+  release.yml (on push)
+  - Checks for unreleased .yaml fragments
+  - If none: skips gracefully
+  - If found: changie batch + merge, create/update release PR with "release" label
+  - Optionally bumps version files (version-files input)
+         |
+         v
+  Developer reviews & merges release PR
+         |
+         v
+  auto-tag.yml (on PR close)
+  - Checks PR has "release" label and was merged
+  - Runs changie latest to get version
+  - Creates and pushes git tag (e.g. v0.1.0)
+  - Creates GitHub Release with changie notes (create-release: true)
+         |
+         v
+  (optional) publish workflow (on tag push matching v*)
+  - Publishes to package registry (hex.pm, npm, etc.)
+```
 
 ### Go projects (with GoReleaser)
 
@@ -574,6 +618,7 @@ Developer pushes to main
   - Checks PR has "release" label and was merged
   - Runs changie latest to get version
   - Creates and pushes git tag (e.g. v0.1.0)
+  - Optionally creates GitHub Release (if create-release: true)
          |
          v
   goreleaser.yml (on tag push matching v*)

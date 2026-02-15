@@ -13,6 +13,7 @@ pkl = "latest"
 "aqua:FiloSottile/age" = "latest"
 "ubi:jandedobbeleer/aliae" = "latest"
 "ubi:str4d/age-plugin-yubikey" = "latest"
+go = "latest"
 
 [settings]
 # configure how frequently (in minutes) to fetch updated plugin repository changes

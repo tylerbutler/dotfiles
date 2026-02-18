@@ -18,7 +18,8 @@
       "Bash(rg:*)",
       "Bash(sd:*)",
       "WebSearch",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(sed:*)"
     ]
   },
   "model": "opus[1m]",
@@ -50,7 +51,7 @@
     "pr-review-toolkit@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
     "sonatype-guide@claude-plugins-official": false,
-    "checkmate@rcrsr": true
+    "checkmate@rcrsr": false
   },
   "alwaysThinkingEnabled": true
 }

@@ -1,4 +1,5 @@
 rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /tv/1TB-10/
+rsync -avz --progress -h --remove-source-files --copy-links "All Her Fault" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "A.P. Bio" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "The Paper (2025)" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Alien - Earth" /tv/1TB-06/

@@ -14,6 +14,7 @@ pkl = "latest"
 "ubi:jandedobbeleer/aliae" = "latest"
 "ubi:str4d/age-plugin-yubikey" = "latest"
 go = "latest"
+python = "3.14.2"
 
 [settings]
 # configure how frequently (in minutes) to fetch updated plugin repository changes

@@ -1,6 +1,11 @@
 ## Node.js
 - Prefer pnpm when working in node projects.
 
+## TypeScript
+- Use proper types in place of any wherever possible.
+- Prefer `satisfies` to `as` where possible.
+- Do not add lint disables to work around type issues.
+
 ## Bash
 - Prefer using:
   - fd to find

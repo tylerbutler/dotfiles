@@ -50,8 +50,9 @@
     "claude-code-setup@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
-    "sonatype-guide@claude-plugins-official": false,
-    "checkmate@rcrsr": false
+    "checkmate@rcrsr": false,
+    "skill-creator@claude-plugins-official": true,
+    "example-skills@anthropic-agent-skills": true
   },
   "alwaysThinkingEnabled": true
 }

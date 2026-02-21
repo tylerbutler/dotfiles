@@ -1,16 +1,15 @@
 sudo zfs mount deadpool/apps
-sudo zfs mount deadpool/bethaney
-sudo zfs mount deadpool/dedication
+sudo zfs mount deadpool/bethaney -l
+sudo zfs mount deadpool/dedication -l
+sudo zfs mount deadpool/home-videos -l
 sudo zfs mount deadpool/movies
 sudo zfs mount deadpool/movies2
 
-sudo zfs mount quicksilver/restic
-
-sudo zfs mount x23/archives
-sudo zfs mount x23/home-videos
+sudo zfs mount x23/archives -l
 sudo zfs mount x23/movies3
 sudo zfs mount x23/movies4
-sudo zfs mount x23/pictures
+sudo zfs mount x23/pictures -l
+sudo zfs mount x23/pictures/Library -l
 sudo zfs mount x23/plex
 sudo zfs mount x23/torrents
 sudo zfs mount x23/tv/1TB-01

@@ -44,6 +44,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Voyager
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Bear" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "The Boys" /tv/1TB-08/
+rsync -avz --progress -h --remove-source-files --copy-links "The Fall and Rise of Reggie Dinkins" /tv/1TB-02/
 rsync -avz --progress -h --remove-source-files --copy-links "The Franchise (2024)" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "The Good Place" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "The Office (US)" /tv/_keep/

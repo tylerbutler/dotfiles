@@ -52,7 +52,8 @@
     "commit-commands@claude-plugins-official": true,
     "checkmate@rcrsr": false,
     "skill-creator@claude-plugins-official": true,
-    "example-skills@anthropic-agent-skills": true
+    "example-skills@anthropic-agent-skills": true,
+    "clippy-claude@clippy-claude": true
   },
   "alwaysThinkingEnabled": true
 }

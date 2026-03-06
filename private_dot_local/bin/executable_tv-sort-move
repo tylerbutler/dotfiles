@@ -1,3 +1,4 @@
+rsync -avz --progress -h --remove-source-files --copy-links "A Knight of the Seven Kingdoms" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "All Her Fault" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "A.P. Bio" /tv/1TB-01/
@@ -39,6 +40,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Deep Sp
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - The Next Generation" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Lower Decks" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Picard" /tv/1TB-09/
+rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Starfleet Academy" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Strange New Worlds" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Star Trek - Voyager" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "Saturday Night Live" /tv/1TB-02/

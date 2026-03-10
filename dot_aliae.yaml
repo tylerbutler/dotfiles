@@ -2,6 +2,8 @@
 alias:
   - name: a
     value: aliae
+  - name: claudia
+    value: claude --dangerously-skip-permissions
   - name: g
     value: git
   - name: j

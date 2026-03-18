@@ -1,17 +1,11 @@
 {
   "locations": {
-    "/home/tylerbu/code/claude-workspace/jj-repoverlay": {
+    "/Volumes/Code/Fluid-workspace/main": {
       "tool_approvals": [
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "gh issue"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "jj"
+            "apply_patch"
           ]
         },
         {
@@ -26,229 +20,63 @@
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "awk"
+            "pnpm -s"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "cargo check"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "cargo test"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "cargo clippy"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "just"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "cargo build"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "python3"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/lattice": {
-      "tool_approvals": [
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        },
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git checkout",
             "git add",
-            "git commit"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git push",
-            "gh pr"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gleam"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "rm"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/birch": {
-      "tool_approvals": [
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "just"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git stash",
-            "git checkout",
-            "git add",
-            "git commit"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git reset"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
+            "git commit",
             "git push"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "gh pr"
+            "curl"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "changie"
+            "gh workflow"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "gleam"
+            "gh aw"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "erl"
+            "rmdir"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "gh milestone"
+            "command"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "gh api"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/tiny-update-check": {
-      "tool_approvals": [
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "changie"
-          ]
-        },
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git checkout",
-            "git add",
-            "git commit"
+            "node"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "jq"
+            "pnpm --silent"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "cargo build"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gh pr"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "just"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "cargo search",
-            "cargo info"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git push"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "sleep"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "rm"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git clone"
+            "copilot"
           ]
         },
         {
@@ -256,101 +84,10 @@
           "commandIdentifiers": [
             "gh issue"
           ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gh api"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "sed"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git pull",
-            "git cherry-pick",
-            "git reset"
-          ]
         }
       ]
     },
-    "/home/tylerbu/code/claude-workspace/talc": {
-      "tool_approvals": [
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gleam",
-            "just"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/slate": {
-      "tool_approvals": [
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "bash"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gleam"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace": {
-      "tool_approvals": [
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/svelte-radial": {
-      "tool_approvals": [
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        },
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "pnpm test:unit:safe"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "pnpm test:visual"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/levee": {
+    "/Volumes/Code/claude-workspace-ccl/levee": {
       "tool_approvals": [
         {
           "kind": "commands",
@@ -361,9 +98,19 @@
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "just"
+            "mix test"
           ]
         },
+        {
+          "kind": "memory"
+        },
+        {
+          "kind": "write"
+        }
+      ]
+    },
+    "/Volumes/Code/claude-workspace-ccl/beryl": {
+      "tool_approvals": [
         {
           "kind": "write"
         },
@@ -371,57 +118,8 @@
           "kind": "commands",
           "commandIdentifiers": [
             "git add",
-            "git commit"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
+            "git commit",
             "git push"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git fetch",
-            "git pull"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "python3"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "jq"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gh pr"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git cherry-pick"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "printf",
-            "git rm"
           ]
         },
         {
@@ -433,13 +131,25 @@
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "xargs"
+            "gleam"
           ]
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "mix test"
+            "git checkout"
+          ]
+        },
+        {
+          "kind": "commands",
+          "commandIdentifiers": [
+            "mv"
+          ]
+        },
+        {
+          "kind": "commands",
+          "commandIdentifiers": [
+            "perl"
           ]
         },
         {
@@ -451,107 +161,19 @@
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "pnpm test:integration"
+            "gh repo"
           ]
+        },
+        {
+          "kind": "memory"
         },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "docker"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "tree"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "find"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/tools-monorepo": {
-      "tool_approvals": [
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git push"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "gh pr"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git rm"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git add"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "corepack",
-            "pnpm nx"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git commit"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git log"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "sed"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
+            "curl",
             "python3"
           ]
         },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git fetch",
-            "git merge"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git checkout",
-            "pnpm install"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/jj-levee": {
-      "tool_approvals": [
         {
           "kind": "commands",
           "commandIdentifiers": [
@@ -561,60 +183,26 @@
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "cp"
+            "gh pr"
           ]
         }
       ]
     },
-    "/home/tylerbu/code/claude-workspace/msgpack_gleam": {
+    "/Volumes/Code/claude-workspace-ccl/slate": {
       "tool_approvals": [
-        {
-          "kind": "write"
-        },
         {
           "kind": "commands",
           "commandIdentifiers": [
-            "just"
+            "pnpm run"
           ]
+        },
+        {
+          "kind": "write"
         }
       ]
     },
-    "/home/tylerbu/code/claude-workspace/repoverlay": {
+    "/Volumes/Code/claude-workspace-ccl/shelf": {
       "tool_approvals": [
-        {
-          "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "tree"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "cargo build"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "just"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "rm",
-            "rmdir"
-          ]
-        },
         {
           "kind": "commands",
           "commandIdentifiers": [
@@ -622,54 +210,7 @@
           ]
         },
         {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git add",
-            "git commit"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "git push"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "cargo generate-lockfile"
-          ]
-        }
-      ]
-    },
-    "/home/tylerbu/code/claude-workspace/data-analysis": {
-      "tool_approvals": [
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "mkdir"
-          ]
-        },
-        {
           "kind": "write"
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "pnpm add"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "pnpm install"
-          ]
-        },
-        {
-          "kind": "commands",
-          "commandIdentifiers": [
-            "rm"
-          ]
         }
       ]
     }

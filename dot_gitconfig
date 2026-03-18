@@ -149,3 +149,5 @@
 	autoSwitchBranches = true
 	show-committed-at = true
 	show-branches = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

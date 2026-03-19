@@ -84,6 +84,11 @@
           "commandIdentifiers": [
             "gh issue"
           ]
+        },
+        {
+          "kind": "mcp",
+          "serverName": "workiq",
+          "toolName": "ask_work_iq"
         }
       ]
     },

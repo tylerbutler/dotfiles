@@ -8,7 +8,7 @@
 if [[ -z "$ZELLIJ" && (-n "$SSH_CLIENT" || -n "$SSH_TTY" || -n "$SSH_CONNECTION") ]]; then
     HOSTNAME=$(hostname -s)
     MARKER_FILE="/tmp/zellij_pane_$HOSTNAME"
-    
+
     if zellij list-sessions 2>/dev/null | grep -q "main"; then
         if [[ ! -f "$MARKER_FILE" ]]; then
             touch "$MARKER_FILE"

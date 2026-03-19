@@ -13,12 +13,14 @@
   - rg to grep
 
 ## Testing
-- When asked to fix tests, don't fix some of them and leave others skipped. 
+- When asked to fix tests, don't fix some of them and leave others skipped.
   When asked to fix tests, fix all of the ones requested.
 
 ## Git Configuration Rules
-- Use conventional commits when committing. 
+- Use conventional commits when committing.
   - Format: type(scope): description
   - Examples: feat: add user authentication, fix: resolve parsing error, docs: update README
 - Keep commit messages brief and don't include attribution.
 - DO include commit bodies with brief details.
+- Use branch names that describe the change, prefixed with its type.
+  - Examples: feat/add-a-new-feature, docs/update-devdocs

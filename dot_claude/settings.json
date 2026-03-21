@@ -223,7 +223,6 @@
     "superpowers@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": false
   },
-  "forceLoginMethod": "console",
   "alwaysThinkingEnabled": true,
   "skipDangerousModePermissionPrompt": true
 }

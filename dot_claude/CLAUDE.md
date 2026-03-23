@@ -6,6 +6,9 @@
 - Prefer `satisfies` to `as` where possible.
 - Do not add lint disables to work around type issues.
 
+## Bugs
+- When fixing bugs or implementing new functions, always prefer using a TDD approach.
+
 ## Bash
 - Prefer using:
   - fd to find

@@ -17,6 +17,9 @@ Read `.changie.yaml` to learn:
 - **`changesDir`** and **`unreleasedDir`**: where fragments go (typically `.changes/unreleased/`)
 - **`kinds`**: the available change categories and their labels
 - **`body`**: whether body is block-style, min length, etc.
+- **`projects`**: if present, a list of projects with `label` and `key` fields
+
+**Important — projects mode**: When `.changie.yaml` has a `projects` section, **all fragments still go in the single root `changesDir/unreleasedDir` directory** (e.g., `.changes/unreleased/`). There are no per-project subdirectories. Each fragment must include a `project: <key>` field matching one of the project keys defined in `.changie.yaml`. Ask the user which project the change belongs to if it isn't obvious from context.
 
 Also read a couple of existing fragments in the unreleased directory (if any) to match the exact format — field order, body style, time format. Consistency with existing fragments matters more than any template.
 
@@ -67,13 +70,23 @@ For each logical change, create a YAML file in the unreleased directory.
 - Use the current timestamp
 - If multiple fragments share the same kind and second, increment the seconds to avoid collisions
 
-**Fragment format**:
+**Fragment format** (single-project repo):
 ```yaml
 kind: <Kind label exactly as it appears in .changie.yaml>
 body: |-
     <Title line — concise summary of the change>
     <Blank line, then a paragraph explaining what changed and why. Focus on what users of the library need to know, not implementation details. If the change is simple enough that the title says it all, omit the description.>
 time: <ISO 8601 with nanosecond precision and timezone offset>
+```
+
+**Fragment format** (multi-project repo — when `.changie.yaml` has `projects`):
+```yaml
+kind: <Kind label exactly as it appears in .changie.yaml>
+body: |-
+    <Title line — concise summary of the change>
+    <Description paragraph, if needed.>
+time: <ISO 8601 with nanosecond precision and timezone offset>
+project: <key value from the matching project entry in .changie.yaml>
 ```
 
 **Writing good fragment bodies:**

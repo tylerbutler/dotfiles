@@ -20,7 +20,8 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "Bash(sed:*)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "opus[1m]",
   "hooks": {
@@ -224,5 +225,7 @@
     "typescript-lsp@claude-plugins-official": false
   },
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "effortLevel": "high"
 }

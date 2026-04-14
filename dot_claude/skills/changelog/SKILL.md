@@ -19,7 +19,7 @@ Read `.changie.yaml` to learn:
 - **`body`**: whether body is block-style, min length, etc.
 - **`projects`**: if present, a list of projects with `label` and `key` fields
 
-**Important — projects mode**: When `.changie.yaml` has a `projects` section, **all fragments still go in the single root `changesDir/unreleasedDir` directory** (e.g., `.changes/unreleased/`). There are no per-project subdirectories. Each fragment must include a `project: <key>` field matching one of the project keys defined in `.changie.yaml`. Ask the user which project the change belongs to if it isn't obvious from context.
+**CRITICAL — projects mode**: When `.changie.yaml` has a `projects` section, **all fragments still go in the single root `changesDir/unreleasedDir` directory** (e.g., `.changes/unreleased/`). **NEVER place fragments in per-project subdirectories** (e.g., `.changes/<project_name>/`) — those directories are for released versions only and fragments placed there will not be detected by CI checks. Each fragment must include a `project: <key>` field matching one of the project keys defined in `.changie.yaml` — this field determines the project, not the directory. Ask the user which project the change belongs to if it isn't obvious from context.
 
 Also read a couple of existing fragments in the unreleased directory (if any) to match the exact format — field order, body style, time format. Consistency with existing fragments matters more than any template.
 

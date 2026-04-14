@@ -3,3 +3,4 @@ font-family = "FiraCode Nerd Font Mono"
 font-family = "Menlo"
 font-size = 16
 keybind = shift+enter=text:\n
+shell-integration-features = no-title

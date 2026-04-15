@@ -23,5 +23,10 @@ git fetch upstream
 git branch --set-upstream-to=upstream/main main
 echo "  main now tracks upstream/main"
 
+# Fetch all remotes and pull latest
+git fetch --all
+git pull
+echo "  fetched and pulled latest from all remotes"
+
 echo "FluidFramework fork remotes configured."
 {{ end -}}

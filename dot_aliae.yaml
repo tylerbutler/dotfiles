@@ -218,9 +218,9 @@ alias:
   - name: gpo
     value: git push -u origin HEAD
   - name: gs
-    value: hub sync
+    value: gh repo sync
   - name: gsv
-    value: HUB_VERBOSE=1 hub sync
+    value: GH_DEBUG=1 gh repo sync
   - name: gsc
     value: git clone --filter=tree:0
   - name: gnd

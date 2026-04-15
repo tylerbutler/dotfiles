@@ -1,0 +1,17 @@
+{{ if .codespaces -}}
+#!/bin/bash
+
+if ! command -v zsh &>/dev/null; then
+    echo "zsh is not installed, skipping default shell change"
+    exit 0
+fi
+
+case "$SHELL" in
+    */zsh)
+        echo "Default shell is already zsh"
+        exit 0
+        ;;
+esac
+
+sudo chsh -s "$(command -v zsh)" "$(whoami)"
+{{ end -}}

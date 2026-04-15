@@ -1,0 +1,27 @@
+{{ if and .codespaces (eq (env "GITHUB_REPOSITORY") "microsoft/FluidFramework") -}}
+#!/bin/bash
+set -euo pipefail
+
+FORK_USER="${GITHUB_USER}"
+FORK_URL="https://github.com/${FORK_USER}/FluidFramework.git"
+UPSTREAM_URL="https://github.com/microsoft/FluidFramework.git"
+
+echo "Setting up FluidFramework fork remotes..."
+
+# Change origin to the user's fork
+git remote set-url origin "$FORK_URL"
+echo "  origin -> $FORK_URL"
+
+# Add upstream pointing to the original repo
+git remote add upstream "$UPSTREAM_URL"
+echo "  upstream -> $UPSTREAM_URL"
+
+# Fetch upstream refs
+git fetch upstream
+
+# Set main to track upstream/main
+git branch --set-upstream-to=upstream/main main
+echo "  main now tracks upstream/main"
+
+echo "FluidFramework fork remotes configured."
+{{ end -}}

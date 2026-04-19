@@ -1,0 +1,14 @@
+{
+  "activeSkillset": "senior-swe",
+  "sendSessionTranscript": "disabled",
+  "autoupdate": "disabled",
+  "version": "0.17.0",
+  "defaultAgents": [
+    "claude-code",
+    "github-copilot",
+    "opencode",
+    "pi"
+  ],
+  "redownloadOnSwitch": "enabled",
+  "installDir": "/Users/tylerbu"
+}

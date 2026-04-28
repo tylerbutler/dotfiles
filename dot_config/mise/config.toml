@@ -17,6 +17,7 @@ python = "3.14.2"
 "github:str4d/age-plugin-yubikey" = "latest"
 "github:tylerbutler/repoverlay" = "latest"
 "aqua:atuinsh/atuin" = "latest"
+dagger = "latest"
 
 [settings]
 # configure how frequently (in minutes) to fetch updated plugin repository changes

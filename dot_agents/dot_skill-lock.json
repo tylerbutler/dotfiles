@@ -26,7 +26,7 @@
       "skillPath": "skills/using-superpowers/SKILL.md",
       "skillFolderHash": "64c70a2b656d440ddb50818c2477e028facbc468",
       "installedAt": "2026-05-02T01:04:08.819Z",
-      "updatedAt": "2026-05-02T01:06:46.987Z"
+      "updatedAt": "2026-05-03T15:39:40.583Z"
     },
     "systematic-debugging": {
       "source": "obra/superpowers",
@@ -35,7 +35,7 @@
       "skillPath": "skills/systematic-debugging/SKILL.md",
       "skillFolderHash": "828c239ac986cc1fc7edd10292f66e4a3640e9c0",
       "installedAt": "2026-05-02T01:04:11.654Z",
-      "updatedAt": "2026-05-02T01:06:49.104Z"
+      "updatedAt": "2026-05-03T15:39:42.798Z"
     },
     "writing-plans": {
       "source": "obra/superpowers",
@@ -44,7 +44,7 @@
       "skillPath": "skills/writing-plans/SKILL.md",
       "skillFolderHash": "704e240d4b281baf8a339e1418baa249860197f7",
       "installedAt": "2026-05-02T01:04:14.310Z",
-      "updatedAt": "2026-05-02T01:06:50.974Z"
+      "updatedAt": "2026-05-03T15:39:44.691Z"
     },
     "test-driven-development": {
       "source": "obra/superpowers",
@@ -53,7 +53,7 @@
       "skillPath": "skills/test-driven-development/SKILL.md",
       "skillFolderHash": "98904a7d8e0e04b9bd46220b9b17298f45fe0b72",
       "installedAt": "2026-05-02T01:04:17.017Z",
-      "updatedAt": "2026-05-02T01:06:52.990Z"
+      "updatedAt": "2026-05-03T15:39:46.805Z"
     },
     "requesting-code-review": {
       "source": "obra/superpowers",
@@ -62,7 +62,7 @@
       "skillPath": "skills/requesting-code-review/SKILL.md",
       "skillFolderHash": "ed265b1a03114cc400d5524afc5c961a4aa9ea8b",
       "installedAt": "2026-05-02T01:04:19.586Z",
-      "updatedAt": "2026-05-02T01:06:55.076Z"
+      "updatedAt": "2026-05-03T15:39:49.121Z"
     },
     "brainstorming": {
       "source": "obra/superpowers",
@@ -71,7 +71,7 @@
       "skillPath": "skills/brainstorming/SKILL.md",
       "skillFolderHash": "f260c775073816860fef8a37c032ac77e2ff5821",
       "installedAt": "2026-05-02T01:04:21.969Z",
-      "updatedAt": "2026-05-02T01:06:57.564Z"
+      "updatedAt": "2026-05-03T15:39:38.624Z"
     }
   },
   "dismissed": {

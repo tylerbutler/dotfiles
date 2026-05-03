@@ -38,12 +38,10 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # source $HOME/.local/zsh-autocomplete-settings.zsh
 
 if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
     fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 fi
 
 if [[ "$SYSTEM_TYPE" = "Linux" && "$SYSTEM_ARCH" != "aarch64" ]]; then
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
 fi
 

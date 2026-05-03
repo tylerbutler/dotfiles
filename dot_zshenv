@@ -13,34 +13,80 @@ fi
 
 export PNPM_HOME="$HOME/.local/share/pnpm"
 
-# APPEND (first entry is highest)
-export PATH="$PATH:/root/.local/bin"
-export PATH="$PATH:$HOME/go/bin"
-export PATH="$PATH:$HOME/.nix-profile/bin"
+path_prepend() {
+    case ":$PATH:" in
+        *":$1:"*) ;;
+        *) export PATH="$1:$PATH" ;;
+    esac
+}
 
-# PREPEND (last entry is highest)
-export PATH="$HOME/.deno/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-export PATH="/snap/bin:$PATH"
-export PATH="/usr/sbin:/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="$PNPM_HOME:$PATH"
+path_append() {
+    case ":$PATH:" in
+        *":$1:"*) ;;
+        *) export PATH="$PATH:$1" ;;
+    esac
+}
+
+infopath_prepend() {
+    case ":${INFOPATH:-}:" in
+        *":$1:"*) ;;
+        *) export INFOPATH="$1:${INFOPATH:-}" ;;
+    esac
+}
+
+path_append "/root/.local/bin"
+path_append "$HOME/go/bin"
+path_append "$HOME/.nix-profile/bin"
+
+path_prepend "$HOME/.deno/bin"
+
+if [ "$SYSTEM_TYPE" = "Darwin" ] && [ -d "/opt/homebrew" ]; then
+    export HOMEBREW_PREFIX="/opt/homebrew"
+    export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+    export HOMEBREW_REPOSITORY="/opt/homebrew"
+    [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
+    infopath_prepend "$HOMEBREW_PREFIX/share/info"
+    path_prepend "$HOMEBREW_PREFIX/sbin"
+    path_prepend "$HOMEBREW_PREFIX/bin"
+elif [ "$SYSTEM_TYPE" = "Linux" ] && [ "$SYSTEM_ARCH" != "aarch64" ] && [ -d "/home/linuxbrew/.linuxbrew" ]; then
+    export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+    export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
+    export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
+    [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
+    infopath_prepend "$HOMEBREW_PREFIX/share/info"
+    path_prepend "$HOMEBREW_PREFIX/sbin"
+    path_prepend "$HOMEBREW_PREFIX/bin"
+fi
+
+path_prepend "/snap/bin"
+path_prepend "/sbin"
+path_prepend "/usr/sbin"
+path_prepend "/usr/local/bin"
+path_prepend "$PNPM_HOME"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    path_prepend "$HOME/bin"
 fi
 
 # set PATH so it includes user's local private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+    path_prepend "$HOME/.local/bin"
 fi
 
 export GOPATH="$HOME/go/bin"
 export EMPLACE_CONFIG="$HOME/.config/emplace.toml"
 
 . "$HOME/.cargo/env"
+
+typeset -U path PATH
+if [ -n "${INFOPATH-}" ]; then
+    infopath_parts=("${(@s/:/)INFOPATH}")
+    typeset -U infopath_parts
+    export INFOPATH="${(j/:/)infopath_parts}"
+    unset infopath_parts
+fi
+unset -f path_prepend path_append infopath_prepend
 
 if command -v eza >/dev/null 2>&1; then
 	export ZSH_LS_BACKEND="eza"

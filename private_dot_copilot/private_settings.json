@@ -1,0 +1,87 @@
+{
+  "renderMarkdown": true,
+  "screenReader": false,
+  "theme": "auto",
+  "logLevel": "all",
+  "allowedUrls": [
+    "https://hex.pm",
+    "https://changie.dev",
+    "https://ccl.tylerbutler.com",
+    "https://github.com",
+    "https://hexdocs.pm",
+    "https://indieauth.spec.indieweb.org",
+    "https://docs.astro.build",
+    "http://localhost:4321",
+    "http://localhost:4325",
+    "http://localhost:4567",
+    "https://tylerbutler.com",
+    "https://raw.githubusercontent.com",
+    "https://tinylytics.app",
+    "http://localhost:4173",
+    "http://localhost:42841",
+    "https://iconoir.com",
+    "https://catconflang.com",
+    "https://events-3bg.pages.dev",
+    "http://127.0.0.1:37100",
+    "https://woodpecker-ci.org",
+    "https://packages.gleam.run",
+    "https://skills.sh",
+    "https://docs.github.com"
+  ],
+  "model": "gpt-5.5",
+  "includeCoAuthoredBy": false,
+  "trusted_folders": [
+    "/home/tylerbu/code/tools-monorepo",
+    "/home/tylerbu/code/FluidFramework",
+    "/home/tylerbu/code/claude-workspace/jj-repoverlay",
+    "/home/tylerbu/code/claude-workspace/ccl-typescript",
+    "/home/tylerbu/code/claude-workspace/birch",
+    "/home/tylerbu/code/claude-workspace/lattice/website",
+    "/home/tylerbu/code/claude-workspace/tiny-update-check",
+    "/home/tylerbu/code/claude-workspace/actions",
+    "/home/tylerbu/code/claude-workspace",
+    "/home/tylerbu/code/jj-levee",
+    "/home/tylerbu/code/ccl_gleam",
+    "/home/tylerbu/code/ccl-workspace/ccl_test_runner_ocaml"
+  ],
+  "firstLaunchAt": "2026-03-11T00:00:00.000Z",
+  "sessionSync": [
+    {
+      "origin": "*",
+      "level": "user"
+    }
+  ],
+  "trustedFolders": [
+    "/home/tylerbu/code/tools-monorepo",
+    "/home/tylerbu/code/FluidFramework",
+    "/home/tylerbu/code/claude-workspace/jj-repoverlay",
+    "/home/tylerbu/code/claude-workspace/ccl-typescript",
+    "/home/tylerbu/code/claude-workspace/birch",
+    "/home/tylerbu/code/claude-workspace/lattice/website",
+    "/home/tylerbu/code/claude-workspace/tiny-update-check",
+    "/home/tylerbu/code/claude-workspace/actions",
+    "/home/tylerbu/code/claude-workspace",
+    "/home/tylerbu/code/jj-levee",
+    "/home/tylerbu/code/ccl_gleam",
+    "/home/tylerbu/code/ccl-workspace/ccl_test_runner_ocaml",
+    "/home/tylerbu/code/ccl-workspace/website",
+    "/home/tylerbu/code/ccl-workspace"
+  ],
+  "disabledSkills": [
+    "ast-grep"
+  ],
+  "extraKnownMarketplaces": {
+    "agent-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/tylerbutler/agent-marketplace"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "workflows@agent-marketplace": true,
+    "repo-tools@agent-marketplace": true,
+    "specialists@agent-marketplace": true,
+    "ai-team-orchestration@awesome-copilot": true
+  }
+}

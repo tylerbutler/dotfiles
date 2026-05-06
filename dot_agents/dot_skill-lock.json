@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "skills": {
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "skillFolderHash": "73b43347c1bdc10f6ab81a5cdb036dd1c8098cc0",
+      "installedAt": "2026-05-06T03:05:35.633Z",
+      "updatedAt": "2026-05-06T03:05:35.633Z"
+    }
+  },
+  "dismissed": {}
+}

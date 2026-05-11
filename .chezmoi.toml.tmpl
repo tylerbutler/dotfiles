@@ -1,4 +1,6 @@
 {{- $codespaces:= env "CODESPACES" | not | not -}}
+{{- /* Brewfile install is disabled by default. Set CHEZMOI_INSTALL_BREWFILE=true to enable. */ -}}
+{{- $install_brewfile := eq (env "CHEZMOI_INSTALL_BREWFILE") "true" -}}
 {{- /* rbw (Bitwarden) is disabled by default. Set CHEZMOI_USE_RBW=true to enable. */ -}}
 {{- $use_rbw := false -}}
 {{- if and (eq (env "CHEZMOI_USE_RBW") "true") (lookPath "rbw") -}}
@@ -18,6 +20,7 @@ encryption = "age"
   name = "Tyler Butler"
   email = "tyler@tylerbutler.com"
   codespaces = {{ $codespaces }}
+  install_brewfile = {{ $install_brewfile }}
   use_rbw = {{ $use_rbw }}
 
 [diff]

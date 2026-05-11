@@ -1,4 +1,4 @@
-tap "oven-sh/bun"
+# tap "oven-sh/bun"
 brew "atuin"
 brew "bat"
 brew "bat-extras"
@@ -34,7 +34,7 @@ brew "topgrade"
 brew "tre-command"
 brew "zellij"
 brew "zoxide"
-brew "oven-sh/bun/bun"
+#brew "oven-sh/bun/bun"
 
 cask "ghostty" if OS.mac?
 cask "git-credential-manager" if OS.mac?

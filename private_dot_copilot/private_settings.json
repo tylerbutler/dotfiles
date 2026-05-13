@@ -26,7 +26,33 @@
     "https://woodpecker-ci.org",
     "https://packages.gleam.run",
     "https://skills.sh",
-    "https://docs.github.com"
+    "https://docs.github.com",
+    "https://api.github.com",
+    "https://socket.io",
+    "https://learn.microsoft.com",
+    "https://ably.com",
+    "https://phoenix-channels.readthedocs.io",
+    "https://liveblocks.io",
+    "https://preview.hex.pm",
+    "http://localhost:8000",
+    "https://crdt.tech",
+    "https://josephg.com",
+    "https://www.bartoszsypytkowski.com",
+    "https://arxiv.org",
+    "https://madebyevan.com",
+    "https://www.inkandswitch.com",
+    "https://en.wikipedia.org",
+    "https://docs.yjs.dev",
+    "https://ninenines.eu",
+    "https://gleam.run",
+    "https://docs.brew.sh",
+    "https://code.visualstudio.com",
+    "https://www.jetbrains.com",
+    "https://plugins.jetbrains.com",
+    "https://marketplace.visualstudio.com",
+    "https://marketplace.eclipse.org",
+    "https://git-scm.com",
+    "https://htmlpreview.github.io"
   ],
   "model": "gpt-5.5",
   "includeCoAuthoredBy": false,
@@ -49,6 +75,21 @@
     {
       "origin": "*",
       "level": "user"
+    },
+    {
+      "origin": "tylerbutler/vestibule",
+      "level": "user",
+      "chronicleDismissed": true
+    },
+    {
+      "origin": "tylerbutler/beryl",
+      "level": "user",
+      "chronicleDismissed": true
+    },
+    {
+      "origin": "tylerbutler/showcase",
+      "level": "user",
+      "chronicleDismissed": true
     }
   ],
   "trustedFolders": [
@@ -65,7 +106,8 @@
     "/home/tylerbu/code/ccl_gleam",
     "/home/tylerbu/code/ccl-workspace/ccl_test_runner_ocaml",
     "/home/tylerbu/code/ccl-workspace/website",
-    "/home/tylerbu/code/ccl-workspace"
+    "/home/tylerbu/code/ccl-workspace",
+    "/home/tylerbu/.local/share/chezmoi"
   ],
   "disabledSkills": [
     "ast-grep"
@@ -83,5 +125,39 @@
     "repo-tools@agent-marketplace": true,
     "specialists@agent-marketplace": true,
     "ai-team-orchestration@awesome-copilot": true
-  }
+  },
+  "installedPlugins": [
+    {
+      "name": "workflows",
+      "marketplace": "agent-marketplace",
+      "version": "0.1.0",
+      "installed_at": "2026-05-04T00:57:54.524Z",
+      "enabled": true,
+      "cache_path": "/home/tylerbu/.copilot/installed-plugins/agent-marketplace/workflows"
+    },
+    {
+      "name": "specialists",
+      "marketplace": "agent-marketplace",
+      "version": "0.1.0",
+      "installed_at": "2026-05-04T00:57:55.567Z",
+      "enabled": true,
+      "cache_path": "/home/tylerbu/.copilot/installed-plugins/agent-marketplace/specialists"
+    },
+    {
+      "name": "repo-tools",
+      "marketplace": "agent-marketplace",
+      "version": "0.1.0",
+      "installed_at": "2026-05-04T00:59:22.683Z",
+      "enabled": true,
+      "cache_path": "/home/tylerbu/.copilot/installed-plugins/agent-marketplace/repo-tools"
+    },
+    {
+      "name": "ai-team-orchestration",
+      "marketplace": "awesome-copilot",
+      "version": "1.0.0",
+      "installed_at": "2026-05-04T01:10:01.908Z",
+      "enabled": true,
+      "cache_path": "/home/tylerbu/.copilot/installed-plugins/awesome-copilot/ai-team-orchestration"
+    }
+  ]
 }

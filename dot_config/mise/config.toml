@@ -24,6 +24,7 @@ actionlint = "latest"
 dagger = "latest"
 ruff = "latest"
 cargo-binstall = "latest"
+"aqua:sethvargo/ratchet" = "latest"
 
 [settings]
 # configure how frequently (in minutes) to fetch updated plugin repository changes

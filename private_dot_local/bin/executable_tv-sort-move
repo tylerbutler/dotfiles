@@ -2,11 +2,12 @@ rsync -avz --progress -h --remove-source-files --copy-links "A Knight of the Sev
 rsync -avz --progress -h --remove-source-files --copy-links "Abbott Elementary" /tv/1TB-10/
 rsync -avz --progress -h --remove-source-files --copy-links "All Her Fault" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "A.P. Bio" /tv/1TB-01/
-rsync -avz --progress -h --remove-source-files --copy-links "The Paper (2025)" /tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "The Paper (2025)" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Alien - Earth" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Agatha All Along" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "Archer (2009)" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Bad Monkey" /tv/1TB-01/
+rsync -avz --progress -h --remove-source-files --copy-links "Battlestar Galactica (2003)" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Better Call Saul" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
@@ -17,7 +18,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Evil" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Gen V" /tv/1TB-04/
 rsync -avz --progress -h --remove-source-files --copy-links "Challenge of the GoBots" /tv/1TB-01/
-rsync -avz --progress -h --remove-source-files --copy-links "Hacks" /tv/1TB-03/
+rsync -avz --progress -h --remove-source-files --copy-links "Hacks (2021)" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "House of Lies" /tv/1TB-01/
 rsync -avz --progress -h --remove-source-files --copy-links "House" /tv/1TB-07/
 rsync -avz --progress -h --remove-source-files --copy-links "How To with John Wilson" /tv/1TB-07/

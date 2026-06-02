@@ -19,6 +19,24 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-05-08T23:20:58.404Z",
       "updatedAt": "2026-05-08T23:20:58.404Z"
+    },
+    "subagent-creator": {
+      "source": "tech-leads-club/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tech-leads-club/agent-skills.git",
+      "skillPath": "packages/skills-catalog/skills/(creation)/subagent-creator/SKILL.md",
+      "skillFolderHash": "0ff28e8f3153915a814d58681e283eaf7953642b",
+      "installedAt": "2026-06-01T00:54:40.875Z",
+      "updatedAt": "2026-06-01T00:54:40.875Z"
+    },
+    "skill-creator": {
+      "source": "cognitedata/builder-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cognitedata/builder-skills.git",
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "skillFolderHash": "c1213ef3aeb34e11e0d7022da77f8a030059a16f",
+      "installedAt": "2026-06-01T01:02:08.870Z",
+      "updatedAt": "2026-06-01T01:02:08.870Z"
     }
   },
   "dismissed": {

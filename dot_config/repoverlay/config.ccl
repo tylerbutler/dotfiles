@@ -1,0 +1,35 @@
+/= Overlay sources, checked in order during resolution. A bare GitHub username
+/= expands to https://github.com/<user>/repo-overlays.
+sources =
+  =
+    name = tylerbutler
+    url = tylerbutler
+
+/= Marketplace sources for plugins to use in profiles. A bare GitHub user/repo
+/= expands to https://github.com/<user>/<repo>.
+marketplaces =
+  =
+    name = tylerbutler
+    url = tylerbutler/agent-marketplace
+  =
+    name = superpowers
+    url = obra/superpowers-marketplace
+
+profiles =
+  development =
+    description = Main development profile
+    /=overlays =
+      /= rust-base
+      /= rust-tools
+
+    instructions =
+      =
+        /= See https://github.com/dmtrKovalenko/fff to install the fff MCP
+        content = For any file search or grep in the current git-indexed directory, use fff tools.
+
+    plugins =
+      = tylerbutler/base
+      = tylerbutler/fff
+      = tylerbutler/specialists
+      = superpowers/superpowers
+      = superpowers/elements-of-style

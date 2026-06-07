@@ -53,7 +53,17 @@
     "https://marketplace.eclipse.org",
     "https://git-scm.com",
     "https://htmlpreview.github.io",
-    "https://pypi.org"
+    "https://pypi.org",
+    "http://127.0.0.1:4321",
+    "https://docs.anthropic.com",
+    "https://repoverlay.tylerbutler.com",
+    "https://frostybee.github.io",
+    "http://localhost:4322",
+    "https://starlight-heading-badges.vercel.app",
+    "https://repo.hex.pm",
+    "https://spruce.tylerbutler.com",
+    "https://release-plz.dev",
+    "https://taplo.tamasfe.dev"
   ],
   "model": "claude-opus-4.8",
   "includeCoAuthoredBy": false,
@@ -90,9 +100,6 @@
     }
   },
   "enabledPlugins": {
-    "workflows@agent-marketplace": true,
-    "repo-tools@agent-marketplace": true,
-    "specialists@agent-marketplace": true,
     "ai-team-orchestration@awesome-copilot": true
   }
 }

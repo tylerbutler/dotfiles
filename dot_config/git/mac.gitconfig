@@ -20,3 +20,14 @@
 
 [protocol "file"]
 	allow = always
+
+[credential]
+	azreposCredentialType = oauth
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+
+[credential "azrepos:org/outlookweb"]
+	username = tylerbu@microsoft.com
+
+[credential "azrepos:org/office"]
+	username = tylerbu@microsoft.com

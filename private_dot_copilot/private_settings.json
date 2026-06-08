@@ -63,7 +63,12 @@
     "https://repo.hex.pm",
     "https://spruce.tylerbutler.com",
     "https://release-plz.dev",
-    "https://taplo.tamasfe.dev"
+    "https://taplo.tamasfe.dev",
+    "https://opensource.axo.dev",
+    "https://api.ipify.org",
+    "http://127.0.0.1:4399",
+    "https://scorecard.lemonmeadow-36b0f99b.westus2.azurecontainerapps.io",
+    "https://evil.example.com"
   ],
   "model": "claude-opus-4.8",
   "includeCoAuthoredBy": false,

@@ -1,0 +1,29 @@
+sources =
+   =
+    name = tylerbutler
+    url = https://github.com/tylerbutler/repo-overlays
+
+profiles =
+  development =
+    description = Main development profile
+    instructions =
+       =
+        content = For any file search or grep in the current git-indexed directory, use fff tools.
+    plugins =
+      = tylerbutler/base
+      /= tylerbutler/fff
+      = tylerbutler/specialists
+      = ponytail/ponytail
+      = superpowers/superpowers
+      = superpowers/elements-of-style
+
+marketplaces =
+   =
+    name = tylerbutler
+    url = https://github.com/tylerbutler/agent-marketplace
+   =
+    name = superpowers
+    url = https://github.com/obra/superpowers-marketplace
+   =
+    name = ponytail
+    url = https://github.com/DietrichGebert/ponytail

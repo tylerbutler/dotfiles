@@ -1,14 +1,8 @@
 {
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "enabledPlugins": {
-  },
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
-  "forceLoginMethod": "console",
   "includeCoAuthoredBy": false,
-  "model": "opus[1m]",
   "permissions": {
     "allow": [
       "Bash(cargo:*)",
@@ -36,10 +30,15 @@
     ],
     "defaultMode": "auto"
   },
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
+  "model": "opus",
   "statusLine": {
-    "command": "bash ~/.claude/statusline-command.sh",
-    "type": "command"
-  }
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {},
+  "forceLoginMethod": "console",
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true
 }

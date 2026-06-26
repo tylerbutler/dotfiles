@@ -68,9 +68,17 @@
     "https://api.ipify.org",
     "http://127.0.0.1:4399",
     "https://scorecard.lemonmeadow-36b0f99b.westus2.azurecontainerapps.io",
-    "https://evil.example.com"
+    "https://evil.example.com",
+    "https://scorecard-public.lemonmeadow-36b0f99b.westus2.azurecontainerapps.io",
+    "https://mcr.microsoft.com",
+    "http://localhost:8099",
+    "http://localhost:4323",
+    "http://localhost:4399",
+    "https://william.hexdocs.pm",
+    "http://localhost:4401",
+    "https://palabres.hexdocs.pm"
   ],
-  "model": "claude-opus-4.8",
+  "model": "gpt-5.5",
   "includeCoAuthoredBy": false,
   "sessionSync": [
     {
@@ -106,5 +114,6 @@
   },
   "enabledPlugins": {
     "ai-team-orchestration@awesome-copilot": true
-  }
+  },
+  "colorMode": "default"
 }

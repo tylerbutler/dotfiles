@@ -151,3 +151,10 @@
 	show-branches = true
 [url "https://github.com/"]
 	insteadOf = "git@github.com:"
+[credential "azrepos:org/office"]
+	username = tylerbu@microsoft.com
+	azureAuthority = https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47
+[credential "azrepos:org/o365exchange"]
+	username = tylerbu@microsoft.com
+[credential "azrepos:org/domoreexp"]
+	username = tylerbu@microsoft.com

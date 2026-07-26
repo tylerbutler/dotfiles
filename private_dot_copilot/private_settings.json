@@ -1,8 +1,4 @@
 {
-  "renderMarkdown": true,
-  "screenReader": false,
-  "theme": "auto",
-  "logLevel": "all",
   "allowedUrls": [
     "https://hex.pm",
     "https://changie.dev",
@@ -76,34 +72,47 @@
     "http://localhost:4399",
     "https://william.hexdocs.pm",
     "http://localhost:4401",
-    "https://palabres.hexdocs.pm"
+    "https://palabres.hexdocs.pm",
+    "http://localhost:4000",
+    "http://127.0.0.1:4000",
+    "https://lustre.hexdocs.pm",
+    "https://nakai.hexdocs.pm",
+    "https://wisp.hexdocs.pm",
+    "https://gleam-html.hexdocs.pm",
+    "https://mist.hexdocs.pm",
+    "http://localhost:4331",
+    "http://localhost:4332",
+    "http://localhost:4333",
+    "http://localhost:4334",
+    "http://localhost:4336",
+    "http://localhost:4324",
+    "http://localhost:4330",
+    "http://localhost:4340",
+    "http://127.0.0.1:4327",
+    "https://lustre-ssg.hexdocs.pm",
+    "https://lustre-dev-tools.hexdocs.pm",
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://codeload.github.com",
+    "https://spdx.org",
+    "https://spdx.github.io",
+    "https://cyclonedx.org",
+    "https://codeberg.org",
+    "https://gitlab.com",
+    "https://www.githubstatus.com",
+    "https://blog.auryn.dev",
+    "https://docs.rs",
+    "http://localhost:8001"
   ],
-  "model": "gpt-5.5",
-  "includeCoAuthoredBy": false,
-  "sessionSync": [
-    {
-      "origin": "*",
-      "level": "user"
-    },
-    {
-      "origin": "tylerbutler/vestibule",
-      "level": "user",
-      "chronicleDismissed": true
-    },
-    {
-      "origin": "tylerbutler/beryl",
-      "level": "user",
-      "chronicleDismissed": true
-    },
-    {
-      "origin": "tylerbutler/showcase",
-      "level": "user",
-      "chronicleDismissed": true
-    }
-  ],
+  "colorMode": "default",
   "disabledSkills": [
     "ast-grep"
   ],
+  "enabledPlugins": {
+    "ai-team-orchestration@awesome-copilot": true
+  },
+  "experimental": true,
   "extraKnownMarketplaces": {
     "agent-marketplace": {
       "source": {
@@ -112,8 +121,55 @@
       }
     }
   },
-  "enabledPlugins": {
-    "ai-team-orchestration@awesome-copilot": true
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "bash '/home/tylerbu/.copilot/hooks/herdr-agent-state.sh'",
+        "timeoutSec": 10,
+        "_vsCodeCompat": "SessionStart"
+      }
+    ]
   },
-  "colorMode": "default"
+  "includeCoAuthoredBy": false,
+  "logLevel": "all",
+  "renderMarkdown": true,
+  "screenReader": false,
+  "sessionSync": [
+    {
+      "level": "user",
+      "origin": "*"
+    },
+    {
+      "chronicleDismissed": true,
+      "level": "user",
+      "origin": "tylerbutler/vestibule"
+    },
+    {
+      "chronicleDismissed": true,
+      "level": "user",
+      "origin": "tylerbutler/beryl"
+    },
+    {
+      "chronicleDismissed": true,
+      "level": "user",
+      "origin": "tylerbutler/showcase"
+    }
+  ],
+  "theme": "default",
+  "model": "gpt-5.6-sol",
+  "effortLevel": "high",
+  "sandbox": {
+    "enabled": false,
+    "sandboxMcpServers": true,
+    "sandboxLspServers": true,
+    "allowBypass": true,
+    "gitAuth": true,
+    "ghAuth": true,
+    "userPolicy": {
+      "network": {
+        "allowLocalNetwork": true
+      }
+    }
+  }
 }

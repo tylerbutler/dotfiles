@@ -13,7 +13,7 @@ rsync -avz --progress -h --remove-source-files --copy-links "Breaking Bad" /tv/1
 rsync -avz --progress -h --remove-source-files --copy-links "Brooklyn Nine-Nine" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Catfish The TV Show" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Cougar Town" /tv/1TB-06/
-rsync -avz --progress -h --remove-source-files --copy-links "Criminal Minds" /tv/1TB-05/
+rsync -avz --progress -h --remove-source-files --copy-links "Criminal Minds" /tv/1TB-06/
 rsync -avz --progress -h --remove-source-files --copy-links "Detroiters" /tv/1TB-03/
 rsync -avz --progress -h --remove-source-files --copy-links "Evil" /tv/1TB-05/
 rsync -avz --progress -h --remove-source-files --copy-links "Fallout" /tv/1TB-03/

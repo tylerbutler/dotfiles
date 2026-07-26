@@ -51,3 +51,7 @@ lefthook-local.json
 ######################
 mise.local.toml
 .mise.local.toml
+
+**/.claude/.cc-writes/
+
+**/.claude/settings.local.json

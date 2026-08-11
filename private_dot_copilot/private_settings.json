@@ -73,44 +73,31 @@
     "https://william.hexdocs.pm",
     "http://localhost:4401",
     "https://palabres.hexdocs.pm",
-    "http://localhost:4000",
-    "http://127.0.0.1:4000",
-    "https://lustre.hexdocs.pm",
-    "https://nakai.hexdocs.pm",
-    "https://wisp.hexdocs.pm",
-    "https://gleam-html.hexdocs.pm",
-    "https://mist.hexdocs.pm",
-    "http://localhost:4331",
-    "http://localhost:4332",
-    "http://localhost:4333",
-    "http://localhost:4334",
-    "http://localhost:4336",
-    "http://localhost:4324",
-    "http://localhost:4330",
-    "http://localhost:4340",
-    "http://127.0.0.1:4327",
-    "https://lustre-ssg.hexdocs.pm",
-    "https://lustre-dev-tools.hexdocs.pm",
-    "http://127.0.0.1:3000",
+    "http://scorecard.lemonmeadow-36b0f99b.westus2.azurecontainerapps.io",
+    "https://roost.tylerbutler.com",
+    "http://localhost:8080",
     "http://localhost:3000",
-    "http://localhost:3001",
-    "https://codeload.github.com",
-    "https://spdx.org",
-    "https://spdx.github.io",
-    "https://cyclonedx.org",
-    "https://codeberg.org",
-    "https://gitlab.com",
-    "https://www.githubstatus.com",
-    "https://blog.auryn.dev",
+    "http://127.0.0.1:4000",
+    "https://registry.npmjs.org",
     "https://docs.rs",
-    "http://localhost:8001"
+    "https://crates.io",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:18000",
+    "https://microsoft.github.io",
+    "https://www.githubstatus.com",
+    "https://packagefeedproxy.microsoft.io",
+    "https://example.test"
   ],
   "colorMode": "default",
+  "companyAnnouncements": [
+    "GPT-5.6 Sol, Terra, and Luna are now available in Copilot CLI. Try them from the model picker.",
+    "Need help with Agency? Run `agency support` or join the support community: https://aka.ms/agency/support"
+  ],
   "disabledSkills": [
     "ast-grep"
   ],
   "enabledPlugins": {
-    "ai-team-orchestration@awesome-copilot": true
+    "ai-team-orchestration@awesome-copilot": false
   },
   "experimental": true,
   "extraKnownMarketplaces": {
@@ -125,7 +112,7 @@
     "sessionStart": [
       {
         "type": "command",
-        "bash": "bash '/home/tylerbu/.copilot/hooks/herdr-agent-state.sh'",
+        "bash": "bash '/Users/tylerbu/.copilot/hooks/herdr-agent-state.sh'",
         "timeoutSec": 10,
         "_vsCodeCompat": "SessionStart"
       }
@@ -157,19 +144,9 @@
     }
   ],
   "theme": "default",
-  "model": "gpt-5.6-sol",
-  "effortLevel": "high",
-  "sandbox": {
-    "enabled": false,
-    "sandboxMcpServers": true,
-    "sandboxLspServers": true,
-    "allowBypass": true,
-    "gitAuth": true,
-    "ghAuth": true,
-    "userPolicy": {
-      "network": {
-        "allowLocalNetwork": true
-      }
-    }
+  "extensions": {
+    "disabledExtensions": [
+      "user:guardian"
+    ]
   }
 }

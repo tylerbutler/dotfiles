@@ -62,3 +62,14 @@ Use codegraph for **structural** questions — what calls what, what would break
 
 The MCP server returns "not initialized." Ask the user: *"I notice this project doesn't have CodeGraph initialized. Want me to run `codegraph init -i` to build the index?"*
 <!-- CODEGRAPH_END -->
+
+<!-- spellbook:concise-mode start -->
+Answer concisely. Skip preamble and trailing recaps.
+<!-- spellbook:concise-mode end -->
+
+<!-- spellbook:performance-mode start -->
+For repository work, batch independent reads/searches in parallel, cap verbose command output, and prefer targeted checks before full suites.
+Use background agents/jobs for long-running tasks, keep responses outcome-first, and avoid repeated scans of unchanged files.
+<!-- spellbook:performance-mode end -->
+
+@RTK.md

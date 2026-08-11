@@ -16,11 +16,6 @@ profiles =
       = ponytail/ponytail
       = superpowers/superpowers
       = superpowers/elements-of-style
-  tools =
-    description = Repository tools management
-    plugins =
-      = tylerbutler/base
-      = tylerbutler/repo-tools
 
 marketplaces =
    =

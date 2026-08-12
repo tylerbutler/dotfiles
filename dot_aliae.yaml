@@ -312,6 +312,12 @@ alias:
   - name: opus
     value: claude --model opus
 
+  - name: terra
+    value: copilot --model gpt-5.6-terra
+
+  - name: luna
+    value: copilot --model gpt-5.6-luna
+
 # env:
 #   - name: POSH_THEME
 #     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'

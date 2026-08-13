@@ -15,5 +15,6 @@
     "showSchedules": false,
     "showPullRequest": true,
     "showCustom": false
-  }
+  },
+  "model": "gpt-5.6-sol"
 }

@@ -4,31 +4,6 @@
 
 # echo "=== .zshrc START ==="
 
-# Load zellij if not already running in it
-if [[ -z "$ZELLIJ" && (-n "$SSH_CLIENT" || -n "$SSH_TTY" || -n "$SSH_CONNECTION") ]]; then
-    HOSTNAME=$(hostname -s)
-    MARKER_FILE="/tmp/zellij_pane_$HOSTNAME"
-
-    if zellij list-sessions 2>/dev/null | grep -q "main"; then
-        if [[ ! -f "$MARKER_FILE" ]]; then
-            touch "$MARKER_FILE"
-            zellij attach main && zellij action go-to-tab-name "$HOSTNAME" --create
-        else
-            zellij attach main
-        fi
-    else
-        touch "$MARKER_FILE"
-        zellij --session main
-    fi
-fi
-
-# Define the cleanup function
-zellij_cleanup() {
-    rm -f /tmp/zellij_pane_$(hostname -s)
-}
-# Add it to the exit trap
-trap zellij_cleanup EXIT INT TERM
-
 autoload -Uz compinit && compinit
 
 # Case-insensitive tab completion with progressive matching

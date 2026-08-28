@@ -28,6 +28,10 @@ cargo-binstall = "latest"
 "go:github.com/kunchenguid/treehouse" = "latest"
 herdr = "latest"
 pnpm = "11.9.0"
+java = "17"
+sd = "latest"
+dotnet = "10.0.302"
+k6 = "2.2.0"
 
 [settings]
 # configure how frequently (in minutes) to fetch updated plugin repository changes

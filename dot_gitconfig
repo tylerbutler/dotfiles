@@ -145,6 +145,7 @@
   path = ~/.config/git/user-work.gitconfig
 [credential "azrepos:org/fluidframework"]
 	azureAuthority = https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47
+	username = tylerbu@microsoft.com
 [branchless "navigation"]
 	autoSwitchBranches = true
 	show-committed-at = true
@@ -157,4 +158,12 @@
 [credential "azrepos:org/o365exchange"]
 	username = tylerbu@microsoft.com
 [credential "azrepos:org/domoreexp"]
+	username = tylerbu@microsoft.com
+[credential "azrepos:org/onedrive"]
+	azureAuthority = https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47
+	username = tylerbu@microsoft.com
+[credential "https://msft.ghe.com"]
+	provider = github
+[credential "azrepos:org/O365Exchange"]
+	azureAuthority = https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47
 	username = tylerbu@microsoft.com

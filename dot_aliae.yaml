@@ -316,13 +316,13 @@ alias:
     value: copilot --model gpt-6-astra
 
   - name: sol
-    value: copilot --model gpt-5.6-sol
+    value: copilot --model gpt-6.1-sol
 
   - name: terra
     value: copilot --model gpt-5.6-terra
 
   - name: luna
-    value: copilot --model gpt-5.6-luna
+    value: copilot --model gpt-6-luna
 
 # env:
 #   - name: POSH_THEME

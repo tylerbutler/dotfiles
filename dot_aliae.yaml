@@ -324,6 +324,9 @@ alias:
   - name: luna
     value: copilot --model gpt-6-luna
 
+  - name: auto
+    value: copilot --model auto
+
 # env:
 #   - name: POSH_THEME
 #     value: '{{ if match .OS "darwin"}}{{ .Home }}{{ else }}Y:{{ end }}/.posh.omp.jsonc'
